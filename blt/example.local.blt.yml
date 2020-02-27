@@ -19,6 +19,10 @@
 #  chromedriver:
 #    url: http://localhost
 
+#cloud:
+#  key: '****'
+#  secret: '****'
+
 drupal:
   account:
     mail: sws-developers@lists.stanford.edu

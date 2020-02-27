@@ -1,0 +1,60 @@
+version: 2
+# CircleCI integration with Drupal 8.
+
+# Reusable steps.
+
+## Add SSH Key
+add_ssh: &add_ssh
+  add_ssh_keys:
+    fingerprints:
+      - "6f:84:bf:38:2c:c5:fe:25:46:14:94:54:f3:22:42:f5"
+
+## Add Known Hosts
+add_known_hosts: &add_known_hosts
+  run:
+    name: Add SSH Known Hosts
+    command: |
+      ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
+      ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
+
+## Defines images and working directory.
+defaults: &defaults
+  docker:
+    # The Dockerfile along side this config file contains the customizations
+    # of juampynr/drupal8ci.
+    # @see https://circleci.com/docs/2.0/custom-images/#creating-a-custom-image-manually
+    - image: pookmish/drupal8ci:pcov
+    - image: selenium/standalone-chrome:3.141.59-neon
+    - image: mariadb:10.3
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: 1
+  working_directory: /var/www/html
+
+renew_certs: &renew_certs
+  <<: *defaults
+  steps:
+    - *add_ssh
+    - *add_known_hosts
+    - run:
+        name: Renew LE Certs
+        command: vendor/bin/blt gryphon:renew-certs:all
+
+# Declare all of the jobs we should run.
+jobs:
+  renew-certs:
+    <<: *renew_certs
+
+
+# Declare a workflow that runs all of our jobs in parallel.
+workflows:
+  version: 2
+  renew_certs:
+    triggers:
+      - schedule:
+          cron: "*/10 * * * *"
+          filters:
+            branches:
+              only:
+                - /1.x/
+    jobs:
+      - renew-certs

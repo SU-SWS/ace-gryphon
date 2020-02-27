@@ -18,6 +18,7 @@
         "drupal/devel_debug_log": "^1.0@beta",
         "drupal/devel_php": "^1.1",
         "drupal/masquerade": "^2.0@beta",
+        "league/oauth2-client": "^2.4",
         "pcov/clobber": "^2.0",
         "su-sws/stanford-caravan": "dev-8.x-1.x"
     },

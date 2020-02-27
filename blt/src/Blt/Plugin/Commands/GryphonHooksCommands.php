@@ -6,6 +6,9 @@ use Acquia\Blt\Robo\BltTasks;
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
 use Robo\Contract\VerbosityThresholdInterface;
 
+/**
+ * Class GryphonHooksCommands for any pre or post command hooks.
+ */
 class GryphonHooksCommands extends BltTasks {
 
   /**

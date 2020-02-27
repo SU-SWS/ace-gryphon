@@ -38,3 +38,8 @@ modules:
 simplesamlphp: true
 cm:
   strategy: config-split
+cloud:
+  appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
+  dev: 265866-23a85077-2967-41a4-be22-a84c24e0f81a
+  test: 265867-23a85077-2967-41a4-be22-a84c24e0f81a
+  prod: 265865-23a85077-2967-41a4-be22-a84c24e0f81a
