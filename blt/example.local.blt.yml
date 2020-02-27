@@ -1,6 +1,4 @@
-# Override any settings as necessary by copying to local.blt.yml.
-# Do not commit local.blt.yml to Git. It is specific to the machine it was created on.
-
+# Override any settings as necessary by copying to local.blt.yml
 #project:
 #  local:
 #    protocol: http
@@ -11,3 +9,24 @@
 #drush:
 #  aliases:
 #    local: local.mysite.dev
+#
+#tests:
+#  selenium:
+#    url: http://localhost:4444/wd/hub
+#behat:
+#  selenium:
+#    url: http://localhost:4444/wd/hub
+#  chromedriver:
+#    url: http://localhost
+
+drupal:
+  account:
+    mail: sws-developers@lists.stanford.edu
+  db:
+    port: 3306
+    host: localhost
+    username: username
+    password: password
+    database: databasename
+
+
