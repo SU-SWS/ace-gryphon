@@ -6,7 +6,8 @@
     "require": {
         "php": ">=7.2",
         "acquia/blt": "^11.2.0",
-        "su-sws/stanford_profile": "^8.1.0"
+        "drupal/acquia_purge": "^1.0@beta",
+        "su-sws/stanford_profile": "dev-acsf-config-split"
     },
     "require-dev": {
         "acquia/blt-require-dev": "11.x-dev",
