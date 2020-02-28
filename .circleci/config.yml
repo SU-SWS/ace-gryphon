@@ -44,9 +44,6 @@ renew_certs: &renew_certs
           vendor/bin/blt gryphon:issue-cert dev
           vendor/bin/blt gryphon:issue-cert test
           vendor/bin/blt gryphon:issue-cert prod
-          vendor/bin/blt gryphon:renew-certs dev
-          vendor/bin/blt gryphon:renew-certs test
-          vendor/bin/blt gryphon:renew-certs prod
 
 # Declare all of the jobs we should run.
 jobs:
