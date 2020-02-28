@@ -191,9 +191,11 @@
         ],
         "nuke": [
             "rm -rf vendor composer.lock docroot/core docroot/modules/contrib docroot/profiles/contrib docroot/themes/contrib",
-            "rm -rf docroot/modules/custom docroot/profiles/custom docroot/themes/custom",
+            "rm -rf docroot/*/custom",
             "@composer clearcache --ansi",
-            "@composer install --ansi"
+            "@composer install --ansi",
+            "rm -rf docroot/*/custom",
+            "@composer install --ansi --prefer-source"
         ],
         "post-drupal-scaffold-cmd": [
             "patch -Ns -r \"\" --no-backup-if-mismatch -p1 < ./patches/htaccess.patch"
