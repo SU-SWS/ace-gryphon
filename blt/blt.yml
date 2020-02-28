@@ -1,5 +1,4 @@
 project:
-  machine_name: ace-gryphon
   prefix: gryphon
   human_name: 'Stanford ACE D8 Projects'
   profile:
@@ -8,15 +7,13 @@ project:
 git:
   default_branch: 1.x
   remotes:
-    - stanfordgryphon@svn-23450.prod.hosting.acquia.com:stanfordgryphon.git
+    - 'stanfordgryphon@svn-23450.prod.hosting.acquia.com:stanfordgryphon.git'
 deploy:
   tag_source: false
   exclude_file: '${repo.root}/blt/deploy/rsync-exclude.txt'
   gitignore_file: '${repo.root}/blt/deploy/.gitignore'
 drush:
   aliases:
-    remote: '${project.machine_name}.test'
-    local: self
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
@@ -40,6 +37,3 @@ cm:
   strategy: config-split
 cloud:
   appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
-  dev: 265866-23a85077-2967-41a4-be22-a84c24e0f81a
-  test: 265867-23a85077-2967-41a4-be22-a84c24e0f81a
-  prod: 265865-23a85077-2967-41a4-be22-a84c24e0f81a

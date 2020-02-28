@@ -1,3 +1,7 @@
+local:
+  uri: default
+  root: '${env.cwd}/docroot'
+
 dev:
   root: /var/www/html/stanfordgryphon.dev/docroot
   ac-site: stanfordgryphon

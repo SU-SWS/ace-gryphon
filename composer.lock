@@ -19078,12 +19078,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford-caravan.git",
-                "reference": "8c982fca0b1e2d76e531bee6e72f42335bde677e"
+                "reference": "eef11f93e77fd0f557a05088f2f038756714315d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/8c982fca0b1e2d76e531bee6e72f42335bde677e",
-                "reference": "8c982fca0b1e2d76e531bee6e72f42335bde677e",
+                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/eef11f93e77fd0f557a05088f2f038756714315d",
+                "reference": "eef11f93e77fd0f557a05088f2f038756714315d",
                 "shasum": ""
             },
             "require": {
@@ -19111,7 +19111,7 @@
                 }
             ],
             "description": "Tools for testing Drupal 8 on CI/CD",
-            "time": "2020-02-14T18:30:27+00:00"
+            "time": "2020-02-28T00:14:12+00:00"
         },
         {
             "name": "symfony/browser-kit",

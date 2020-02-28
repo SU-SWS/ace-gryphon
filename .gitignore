@@ -12,7 +12,8 @@ tests/behat/local.yml
 box/local.config.yml
 *.local
 local.blt.yml
-keys
+/keys
+/certs
 
 # Ignore drupal core.
 docroot/core
