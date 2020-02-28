@@ -60,6 +60,11 @@ class GryphonHooksCommands extends BltTasks {
 
       file_put_contents($site_file, Yaml::encode($alias));
     }
+
+    $create_db = $this->ask('Would you like to create the database on Acquia now? (y/n)');
+    if (substr(strtolower($create_db), 0, 1) == 'y') {
+      $this->invokeCommand('gryphon:create-database');
+    }
   }
 
   /**
@@ -83,7 +88,7 @@ class GryphonHooksCommands extends BltTasks {
    * @hook post-command blt:init:settings
    */
   public function postInitSettings() {
-    $docroot = $this->getConfigValue('docroot') ;
+    $docroot = $this->getConfigValue('docroot');
     if (!file_exists("$docroot/sites/settings/local.settings.php")) {
       $this->taskFilesystemStack()
         ->stopOnFail()

@@ -12,6 +12,14 @@ use Symfony\Component\Console\Question\Question;
 class GryphonCommands extends BltTasks {
 
   /**
+   * @command gryphon:create-database
+   */
+  public function createDatabase() {
+    $database = $this->getMachineName('What is the name of the database. This ideally will match the site directory name.');
+    $this->say(var_export($this->getAcquiaApi()->addDatabase($database), TRUE));
+  }
+
+  /**
    * Add a new domain to the site and LE Cert.
    *
    * @command gryphon:add-domain
@@ -33,7 +41,7 @@ class GryphonCommands extends BltTasks {
     $environment = $this->askChoice('Which environment would you like to add a new domain to', $environment_options);
     $this->say($environment);
     $new_domain = $this->getNewDomain('What is the new url?');
-    $api->addDomain($environment, $new_domain);
+    $this->say(var_export($api->addDomain($environment, $new_domain), TRUE));
   }
 
   /**
@@ -43,8 +51,26 @@ class GryphonCommands extends BltTasks {
    * @aliases gacd
    */
   public function addDomainToCert($environment, $domain) {
-    $ssh_env = $environment == 'prod' ? '': $environment;
-    exec(sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --list --listraw"', $environment, $ssh_env), $certs);
+    // Different environments have different ssh urls.
+    switch ($environment) {
+      case 'prod':
+        $ssh_env = '';
+        break;
+      case 'test':
+        $ssh_env = 'stg';
+        break;
+      default:
+        $ssh_env = $environment;
+    }
+
+    // Get the list of certs on the environment. There can be multiple certs,
+    // so we will have to parse the data next.
+    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --list --listraw"', $environment, $ssh_env);
+    $cert_results = $this->taskExec($command)
+      ->printOutput(FALSE)
+      ->run()
+      ->getMessage();
+    $certs = explode("\n", trim($cert_results));
 
     $header = NULL;
     $cert_data = [];
@@ -55,22 +81,31 @@ class GryphonCommands extends BltTasks {
         continue;
       }
 
+      // Key the cert data by which environment the main domain is on.
       $data = array_combine($header, $line);
       preg_match('/gryphon(.*)\.prod/', $data['Main_Domain'], $cert_env);
       $cert_data[$cert_env[1] ?: 'prod'] = $data;
     }
-    if (isset($cert_data[$environment])) {
-      $domains = explode(',', $cert_data[$environment]['SAN_Domains']);
+
+    if (isset($cert_data[$ssh_env])) {
+      $domains = explode(',', $cert_data[$ssh_env]['SAN_Domains']);
     }
+
     $domains[] = $domain;
     asort($domains);
-    if (isset($cert_data[$environment])) {
-      array_unshift($domains, $cert_data[$environment]['Main_Domain']);
+
+    if (isset($cert_data[$ssh_env])) {
+      array_unshift($domains, $cert_data[$ssh_env]['Main_Domain']);
     }
+
+    $domains = array_filter($domains, function ($domain) {
+      return $domain != 'no';
+    });
+
     $domains = '-d ' . implode(' -d ', $domains);
 
-    exec(sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp"', $environment, $ssh_env, $domains, $environment), $output);
-    $this->say($output);
+    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp --force --debug"', $environment, $ssh_env, $domains, $environment);
+    $this->taskExec($command)->run();
   }
 
   /**
@@ -244,6 +279,30 @@ class GryphonCommands extends BltTasks {
         );
       }
 
+      return $answer;
+    });
+    return $this->doAsk($question);
+  }
+
+  /**
+   * Ask the user for a new stanford url and validate the entry.
+   *
+   * @param string $message
+   *   Prompt for the user.
+   *
+   * @return string
+   *   User entered value.
+   */
+  protected function getMachineName($message) {
+    $question = new Question($this->formatQuestion($message));
+    $question->setValidator(function ($answer) {
+      $modified_answer = strtolower($answer);
+      $modified_answer = preg_replace("/[^a-z0-9_]/", '_', $modified_answer);
+      if ($modified_answer != $answer) {
+        throw new \RuntimeException(
+          'Only lower case alphanumeric characters with underscores are allowed.'
+        );
+      }
       return $answer;
     });
     return $this->doAsk($question);
