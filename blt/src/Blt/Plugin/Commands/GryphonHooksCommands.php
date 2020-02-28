@@ -4,6 +4,8 @@ namespace Example\Blt\Plugin\Commands;
 
 use Acquia\Blt\Robo\BltTasks;
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use Consolidation\AnnotatedCommand\CommandData;
+use Drupal\Core\Serialization\Yaml;
 use Robo\Contract\VerbosityThresholdInterface;
 
 /**
@@ -31,6 +33,32 @@ class GryphonHooksCommands extends BltTasks {
     $task->run();
     foreach ($copy_map as $to) {
       $this->getConfig()->expandFileProperties($to);
+    }
+  }
+
+  /**
+   * After a multisite is created, modify the drush alias with default values.
+   *
+   * @hook post-command recipes:multisite:init
+   */
+  public function postMultiSiteInit() {
+    $root = $this->getConfigValue('repo.root');
+
+    $default_alias = Yaml::decode(file_get_contents("$root/drush/sites/default.site.yml"));
+    $sites = glob("$root/drush/sites/*.site.yml");
+    foreach ($sites as $site_file) {
+      $alias = Yaml::decode(file_get_contents($site_file));
+      preg_match('/sites\/(.*)\.site\.yml/', $site_file, $matches);
+      $site_name = $matches[1];
+
+      if (count($alias) != count($default_alias)) {
+        foreach ($default_alias as $environment => $env_alias) {
+          $env_alias['uri'] = "$site_name.sites-pro.stanford.edu";
+          $alias[$environment] = $env_alias;
+        }
+      }
+
+      file_put_contents($site_file, Yaml::encode($alias));
     }
   }
 

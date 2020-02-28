@@ -1,0 +1,12 @@
+project:
+  local:
+    hostname: local.haas.com
+    protocol: http
+  machine_name: haas
+  human_name: haas
+drush:
+  aliases:
+    local: haas.local
+    remote: haas.prod
+drupal:
+  db: {  }

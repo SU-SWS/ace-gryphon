@@ -55,3 +55,18 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
+
+$sites_settings = glob(__DIR__ . '/*/settings.php');
+foreach ($sites_settings as $site_setting) {
+  $site_setting = str_replace(__DIR__ . '/', '', $site_setting);
+  $site_name = substr($site_setting, 0, strpos($site_setting, '/'));
+  if ($site_name == 'default') {
+    continue;
+  }
+
+  $sites["$site_name-dev.sites-pro.stanford.edu"] = $site_name;
+  $sites["$site_name-stage.sites-pro.stanford.edu"] = $site_name;
+  $sites["$site_name.sites-pro.stanford.edu"] = $site_name;
+  $sites["$site_name.stanford.edu"] = $site_name;
+}
+
