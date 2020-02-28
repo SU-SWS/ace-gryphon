@@ -92,6 +92,7 @@ class GryphonCommands extends BltTasks {
       ->printOutput(FALSE)
       ->run()
       ->getMessage();
+
     $certs = explode("\n", trim($cert_results));
 
     $header = NULL;
@@ -106,12 +107,13 @@ class GryphonCommands extends BltTasks {
       // Key the cert data by which environment the main domain is on.
       $data = array_combine($header, $line);
       preg_match('/gryphon(.*)\.prod/', $data['Main_Domain'], $cert_env);
+
       $cert_data[$cert_env[1] ?: 'prod'] = $data;
     }
 
-    if (isset($cert_data[$ssh_env])) {
-      $domains = explode(',', $cert_data[$ssh_env]['SAN_Domains']);
-      array_unshift($domains, $cert_data[$ssh_env]['Main_Domain']);
+    if (isset($cert_data[$ssh_env ?: 'prod'])) {
+      $domains = explode(',', $cert_data[$ssh_env ?: 'prod']['SAN_Domains']);
+      array_unshift($domains, $cert_data[$ssh_env ?: 'prod']['Main_Domain']);
       $domains = array_filter($domains, function ($domain) {
         return $domain != 'no';
       });
@@ -121,6 +123,8 @@ class GryphonCommands extends BltTasks {
   }
 
   /**
+   * Ask acme.sh to create a new LE certificate.
+   *
    * @command gryphon:issue-cert
    *
    * @option force
@@ -144,6 +148,7 @@ class GryphonCommands extends BltTasks {
    * @throws \Acquia\Blt\Robo\Exceptions\BltException
    */
   protected function issueNewCert($environment, array $domains, $force = FALSE) {
+
     // Different environments have different ssh urls.
     switch ($environment) {
       case 'prod':
@@ -167,6 +172,8 @@ class GryphonCommands extends BltTasks {
 
     $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp %s --debug"', $environment, $ssh_env, $domains, $environment, $force ? '--force' : '');
     $this->taskExec($command)->run();
+
+    $this->invokeCommand('gryphon:renew-certs', ['environment' => $environment]);
   }
 
   /**
