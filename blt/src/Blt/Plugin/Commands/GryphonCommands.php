@@ -4,6 +4,7 @@ namespace Example\Blt\Plugin\Commands;
 
 use Acquia\Blt\Robo\BltTasks;
 use StanfordCaravan\Robo\Tasks\AcquiaApi;
+use Symfony\Component\Console\Question\Question;
 
 /**
  * Class GryphonCommands.
@@ -11,9 +12,72 @@ use StanfordCaravan\Robo\Tasks\AcquiaApi;
 class GryphonCommands extends BltTasks {
 
   /**
+   * Add a new domain to the site and LE Cert.
+   *
+   * @command gryphon:add-domain
+   * @aliases gad
+   */
+  public function addDomain() {
+    $this->say('Getting environment information...');
+    $api = $this->getAcquiaApi();
+    $environments = $api->getEnvironments();
+    $environment_options = [];
+    foreach ($environments['_embedded']['items'] as $environment_data) {
+      // Skip RA Environment.
+      if ($environment_data['name'] == 'ra') {
+        continue;
+      }
+      $environment_options[$environment_data['name']] = $environment_data['name'];
+    }
+    $environment_options = array_values($environment_options);
+    $environment = $this->askChoice('Which environment would you like to add a new domain to', $environment_options);
+    $this->say($environment);
+    $new_domain = $this->getNewDomain('What is the new url?');
+    $api->addDomain($environment, $new_domain);
+  }
+
+  /**
+   * Add a new domain to the LE Cert.
+   *
+   * @command gryphon:add-cert-domain
+   * @aliases gacd
+   */
+  public function addDomainToCert($environment, $domain) {
+    $ssh_env = $environment == 'prod' ? '': $environment;
+    exec(sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --list --listraw"', $environment, $ssh_env), $certs);
+
+    $header = NULL;
+    $cert_data = [];
+    foreach ($certs as $line) {
+      $line = str_getcsv($line, '|');
+      if (!$header) {
+        $header = $line;
+        continue;
+      }
+
+      $data = array_combine($header, $line);
+      preg_match('/gryphon(.*)\.prod/', $data['Main_Domain'], $cert_env);
+      $cert_data[$cert_env[1] ?: 'prod'] = $data;
+    }
+    if (isset($cert_data[$environment])) {
+      $domains = explode(',', $cert_data[$environment]['SAN_Domains']);
+    }
+    $domains[] = $domain;
+    asort($domains);
+    if (isset($cert_data[$environment])) {
+      array_unshift($domains, $cert_data[$environment]['Main_Domain']);
+    }
+    $domains = '-d ' . implode(' -d ', $domains);
+
+    exec(sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp"', $environment, $ssh_env, $domains, $environment), $output);
+    $this->say($output);
+  }
+
+  /**
    * Renew LE Certs for all environments.
    *
    * @command gryphon:renew-certs:all
+   * @aliases grca
    */
   public function renewAllCerts() {
     $api = $this->getAcquiaApi();
@@ -33,6 +97,7 @@ class GryphonCommands extends BltTasks {
    * Renew LE Certs for a single environment.
    *
    * @command gryphon:renew-certs
+   * @aliases grc
    *
    * @param string $environment
    *   Environment name like `dev`, `test`, or `ode123`.
@@ -105,6 +170,7 @@ class GryphonCommands extends BltTasks {
    * @example blt gryphon:enable-modules dev views_ui,field
    *
    * @command gryphon:enable-modules
+   * @aliases gem
    *
    */
   public function enableModules($environment, $modules) {
@@ -126,6 +192,29 @@ class GryphonCommands extends BltTasks {
   }
 
   /**
+   * Get encryption keys from acquia.
+   *
+   * @command gryphon:keys
+   * @aliases gkey
+   */
+  public function cardinalsitesKeys() {
+    $keys_dir = $this->getConfigValue('repo.root') . '/keys';
+    if (!is_dir($keys_dir)) {
+      mkdir($keys_dir, 0777, TRUE);
+    }
+    $this->taskRsync()
+      ->fromPath('stanfordgryphon.prod@stanfordgryphon.ssh.prod.acquia-sites.com:/mnt/gfs/stanfordgryphon.prod/nobackup/simplesamlphp/')
+      ->toPath($keys_dir)
+      ->recursive()
+      ->excludeVcs()
+      ->verbose()
+      ->progress()
+      ->humanReadable()
+      ->stats()
+      ->run();
+  }
+
+  /**
    * Get initialized Acquia api object.
    *
    * @return \StanfordCaravan\Robo\Tasks\AcquiaApi
@@ -135,6 +224,29 @@ class GryphonCommands extends BltTasks {
     $key = $this->getConfigValue('cloud.key') ?: $_ENV['ACP_KEY'];
     $secret = $this->getConfigValue('cloud.secret') ?: $_ENV['ACP_SECRET'];
     return new AcquiaApi($this->getConfigValue('cloud.appId'), $key, $secret);
+  }
+
+  /**
+   * Ask the user for a new stanford url and validate the entry.
+   *
+   * @param string $message
+   *   Prompt for the user.
+   *
+   * @return string
+   *   User entered value.
+   */
+  protected function getNewDomain($message) {
+    $question = new Question($this->formatQuestion($message));
+    $question->setValidator(function ($answer) {
+      if (empty($answer) || !preg_match('/\.stanford\.edu/', $answer) || preg_match('/^http/', $answer)) {
+        throw new \RuntimeException(
+          'You must provide a stanford.edu url. ie gryphon.stanford.edu'
+        );
+      }
+
+      return $answer;
+    });
+    return $this->doAsk($question);
   }
 
 }
