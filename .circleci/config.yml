@@ -30,6 +30,7 @@ defaults: &defaults
         MYSQL_ALLOW_EMPTY_PASSWORD: 1
   working_directory: /var/www/html
 
+## Renew the lets encrypt certificates for the three main environments.
 renew_certs: &renew_certs
   <<: *defaults
   steps:
@@ -37,7 +38,15 @@ renew_certs: &renew_certs
     - *add_known_hosts
     - run:
         name: Renew LE Certs
-        command: vendor/bin/blt gryphon:renew-certs:all
+        command: |
+          vendor/bin/blt gryphon:enable-modules dev letsencrypt_challenge
+          vendor/bin/blt gryphon:enable-modules test letsencrypt_challenge
+          vendor/bin/blt gryphon:issue-cert dev
+          vendor/bin/blt gryphon:issue-cert test
+          vendor/bin/blt gryphon:issue-cert prod
+          vendor/bin/blt gryphon:renew-certs dev
+          vendor/bin/blt gryphon:renew-certs test
+          vendor/bin/blt gryphon:renew-certs prod
 
 # Declare all of the jobs we should run.
 jobs:
@@ -51,7 +60,7 @@ workflows:
   renew_certs:
     triggers:
       - schedule:
-          cron: "*/10 * * * *"
+          cron: "0 0 */15 * *"
           filters:
             branches:
               only:

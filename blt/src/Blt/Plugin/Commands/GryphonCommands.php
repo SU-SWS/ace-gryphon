@@ -51,6 +51,28 @@ class GryphonCommands extends BltTasks {
    * @aliases gacd
    */
   public function addDomainToCert($environment, $domain) {
+    $domains = $this->getCurrentDomainsForEnvironment($environment);
+    $main_domain = NULL;
+    if (!empty($domains)) {
+      $main_domain = $domains[0];
+      unset($domains[0]);
+    }
+    $domains[] = $domain;
+    asort($domains);
+    array_unshift($domains, $main_domain);
+    $this->issueNewCert($environment, array_filter($domains), TRUE);
+  }
+
+  /**
+   * Get an array of all the current domains on the LE Cert for the environment.
+   *
+   * @param string $environment
+   *   Environment machine name.
+   *
+   * @return array
+   *   Array of domains.
+   */
+  protected function getCurrentDomainsForEnvironment($environment) {
     // Different environments have different ssh urls.
     switch ($environment) {
       case 'prod':
@@ -89,22 +111,61 @@ class GryphonCommands extends BltTasks {
 
     if (isset($cert_data[$ssh_env])) {
       $domains = explode(',', $cert_data[$ssh_env]['SAN_Domains']);
-    }
-
-    $domains[] = $domain;
-    asort($domains);
-
-    if (isset($cert_data[$ssh_env])) {
       array_unshift($domains, $cert_data[$ssh_env]['Main_Domain']);
+      $domains = array_filter($domains, function ($domain) {
+        return $domain != 'no';
+      });
+      return $domains;
     }
+    return [];
+  }
 
-    $domains = array_filter($domains, function ($domain) {
-      return $domain != 'no';
-    });
+  /**
+   * @command gryphon:issue-cert
+   *
+   * @option force
+   *   Should the certificate be forced to renew.
+   */
+  public function issueCert($environment, $options = ['force' => FALSE]) {
+    $domains = $this->getCurrentDomainsForEnvironment($environment);
+    $this->issueNewCert($environment, $domains, $options['force']);
+  }
 
+  /**
+   * Call acme.sh to issue a new cert for the environment.
+   *
+   * @param string $environment
+   *   Acquia environment
+   * @param array $domains
+   *   Array of domains for the environment cert.
+   * @param bool $force
+   *   Force the cert to be renewed.
+   *
+   * @throws \Acquia\Blt\Robo\Exceptions\BltException
+   */
+  protected function issueNewCert($environment, array $domains, $force = FALSE) {
+    // Different environments have different ssh urls.
+    switch ($environment) {
+      case 'prod':
+        $ssh_env = '';
+        break;
+
+      case 'test':
+        $ssh_env = 'stg';
+        break;
+
+      default:
+        $ssh_env = $environment;
+    }
+    $domains = array_unique($domains);
     $domains = '-d ' . implode(' -d ', $domains);
 
-    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp --force --debug"', $environment, $ssh_env, $domains, $environment);
+    $this->invokeCommand('gryphon:enable-modules', [
+      'environment' => $environment,
+      'modules' => 'letsencrypt_challenge',
+    ]);
+
+    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp %s --debug"', $environment, $ssh_env, $domains, $environment, $force ? '--force' : '');
     $this->taskExec($command)->run();
   }
 
@@ -137,15 +198,10 @@ class GryphonCommands extends BltTasks {
    * @param string $environment
    *   Environment name like `dev`, `test`, or `ode123`.
    *
-   * @throws \Acquia\Blt\Robo\Exceptions\BltException
    * @throws \Robo\Exception\TaskException
    */
   public function renewCerts($environment) {
     $api = $this->getAcquiaApi();
-    $this->invokeCommand('gryphon:enable-modules', [
-      'environment' => $environment,
-      'modules' => 'letsencrypt_challenge',
-    ]);
 
     // The names of the cert are different each environment.
     switch ($environment) {
