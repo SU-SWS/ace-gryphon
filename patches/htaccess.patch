@@ -1,8 +1,8 @@
 diff --git a/docroot/.htaccess b/docroot/.htaccess
-index 83cb71a..6fad7ae 100644
+index 9a73a3d..dbaaf91 100644
 --- a/docroot/.htaccess
 +++ b/docroot/.htaccess
-@@ -69,6 +69,49 @@ AddEncoding gzip svgz
+@@ -69,6 +69,33 @@ AddEncoding gzip svgz
  <IfModule mod_rewrite.c>
    RewriteEngine on
  
@@ -25,34 +25,18 @@ index 83cb71a..6fad7ae 100644
 +  # See https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_f.
 +  RewriteRule .* - [F]
 +
-+  # Rewrite URLs of the form foo.cardinalsites.acsitefactory.com to
-+  # https://foo.sites.stanford.edu
-+  # See https://stanfordits.atlassian.net/browse/SITES-129.
-+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.cardinalsites\.acsitefactory\.com" [NC]
-+  RewriteRule "^/?(.*)"        "https://%1.sites.stanford.edu/$1" [L,R,NE]
-+
-+  # Test environment.
-+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.test-cardinalsites\.acsitefactory\.com" [NC]
-+  RewriteRule "^/?(.*)"        "https://%1-test.sites.stanford.edu/$1" [L,R,NE]
-+
-+  # Dev environment.
-+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.dev-cardinalsites\.acsitefactory\.com" [NC]
-+  RewriteRule "^/?(.*)"        "https://%1-dev.sites.stanford.edu/$1" [L,R,NE]
-+
-+  # Remote Administration environment.
-+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.acqra-cardinalsites\.acsitefactory\.com" [NC]
-+  RewriteRule "^/?(.*)"        "https://%1-acqra.sites.stanford.edu/$1" [L,R,NE]
-+
 +  # Redirect HTTP to HTTPS on cloud
++  RewriteCond %{HTTPS} off
 +  RewriteCond %{HTTP:X-Forwarded-Proto} !https
-+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} ^.*(dev|test|prod|live)$ [NC,OR]
-+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} ^ode.*$ [NC]
++  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} prod [NC,OR]
++  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} test [NC,OR]
++  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} dev [NC]
 +  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [NE,L,R=301]
 +
    # Set "protossl" to "s" if we were accessed via https://.  This is used later
    # if you enable "www." stripping or enforcement, in order to ensure that
    # you don't bounce between http and https.
-@@ -146,10 +189,14 @@ AddEncoding gzip svgz
+@@ -146,10 +173,14 @@ AddEncoding gzip svgz
    RewriteCond %{REQUEST_URI} !/core/[^/]*\.php$
    # Allow access to test-specific PHP files:
    RewriteCond %{REQUEST_URI} !/core/modules/system/tests/https?.php
