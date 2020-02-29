@@ -61,6 +61,6 @@ workflows:
           filters:
             branches:
               only:
-                - /1.x/
+                - /fix-dependencies/
     jobs:
       - renew-certs
