@@ -132,7 +132,12 @@ class GryphonCommands extends BltTasks {
    */
   public function issueCert($environment, $options = ['force' => FALSE]) {
     $domains = $this->getCurrentDomainsForEnvironment($environment);
-    $this->issueNewCert($environment, $domains, $options['force']);
+    $this->say(sprintf('<info>You are about to update the <comment>%s</comment> certificate with the following domains:</info>', $environment));
+    $this->say(implode(PHP_EOL, $domains));
+    $answer = $this->askRequired('Are you sure you wish to update the certificate? (y/n)');
+    if (is_null($answer) || substr(strtolower($answer), 0, 1) == 'y') {
+      $this->issueNewCert($environment, $domains, $options['force']);
+    }
   }
 
   /**

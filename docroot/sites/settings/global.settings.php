@@ -19,11 +19,26 @@ if (EnvironmentDetector::isAhEnv()) {
   // Set the temp directory as per https://docs.acquia.com/acquia-cloud/manage/files/broken/
   $settings['file_temp_path'] = '/mnt/gfs/' . EnvironmentDetector::getAhGroup() . '.' . EnvironmentDetector::getAhEnv() . '/tmp';
   $settings['letsencrypt_challenge_directory'] = $settings['file_temp_path'];
+
+  // Lock the UI to read_only when on production or test in Acquia.
+  if (
+    (EnvironmentDetector::isAhProdEnv() || EnvironmentDetector::isAhStageEnv())
+    && PHP_SAPI !== 'cli'
+  ) {
+    $settings['config_readonly'] = TRUE;
+    $settings['config_readonly_whitelist_patterns'] = [
+      'system.menu.*',
+      'core.menu.static_menu_link_overrides',
+    ];
+  }
 }
 
+/**
+ * This can be overridden for individual sites. Add or modify this value in
+ * `docroot/sites/{site-name}/settings/includes.settings.php` for the respective
+ * site. See related information below.
+ */
 $settings['config_sync_directory'] = DRUPAL_ROOT . '/profiles/custom/stanford_profile/config/sync';
-
-//var_dump($settings['config_sync_directory']);
 
 /**
  * Include settings files in docroot/sites/settings.
