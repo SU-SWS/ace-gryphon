@@ -57,7 +57,7 @@ renew_certs: &renew_certs
     - run:
         name: Renew LE Certs
         command: |
-          composer install
+          composer install --no-interaction 
           vendor/bin/blt gryphon:enable-modules dev letsencrypt_challenge
           vendor/bin/blt gryphon:enable-modules test letsencrypt_challenge
           vendor/bin/blt gryphon:issue-cert dev
@@ -76,7 +76,7 @@ workflows:
   renew_certs:
     triggers:
       - schedule:
-          cron: "5 7 * * 0"
+          cron: "11 7 * * 0"
           filters:
             branches:
               only:
