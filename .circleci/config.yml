@@ -52,6 +52,7 @@ renew_certs: &renew_certs
   steps:
     - *add_ssh
     - *add_known_hosts
+    - checkout
     - *restore_caches
     - run:
         name: Renew LE Certs
@@ -75,7 +76,7 @@ workflows:
   renew_certs:
     triggers:
       - schedule:
-          cron: "0 7 * * 0"
+          cron: "5 7 * * 0"
           filters:
             branches:
               only:
