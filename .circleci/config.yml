@@ -84,12 +84,12 @@ jobs:
 workflows:
   version: 2
   renew_certs:
-    triggers:
-      - schedule:
-          cron: "38 21 * * 0"
-          filters:
-            branches:
-              only:
-                - /fix-dependencies/
+#    triggers:
+#      - schedule:
+#          cron: "38 21 * * 0"
+#          filters:
+#            branches:
+#              only:
+#                - /fix-dependencies/
     jobs:
       - renew-certs
