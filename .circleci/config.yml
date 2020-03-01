@@ -16,6 +16,22 @@ add_known_hosts: &add_known_hosts
     command: |
       ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
       ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
+      
+## Defines the cache restoring mechanism.
+restore_caches: &restore_caches
+  restore_cache:
+    # We use the composer.lock as a way to determine if we can cache our build.
+    keys:
+      - v1-vendor-{{ checksum "composer.lock" }}
+      # fallback to using the latest cache if no exact match is found
+      - v1-vendor-
+
+## Defines the cache saving mechanism.
+save_caches: &save_caches
+  save_cache:
+    paths:
+      - ./vendor
+    key: v1-vendor-{{ checksum "composer.lock" }}
 
 ## Defines images and working directory.
 defaults: &defaults
@@ -36,20 +52,22 @@ renew_certs: &renew_certs
   steps:
     - *add_ssh
     - *add_known_hosts
+    - *restore_caches
     - run:
         name: Renew LE Certs
         command: |
+          composer install
           vendor/bin/blt gryphon:enable-modules dev letsencrypt_challenge
           vendor/bin/blt gryphon:enable-modules test letsencrypt_challenge
           vendor/bin/blt gryphon:issue-cert dev
           vendor/bin/blt gryphon:issue-cert test
           vendor/bin/blt gryphon:issue-cert prod
+    - *save_caches
 
 # Declare all of the jobs we should run.
 jobs:
   renew-certs:
     <<: *renew_certs
-
 
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
@@ -57,7 +75,7 @@ workflows:
   renew_certs:
     triggers:
       - schedule:
-          cron: "0 0 * * 0"
+          cron: "0 7 * * 0"
           filters:
             branches:
               only:
