@@ -15,6 +15,9 @@ add_known_hosts: &add_known_hosts
     name: Add SSH Known Hosts
     command: |
       ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
+      ssh-keyscan stanfordgryphondev.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
+      ssh-keyscan stanfordgryphonstg.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
+      ssh-keyscan stanfordgryphon.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
       ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
 
 ## Defines the cache restoring mechanism.
@@ -31,6 +34,14 @@ save_caches: &save_caches
   save_cache:
     paths:
       - ./vendor
+      - ./docroot/modules/contrib
+      - ./docroot/modules/custom
+      - ./docroot/profiles/contrib
+      - ./docroot/profiles/custom
+      - ./docroot/themes/contrib
+      - ./docroot/themes/custom
+      - ./docroot/libraries
+      - ./docroot/core
     key: v1-vendor-{{ checksum "composer.lock" }}
 
 ## Defines images and working directory.
