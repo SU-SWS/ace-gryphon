@@ -16,7 +16,7 @@ add_known_hosts: &add_known_hosts
     command: |
       ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
       ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
-      
+
 ## Defines the cache restoring mechanism.
 restore_caches: &restore_caches
   restore_cache:
@@ -57,12 +57,11 @@ renew_certs: &renew_certs
     - run:
         name: Renew LE Certs
         command: |
-          composer install --no-interaction 
-          vendor/bin/blt gryphon:enable-modules dev letsencrypt_challenge
-          vendor/bin/blt gryphon:enable-modules test letsencrypt_challenge
-          vendor/bin/blt gryphon:issue-cert dev
-          vendor/bin/blt gryphon:issue-cert test
-          vendor/bin/blt gryphon:issue-cert prod
+          composer install --no-interaction
+          vendor/bin/blt blt:telemetry:disable --no-interaction
+          vendor/bin/blt gryphon:issue-cert dev --no-interaction
+          vendor/bin/blt gryphon:issue-cert test --no-interaction
+          vendor/bin/blt gryphon:issue-cert prod --no-interaction
     - *save_caches
 
 # Declare all of the jobs we should run.
@@ -76,7 +75,7 @@ workflows:
   renew_certs:
     triggers:
       - schedule:
-          cron: "11 7 * * 0"
+          cron: "38 21 * * 0"
           filters:
             branches:
               only:

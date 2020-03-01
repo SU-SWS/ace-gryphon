@@ -45,6 +45,13 @@ SAML and other certificate files will be download for local use.
      ```
     $ blt gryphon:keys
     ```
+
+Optional:
+If you wish to not provide statistics and user information back to Acquia run
+     ```
+    $ blt blt:telemetry:disable --no-interaction
+    ```
+
 ---
 ## Other Local Setup Steps
 
