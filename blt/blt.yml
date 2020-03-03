@@ -18,22 +18,40 @@ drush:
   default_alias: '${drush.aliases.local}'
 modules:
   local:
-    enable: [stanford_ssp, environment_indicator]
-    uninstall: [acsf, acquia_purge, acquia_connector]
+    enable:
+      - stanford_ssp
+      - environment_indicator
+    uninstall:
+      - acquia_purge
+      - acquia_connector
   ci:
-    enable: [nobots]
-    uninstall: [simplesamlphp_auth, acsf, acquia_purge, acquia_connector]
-  01dev:
-    enable: [acsf, nobots, environment_indicator]
+    enable:
+      - nobots
+    uninstall:
+      - simplesamlphp_auth
+      - acquia_purge
+      - acquia_connector
+  dev:
+    enable:
+      - nobots
+      - environment_indicator
     uninstall: {  }
-  01test:
-    enable: [acsf, nobots, environment_indicator]
-    uninstall: [views_ui]
-  01live:
-    enable: [acsf, environment_indicator]
-    uninstall: [views_ui]
+  test:
+    enable:
+      - nobots
+      - environment_indicator
+    uninstall:
+      - views_ui
+  prod:
+    enable:
+      - environment_indicator
+    uninstall:
+      - views_ui
 simplesamlphp: true
 cm:
   strategy: config-split
 cloud:
   appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
+multisites:
+  - cardinalservice
+  - default
