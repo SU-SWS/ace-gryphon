@@ -25,20 +25,8 @@ class GryphonCommands extends BltTasks {
    * @command gryphon:add-domain
    * @aliases gad
    */
-  public function addDomain() {
-    $this->say('Getting environment information...');
+  public function addDomain($environment) {
     $api = $this->getAcquiaApi();
-    $environments = $api->getEnvironments();
-    $environment_options = [];
-    foreach ($environments['_embedded']['items'] as $environment_data) {
-      // Skip RA Environment.
-      if ($environment_data['name'] == 'ra') {
-        continue;
-      }
-      $environment_options[$environment_data['name']] = $environment_data['name'];
-    }
-    $environment_options = array_values($environment_options);
-    $environment = $this->askChoice('Which environment would you like to add a new domain to', $environment_options);
     $this->say($environment);
     $new_domain = $this->getNewDomain('What is the new url?');
     $this->say(var_export($api->addDomain($environment, $new_domain), TRUE));
@@ -49,15 +37,23 @@ class GryphonCommands extends BltTasks {
    *
    * @command gryphon:add-cert-domain
    * @aliases gacd
+   *
+   * @param string $environment
+   *   Acquia environment name: `dev`, `test`, or `prod`.
+   * @param string $new_domains
+   *   Comma separated list of domains.
+   *
+   * @throws \Acquia\Blt\Robo\Exceptions\BltException
    */
-  public function addDomainToCert($environment, $domain) {
+  public function addDomainToCert($environment, $new_domains) {
     $domains = $this->getCurrentDomainsForEnvironment($environment);
     $main_domain = NULL;
     if (!empty($domains)) {
       $main_domain = $domains[0];
       unset($domains[0]);
     }
-    $domains[] = $domain;
+    $new_domains = array_filter(explode(',', $new_domains));
+    $domains = array_merge($domains, $new_domains);
     asort($domains);
     array_unshift($domains, $main_domain);
     $this->issueNewCert($environment, array_filter($domains), TRUE);
@@ -87,7 +83,7 @@ class GryphonCommands extends BltTasks {
 
     // Get the list of certs on the environment. There can be multiple certs,
     // so we will have to parse the data next.
-    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --list --listraw"', $environment, $ssh_env);
+    $command = sprintf('ssh %s "~/.acme.sh/acme.sh --list --listraw"', $this->getSshUrl($environment));
     $cert_results = $this->taskExec($command)
       ->printOutput(FALSE)
       ->run()
@@ -125,19 +121,41 @@ class GryphonCommands extends BltTasks {
   /**
    * Ask acme.sh to create a new LE certificate.
    *
-   * @command gryphon:issue-cert
+   * @command gryphon:renew-cert
    *
    * @option force
    *   Should the certificate be forced to renew.
+   *
+   * @param string $environment
+   *   Acquia environment: `dev`, `test`, or `prod`.
+   * @param array $options
+   *   Command options.
+   *
+   * @throws \Acquia\Blt\Robo\Exceptions\BltException
    */
-  public function issueCert($environment, $options = ['force' => FALSE]) {
+  public function renewCert($environment, $options = ['force' => FALSE]) {
     $domains = $this->getCurrentDomainsForEnvironment($environment);
-    $this->say(sprintf('<info>You are about to update the <comment>%s</comment> certificate with the following domains:</info>', $environment));
+    $this->say(sprintf('<info>Renewing the <comment>%s</comment> certificate with the following domains:</info>', $environment));
     $this->say(implode(PHP_EOL, $domains));
-    $answer = $this->askRequired('Are you sure you wish to update the certificate? (y/n)');
-    if (is_null($answer) || substr(strtolower($answer), 0, 1) == 'y') {
-      $this->issueNewCert($environment, $domains, $options['force']);
+
+    $this->invokeCommand('gryphon:enable-modules', [
+      'environment' => $environment,
+      'modules' => 'letsencrypt_challenge',
+    ]);
+    $ssh_url = $this->getSshUrl($environment);
+    $command = sprintf('ssh %s "~/.acme.sh/acme.sh --renew -d %s %s"', $ssh_url, reset($domains), $options['force'] ? '--force' : '');
+
+    // Use exec() since we need to collect the results of the command.
+    // https://github.com/consolidation/Robo/issues/382#issuecomment-238364034
+    exec($command, $output);
+    $output = implode("\n", $output);
+    $this->say($output);
+
+    if (strpos($output, 'Skip,') === FALSE) {
+      $this->invokeCommand('gryphon:update-certs', ['environment' => $environment]);
+      return;
     }
+    $this->say('<info>Cert is not ready to be renewed.</info>');
   }
 
   /**
@@ -153,20 +171,6 @@ class GryphonCommands extends BltTasks {
    * @throws \Acquia\Blt\Robo\Exceptions\BltException
    */
   protected function issueNewCert($environment, array $domains, $force = FALSE) {
-
-    // Different environments have different ssh urls.
-    switch ($environment) {
-      case 'prod':
-        $ssh_env = '';
-        break;
-
-      case 'test':
-        $ssh_env = 'stg';
-        break;
-
-      default:
-        $ssh_env = $environment;
-    }
     $domains = array_unique($domains);
     $domains = '-d ' . implode(' -d ', $domains);
 
@@ -174,20 +178,20 @@ class GryphonCommands extends BltTasks {
       'environment' => $environment,
       'modules' => 'letsencrypt_challenge',
     ]);
-
-    $command = sprintf('ssh stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp %s --debug"', $environment, $ssh_env, $domains, $environment, $force ? '--force' : '');
+    $ssh_url = $this->getSshUrl($environment);
+    $command = sprintf('ssh %s "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp %s --debug"', $ssh_url, $domains, $environment, $force ? '--force' : '');
     $this->taskExec($command)->run();
 
-    $this->invokeCommand('gryphon:renew-certs', ['environment' => $environment]);
+    $this->invokeCommand('gryphon:update-certs', ['environment' => $environment]);
   }
 
   /**
-   * Renew LE Certs for all environments.
+   * Upload and update Acquia with new cert data.
    *
-   * @command gryphon:renew-certs:all
-   * @aliases grca
+   * @command gryphon:update-certs:all
+   * @aliases gruca
    */
-  public function renewAllCerts() {
+  public function updateAllCerts() {
     $api = $this->getAcquiaApi();
     $environments = $api->getEnvironments();
 
@@ -197,22 +201,22 @@ class GryphonCommands extends BltTasks {
         continue;
       }
       $this->say(sprintf('Renewing certs for %s', $environment_data['name']));
-      $this->invokeCommand('gryphon:renew-certs', ['environment' => $environment_data['name']]);
+      $this->invokeCommand('gryphon:update-certs', ['environment' => $environment_data['name']]);
     }
   }
 
   /**
-   * Renew LE Certs for a single environment.
+   * Upload and update Acquia with the new cert data for a single environment.
    *
-   * @command gryphon:renew-certs
-   * @aliases grc
+   * @command gryphon:update-certs
+   * @aliases gruc
    *
    * @param string $environment
    *   Environment name like `dev`, `test`, or `ode123`.
    *
    * @throws \Robo\Exception\TaskException
    */
-  public function renewCerts($environment) {
+  public function updateCert($environment) {
     $api = $this->getAcquiaApi();
 
     // The names of the cert are different each environment.
@@ -300,7 +304,7 @@ class GryphonCommands extends BltTasks {
    * @command gryphon:keys
    * @aliases gkey
    */
-  public function cardinalsitesKeys() {
+  public function gryphonKeys() {
     $keys_dir = $this->getConfigValue('repo.root') . '/keys';
     if (!is_dir($keys_dir)) {
       mkdir($keys_dir, 0777, TRUE);
@@ -374,6 +378,32 @@ class GryphonCommands extends BltTasks {
       return $answer;
     });
     return $this->doAsk($question);
+  }
+
+  /**
+   * Get the url for ssh commands based on the environment.
+   *
+   * @param string $environment
+   *   Acquia environment.
+   *
+   * @return string
+   *   Ssh url.
+   */
+  protected function getSshUrl($environment) {
+    // Different environments have different ssh urls.
+    switch ($environment) {
+      case 'prod':
+        $ssh_env = '';
+        break;
+
+      case 'test':
+        $ssh_env = 'stg';
+        break;
+
+      default:
+        $ssh_env = $environment;
+    }
+    return sprintf('stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com', $environment, $ssh_env);
   }
 
 }

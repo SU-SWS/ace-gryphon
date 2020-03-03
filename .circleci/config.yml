@@ -70,9 +70,9 @@ renew_certs: &renew_certs
         command: |
           composer install --no-interaction
           vendor/bin/blt blt:telemetry:disable --no-interaction
-          vendor/bin/blt gryphon:issue-cert dev --no-interaction
-          vendor/bin/blt gryphon:issue-cert test --no-interaction
-          vendor/bin/blt gryphon:issue-cert prod --no-interaction
+          vendor/bin/blt gryphon:renew-cert dev --no-interaction
+          vendor/bin/blt gryphon:renew-cert test --no-interaction
+          vendor/bin/blt gryphon:renew-cert prod --no-interaction
     - *save_caches
 
 # Declare all of the jobs we should run.
@@ -86,10 +86,10 @@ workflows:
   renew_certs:
 #    triggers:
 #      - schedule:
-#          cron: "38 21 * * 0"
+#          cron: "0 8 * * 0"
 #          filters:
 #            branches:
 #              only:
-#                - /fix-dependencies/
+#                - /1.x/
     jobs:
       - renew-certs
