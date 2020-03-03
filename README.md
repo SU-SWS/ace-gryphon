@@ -16,7 +16,8 @@ This will only work if the url points to the desired environment.
 - `blt gryphon:issue-cert` will request the lets encrypt certificate be renewed.
 Note: the letsencrypt_challenge module must be enabled. during this command the
 module is enabled for all site aliases for the given environment.
-- `blt gryphon:renew-certs` downloads the certificate files from acquia and will
+- `blt gryphon:renew-cert` will run a command on Acquia's server to renew the LE certificate.
+- `blt gryphon:update-certs` downloads the certificate files from acquia and will
 use the cloud API to upload and activate the cert on the acquia environment.
 
 ----
