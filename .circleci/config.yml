@@ -47,9 +47,6 @@ save_caches: &save_caches
 ## Defines images and working directory.
 defaults: &defaults
   docker:
-    # The Dockerfile along side this config file contains the customizations
-    # of juampynr/drupal8ci.
-    # @see https://circleci.com/docs/2.0/custom-images/#creating-a-custom-image-manually
     - image: pookmish/drupal8ci:pcov
     - image: selenium/standalone-chrome:3.141.59-neon
     - image: mariadb:10.3
@@ -73,7 +70,6 @@ renew_certs: &renew_certs
           vendor/bin/blt gryphon:renew-cert dev --no-interaction
           vendor/bin/blt gryphon:renew-cert test --no-interaction
           vendor/bin/blt gryphon:renew-cert prod --no-interaction
-    - *save_caches
 
 # Declare all of the jobs we should run.
 jobs:
@@ -84,12 +80,12 @@ jobs:
 workflows:
   version: 2
   renew_certs:
-#    triggers:
-#      - schedule:
-#          cron: "0 8 * * 0"
-#          filters:
-#            branches:
-#              only:
-#                - /1.x/
+    triggers:
+      - schedule:
+          cron: "0 8 * * 0"
+          filters:
+            branches:
+              only:
+                - /1.x/
     jobs:
       - renew-certs
