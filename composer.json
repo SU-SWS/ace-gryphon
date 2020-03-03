@@ -3,6 +3,52 @@
     "type": "project",
     "description": "Project template for Drupal 8 sites built with BLT.",
     "license": "GPL-2.0-only",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:pookmish/behat-tools.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.13.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.13.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.13.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.13.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.2",
         "acquia/blt": "^11.2.0",
@@ -139,52 +185,6 @@
             "Drupal\\Tests\\PHPUnit\\": "tests/phpunit/src/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:pookmish/behat-tools.git"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/link",
-                "version": "4.13.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/link/releases/link_4.13.1.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/fakeobjects",
-                "version": "4.13.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.13.1.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "post-create-project-cmd": [
             "blt internal:create-project:init-repo"
