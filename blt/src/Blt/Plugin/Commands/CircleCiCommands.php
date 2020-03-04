@@ -16,8 +16,7 @@ class CircleCiCommands extends BltTasks {
     $root = $this->getConfigValue('repo.root');
     $tasks[] = $this->taskExec('dockerize -wait tcp://localhost:3306 -timeout 1m');
     $tasks[] = $this->taskExec('apachectl stop; apachectl start');
-    $tasks[] = $this->taskFilesystemStack()
-      ->copy("$root/.circleci/circleci.blt.yml", "$root/blt/local.blt.yml");
+
     $files = glob("$root/docroot/sites/*/local.*");
     $tasks[] = $this->taskFilesystemStack()->remove($files);
     $tasks[] = $this->taskComposerInstall();

@@ -1,7 +1,4 @@
 project:
-  local:
-    hostname: docroot.ace-gryphon.loc
-    protocol: http
   machine_name: ace-gryphon
 drush:
   aliases:
