@@ -52,8 +52,7 @@ class GryphonTestCommands extends BltTasks {
       ->arg($suite)
       ->option('config', 'tests', '=')
       ->option('html')
-      ->option('xml')
-      ->option('phpunit-xml');
+      ->option('xml');
 
     if ($this->input()->getOption('verbose')) {
       $executable->option('debug');
