@@ -57,6 +57,7 @@
     },
     "require-dev": {
         "acquia/blt-require-dev": "11.x-dev",
+        "codeception/codeception": "^4.1",
         "drupal-composer/drupal-scaffold": "^2.6",
         "drupal/config_inspector": "^1.0@beta",
         "drupal/console": "^1.8",
@@ -66,7 +67,9 @@
         "drupal/masquerade": "^2.0@beta",
         "league/oauth2-client": "^2.4",
         "pcov/clobber": "^2.0",
-        "su-sws/stanford-caravan": "dev-8.x-1.x"
+        "su-sws/stanford-caravan": "dev-8.x-1.x",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
     },
     "replace": {
         "dealerdirect/phpcodesniffer-composer-installer": "*"

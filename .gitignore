@@ -15,6 +15,12 @@ local.blt.yml
 /keys
 /certs
 
+# Ignore custom test configuration.
+tests/codeception.yml
+tests/codeception/*.suite.yml
+tests/codeception/_output
+tests/codeception/_support/_generated
+
 # Ignore drupal core.
 docroot/core
 

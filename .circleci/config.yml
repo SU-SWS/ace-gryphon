@@ -71,14 +71,30 @@ renew_certs: &renew_certs
           vendor/bin/blt gryphon:renew-cert test --no-interaction
           vendor/bin/blt gryphon:renew-cert prod --no-interaction
 
+codeception_acceptance: &codeception_acceptance
+  <<: *defaults
+  steps:
+    - checkout
+    - *restore_caches
+    - run:
+        name: Run Codeception Acceptance Tests
+        command: |
+          vendor/bin/blt circleci:drupal:install --no-interaction
+          vendor/bin/blt tests:codeception:acceptance
+
 # Declare all of the jobs we should run.
 jobs:
   renew-certs:
     <<: *renew_certs
+  run-codeception-acceptance:
+    <<: *codeception_acceptance
 
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
   version: 2
+  tests:
+    jobs:
+      - run-codeception-acceptance
   renew_certs:
     triggers:
       - schedule:
