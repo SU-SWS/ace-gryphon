@@ -117,19 +117,27 @@ class GryphonHooksCommands extends BltTasks {
    */
   public function preDbScrub(CommandData $comand_data) {
     $args_options = $comand_data->getArgsAndOptions();
-    $this->switchSiteContext($args_options['site']);
+    // Databases should correlate directly to the site name. Except the default
+    // directory which has a different database name. This allows the db scrub
+    // drush command to operate on the correct database.
+    $site = $args_options['db_name'] == 'stanfordgryphon' ? 'default' : $args_options['db_name'];
+    $this->switchSiteContext($site);
   }
 
   /**
+   * Set nobots to emit headers for non-production sites.
    *
-   *
-   * @hook post-command artifact:ac-hooks:db-scrub
+   * @hook post-command artifact:update:drupal:all-sites
    */
   public function postDbScrub($result, CommandData $comand_data) {
     if (!EnvironmentDetector::isProdEnv()) {
-      $this->taskDrush()
-        ->drush("state:set nobots 0")
-        ->run();
+      // Disable alias since we are targeting specific uri.
+      $this->config->set('drush.alias', '');
+
+      foreach ($this->getConfigValue('multisites') as $multisite) {
+        $this->switchSiteContext($multisite);
+        $this->taskDrush()->drush('state:set nobots 1')->run();
+      }
     }
   }
 
