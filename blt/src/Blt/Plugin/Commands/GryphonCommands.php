@@ -12,7 +12,10 @@ use Symfony\Component\Console\Question\Question;
 class GryphonCommands extends BltTasks {
 
   /**
+   * Create a database on the Acquia environments, should match the site name.
+   *
    * @command gryphon:create-database
+   * @aliases grcd
    */
   public function createDatabase() {
     $database = $this->getMachineName('What is the name of the database. This ideally will match the site directory name.');
@@ -23,12 +26,18 @@ class GryphonCommands extends BltTasks {
    * Add a new domain to the site and LE Cert.
    *
    * @command gryphon:add-domain
-   * @aliases gad
+   * @aliases grad
+   *
+   * @param string $environment
+   *   Acquia environment name: `dev`, `test`, or `prod`.
+   * @param string $new_domain
+   *   New stanford.edu domain.
    */
-  public function addDomain($environment) {
+  public function addDomain($environment, $new_domain = '') {
     $api = $this->getAcquiaApi();
-    $this->say($environment);
-    $new_domain = $this->getNewDomain('What is the new url?');
+    if (empty($new_domain)) {
+      $new_domain = $this->getNewDomain('What is the new url?');
+    }
     $this->say(var_export($api->addDomain($environment, $new_domain), TRUE));
   }
 
@@ -36,7 +45,7 @@ class GryphonCommands extends BltTasks {
    * Add a new domain to the LE Cert.
    *
    * @command gryphon:add-cert-domain
-   * @aliases gacd
+   * @aliases gracd
    *
    * @param string $environment
    *   Acquia environment name: `dev`, `test`, or `prod`.
@@ -122,6 +131,7 @@ class GryphonCommands extends BltTasks {
    * Ask acme.sh to create a new LE certificate.
    *
    * @command gryphon:renew-cert
+   * @aliases grrc
    *
    * @option force
    *   Should the certificate be forced to renew.
@@ -277,7 +287,7 @@ class GryphonCommands extends BltTasks {
    * @example blt gryphon:enable-modules dev views_ui,field
    *
    * @command gryphon:enable-modules
-   * @aliases gem
+   * @aliases grem
    *
    */
   public function enableModules($environment, $modules) {
@@ -302,7 +312,7 @@ class GryphonCommands extends BltTasks {
    * Get encryption keys from acquia.
    *
    * @command gryphon:keys
-   * @aliases gkey
+   * @aliases grkey
    */
   public function gryphonKeys() {
     $keys_dir = $this->getConfigValue('repo.root') . '/keys';
