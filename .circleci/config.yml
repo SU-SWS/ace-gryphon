@@ -81,6 +81,7 @@ codeception_acceptance: &codeception_acceptance
         command: |
           vendor/bin/blt circleci:drupal:install --no-interaction
           vendor/bin/blt tests:codeception:acceptance
+    - *save_caches
 
 # Declare all of the jobs we should run.
 jobs:
