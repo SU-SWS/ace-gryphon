@@ -14,24 +14,16 @@ use Symfony\Component\Console\Output\OutputInterface;
 class GryphonTestCommands extends BltTasks {
 
   /**
-   * @command tests:codeception:acceptance
+   * Run all the codeception tests defined in blt.yml.
+   *
+   * @command tests:codeception:run
+   * @aliases tests:codeception codeception
    */
-  public function runCodeceptionAcceptanceTests() {
-    $this->runCodeceptionTestSuite('acceptance');
-  }
-
-  /**
-   * @command tests:codeception:functional
-   */
-  public function runCodeceptionFunctionalTests() {
-    $this->runCodeceptionTestSuite('functional');
-  }
-
-  /**
-   * @command tests:codeception:unit
-   */
-  public function runCodeceptionUnitTests() {
-    $this->runCodeceptionTestSuite('unit');
+  public function runCodeceptionTests() {
+    foreach ($this->getConfigValue('tests.codeception') as $test) {
+      // TODO: make this more universal when profiles have codeception tests.
+      $this->runCodeceptionTestSuite($test['suite']);
+    }
   }
 
   /**

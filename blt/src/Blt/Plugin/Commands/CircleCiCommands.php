@@ -17,8 +17,10 @@ class CircleCiCommands extends BltTasks {
     $tasks[] = $this->taskExec('dockerize -wait tcp://localhost:3306 -timeout 1m');
     $tasks[] = $this->taskExec('apachectl stop; apachectl start');
 
+    // Cleanup any local or remnant files.
     $files = glob("$root/docroot/sites/*/local.*");
     $tasks[] = $this->taskFilesystemStack()->remove($files);
+    $tasks[] = $this->taskFilesystemStack()->remove("$root/docroot/core/phpunit.xml");
     $tasks[] = $this->blt()->arg('blt:telemetry:disable');
     $tasks[] = $this->blt()->arg('blt:init:setting');
     $tasks[] = $this->taskDrush()->drush('si minimal');

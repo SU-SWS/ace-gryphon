@@ -65,6 +65,9 @@ tests:
       config: ${docroot}/core/phpunit.xml
       directory: ${docroot}/modules/custom
       bootstrap: ${docroot}/core/tests/bootstrap.php
+  codeception:
+    -
+      suite: 'acceptance'
 validate:
   twig:
     # Add custom functions from twig tweaks or other modules.
