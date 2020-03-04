@@ -20,6 +20,7 @@ tests/codeception.yml
 tests/codeception/*.suite.yml
 tests/codeception/_output
 tests/codeception/_support/_generated
+artifacts
 
 # Ignore drupal core.
 docroot/core

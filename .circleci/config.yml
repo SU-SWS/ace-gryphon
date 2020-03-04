@@ -79,6 +79,7 @@ codeception_acceptance: &codeception_acceptance
     - run:
         name: Run Codeception Acceptance Tests
         command: |
+          composer install --no-interaction
           vendor/bin/blt circleci:drupal:install --no-interaction
           vendor/bin/blt tests:codeception:acceptance
     - *save_caches
@@ -87,12 +88,31 @@ codeception_acceptance: &codeception_acceptance
     - store_artifacts:
         path: tests/codeception/_output
 
+phpunit_coverage: &phpunit_coverage
+  <<: *defaults
+  steps:
+    - checkout
+    - *restore_caches
+    - run:
+        name: Run Codeception Acceptance Tests
+        command: |
+          composer install --no-interaction
+          vendor/bin/blt circleci:drupal:setup --no-interaction
+          vendor/bin/blt tests:phpunit:coverage
+    - *save_caches
+    - store_test_results:
+        path: artifacts/phpunit
+    - store_artifacts:
+        path: artifacts/phpunit
+
 # Declare all of the jobs we should run.
 jobs:
   renew-certs:
     <<: *renew_certs
   run-codeception-acceptance:
     <<: *codeception_acceptance
+  run-phpunit-coverage:
+    <<: *phpunit_coverage
 
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
@@ -100,6 +120,7 @@ workflows:
   tests:
     jobs:
       - run-codeception-acceptance
+      - run-phpunit-coverage
   renew_certs:
     triggers:
       - schedule:

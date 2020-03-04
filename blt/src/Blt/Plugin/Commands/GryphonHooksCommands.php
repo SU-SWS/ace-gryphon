@@ -14,6 +14,59 @@ use Robo\Contract\VerbosityThresholdInterface;
 class GryphonHooksCommands extends BltTasks {
 
   /**
+   * @hook pre-command tests:phpunit:run
+   */
+  public function prePhpUnitRun() {
+    $root = $this->getConfigValue('repo.root');
+    $docroot = $this->getConfigValue('docroot');
+
+    $task = $this->taskFilesystemStack();
+    if (!file_exists("$docroot/core/phpunit.xml")) {
+      $task->copy("$root/tests/phpunit/example.phpunit.xml", "$docroot/core/phpunit.xml")
+        ->run();
+      if (empty($this->getConfigValue('drupal.db.password'))) {
+        // If the password is empty, remove the colon between the username &
+        // password. This prevents the system from thinking its supposed to
+        // use a password.
+        $file_contents = file_get_contents("$docroot/core/phpunit.xml");
+        str_replace(':${drupal.db.password}', '', $file_contents);
+        file_put_contents("$docroot/core/phpunit.xml", $file_contents);
+      }
+      $this->getConfig()->expandFileProperties("$docroot/core/phpunit.xml");
+    }
+  }
+
+  /**
+   * @hook pre-command tests:phpunit:coverage:run
+   */
+  public function prePhpUnitCoverageRun() {
+    $this->prePhpUnitRun();
+  }
+
+  /**
+   * @hook post-command tests:phpunit:coverage:run
+   */
+  public function phpUnitCoverCheck() {
+    $report = $this->getConfigValue('tests.reports.localDir') . '/phpunit/coverage/xml/index.xml';
+    if (!file_exists($report)) {
+      throw new \Exception('Coverage report not found at ' . $report);
+    }
+
+    libxml_use_internal_errors(TRUE);
+    $dom = new \DOMDocument();
+    $dom->loadHtml(file_get_contents($report));
+    $xpath = new \DOMXPath($dom);
+
+    $coverage_percent = $xpath->query("//directory[@name='/']/totals/lines/@percent");
+    $percent = (float) $coverage_percent->item(0)->nodeValue;
+    $pass = $this->getConfigValue('tests.reports.coveragePass');
+    if ($pass > $percent) {
+      throw new \Exception("Test coverage is only at $percent%. $pass% is required.");
+    }
+    $this->yell(sprintf('Coverage at %s%%. %s%% required.', $percent, $pass));
+  }
+
+  /**
    * @hook pre-command source:build:simplesamlphp-config
    */
   public function preSamlConfigCopy() {

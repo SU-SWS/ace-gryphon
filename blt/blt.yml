@@ -55,3 +55,20 @@ cloud:
 multisites:
   - cardinalservice
   - default
+tests:
+  reports:
+    localDir: '${repo.root}/artifacts'
+    coveragePass: 90
+  phpunit:
+    - # Run all tests in the custom modules directory.
+      path: '${docroot}'
+      config: ${docroot}/core/phpunit.xml
+      directory: ${docroot}/modules/custom
+      bootstrap: ${docroot}/core/tests/bootstrap.php
+validate:
+  twig:
+    # Add custom functions from twig tweaks or other modules.
+    functions:
+      - drupal_block
+      - drupal_field
+      - pattern
