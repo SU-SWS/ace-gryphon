@@ -110,4 +110,27 @@ class GryphonHooksCommands extends BltTasks {
     $this->invokeCommand('gryphon:keys');
   }
 
+  /**
+   * Switch the context for the site that was copied.
+   *
+   * @hook pre-command artifact:ac-hooks:db-scrub
+   */
+  public function preDbScrub(CommandData $comand_data) {
+    $args_options = $comand_data->getArgsAndOptions();
+    $this->switchSiteContext($args_options['site']);
+  }
+
+  /**
+   *
+   *
+   * @hook post-command artifact:ac-hooks:db-scrub
+   */
+  public function postDbScrub($result, CommandData $comand_data) {
+    if (!EnvironmentDetector::isProdEnv()) {
+      $this->taskDrush()
+        ->drush("state:set nobots 0")
+        ->run();
+    }
+  }
+
 }
