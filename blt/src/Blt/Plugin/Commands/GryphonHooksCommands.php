@@ -127,9 +127,9 @@ class GryphonHooksCommands extends BltTasks {
   /**
    * Set nobots to emit headers for non-production sites.
    *
-   * @hook post-command artifact:update:drupal:all-sites
+   * @hook post-command artifact:ac-hooks:post-db-copy
    */
-  public function postDbScrub($result, CommandData $comand_data) {
+  public function postDbCopy($result, CommandData $comand_data) {
     if (!EnvironmentDetector::isProdEnv()) {
       // Disable alias since we are targeting specific uri.
       $this->config->set('drush.alias', '');
