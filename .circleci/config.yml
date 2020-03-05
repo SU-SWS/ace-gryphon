@@ -84,9 +84,9 @@ codeception_acceptance: &codeception_acceptance
           vendor/bin/blt tests:codeception
     - *save_caches
     - store_test_results:
-        path: tests/codeception/_output
+        path: artifacts
     - store_artifacts:
-        path: tests/codeception/_output
+        path: artifacts
 
 phpunit_coverage: &phpunit_coverage
   <<: *defaults
