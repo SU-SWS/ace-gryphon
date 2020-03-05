@@ -18,7 +18,7 @@ class GryphonCommands extends BltTasks {
    * @aliases grcd
    */
   public function createDatabase() {
-    $database = $this->getMachineName('What is the name of the database. This ideally will match the site directory name.');
+    $database = $this->getMachineName('What is the name of the database? This ideally will match the site directory name. No special characters please.');
     $this->say(var_export($this->getAcquiaApi()->addDatabase($database), TRUE));
   }
 
