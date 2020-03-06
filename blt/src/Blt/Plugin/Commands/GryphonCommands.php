@@ -292,14 +292,7 @@ class GryphonCommands extends BltTasks {
    */
   public function enableModules($environment, $modules) {
     $commands = $this->collectionBuilder();
-
-    $docroot = $this->getConfigValue('docroot');
-    $sites = glob("$docroot/sites/*/settings.php");
-
-    foreach ($sites as $path) {
-      $path = str_replace('/settings.php', '', $path);
-      $site = substr($path, strrpos($path, '/') + 1);
-
+    foreach ($this->getConfigValue('multisites') as $site) {
       $commands->addTask($this->taskDrush()
         ->alias("$site.$environment")
         ->drush('en ' . $modules));
