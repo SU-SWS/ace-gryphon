@@ -7,7 +7,7 @@
 
 use Drupal\Component\Assertion\Handle;
 
-$db_name = 'drupal8';
+$db_name = 'drupal';
 
 /**
  * Database configuration.

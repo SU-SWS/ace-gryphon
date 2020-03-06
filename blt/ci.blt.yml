@@ -12,4 +12,4 @@ drupal:
     port: 3306
     username: root
     password: ''
-    database: drupal8
+    database: drupal
