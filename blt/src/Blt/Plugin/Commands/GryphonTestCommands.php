@@ -14,6 +14,26 @@ use Symfony\Component\Console\Output\OutputInterface;
 class GryphonTestCommands extends BltTasks {
 
   /**
+   * Runs all tests, including Behat, PHPUnit, and security updates check.
+   *
+   * @command tests
+   *
+   * @aliases ta test tests:all
+   */
+  public function tests() {
+    $this->invokeCommands([
+      'tests:behat:run',
+      'tests:phpunit:run',
+      'tests:codeception:run',
+      'tests:drupal:run',
+      'tests:security:check:updates',
+      'tests:security:check:composer',
+      'tests:frontend:run',
+    ]);
+  }
+
+
+  /**
    * Run all the codeception tests defined in blt.yml.
    *
    * @command tests:codeception:run
