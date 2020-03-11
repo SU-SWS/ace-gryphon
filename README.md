@@ -21,6 +21,19 @@ module is enabled for all site aliases for the given environment.
 use the cloud API to upload and activate the cert on the acquia environment.
 
 ----
+# Config Management
+Each site has the ability to determine its own configuration management strategy.
+The default site in this repo will be using a configuration management that uses
+the configuration from the `stanford_profile`. By default this is the behavior
+of all other sites unless defined within their own settings.php.
+
+There are three options a site can choose from:
+1. Do nothing and the configuration sync directory will use what is in `stanford_profile`.
+2. Modify the configuration sync directory to a desired directory such as another profile.
+3. Modify the configuration sync directory to point to an empty directory. This
+will bypass any configuration management strategy and the site's configuration will be updated via update hooks.
+
+----
 # Setup Local Environment.
 
 BLT provides an automation layer for testing, building, and launching Drupal 8 applications. For ease when updating codebase it is recommended to use  Drupal VM. If you prefer, you can use another tool such as Docker, [DDEV](https://docs.acquia.com/blt/install/alt-env/ddev/), [Docksal](https://docs.acquia.com/blt/install/alt-env/docksal/), [Lando](https://docs.acquia.com/blt/install/alt-env/lando/), (other) Vagrant, or your own custom LAMP stack, however support is very limited for these solutions.

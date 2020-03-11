@@ -75,9 +75,7 @@ AddEncoding gzip svgz
   # requested by bots or by user's cached requests.
   RewriteCond %{REQUEST_URI} ^/simplesaml [OR]
   RewriteCond %{REQUEST_URI} ^/update.php$ [OR]
-  RewriteCond %{REQUEST_URI} ^/core/install.php [OR]
-  RewriteCond %{REQUEST_URI} "/wp-(admin|includes|cron\.php|config\.php|login\.php|signup\.php)" [OR]
-  RewriteCond %{REQUEST_URI} ^/wp-content/.*(.js|.css|.jpg|.jpeg|.png|.pdf)$
+  RewriteCond %{REQUEST_URI} ^/core/install.php
   # Only need to block on Acquia's environment. Local isn't a concern.
   RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (dev|test|prod|live)$
   # The following path is always required to log into the site.
@@ -86,6 +84,14 @@ AddEncoding gzip svgz
   RewriteCond %{ENV:AH_Client_IP} !^171.66.21.182$
   # Block the above conditions on acquia infrastructure.
   # See https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_f.
+  RewriteRule .* - [F]
+
+  # Block access to WordPress URLs.
+  RewriteCond %{REQUEST_URI} "/wp-(admin|content/plugins/|includes|cron\.php|config\.php|login\.php|signup\.php)|xmlrpc.php" [NC]
+  RewriteRule .* - [F]
+
+  # Block access to URLs that malicious bots are probing.
+  RewriteCond %{REQUEST_URI} "/.*(uploadify.php|eval-stdin.php|sssp.pHp5|sssp.php.fla|sssp.php.pjpeg|sssp.phtml|upload.php|connector.minimal.php).*" [NC]
   RewriteRule .* - [F]
 
   # Redirect HTTP to HTTPS on cloud

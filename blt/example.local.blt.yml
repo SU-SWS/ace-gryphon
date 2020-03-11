@@ -19,6 +19,9 @@
 #  chromedriver:
 #    url: http://localhost
 
+# You can add an Acquia cloud API key and secret by uncommenting the lines below.
+# This will give you the ability to run the BLT commands that pull or push data
+# to Acquia's server.
 #cloud:
 #  key: '****'
 #  secret: '****'

@@ -145,7 +145,7 @@ $settings['skip_permissions_hardening'] = TRUE;
 /**
  * Private file path.
  */
-$settings['file_private_path'] = $dir . '/files-private/default';
+$settings['file_private_path'] = $dir . '/files-private/cardinalservice';
 if (isset($_acsf_site_name)) {
   $settings['file_public_path'] = "sites/default/files/$_acsf_site_name";
   // phpcs:ignore
