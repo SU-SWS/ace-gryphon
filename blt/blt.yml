@@ -56,6 +56,15 @@ cloud:
 multisites:
   - cardinalservice
   - default
+behat:
+  selenium:
+    url: http://localhost:4444/wd/hub
+  chromedriver:
+    url: http://localhost
+  web-driver: selenium
+  paths:
+    - ${docroot}/profiles/custom
+    - ${repo.root}/tests/behat/features
 tests:
   reports:
     localDir: '${repo.root}/artifacts'

@@ -7,7 +7,32 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: '${project.local.protocol}://${project.local.hostname}/'
-        - \Helper\Acceptance
+      - \Helper\Acceptance
+      - StanfordCaravan\Codeception\Drupal\DrupalBootstrap:
+          root: './docroot'
+          server:
+            HTTP_HOST: '${project.local.hostname}'
+      - StanfordCaravan\Codeception\Drupal\DrupalDrush:
+          options:
+            uri: '${project.local.hostname}'
+      - PhpBrowser:
+          url: '${project.local.protocol}://${project.local.hostname}/'
+      - StanfordCaravan\Codeception\Drupal\DrupalEntity:
+          cleanup_test: true
+          cleanup_failed: false
+          cleanup_suite: true
+          route_entities:
+              - node
+              - taxonomy_term
+              - media
+      - StanfordCaravan\Codeception\Drupal\DrupalUser:
+          default_role: 'authenticated'
+          driver: 'PhpBrowser'
+          cleanup_entities:
+            - node
+            - media
+            - file
+          cleanup_test: true
+          cleanup_failed: false
+          cleanup_suite: true
     step_decorators: ~

@@ -61,6 +61,7 @@
         "codeception/codeception": "^4.1",
         "codeception/module-asserts": "^1.0.0",
         "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-webdriver": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.6",
         "drupal/config_inspector": "^1.0@beta",
         "drupal/console": "^1.8",
@@ -71,7 +72,8 @@
         "drupal/masquerade": "^2.0@beta",
         "league/oauth2-client": "^2.4",
         "pcov/clobber": "^2.0",
-        "su-sws/stanford-caravan": "dev-8.x-1.x"
+        "se/selenium-server-standalone": "^3.141",
+        "su-sws/stanford-caravan": "dev-codeception-modules"
     },
     "replace": {
         "dealerdirect/phpcodesniffer-composer-installer": "*"

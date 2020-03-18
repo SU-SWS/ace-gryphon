@@ -1,8 +1,4 @@
 default:
-  suites:
-    default:
-      paths:
-        - "%paths.base%/features"
   extensions:
     Behat\MinkExtension:
       default_session: goutte

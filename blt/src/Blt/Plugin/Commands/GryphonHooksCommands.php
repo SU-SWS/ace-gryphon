@@ -14,6 +14,20 @@ use Robo\Contract\VerbosityThresholdInterface;
 class GryphonHooksCommands extends BltTasks {
 
   /**
+   * @hook pre-command tests:behat:run
+   */
+  public function preBehatRun() {
+    $root = $this->getConfigValue('repo.root');
+    $task = $this->taskFilesystemStack();
+
+    if (!file_exists("$root/tests/behat/local.yml")) {
+      $task->copy("$root/tests/behat/example.local.yml", "$root/tests/behat/local.yml")
+        ->run();
+      $this->getConfig()->expandFileProperties("$root/tests/behat/local.yml");
+    }
+  }
+
+  /**
    * @hook pre-command tests:phpunit:run
    */
   public function prePhpUnitRun() {
