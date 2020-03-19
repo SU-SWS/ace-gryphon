@@ -81,6 +81,7 @@ codeception_acceptance: &codeception_acceptance
         command: |
           composer install --no-interaction
           vendor/bin/blt circleci:drupal:install --no-interaction
+          vendor/bin/blt drupal:toggle:modules
           vendor/bin/blt tests:codeception
     - *save_caches
     - store_test_results:
