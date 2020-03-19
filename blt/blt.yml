@@ -29,8 +29,6 @@ modules:
       - nobots
     uninstall:
       - simplesamlphp_auth
-      - acquia_purge
-      - acquia_connector
   dev:
     enable:
       - nobots
