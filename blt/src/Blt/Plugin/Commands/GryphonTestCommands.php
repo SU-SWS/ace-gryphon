@@ -69,6 +69,7 @@ class GryphonTestCommands extends BltTasks {
     $executable = $this->taskExec('vendor/bin/codecept')
       ->arg('run')
       ->arg($suite)
+      ->option('steps')
       ->option('config', 'tests', '=')
       ->option('html')
       ->option('xml');
