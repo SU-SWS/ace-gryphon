@@ -9,7 +9,7 @@ modules:
     enabled:
       - \Helper\Acceptance
       - StanfordCaravan\Codeception\Drupal\DrupalBootstrap:
-          root: './docroot'
+          root: '${repo.root}/docroot'
           server:
             HTTP_HOST: '${project.local.hostname}'
       - StanfordCaravan\Codeception\Drupal\DrupalDrush:
@@ -26,6 +26,7 @@ modules:
               - taxonomy_term
               - media
       - StanfordCaravan\Codeception\Drupal\DrupalUser:
+          drush: '${repo.root}/vendor/bin/drush'
           default_role: 'authenticated'
           driver: 'PhpBrowser'
           cleanup_entities:

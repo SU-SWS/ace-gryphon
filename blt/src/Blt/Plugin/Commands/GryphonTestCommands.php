@@ -42,7 +42,7 @@ class GryphonTestCommands extends BltTasks {
     foreach ($this->getConfigValue('tests.codeception') as $test) {
       // TODO: make this more universal when profiles have codeception tests.
       $result = $this->runCodeceptionTestSuite($test['suite']);
-      if ($result->getExitCode() == 1) {
+      if (!$result->wasSuccessful()) {
         return $result;
       }
     }
