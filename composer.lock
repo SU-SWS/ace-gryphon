@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccacaeecac44c6263bd14fa057694abf",
+    "content-hash": "1dfcb8a122bea9de2af3f47cb2d74e15",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2135,16 +2135,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "1.3.6",
+            "version": "1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "5dd3ac5eebef2d0b074daa4440bb18f93132dee4"
+                "reference": "0af483f91bada1c9ded6c2cfd26ab7d5ab2094e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/5dd3ac5eebef2d0b074daa4440bb18f93132dee4",
-                "reference": "5dd3ac5eebef2d0b074daa4440bb18f93132dee4",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/0af483f91bada1c9ded6c2cfd26ab7d5ab2094e0",
+                "reference": "0af483f91bada1c9ded6c2cfd26ab7d5ab2094e0",
                 "shasum": ""
             },
             "require": {
@@ -2152,7 +2152,7 @@
                 "doctrine/cache": "^1.0",
                 "doctrine/collections": "^1.0",
                 "doctrine/event-manager": "^1.0",
-                "doctrine/reflection": "^1.1",
+                "doctrine/reflection": "^1.2",
                 "php": "^7.1"
             },
             "conflict": {
@@ -2214,20 +2214,20 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2020-01-16T22:06:23+00:00"
+            "time": "2020-03-21T15:13:52+00:00"
         },
         {
             "name": "doctrine/reflection",
-            "version": "v1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/reflection.git",
-                "reference": "bc420ead87fdfe08c03ecc3549db603a45b06d4c"
+                "reference": "b699ecc7f2784d1e49924fd9858cf1078db6b0e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/reflection/zipball/bc420ead87fdfe08c03ecc3549db603a45b06d4c",
-                "reference": "bc420ead87fdfe08c03ecc3549db603a45b06d4c",
+                "url": "https://api.github.com/repos/doctrine/reflection/zipball/b699ecc7f2784d1e49924fd9858cf1078db6b0e2",
+                "reference": "b699ecc7f2784d1e49924fd9858cf1078db6b0e2",
                 "shasum": ""
             },
             "require": {
@@ -2248,7 +2248,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -2292,7 +2292,7 @@
                 "reflection",
                 "static"
             ],
-            "time": "2020-01-08T19:53:19+00:00"
+            "time": "2020-03-21T11:34:59+00:00"
         },
         {
             "name": "drupal/acquia_purge",
@@ -2927,24 +2927,25 @@
         },
         {
             "name": "drupal/coder",
-            "version": "8.3.7",
+            "version": "8.3.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/coder.git",
-                "reference": "c11c2957653bdbfd68adc851692d094b43d39221"
+                "reference": "e53e75b45842a5d2b454b08c318a17f57339e60e"
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=5.5.9",
-                "squizlabs/php_codesniffer": "^3.4.1",
+                "php": ">=7.0.8",
+                "squizlabs/php_codesniffer": "^3.5.4",
                 "symfony/yaml": ">=2.0.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+                "phpstan/phpstan": "^0.12.5",
+                "phpunit/phpunit": "^6.0 || ^7.0"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Drupal\\": "coder_sniffer/Drupal/",
                     "DrupalPractice\\": "coder_sniffer/DrupalPractice/"
                 }
@@ -2960,7 +2961,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-12-07T16:00:28+00:00"
+            "time": "2020-03-08T19:03:35+00:00"
         },
         {
             "name": "drupal/components",
@@ -5102,20 +5103,20 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "b274a5f4484ce99dece492dc7ae7149b34982244"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "f5b2ee49853fdcea7b4273a8c2d0c210be24de54"
             },
             "require": {
-                "drupal/core": "*",
+                "drupal/core": "^8 || ^9",
                 "drupal/crop": "*"
             },
             "require-dev": {
@@ -5127,8 +5128,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1569333485",
+                    "version": "8.x-1.3",
+                    "datestamp": "1584797652",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5136,7 +5137,7 @@
                 },
                 "patches_applied": {
                     "https://www.drupal.org/project/focal_point/issues/3094478": "https://www.drupal.org/files/issues/2019-12-11/focal_point-compatibility-with-media-libary-3094478-2.patch",
-                    "https://www.drupal.org/project/focal_point/issues/3098235": "https://www.drupal.org/files/issues/2019-12-11/focal_point-3098235-6.patch"
+                    "https://www.drupal.org/project/focal_point/issues/3098235": "https://www.drupal.org/files/issues/2020-03-23/focal_point-3098235-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -10515,16 +10516,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.0",
+            "version": "v0.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e361c8b7e5114534078e0ce04ddc442b39018a3c"
+                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e361c8b7e5114534078e0ce04ddc442b39018a3c",
-                "reference": "e361c8b7e5114534078e0ce04ddc442b39018a3c",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/573c2362c3cdebe846b4adae4b630eecb350afd8",
+                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8",
                 "shasum": ""
             },
             "require": {
@@ -10584,7 +10585,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-03-15T22:52:37+00:00"
+            "time": "2020-03-21T06:55:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -10743,16 +10744,16 @@
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "v4.1.5",
+            "version": "v4.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "d1a932052e4e034edb3d9b69414d45dbf27dcf3c"
+                "reference": "62c7ab036c2db4c25bcab210d30343add0ae2c28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/d1a932052e4e034edb3d9b69414d45dbf27dcf3c",
-                "reference": "d1a932052e4e034edb3d9b69414d45dbf27dcf3c",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/62c7ab036c2db4c25bcab210d30343add0ae2c28",
+                "reference": "62c7ab036c2db4c25bcab210d30343add0ae2c28",
                 "shasum": ""
             },
             "require": {
@@ -10794,20 +10795,20 @@
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2020-03-18T20:27:51+00:00"
+            "time": "2020-03-21T19:43:09+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp",
-            "version": "v1.18.4",
+            "version": "v1.18.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp.git",
-                "reference": "864f0392480317a6f44b0e3c26db23ad0e21e5fb"
+                "reference": "a837c73a04c9964585bd75d1917b490fad90b114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/864f0392480317a6f44b0e3c26db23ad0e21e5fb",
-                "reference": "864f0392480317a6f44b0e3c26db23ad0e21e5fb",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/a837c73a04c9964585bd75d1917b490fad90b114",
+                "reference": "a837c73a04c9964585bd75d1917b490fad90b114",
                 "shasum": ""
             },
             "require": {
@@ -10919,7 +10920,7 @@
                 "sp",
                 "ws-federation"
             ],
-            "time": "2020-01-24T09:57:02+00:00"
+            "time": "2020-03-23T13:44:30+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-adfs",
@@ -12401,12 +12402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "19ae5759d0a2e24b2194c1c72981fbe07e7f15cb"
+                "reference": "14e49fb4d2f0aad0ad20ee79bf38527067344e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/19ae5759d0a2e24b2194c1c72981fbe07e7f15cb",
-                "reference": "19ae5759d0a2e24b2194c1c72981fbe07e7f15cb",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/14e49fb4d2f0aad0ad20ee79bf38527067344e07",
+                "reference": "14e49fb4d2f0aad0ad20ee79bf38527067344e07",
                 "shasum": ""
             },
             "require": {
@@ -12499,7 +12500,7 @@
                 "GPL-2.0+"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-03-18T18:36:08+00:00"
+            "time": "2020-03-23T18:06:49+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",
@@ -12686,16 +12687,16 @@
         },
         {
             "name": "su-sws/stanford_media",
-            "version": "8.2.2",
+            "version": "8.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_media.git",
-                "reference": "cab0838cbcfde29ca60fd2d3866c74cd9b1edcbd"
+                "reference": "a8381f13cc1a797415850672741451e98abeb797"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/cab0838cbcfde29ca60fd2d3866c74cd9b1edcbd",
-                "reference": "cab0838cbcfde29ca60fd2d3866c74cd9b1edcbd",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/a8381f13cc1a797415850672741451e98abeb797",
+                "reference": "a8381f13cc1a797415850672741451e98abeb797",
                 "shasum": ""
             },
             "require": {
@@ -12703,7 +12704,7 @@
                 "drupal/core": "^8.8.0",
                 "drupal/dropzonejs": "^2.0@alpha",
                 "drupal/entity_usage": "^2.0@beta",
-                "drupal/focal_point": "^1.1",
+                "drupal/focal_point": "^1.3",
                 "drupal/inline_entity_form": "^1.0@beta",
                 "drupal/linkit": "^5.0-beta6",
                 "enyo/dropzone": "^5.1"
@@ -12718,7 +12719,7 @@
                 "patches": {
                     "drupal/focal_point": {
                         "https://www.drupal.org/project/focal_point/issues/3094478": "https://www.drupal.org/files/issues/2019-12-11/focal_point-compatibility-with-media-libary-3094478-2.patch",
-                        "https://www.drupal.org/project/focal_point/issues/3098235": "https://www.drupal.org/files/issues/2019-12-11/focal_point-3098235-6.patch"
+                        "https://www.drupal.org/project/focal_point/issues/3098235": "https://www.drupal.org/files/issues/2020-03-23/focal_point-3098235-13.patch"
                     }
                 }
             },
@@ -12741,20 +12742,20 @@
             ],
             "description": "Stanford Media module for Drupal 8 Media management",
             "homepage": "https://github.com/SU-SWS/stanford_media",
-            "time": "2020-02-28T00:18:47+00:00"
+            "time": "2020-03-23T18:55:17+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "dev-8.x-1.x",
+            "version": "8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "d00af3e24821fee1cfd6237480c61c3055e8cf34"
+                "reference": "2d6b91bbe2f47ad8043cffd0a43f31c84925ba27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d00af3e24821fee1cfd6237480c61c3055e8cf34",
-                "reference": "d00af3e24821fee1cfd6237480c61c3055e8cf34",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/2d6b91bbe2f47ad8043cffd0a43f31c84925ba27",
+                "reference": "2d6b91bbe2f47ad8043cffd0a43f31c84925ba27",
                 "shasum": ""
             },
             "require": {
@@ -12847,20 +12848,20 @@
                 "GPL-2.0+"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-03-18T17:22:06+00:00"
+            "time": "2020-03-20T21:42:57+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "8.1.2",
+            "version": "8.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "226847825ff66cbd0c891c90e8966325193f5ace"
+                "reference": "f552afb827a7a47ce36707ef54d4689e8d4f1f77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/226847825ff66cbd0c891c90e8966325193f5ace",
-                "reference": "226847825ff66cbd0c891c90e8966325193f5ace",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/f552afb827a7a47ce36707ef54d4689e8d4f1f77",
+                "reference": "f552afb827a7a47ce36707ef54d4689e8d4f1f77",
                 "shasum": ""
             },
             "require": {
@@ -12881,7 +12882,7 @@
                 "GPL-2.0+"
             ],
             "description": "A Drupal Authentication Module.",
-            "time": "2020-02-05T21:18:22+00:00"
+            "time": "2020-03-20T16:11:14+00:00"
         },
         {
             "name": "su-sws/stanford_text_editor",
@@ -16125,16 +16126,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "c30e2abe4af327d8be4fb23446ff740fec76fd60"
+                "reference": "55d8d1d882fa0777e47de17b04c29b3c50fe29e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/c30e2abe4af327d8be4fb23446ff740fec76fd60",
-                "reference": "c30e2abe4af327d8be4fb23446ff740fec76fd60",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/55d8d1d882fa0777e47de17b04c29b3c50fe29e7",
+                "reference": "55d8d1d882fa0777e47de17b04c29b3c50fe29e7",
                 "shasum": ""
             },
             "require": {
@@ -16206,7 +16207,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2020-03-17T16:48:30+00:00"
+            "time": "2020-03-23T17:07:20+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -16414,20 +16415,20 @@
         },
         {
             "name": "codeception/module-webdriver",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-webdriver.git",
-                "reference": "cfeadb39170aa80e6fe244de6a130453edd79fe9"
+                "reference": "9ee54108860859b120ed4a22e50f37d33aa3a518"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-webdriver/zipball/cfeadb39170aa80e6fe244de6a130453edd79fe9",
-                "reference": "cfeadb39170aa80e6fe244de6a130453edd79fe9",
+                "url": "https://api.github.com/repos/Codeception/module-webdriver/zipball/9ee54108860859b120ed4a22e50f37d33aa3a518",
+                "reference": "9ee54108860859b120ed4a22e50f37d33aa3a518",
                 "shasum": ""
             },
             "require": {
-                "codeception/codeception": "4.0.x-dev | ^4.0",
+                "codeception/codeception": "^4.0",
                 "php": ">=5.6.0 <8.0",
                 "php-webdriver/webdriver": "^1.6.0"
             },
@@ -16465,7 +16466,7 @@
                 "browser-testing",
                 "codeception"
             ],
-            "time": "2020-03-06T08:39:02+00:00"
+            "time": "2020-03-23T17:08:27+00:00"
         },
         {
             "name": "codeception/phpunit-wrapper",
@@ -20336,12 +20337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford-caravan.git",
-                "reference": "70ea9ea54c16a87efcee0f31cb22a10a9343a99e"
+                "reference": "ef787fc9426554a5c9783f449cccc0565ee6cb79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/70ea9ea54c16a87efcee0f31cb22a10a9343a99e",
-                "reference": "70ea9ea54c16a87efcee0f31cb22a10a9343a99e",
+                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/ef787fc9426554a5c9783f449cccc0565ee6cb79",
+                "reference": "ef787fc9426554a5c9783f449cccc0565ee6cb79",
                 "shasum": ""
             },
             "require": {
@@ -20370,7 +20371,7 @@
                 }
             ],
             "description": "Tools for testing Drupal 8 on CI/CD",
-            "time": "2020-03-18T23:23:04+00:00"
+            "time": "2020-03-20T23:34:47+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -20751,7 +20752,6 @@
     "stability-flags": {
         "drupal/acquia_purge": 10,
         "su-hkku/cardinal_service_profile": 20,
-        "su-sws/stanford_profile": 20,
         "acquia/blt-require-dev": 20,
         "drupal/config_inspector": 10,
         "drupal/devel_debug_log": 10,
