@@ -54,31 +54,31 @@ cloud:
 multisites:
   - cardinalservice
   - default
+  - healthalerts
 behat:
   selenium:
-    url: http://localhost:4444/wd/hub
+    url: 'http://localhost:4444/wd/hub'
   chromedriver:
-    url: http://localhost
+    url: 'http://localhost'
   web-driver: selenium
   paths:
-    - ${docroot}/profiles/custom
-    - ${repo.root}/tests/behat/features
+    - '${docroot}/profiles/custom'
+    - '${repo.root}/tests/behat/features'
 tests:
   reports:
     localDir: '${repo.root}/artifacts'
     coveragePass: 90
   phpunit:
-    - # Run all tests in the custom modules directory.
+    -
       path: '${docroot}'
-      config: ${docroot}/core/phpunit.xml
-      directory: ${docroot}/modules/custom
-      bootstrap: ${docroot}/core/tests/bootstrap.php
+      config: '${docroot}/core/phpunit.xml'
+      directory: '${docroot}/modules/custom'
+      bootstrap: '${docroot}/core/tests/bootstrap.php'
   codeception:
     -
-      suite: 'acceptance'
+      suite: acceptance
 validate:
   twig:
-    # Add custom functions from twig tweaks or other modules.
     functions:
       - drupal_block
       - drupal_field

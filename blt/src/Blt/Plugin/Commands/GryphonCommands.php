@@ -49,17 +49,28 @@ class GryphonCommands extends BltTasks {
    * @command gryphon:add-domain
    * @aliases grad
    *
+   * @options update-cert Update the LetsEncrypt certificate as well.
+   *
    * @param string $environment
    *   Acquia environment name: `dev`, `test`, or `prod`.
    * @param string $new_domain
    *   New stanford.edu domain.
    */
-  public function addDomain($environment, $new_domain = '') {
+  public function addDomain($environment, $new_domain = '', $options = ['update-cert' => FALSE]) {
     $api = $this->getAcquiaApi();
     if (empty($new_domain)) {
       $new_domain = $this->getNewDomain('What is the new url?');
     }
     $this->say(var_export($api->addDomain($environment, $new_domain), TRUE));
+
+    if ($options['update-cert']) {
+      $this->say('Please wait as the domain is activated on Acquia');
+      sleep(15);
+      $this->invokeCommand('gryphon:add-cert-domain', [
+        'environment' => $environment,
+        'new_domains' => $new_domain,
+      ]);
+    }
   }
 
   /**

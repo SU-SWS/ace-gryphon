@@ -1,0 +1,12 @@
+project:
+  machine_name: healthalerts
+  human_name: healthalerts
+  local:
+    protocol: null
+    hostname: null
+drush:
+  aliases:
+    local: healthalerts.local
+    remote: healthalerts.prod
+drupal:
+  db: {  }
