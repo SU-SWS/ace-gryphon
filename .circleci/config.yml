@@ -71,7 +71,7 @@ renew_certs: &renew_certs
           vendor/bin/blt gryphon:renew-cert test --no-interaction
           vendor/bin/blt gryphon:renew-cert prod --no-interaction
 
-codeception_acceptance: &codeception_acceptance
+cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptance
   <<: *defaults
   steps:
     - checkout
@@ -80,9 +80,9 @@ codeception_acceptance: &codeception_acceptance
         name: Run Codeception Acceptance Tests
         command: |
           composer install --no-interaction
-          vendor/bin/blt circleci:drupal:install --no-interaction
+          vendor/bin/blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
           vendor/bin/blt drupal:toggle:modules
-          vendor/bin/blt tests:codeception
+          vendor/bin/blt tests:codeception cardinal_service_profile
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -112,8 +112,8 @@ phpunit_coverage: &phpunit_coverage
 jobs:
   renew-certs:
     <<: *renew_certs
-  run-codeception-acceptance:
-    <<: *codeception_acceptance
+  run-cardinal-service-codeception-acceptance:
+    <<: *cardinal_service_codeception_acceptance
   run-phpunit-coverage:
     <<: *phpunit_coverage
 
@@ -122,7 +122,7 @@ workflows:
   version: 2
   tests:
     jobs:
-      - run-codeception-acceptance
+      - run-cardinal-service-codeception-acceptance
       - run-phpunit-coverage
   renew_certs:
     triggers:

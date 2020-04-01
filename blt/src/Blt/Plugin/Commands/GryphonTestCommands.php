@@ -37,14 +37,16 @@ class GryphonTestCommands extends BltTasks {
    *
    * @command tests:codeception:run
    * @aliases tests:codeception codeception
+   *
+   * @param string $test_key
+   *   Specify which test to run.
+   *
+   * @return \Robo\Result
+   *   Result of the test.
    */
-  public function runCodeceptionTests() {
-    foreach ($this->getConfigValue('tests.codeception') as $test) {
-      // TODO: make this more universal when profiles have codeception tests.
-      $result = $this->runCodeceptionTestSuite($test['suite']);
-      if (!$result->wasSuccessful()) {
-        return $result;
-      }
+  public function runCodeceptionTests($test_key) {
+    if ($test = $this->getConfigValue('tests.codeception.' . $test_key)) {
+      return $this->runCodeceptionTestSuite($test['suite'], $test['directory']);
     }
   }
 
@@ -53,11 +55,13 @@ class GryphonTestCommands extends BltTasks {
    *
    * @param string $suite
    *   Codeception suite to run.
+   * @param string $test_directory
+   *   Directory to codeception tests.
    *
    * @return \Robo\Result
    *   Result of the test.
    */
-  protected function runCodeceptionTestSuite($suite) {
+  protected function runCodeceptionTestSuite($suite, $test_directory) {
     $root = $this->getConfigValue('repo.root');
     if (!file_exists("$root/tests/codeception/$suite.suite.yml")) {
       $this->taskFilesystemStack()
@@ -66,7 +70,15 @@ class GryphonTestCommands extends BltTasks {
       $this->getConfig()
         ->expandFileProperties("$root/tests/codeception/$suite.suite.yml");
     }
-    $executable = $this->taskExec('vendor/bin/codecept')
+
+    $new_test_dir = "$root/tests/codeception/$suite/" . date('Ymd-Hi');
+    $tasks[] = $this->taskFilesystemStack()->mkdir($new_test_dir);
+    $tasks[] = $this->taskRsync()
+      ->recursive()
+      ->fromPath("$test_directory/$suite/")
+      ->toPath($new_test_dir);
+
+    $test = $this->taskExec('vendor/bin/codecept')
       ->arg('run')
       ->arg($suite)
       ->option('steps')
@@ -75,11 +87,15 @@ class GryphonTestCommands extends BltTasks {
       ->option('xml');
 
     if ($this->input()->getOption('verbose')) {
-      $executable->option('debug');
-      $executable->option('verbose');
+      $test->option('debug');
+      $test->option('verbose');
     }
-
-    return $executable->run();
+    $tasks[] = $test;
+    $test_result = $this->collectionBuilder()->addTaskList($tasks)->run();
+    // Regardless if the test failed or succeeded, always clean up the temporary
+    // test directory.
+    $this->taskDeleteDir($new_test_dir)->run();
+    return $test_result;
   }
 
   /**
