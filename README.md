@@ -34,7 +34,9 @@ There are three options a site can choose from:
 will bypass any configuration management strategy and the site's configuration will be updated via update hooks.
 
 ----
-# Setup Local Environment.
+# Setup Local Environment - Native LAMP Stack
+
+(See below for Lando config)
 
 BLT provides an automation layer for testing, building, and launching Drupal 8 applications. For ease when updating codebase it is recommended to use  Drupal VM. If you prefer, you can use another tool such as Docker, [DDEV](https://docs.acquia.com/blt/install/alt-env/ddev/), [Docksal](https://docs.acquia.com/blt/install/alt-env/docksal/), [Lando](https://docs.acquia.com/blt/install/alt-env/lando/), (other) Vagrant, or your own custom LAMP stack, however support is very limited for these solutions.
 1. Install Composer dependencies.
@@ -65,6 +67,16 @@ If you wish to not provide statistics and user information back to Acquia run
      ```
     $ blt blt:telemetry:disable --no-interaction
     ```
+# Setup Local Environment - Lando
+
+1. Clone this repository somewhere on your local system.
+2. Run `composer install --prefer-source`
+3. Run `composer init-lando`
+4. Run `lando start`
+5. Run `lando blt drupal:install`
+
+(If using lando, prefix any `blt` commands with `lando`, e.g., `lando blt drupal:install`)
+
 
 ---
 ## Other Local Setup Steps
