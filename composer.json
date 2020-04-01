@@ -203,6 +203,15 @@
             "rm -rf docroot/*/custom",
             "@composer install --ansi --prefer-source"
         ],
+        "init-lando": [
+          "cp lando/example.env .env",
+          "cp lando/example.lando.yml .lando.yml",
+          "cp lando/example.local.blt.yml blt/local.blt.yml",
+          "cp lando/example.php.ini lando/php.ini",
+          "blt blt:init:settings",
+          "blt source:build:simplesamlphp-config",
+          "blt gryphon:keys"
+        ],
         "post-drupal-scaffold-cmd": [
             "patch -Ns -r \"\" --no-backup-if-mismatch -p1 < ./patches/htaccess.patch"
         ]

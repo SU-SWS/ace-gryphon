@@ -16,6 +16,9 @@ box/local.config.yml
 local.blt.yml
 /keys
 /certs
+.env
+.lando.yml
+lando/php.ini
 
 # Ignore custom test configuration.
 tests/codeception.yml
