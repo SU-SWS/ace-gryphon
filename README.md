@@ -51,6 +51,7 @@ If the blt alias is not available use this command outside and inside vagrant (o
     ```
 3. Set up local BLT
 Copy the file `blt/example.local.blt.yml` and name it `local.blt.yml`. Populate all available information with your local configuration values.
+
 4. Setup Local settings
 After you have the `local.blt.yml` file configured, set up the settings.php for you setup.
     ```

@@ -4,6 +4,10 @@ config:
   webroot: docroot
   php: '7.3'
   xdebug: false
+proxy:
+  appserver:
+    - gryphon.lndo.site
+    - cardinalservice.lndo.site
 services:
   appserver:
     ssl: true
@@ -24,7 +28,7 @@ services:
     creds:
       user: drupal
       password: drupal
-      database: drupal
+      database: cardinalservice
   # Uncomment the below for behat testing.
   # chromedriver:
   #   type: compose
