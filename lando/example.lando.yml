@@ -28,7 +28,18 @@ services:
     creds:
       user: drupal
       password: drupal
+      database: drupal
+  cardinalservice:
+    type: mysql:5.7
+    creds:
+      user: drupal
+      password: drupal
       database: cardinalservice
+  #  gryphon:
+  #    creds:
+  #      user: drupal
+  #      password: drupal
+  #      database: gryphon
   # Uncomment the below for behat testing.
   # chromedriver:
   #   type: compose

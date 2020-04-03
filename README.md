@@ -74,7 +74,7 @@ If you wish to not provide statistics and user information back to Acquia run
 2. Run `composer install --prefer-source`
 3. Run `composer init-lando`
 4. Run `lando start`
-5. Run `lando blt drupal:install`
+5. Run `lando blt drupal:install -n`
 
 (If using lando, prefix any `blt` commands with `lando`, e.g., `lando blt drupal:install`)
 
