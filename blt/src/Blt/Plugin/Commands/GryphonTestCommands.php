@@ -95,6 +95,23 @@ class GryphonTestCommands extends BltTasks {
     // Regardless if the test failed or succeeded, always clean up the temporary
     // test directory.
     $this->taskDeleteDir($new_test_dir)->run();
+
+    $codeception_config = $this->taskExec('vendor/bin/codecept')
+      ->arg('config:validate')
+      ->option('config', 'tests', '=')
+      ->printOutput(FALSE)
+      ->run()
+      ->getMessage();
+
+    // Delete the failed file because codeception will try to look for the file
+    // that failed again on the next run. Since we have temporary test
+    // directories we don't want to save that data.
+    preg_match_all('/output => (.*)$/m', $codeception_config, $preg_matches);
+    if (!empty($preg_matches[1][0]) && is_dir("$root/tests/{$preg_matches[1][0]}")) {
+      $this->taskFilesystemStack()
+        ->remove("$root/tests/{$preg_matches[1][0]}/failed")
+        ->run();
+    }
     return $test_result;
   }
 
