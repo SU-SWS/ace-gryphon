@@ -208,6 +208,7 @@
           "cp lando/example.lando.yml .lando.yml",
           "cp lando/example.local.blt.yml blt/local.blt.yml",
           "cp lando/example.php.ini lando/php.ini",
+          "cp lando/example.local.sites.php docroot/sites/local.sites.php",
           "blt blt:init:settings",
           "blt source:build:simplesamlphp-config",
           "blt gryphon:keys"
