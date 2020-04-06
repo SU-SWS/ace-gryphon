@@ -29,12 +29,14 @@ services:
       user: drupal
       password: drupal
       database: drupal
+    healthcheck:
   cardinalservice:
     type: mysql:5.7
     creds:
       user: drupal
       password: drupal
       database: cardinalservice
+    healthcheck:
   #  gryphon:
   #    creds:
   #      user: drupal
