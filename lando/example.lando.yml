@@ -10,6 +10,9 @@ proxy:
     - cardinalservice.lndo.site
 services:
   appserver:
+    build_as_root:
+      - pecl install pcov
+      - docker-php-ext-enable pcov
     ssl: true
     config:
       php: lando/php.ini
