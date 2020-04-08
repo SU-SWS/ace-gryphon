@@ -19,11 +19,41 @@
         {
             "type": "package",
             "package": {
-                "name": "ckeditor-plugin/link",
-                "version": "4.13.1",
+                "name": "ckeditor-plugin/a11ychecker",
+                "version": "1.1.1",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.ckeditor.com/link/releases/link_4.13.1.zip",
+                    "url": "https://download.ckeditor.com/a11ychecker/releases/a11ychecker_1.1.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/balloonpanel",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/balloonpanel/releases/balloonpanel_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -35,10 +65,10 @@
             "type": "package",
             "package": {
                 "name": "ckeditor-plugin/fakeobjects",
-                "version": "4.13.1",
+                "version": "4.14.0",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.13.1.zip",
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -53,7 +83,8 @@
         "php": ">=7.2",
         "acquia/blt": "^11.2.0",
         "drupal/acquia_purge": "^1.0@beta",
-        "su-hkku/cardinal_service_profile": "dev-8.x-1.x"
+        "su-hkku/cardinal_service_profile": "dev-8.x-1.x",
+        "su-sws/stanford_profile": "dev-8.x-1.x"
     },
     "require-dev": {
         "acquia/blt-require-dev": "11.x-dev",

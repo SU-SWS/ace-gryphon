@@ -23,7 +23,6 @@ modules:
       - environment_indicator
     uninstall:
       - acquia_purge
-      - acquia_connector
   ci:
     enable:
       - nobots
