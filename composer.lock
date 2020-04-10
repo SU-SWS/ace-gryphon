@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a40b6899e4b2c87144b87c22c51fbd0",
+    "content-hash": "7d0183bff848782b827204bacb15fcd0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -9406,16 +9406,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
                 "shasum": ""
             },
             "require": {
@@ -9454,7 +9454,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-11-08T13:50:10+00:00"
+            "time": "2020-04-10T16:34:50+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -11215,22 +11215,22 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-discopower",
-            "version": "v0.9.1",
+            "version": "v0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp-module-discopower.git",
-                "reference": "006c0617610f1bae11cf4d17e8ce4c509239a60e"
+                "reference": "c892926e8186d0a2c638f7032dfc30540c1f92fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-discopower/zipball/006c0617610f1bae11cf4d17e8ce4c509239a60e",
-                "reference": "006c0617610f1bae11cf4d17e8ce4c509239a60e",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-discopower/zipball/c892926e8186d0a2c638f7032dfc30540c1f92fb",
+                "reference": "c892926e8186d0a2c638f7032dfc30540c1f92fb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
                 "simplesamlphp/composer-module-installer": "~1.1",
-                "webmozart/assert": "~1.4"
+                "webmozart/assert": "~1.4 <1.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "~5.7",
@@ -11258,7 +11258,7 @@
                 "discovery",
                 "simplesamlphp"
             ],
-            "time": "2019-11-27T20:34:37+00:00"
+            "time": "2019-12-13T07:51:43+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-exampleattributeserver",
@@ -12114,12 +12114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "bfcad894cd56def0a00bcc290c106c76313a2bef"
+                "reference": "d570ddb07da6b90a575620f1f2cdcece683a735a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/bfcad894cd56def0a00bcc290c106c76313a2bef",
-                "reference": "bfcad894cd56def0a00bcc290c106c76313a2bef",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/d570ddb07da6b90a575620f1f2cdcece683a735a",
+                "reference": "d570ddb07da6b90a575620f1f2cdcece683a735a",
                 "shasum": ""
             },
             "require": {
@@ -12193,6 +12193,11 @@
             },
             "type": "drupal-custom-profile",
             "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                },
                 "patches": {
                     "drupal/field_formatter_class": {
                         "https://www.drupal.org/project/field_formatter_class/issues/3046372": "https://www.drupal.org/files/issues/2020-02-03/field_formatter_class-3046372-10.patch"
@@ -12211,12 +12216,18 @@
                     }
                 }
             },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\stanford_profile\\": "src/",
+                    "Drupal\\stanford_profile_drush\\": "modules/stanford_profile_drush/src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-04-09T06:59:16+00:00"
+            "time": "2020-04-10T08:01:26+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",
@@ -12275,12 +12286,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/react_paragraphs.git",
-                "reference": "9fe06eca2e6bc6fb4da0c11f2396dbe56657a816"
+                "reference": "65fad3ef7ce99809b10af4abb6e6b5cfc15fb68b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/9fe06eca2e6bc6fb4da0c11f2396dbe56657a816",
-                "reference": "9fe06eca2e6bc6fb4da0c11f2396dbe56657a816",
+                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/65fad3ef7ce99809b10af4abb6e6b5cfc15fb68b",
+                "reference": "65fad3ef7ce99809b10af4abb6e6b5cfc15fb68b",
                 "shasum": ""
             },
             "require": {
@@ -12298,7 +12309,7 @@
                 }
             ],
             "description": "An advanced UI for editing paragraphs in Drupal.",
-            "time": "2020-04-01T20:13:12+00:00"
+            "time": "2020-04-09T23:06:17+00:00"
         },
         {
             "name": "su-sws/stanford_basic",
@@ -12306,12 +12317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_basic.git",
-                "reference": "7895cbe0b5bdc1cbca36f102ac8e0a136315a28b"
+                "reference": "248f4e7a52ce6866562b5cab1f62ef6f89202bcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/7895cbe0b5bdc1cbca36f102ac8e0a136315a28b",
-                "reference": "7895cbe0b5bdc1cbca36f102ac8e0a136315a28b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/248f4e7a52ce6866562b5cab1f62ef6f89202bcf",
+                "reference": "248f4e7a52ce6866562b5cab1f62ef6f89202bcf",
                 "shasum": ""
             },
             "type": "drupal-custom-theme",
@@ -12321,7 +12332,7 @@
             ],
             "description": "Stanford Basic Branding Theme.",
             "homepage": "https://github.com/SU-SWS/stanford_basic",
-            "time": "2020-04-06T20:08:29+00:00"
+            "time": "2020-04-09T19:58:51+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -12407,12 +12418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_media.git",
-                "reference": "2ecd86c3786153edb07f145b1ebaf71383d829e0"
+                "reference": "f1ac551cbd746f6c8837d62f146409a98d0f33c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/2ecd86c3786153edb07f145b1ebaf71383d829e0",
-                "reference": "2ecd86c3786153edb07f145b1ebaf71383d829e0",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/f1ac551cbd746f6c8837d62f146409a98d0f33c4",
+                "reference": "f1ac551cbd746f6c8837d62f146409a98d0f33c4",
                 "shasum": ""
             },
             "require": {
@@ -12461,7 +12472,7 @@
             ],
             "description": "Stanford Media module for Drupal 8 Media management",
             "homepage": "https://github.com/SU-SWS/stanford_media",
-            "time": "2020-04-09T08:23:57+00:00"
+            "time": "2020-04-09T20:15:22+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -12469,12 +12480,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "d9b032665bc3af37761fd4df2456e32a83d71ff4"
+                "reference": "7e06993b96fb5a61604ede9124da0a6e0256cdd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d9b032665bc3af37761fd4df2456e32a83d71ff4",
-                "reference": "d9b032665bc3af37761fd4df2456e32a83d71ff4",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/7e06993b96fb5a61604ede9124da0a6e0256cdd8",
+                "reference": "7e06993b96fb5a61604ede9124da0a6e0256cdd8",
                 "shasum": ""
             },
             "require": {
@@ -12547,6 +12558,11 @@
             },
             "type": "drupal-custom-profile",
             "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                },
                 "patches": {
                     "drupal/field_formatter_class": {
                         "https://www.drupal.org/project/field_formatter_class/issues/3046372": "https://www.drupal.org/files/issues/2020-02-03/field_formatter_class-3046372-10.patch"
@@ -12565,12 +12581,18 @@
                     }
                 }
             },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\stanford_profile\\": "src/",
+                    "Drupal\\stanford_profile_drush\\": "modules/stanford_profile_drush/src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-04-07T23:24:53+00:00"
+            "time": "2020-04-09T20:33:53+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
@@ -14655,29 +14677,31 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/88e6d84706d09a236046d686bbea96f07b3a34f4",
+                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.3 || ^7.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
-            "conflict": {
-                "vimeo/psalm": "<3.6.0"
-            },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -14699,7 +14723,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2019-08-24T08:43:50+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -15353,16 +15377,16 @@
         },
         {
             "name": "behat/mink",
-            "version": "v1.8.0",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "e1772aabb6b654464264a6cc72158c8b3409d8bc"
+                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/e1772aabb6b654464264a6cc72158c8b3409d8bc",
-                "reference": "e1772aabb6b654464264a6cc72158c8b3409d8bc",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
+                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
                 "shasum": ""
             },
             "require": {
@@ -15410,7 +15434,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2020-03-11T15:26:34+00:00"
+            "time": "2020-03-11T15:45:53+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -16269,16 +16293,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.4",
+            "version": "1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "1efa6850b4a1740980346ac3582edf7dfb7899ee"
+                "reference": "7a4d5b6aa30d2118af27c04f5e897b57156ccfa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/1efa6850b4a1740980346ac3582edf7dfb7899ee",
-                "reference": "1efa6850b4a1740980346ac3582edf7dfb7899ee",
+                "url": "https://api.github.com/repos/composer/composer/zipball/7a4d5b6aa30d2118af27c04f5e897b57156ccfa9",
+                "reference": "7a4d5b6aa30d2118af27c04f5e897b57156ccfa9",
                 "shasum": ""
             },
             "require": {
@@ -16345,7 +16369,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2020-04-09T15:05:50+00:00"
+            "time": "2020-04-10T09:44:22+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -17044,24 +17068,24 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "8.8.5",
+            "version": "8.9.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
-                "reference": "2dffabdcee78b36d513978424ac220da1fe2e11f"
+                "reference": "407a4719a0e9342d77f2b34be64d6f3c4623d450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-dev/zipball/2dffabdcee78b36d513978424ac220da1fe2e11f",
-                "reference": "2dffabdcee78b36d513978424ac220da1fe2e11f",
+                "url": "https://api.github.com/repos/drupal/core-dev/zipball/407a4719a0e9342d77f2b34be64d6f3c4623d450",
+                "reference": "407a4719a0e9342d77f2b34be64d6f3c4623d450",
                 "shasum": ""
             },
             "require": {
-                "behat/mink": "1.8.0 | 1.7.1.1 | 1.7.x-dev",
+                "behat/mink": "^1.8",
                 "behat/mink-goutte-driver": "^1.2",
-                "behat/mink-selenium2-driver": "1.4.0 | 1.3.1.1 | 1.3.x-dev",
+                "behat/mink-selenium2-driver": "^1.4",
                 "composer/composer": "^1.9.1",
-                "drupal/coder": "^8.3.2",
+                "drupal/coder": "^8.3.7",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "justinrainbow/json-schema": "^5.2",
@@ -17085,7 +17109,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
-            "time": "2019-11-05T11:06:10+00:00"
+            "time": "2020-03-13T11:49:54+00:00"
         },
         {
             "name": "drupal/devel",
@@ -17554,155 +17578,30 @@
             }
         },
         {
-            "name": "drupal/migrate_file",
-            "version": "1.1.0",
+            "name": "drupal/qa_accounts",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_file.git",
-                "reference": "8.x-1.1"
+                "url": "https://git.drupalcode.org/project/qa_accounts.git",
+                "reference": "8.x-1.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_file-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "4a24edc577541b5aa67682a4f89c8dfd7c0788d5"
+                "url": "https://ftp.drupal.org/files/projects/qa_accounts-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "35c547ebf96ca65154b8eb6bb0d8819819660167"
             },
             "require": {
                 "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1539064380",
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1586457323",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "drclaw",
-                    "homepage": "https://www.drupal.org/user/823702"
-                }
-            ],
-            "description": "Additional support for migrating files including downloading remote files and using remote uris (without download)",
-            "homepage": "https://www.drupal.org/project/migrate_file",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/migrate_file",
-                "issues": "https://www.drupal.org/project/issues/migrate_file"
-            }
-        },
-        {
-            "name": "drupal/migrate_plus",
-            "version": "5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_plus.git",
-                "reference": "8.x-5.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-5.0.zip",
-                "reference": "8.x-5.0",
-                "shasum": "5509c76498e4c6141c29db626d20904e1e8593c6"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "require-dev": {
-                "drupal/migrate_example_advanced_setup": "*",
-                "drupal/migrate_example_setup": "*"
-            },
-            "suggest": {
-                "ext-soap": "*",
-                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-5.0",
-                    "datestamp": "1586234154",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Ryan",
-                    "homepage": "https://www.drupal.org/u/mikeryan",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Lucas Hedding",
-                    "homepage": "https://www.drupal.org/u/heddn",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Enhancements to core migration support.",
-            "homepage": "https://www.drupal.org/project/migrate_plus",
-            "support": {
-                "source": "https://git.drupalcode.org/project/migrate_plus",
-                "issues": "https://www.drupal.org/project/issues/migrate_plus",
-                "slack": "#migrate"
-            }
-        },
-        {
-            "name": "drupal/migrate_tools",
-            "version": "4.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "8.x-4.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.5.zip",
-                "reference": "8.x-4.5",
-                "shasum": "06390b359bf53c50a30f2d6dc4c7542bfb1fe7ca"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/migrate_plus": "^4 || ^5"
-            },
-            "require-dev": {
-                "drupal/migrate_plus": "4.x-dev",
-                "drupal/migrate_source_csv": "^2.2",
-                "drush/drush": "^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.5",
-                    "datestamp": "1574693285",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -17712,24 +17611,14 @@
             ],
             "authors": [
                 {
-                    "name": "heddn",
-                    "homepage": "https://www.drupal.org/user/1463982"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
+                    "name": "Dane Powell",
+                    "homepage": "https://www.drupal.org/user/339326"
                 }
             ],
-            "description": "Tools to assist in developing and running migrations.",
-            "homepage": "http://drupal.org/project/migrate_tools",
+            "description": "Creates dummy accounts to aid in testing. Never enable in production environments.",
+            "homepage": "https://www.drupal.org/project/qa_accounts",
             "support": {
-                "source": "http://cgit.drupalcode.org/migrate_tools",
-                "issues": "http://drupal.org/project/migrate_tools",
-                "irc": "irc://irc.freenode.org/drupal-migrate"
+                "source": "https://git.drupalcode.org/project/qa_accounts"
             }
         },
         {
@@ -20236,6 +20125,53 @@
             "time": "2019-11-24T17:03:06+00:00"
         },
         {
+            "name": "su-sws/drupal-dev",
+            "version": "8.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SU-SWS/drupal-dev.git",
+                "reference": "d1b0526434f5b2cd502b46191ee97eb3a20474a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-dev/zipball/d1b0526434f5b2cd502b46191ee97eb3a20474a4",
+                "reference": "d1b0526434f5b2cd502b46191ee97eb3a20474a4",
+                "shasum": ""
+            },
+            "require": {
+                "acquia/blt-require-dev": "^11.0",
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^1.1",
+                "codeception/module-phpbrowser": "^1.0",
+                "codeception/module-webdriver": "^1.0",
+                "drupal-composer/drupal-scaffold": "^2.6",
+                "drupal/config_inspector": "^1.0",
+                "drupal/console": "^1.9",
+                "drupal/core": "^8.8",
+                "drupal/core-dev": "^8.8",
+                "drupal/devel": "^2.1",
+                "drupal/devel_debug_log": "^1.0@beta",
+                "drupal/devel_php": "^1.1",
+                "drupal/masquerade": "^2.0@beta",
+                "drupal/qa_accounts": "^1.0@beta",
+                "league/oauth2-client": "^2.4",
+                "su-sws/stanford-caravan": "dev-8.x-1.x"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Decker",
+                    "email": "pookmish@gmail.com"
+                }
+            ],
+            "description": "Drupal dev dependencies manager",
+            "time": "2020-04-10T19:48:06+00:00"
+        },
+        {
             "name": "su-sws/stanford-caravan",
             "version": "dev-8.x-1.x",
             "source": {
@@ -20657,11 +20593,7 @@
         "drupal/acquia_purge": 10,
         "su-hkku/cardinal_service_profile": 20,
         "su-sws/stanford_profile": 20,
-        "acquia/blt-require-dev": 20,
-        "drupal/config_inspector": 10,
-        "drupal/devel_debug_log": 10,
-        "drupal/masquerade": 10,
-        "su-sws/stanford-caravan": 20
+        "acquia/blt-require-dev": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
