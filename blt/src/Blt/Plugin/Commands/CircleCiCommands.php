@@ -25,6 +25,8 @@ class CircleCiCommands extends BltTasks {
     $tasks[] = $this->taskFilesystemStack()->remove($files);
     $tasks[] = $this->taskFilesystemStack()
       ->remove("$root/docroot/core/phpunit.xml");
+
+    $tasks[] = $this->taskFilesystemStack()->mkdir("{$_SERVER['HOME']}/.config/blt");
     $tasks[] = $this->blt()->arg('blt:telemetry:disable');
     $tasks[] = $this->blt()->arg('blt:init:setting');
     $tasks[] = $this->taskDrush()->drush('si minimal');
