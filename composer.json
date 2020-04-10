@@ -87,10 +87,9 @@
         "su-sws/stanford_profile": "dev-8.x-1.x"
     },
     "require-dev": {
-        "acquia/blt-require-dev": "11.x-dev",
         "pcov/clobber": "^2.0",
         "se/selenium-server-standalone": "^3.141",
-        "su-sws/drupal-dev": "^8.1.0"
+        "su-sws/drupal-dev": "^8.1.2"
     },
     "replace": {
         "dealerdirect/phpcodesniffer-composer-installer": "*"
