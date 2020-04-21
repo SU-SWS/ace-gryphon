@@ -141,7 +141,8 @@ class GryphonTestCommands extends BltTasks {
     $config = $this->getConfigValue('tests.phpunit');
     try {
       $this->executeUnitCoverageTests($config, $report_directory);
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       throw $e;
     }
   }
