@@ -8,11 +8,11 @@
 actor: FunctionalTester
 modules:
   enabled:
+    - WebDriver
     - \Helper\Functional
     - Codeception\Module\Asserts
     - StanfordCaravan\Codeception\Drupal\DrupalBootstrap
     - StanfordCaravan\Codeception\Drupal\DrupalDrush
-    - WebDriver
     - StanfordCaravan\Codeception\Drupal\DrupalEntity
     - StanfordCaravan\Codeception\Drupal\DrupalUser
   disabled:
