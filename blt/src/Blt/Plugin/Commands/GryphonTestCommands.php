@@ -114,7 +114,7 @@ class GryphonTestCommands extends BltTasks {
     // Delete the failed file because codeception will try to look for the file
     // that failed again on the next run. Since we have temporary test
     // directories we don't want to save that data.
-    foreach (glob("$root/tests/*/failed") as $file) {
+    foreach (glob("$root/artifacts/*/failed") as $file) {
       $this->taskFilesystemStack()
         ->remove($file)
         ->run();
