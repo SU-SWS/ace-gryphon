@@ -74,7 +74,9 @@ tests:
       bootstrap: ${docroot}/core/tests/bootstrap.php
   codeception:
     cardinal_service_profile:
-      suite: 'acceptance'
+      suites:
+        - acceptance
+        - functional
       directory: ${docroot}/profiles/custom/cardinal_service_profile/tests/codeception
 validate:
   twig:

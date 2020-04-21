@@ -7,7 +7,14 @@
 
 actor: FunctionalTester
 modules:
-    enabled:
-        # add a framework module here
-        - \Helper\Functional
-    step_decorators: ~        
+  enabled:
+    - \Helper\Functional
+    - Codeception\Module\Asserts
+    - StanfordCaravan\Codeception\Drupal\DrupalBootstrap
+    - StanfordCaravan\Codeception\Drupal\DrupalDrush
+    - WebDriver
+    - StanfordCaravan\Codeception\Drupal\DrupalEntity
+    - StanfordCaravan\Codeception\Drupal\DrupalUser
+  disabled:
+    - PhpBrowser
+  step_decorators: ~
