@@ -16,6 +16,7 @@ modules:
         server:
           HTTP_HOST: '${project.local.hostname}'
     - StanfordCaravan\Codeception\Drupal\DrupalDrush:
+        drush: '${repo.root}/vendor/bin/drush'
         options:
           uri: '${project.local.hostname}'
     - PhpBrowser:
