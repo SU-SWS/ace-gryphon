@@ -45,11 +45,13 @@ class GryphonTestCommands extends BltTasks {
    * @command tests:codeception:run
    * @aliases tests:codeception codeception
    * @options test The key of the tests to run.
-   * @options suite only run a specific suite instead of all suites.
+   * @options suite Only run a specific suite instead of all suites.
+   * @options group Groups of tests to run.
    */
   public function runCodeceptionTests(array $options = [
     'test' => NULL,
     'suite' => NULL,
+    'group' => NULL,
   ]) {
     $failed_test = NULL;
 
@@ -70,7 +72,7 @@ class GryphonTestCommands extends BltTasks {
       // Run each suite of tests.
       foreach ($test['suites'] as $suite) {
         $this->say("Running <comment>$suite</comment> Tests.");
-        $test_result = $this->runCodeceptionTestSuite($suite, $test['directory']);
+        $test_result = $this->runCodeceptionTestSuite($suite, $test['directory'], $options['groups']);
 
         if (!$test_result->wasSuccessful()) {
           $failed_test = $test_result;
@@ -92,6 +94,7 @@ class GryphonTestCommands extends BltTasks {
    *   Result of the test.
    */
   protected function runCodeceptionTestSuite($suite, $test_directory) {
+
     if (!file_exists("$test_directory/$suite/")) {
       return new ResultData(ResultData::EXITCODE_OK, 'No tests to execute for suite ' . $suite);
     }
@@ -106,7 +109,8 @@ class GryphonTestCommands extends BltTasks {
     }
 
     $new_test_dir = "$root/tests/codeception/$suite/" . date('Ymd-Hi');
-    $tasks[] = $this->taskFilesystemStack()->symlink("$test_directory/$suite/", $new_test_dir);
+    $tasks[] = $this->taskFilesystemStack()
+      ->symlink("$test_directory/$suite/", $new_test_dir);
 
     $test = $this->taskExec('vendor/bin/codecept')
       ->arg('run')
@@ -118,10 +122,16 @@ class GryphonTestCommands extends BltTasks {
       ->option('html')
       ->option('xml');
 
+
     if ($this->input()->getOption('verbose')) {
       $test->option('debug');
       $test->option('verbose');
     }
+
+    if ($groups = $this->input()->getOption('group')) {
+      $test->option('group', $groups);
+    }
+
     $tasks[] = $test;
     $test_result = $this->collectionBuilder()->addTaskList($tasks)->run();
     // Regardless if the test failed or succeeded, always clean up the temporary
