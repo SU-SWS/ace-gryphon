@@ -81,7 +81,7 @@ cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptanc
           composer install --no-interaction
           vendor/bin/blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
           vendor/bin/blt drupal:toggle:modules --no-interaction
-          vendor/bin/blt tests:codeception cardinal_service_profile --no-interaction
+          vendor/bin/blt tests:codeception --test=cardinal_service --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -94,7 +94,7 @@ phpunit_coverage: &phpunit_coverage
     - checkout
     - *restore_caches
     - run:
-        name: Run Codeception Acceptance Tests
+        name: Run PHPUnit Coverage Tests
         command: |
           composer install --no-interaction
           vendor/bin/blt circleci:drupal:setup --no-interaction
