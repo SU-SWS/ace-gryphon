@@ -12308,16 +12308,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.39",
+            "version": "0.12.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "f970cab80f0a681019dc669bf8c72905845dadaa"
+                "reference": "dce7293ad7b59fc09a9ab9b0b5b44902c092ca17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f970cab80f0a681019dc669bf8c72905845dadaa",
-                "reference": "f970cab80f0a681019dc669bf8c72905845dadaa",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dce7293ad7b59fc09a9ab9b0b5b44902c092ca17",
+                "reference": "dce7293ad7b59fc09a9ab9b0b5b44902c092ca17",
                 "shasum": ""
             },
             "require": {
@@ -12360,7 +12360,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-24T21:34:53+00:00"
+            "time": "2020-08-26T19:06:20+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -14394,16 +14394,16 @@
         },
         {
             "name": "simplesamlphp/twig-configurable-i18n",
-            "version": "v2.3.3",
+            "version": "v2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/twig-configurable-i18n.git",
-                "reference": "746f15796fbc76a37b847c5311d6a4e7030717f9"
+                "reference": "e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/twig-configurable-i18n/zipball/746f15796fbc76a37b847c5311d6a4e7030717f9",
-                "reference": "746f15796fbc76a37b847c5311d6a4e7030717f9",
+                "url": "https://api.github.com/repos/simplesamlphp/twig-configurable-i18n/zipball/e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a",
+                "reference": "e2bffc7eed3112a0b3870ef5b4da0fd74c7c4b8a",
                 "shasum": ""
             },
             "require": {
@@ -14442,7 +14442,7 @@
                 "translation",
                 "twig"
             ],
-            "time": "2020-08-26T15:02:50+00:00"
+            "time": "2020-08-27T12:51:10+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -14605,12 +14605,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "5c718b4e35102009fe3fdc1881b6d89594035f8e"
+                "reference": "56826970af0d8340c720af4b9b8ab9cd639054e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/5c718b4e35102009fe3fdc1881b6d89594035f8e",
-                "reference": "5c718b4e35102009fe3fdc1881b6d89594035f8e",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/56826970af0d8340c720af4b9b8ab9cd639054e0",
+                "reference": "56826970af0d8340c720af4b9b8ab9cd639054e0",
                 "shasum": ""
             },
             "require": {
@@ -14656,7 +14656,7 @@
                 "GPL-2.0+"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-08-26T16:31:49+00:00"
+            "time": "2020-08-27T17:47:20+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",
@@ -14664,12 +14664,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/jumpstart_ui.git",
-                "reference": "a2f7a09d329fd8b9da0f98cc6f4bbb72a3557612"
+                "reference": "64ddbe9c3a142d043da7dcbf7ce91aa3351f72af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/a2f7a09d329fd8b9da0f98cc6f4bbb72a3557612",
-                "reference": "a2f7a09d329fd8b9da0f98cc6f4bbb72a3557612",
+                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/64ddbe9c3a142d043da7dcbf7ce91aa3351f72af",
+                "reference": "64ddbe9c3a142d043da7dcbf7ce91aa3351f72af",
                 "shasum": ""
             },
             "require": {
@@ -14685,7 +14685,7 @@
             ],
             "description": "Stanford Module Example",
             "homepage": "https://github.com/SU-SWS/jumpstart_ui",
-            "time": "2020-08-25T18:03:32+00:00"
+            "time": "2020-08-26T23:37:53+00:00"
         },
         {
             "name": "su-sws/nobots",
@@ -15181,12 +15181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "eb4b434c88a1d4d2001a8c481f021819fc7b3f24"
+                "reference": "d2434564d68aa95c21738c2076102037057b668c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/eb4b434c88a1d4d2001a8c481f021819fc7b3f24",
-                "reference": "eb4b434c88a1d4d2001a8c481f021819fc7b3f24",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d2434564d68aa95c21738c2076102037057b668c",
+                "reference": "d2434564d68aa95c21738c2076102037057b668c",
                 "shasum": ""
             },
             "require": {
@@ -15299,7 +15299,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-08-21T19:27:43+00:00"
+            "time": "2020-08-26T23:34:43+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -15307,12 +15307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "c04aa910f1f0f5383a00daedb1b4f498c4a1fe05"
+                "reference": "527e33ede2e51ae88079f407570e3c225c1970ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/c04aa910f1f0f5383a00daedb1b4f498c4a1fe05",
-                "reference": "c04aa910f1f0f5383a00daedb1b4f498c4a1fe05",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/527e33ede2e51ae88079f407570e3c225c1970ef",
+                "reference": "527e33ede2e51ae88079f407570e3c225c1970ef",
                 "shasum": ""
             },
             "require": {
@@ -15355,7 +15355,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Helper Module For Stanford Profile",
-            "time": "2020-08-21T19:27:12+00:00"
+            "time": "2020-08-27T03:23:30+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
