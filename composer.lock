@@ -14660,12 +14660,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "351fe15ef2652fdf3343e264eb492876daf61505"
+                "reference": "efb4b2946eca60711a93fb2ac5aacd357d11f329"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/351fe15ef2652fdf3343e264eb492876daf61505",
-                "reference": "351fe15ef2652fdf3343e264eb492876daf61505",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/efb4b2946eca60711a93fb2ac5aacd357d11f329",
+                "reference": "efb4b2946eca60711a93fb2ac5aacd357d11f329",
                 "shasum": ""
             },
             "require": {
@@ -14712,10 +14712,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-09-01T00:24:57+00:00"
+            "time": "2020-09-02T00:04:43+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",
@@ -14770,25 +14770,26 @@
         },
         {
             "name": "su-sws/react_paragraphs",
-            "version": "dev-8.x-1.x",
+            "version": "dev-8.x-2.x",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/react_paragraphs.git",
-                "reference": "777954a5b35c96fe8512d17e3d22a5dceaad74e3"
+                "reference": "be19ff82412e212aea305fa747b5e0d264b1d894"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/777954a5b35c96fe8512d17e3d22a5dceaad74e3",
-                "reference": "777954a5b35c96fe8512d17e3d22a5dceaad74e3",
+                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/be19ff82412e212aea305fa747b5e0d264b1d894",
+                "reference": "be19ff82412e212aea305fa747b5e0d264b1d894",
                 "shasum": ""
             },
             "require": {
+                "drupal/core": "^8.8 || ^9.0",
                 "drupal/paragraphs": "^1.1"
             },
             "type": "drupal-custom-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -14797,7 +14798,7 @@
                 }
             ],
             "description": "An advanced UI for editing paragraphs in Drupal.",
-            "time": "2020-08-07T20:36:25+00:00"
+            "time": "2020-09-01T16:32:50+00:00"
         },
         {
             "name": "su-sws/stanford_basic",
@@ -15178,12 +15179,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_person.git",
-                "reference": "016ab4640685d2dd9851981130bf44e358d5c6e5"
+                "reference": "70e30d8b0eb6b07c02cb8e98e9e9f66c64877cb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/016ab4640685d2dd9851981130bf44e358d5c6e5",
-                "reference": "016ab4640685d2dd9851981130bf44e358d5c6e5",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/70e30d8b0eb6b07c02cb8e98e9e9f66c64877cb1",
+                "reference": "70e30d8b0eb6b07c02cb8e98e9e9f66c64877cb1",
                 "shasum": ""
             },
             "require": {
@@ -15232,7 +15233,7 @@
             ],
             "description": "Stanford Module Example",
             "homepage": "https://github.com/SU-SWS/stanford_person",
-            "time": "2020-08-21T19:26:15+00:00"
+            "time": "2020-08-31T23:29:05+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -15240,12 +15241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "d2434564d68aa95c21738c2076102037057b668c"
+                "reference": "928ad7510e52fb37b3c94f1f35cc140390f9942a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d2434564d68aa95c21738c2076102037057b668c",
-                "reference": "d2434564d68aa95c21738c2076102037057b668c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/928ad7510e52fb37b3c94f1f35cc140390f9942a",
+                "reference": "928ad7510e52fb37b3c94f1f35cc140390f9942a",
                 "shasum": ""
             },
             "require": {
@@ -15305,7 +15306,7 @@
                 "ext-imagick": "*",
                 "su-sws/jumpstart_ui": "dev-8.x-1.x",
                 "su-sws/nobots": "dev-8.x-2.x",
-                "su-sws/react_paragraphs": "dev-8.x-1.x",
+                "su-sws/react_paragraphs": "dev-8.x-2.x",
                 "su-sws/stanford_basic": "dev-8.x-4.x",
                 "su-sws/stanford_date_formats": "dev-8.x-1.x",
                 "su-sws/stanford_events": "dev-8.x-1.x",
@@ -15358,7 +15359,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2020-08-26T23:34:43+00:00"
+            "time": "2020-09-01T17:41:05+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -15366,12 +15367,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "527e33ede2e51ae88079f407570e3c225c1970ef"
+                "reference": "cd5c1aee6989d04ddd35fe06e6a525285a913bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/527e33ede2e51ae88079f407570e3c225c1970ef",
-                "reference": "527e33ede2e51ae88079f407570e3c225c1970ef",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/cd5c1aee6989d04ddd35fe06e6a525285a913bc2",
+                "reference": "cd5c1aee6989d04ddd35fe06e6a525285a913bc2",
                 "shasum": ""
             },
             "require": {
@@ -15387,7 +15388,7 @@
                 "drupal/ui_patterns": "~1.0",
                 "drupal/xmlsitemap": "~1.0",
                 "su-sws/jumpstart_ui": "dev-8.x-1.x",
-                "su-sws/react_paragraphs": "dev-8.x-1.x",
+                "su-sws/react_paragraphs": "dev-8.x-2.x",
                 "su-sws/stanford_date_formats": "dev-8.x-1.x",
                 "su-sws/stanford_fields": "dev-8.x-1.x",
                 "su-sws/stanford_image_styles": "dev-8.x-1.x",
@@ -15414,7 +15415,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Helper Module For Stanford Profile",
-            "time": "2020-08-27T03:23:30+00:00"
+            "time": "2020-09-01T16:51:43+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
