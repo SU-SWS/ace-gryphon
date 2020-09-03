@@ -79,6 +79,7 @@ cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptanc
         name: Run Codeception Acceptance Tests
         command: |
           composer install --no-interaction
+          mkdir -p artifacts/_data
           vendor/bin/blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
           vendor/bin/blt drupal:toggle:modules --no-interaction
           vendor/bin/blt tests:codeception --test=cardinal_service --no-interaction
