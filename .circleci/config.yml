@@ -66,9 +66,9 @@ renew_certs: &renew_certs
         name: Renew LE Certs
         command: |
           composer install --no-interaction
-          vendor/bin/blt gryphon:renew-cert dev --no-interaction
-          vendor/bin/blt gryphon:renew-cert test --no-interaction
           vendor/bin/blt gryphon:renew-cert prod --no-interaction
+          vendor/bin/blt gryphon:renew-cert test --no-interaction
+          vendor/bin/blt gryphon:renew-cert dev --no-interaction
 
 cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptance
   <<: *defaults

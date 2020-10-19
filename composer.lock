@@ -15229,16 +15229,16 @@
         },
         {
             "name": "su-sws/stanford_migrate",
-            "version": "8.1.4",
+            "version": "8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_migrate.git",
-                "reference": "2e2bf4472e4e27615b90032cdaae04d72e9c8efd"
+                "reference": "4b9ff8765692198cd00d13f375aa0dee35d69b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/2e2bf4472e4e27615b90032cdaae04d72e9c8efd",
-                "reference": "2e2bf4472e4e27615b90032cdaae04d72e9c8efd",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/4b9ff8765692198cd00d13f375aa0dee35d69b35",
+                "reference": "4b9ff8765692198cd00d13f375aa0dee35d69b35",
                 "shasum": ""
             },
             "require": {
@@ -15270,7 +15270,7 @@
             ],
             "description": "Stanford Migrate Helper functions",
             "homepage": "https://github.com/SU-SWS/stanford_migrate",
-            "time": "2020-10-05T22:13:32+00:00"
+            "time": "2020-10-19T20:29:07+00:00"
         },
         {
             "name": "su-sws/stanford_news",
