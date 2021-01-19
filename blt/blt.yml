@@ -85,3 +85,5 @@ validate:
       - drupal_block
       - drupal_field
       - pattern
+    filters:
+      - render_clean
