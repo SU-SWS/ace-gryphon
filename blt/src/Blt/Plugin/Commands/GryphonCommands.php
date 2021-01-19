@@ -284,18 +284,20 @@ class GryphonCommands extends BltTasks {
 
     $delete_cert_ids = [];
     foreach ($certs['_embedded']['items'] as $cert) {
-      // Find the cert we just created and activate it.
+      // Find the cert we just created so we can activate it.
       if ($cert['label'] == $label) {
         $activate_cert_id = $cert['id'];
         continue;
       }
 
-      // Remove any certs that are outdated.
+      // Find all the outdated certs.
       if (strtotime($cert['expires_at']) < time()) {
         $delete_cert_ids[] = $cert['id'];
       }
     }
 
+    // Activate the new cert before we delete the old certs. This prevents the
+    // possibility of deleting an active cert.
     $this->say(var_export($api->activateCert($environment, $activate_cert_id), TRUE));
     foreach ($delete_cert_ids as $cert_id) {
       $this->say(var_export($api->removeCert($environment, $cert_id), TRUE));
