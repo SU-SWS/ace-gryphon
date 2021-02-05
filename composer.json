@@ -178,6 +178,9 @@
             "drupal/anchor_link": {
                 "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch"
             },
+            "drupal/conditional_fields": {
+                "https://www.drupal.org/project/conditional_fields/issues/3192044": "https://www.drupal.org/files/issues/2021-01-14/fix-notice-3192044-14.patch"
+            },
             "drupal/config_ignore": {
                 "https://www.drupal.org/project/config_ignore/issues/2857247": "https://www.drupal.org/files/issues/2018-10-14/support-for-export-2857247-24.patch"
             },

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "acquia/blt",
-            "version": "11.6.0",
+            "version": "11.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt.git",
-                "reference": "df430af3945b00bed1721d01b6deb798eefad85b"
+                "reference": "b208c0af33846a833c18203b7592ee4056600108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/blt/zipball/df430af3945b00bed1721d01b6deb798eefad85b",
-                "reference": "df430af3945b00bed1721d01b6deb798eefad85b",
+                "url": "https://api.github.com/repos/acquia/blt/zipball/b208c0af33846a833c18203b7592ee4056600108",
+                "reference": "b208c0af33846a833c18203b7592ee4056600108",
                 "shasum": ""
             },
             "require": {
@@ -35,13 +35,13 @@
                 "drupal/core": "^8.7.0",
                 "drupol/phposinfo": "^1.6",
                 "drush/drush": "^9.5.0 || ^10.2.2",
+                "enlightn/security-checker": "^1.3",
                 "ext-json": "*",
                 "grasmash/drupal-security-warning": "dev-master",
                 "grasmash/yaml-cli": "^1.0.0",
                 "grasmash/yaml-expander": "^1.2.0",
                 "oomphinc/composer-installers-extender": "^1.1 || ^2",
                 "php": ">=7.2",
-                "sensiolabs/security-checker": "^5.0.0",
                 "symfony/config": "^3.0",
                 "symfony/console": "^3.4.0",
                 "symfony/twig-bridge": "^3.3",
@@ -111,7 +111,7 @@
                 "template",
                 "testing"
             ],
-            "time": "2020-10-21T19:00:48+00:00"
+            "time": "2021-02-02T02:15:10+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -375,77 +375,6 @@
                 "postal"
             ],
             "time": "2020-12-05T18:16:35+00:00"
-        },
-        {
-            "name": "composer/ca-bundle",
-            "version": "1.2.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "ext-pcre": "*",
-                "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12.55",
-                "psr/log": "^1.0",
-                "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\CaBundle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-            "keywords": [
-                "cabundle",
-                "cacert",
-                "certificate",
-                "ssl",
-                "tls"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-01-12T12:10:35+00:00"
         },
         {
             "name": "composer/installers",
@@ -2885,26 +2814,29 @@
         },
         {
             "name": "drupal/auto_entitylabel",
-            "version": "dev-3.x",
+            "version": "3.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
-                "reference": "27c417d2861168d43c45ebc09c08005f3e0d0db0"
+                "reference": "8.x-3.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.0-beta4.zip",
+                "reference": "8.x-3.0-beta4",
+                "shasum": "916befd4ce95b5d73de48ac1b105cc33e9f7821f"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.0-beta3+6-dev",
-                    "datestamp": "1609346741",
+                    "version": "8.x-3.0-beta4",
+                    "datestamp": "1609349103",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2943,8 +2875,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/auto_entitylabel",
                 "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
-            },
-            "time": "2020-12-30T16:45:03+00:00"
+            }
         },
         {
             "name": "drupal/block_content_permissions",
@@ -3365,17 +3296,17 @@
         },
         {
             "name": "drupal/components",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/components.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/components-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "2bd4634ee293d7f0a2f967408e20aa4bded9858d"
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "02a57b2274348c7b9c14800c1bc5f5954d64df88"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -3383,8 +3314,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1610761106",
+                    "version": "8.x-2.2",
+                    "datestamp": "1611799702",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4029,16 +3960,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ec7ac2bd2b7fa7f06df654c637b7f29f019d356f"
+                "reference": "a53db77b55a035453d7229e0c3069f8591cb4cb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ec7ac2bd2b7fa7f06df654c637b7f29f019d356f",
-                "reference": "ec7ac2bd2b7fa7f06df654c637b7f29f019d356f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/a53db77b55a035453d7229e0c3069f8591cb4cb6",
+                "reference": "a53db77b55a035453d7229e0c3069f8591cb4cb6",
                 "shasum": ""
             },
             "require": {
@@ -4065,7 +3996,7 @@
                 "laminas/laminas-diactoros": "^1.8",
                 "laminas/laminas-feed": "^2.12",
                 "masterminds/html5": "^2.1",
-                "pear/archive_tar": "^1.4.11",
+                "pear/archive_tar": "^1.4.12",
                 "php": "^7.0.8",
                 "psr/log": "^1.0",
                 "stack/builder": "^1.0",
@@ -4235,14 +4166,14 @@
                     }
                 },
                 "patches_applied": {
+                    "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
+                    "https://www.drupal.org/project/drupal/issues/3015152": "https://www.drupal.org/files/issues/2019-12-05/3015152-tps-26.patch",
+                    "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2020-06-11/2577923-128.patch",
+                    "https://www.drupal.org/project/drupal/issues/3104980": "https://www.drupal.org/files/issues/2020-01-08/3104980-2.patch",
                     "https://www.drupal.org/project/drupal/issues/3064751": "https://www.drupal.org/files/issues/2019-07-02/3064751-5.patch",
                     "https://www.drupal.org/project/drupal/issues/3059955": "https://www.drupal.org/files/issues/2019-12-28/3082690-80.patch",
-                    "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
                     "https://www.drupal.org/project/drupal/issues/3106718": "https://www.drupal.org/files/issues/2020-01-16/3106718-image-hal-3.patch",
-                    "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2019-10-14/2577923-125.patch",
-                    "https://www.drupal.org/project/drupal/issues/2353611": "https://www.drupal.org/files/issues/2019-10-15/drupal-link_uuid-2353611-262.patch",
-                    "https://www.drupal.org/project/drupal/issues/3015152": "https://www.drupal.org/files/issues/2019-12-05/3015152-tps-26.patch",
-                    "https://www.drupal.org/project/drupal/issues/3104980": "https://www.drupal.org/files/issues/2020-01-08/3104980-2.patch"
+                    "https://www.drupal.org/project/drupal/issues/2353611": "https://www.drupal.org/files/issues/2019-10-15/drupal-link_uuid-2353611-262.patch"
                 }
             },
             "autoload": {
@@ -4266,7 +4197,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2021-01-06T23:44:11+00:00"
+            "time": "2021-01-19T23:11:00+00:00"
         },
         {
             "name": "drupal/crop",
@@ -4574,9 +4505,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0",
                     "datestamp": "1578322688",
@@ -4584,6 +4512,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/project/diff/issues/2882334#comment-13913401": "https://www.drupal.org/files/issues/2020-09-11/2882334-diff-missing_some_revisions-11.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6909,7 +6840,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_block.git",
-                "reference": "49bee70b9081778a3556a5b434619c421d4f3fb1"
+                "reference": "17bc5a2094dec85a921fdac6aff0030bfe004744"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6920,8 +6851,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.6+7-dev",
-                    "datestamp": "1609455004",
+                    "version": "8.x-1.6+8-dev",
+                    "datestamp": "1609550251",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6945,6 +6876,10 @@
                     "homepage": "https://www.drupal.org/user/32095"
                 },
                 {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
                     "name": "joelpittet",
                     "homepage": "https://www.drupal.org/user/160302"
                 },
@@ -6962,7 +6897,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/menu_block"
             },
-            "time": "2021-01-02T01:17:06+00:00"
+            "time": "2021-01-31T01:08:45+00:00"
         },
         {
             "name": "drupal/menu_link_weight",
@@ -7464,11 +7399,17 @@
         },
         {
             "name": "drupal/page_manager",
-            "version": "dev-4.x",
+            "version": "4.0.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/page_manager.git",
-                "reference": "1f1d4b1dad38b0c0412f5702e88dcede545492de"
+                "reference": "8.x-4.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-4.0-beta6.zip",
+                "reference": "8.x-4.0-beta6",
+                "shasum": "bf0ac07177b1cd6c1a3da80f727f1448221ee98a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -7476,17 +7417,16 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev",
-                    "dev-8.x-4.x": "4.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-4.0-beta5+10-dev",
-                    "datestamp": "1591120155",
+                    "version": "8.x-4.0-beta6",
+                    "datestamp": "1591125562",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "branch-alias": {
+                    "dev-8.x-4.x": "4.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7522,8 +7462,7 @@
                 "source": "https://git.drupal.org/project/page_manager.git",
                 "issues": "https://www.drupal.org/project/issues/page_manager",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2020-06-02T17:48:54+00:00"
+            }
         },
         {
             "name": "drupal/paragraphs",
@@ -7786,26 +7725,26 @@
         },
         {
             "name": "drupal/pdb",
-            "version": "1.0.0-alpha6",
+            "version": "1.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pdb.git",
-                "reference": "8.x-1.0-alpha6"
+                "reference": "8.x-1.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pdb-8.x-1.0-alpha6.zip",
-                "reference": "8.x-1.0-alpha6",
-                "shasum": "19721bdd7f61b48150c6ba451174bc1af9683e5a"
+                "url": "https://ftp.drupal.org/files/projects/pdb-8.x-1.0-alpha7.zip",
+                "reference": "8.x-1.0-alpha7",
+                "shasum": "def13d6964e3311786082bda709f37a5d7f9781d"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-alpha6",
-                    "datestamp": "1479388440",
+                    "version": "8.x-1.0-alpha7",
+                    "datestamp": "1611102234",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7832,6 +7771,10 @@
                 {
                     "name": "sdleslie",
                     "homepage": "https://www.drupal.org/user/3608649"
+                },
+                {
+                    "name": "segovia94",
+                    "homepage": "https://www.drupal.org/user/780142"
                 }
             ],
             "description": "Progressively Decoupled Blocks (PDB). Build stuff with javascript frameworks as blocks.",
@@ -8248,17 +8191,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.18.0",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.18"
+                "reference": "8.x-1.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.18.zip",
-                "reference": "8.x-1.18",
-                "shasum": "6cf1d6820ba55891e204bac40b6031ed15db482a"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "5654e9d02117e28c585d89a25ea3cc40d20c5019"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -8279,8 +8222,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.18",
-                    "datestamp": "1603359374",
+                    "version": "8.x-1.19",
+                    "datestamp": "1612192040",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8461,6 +8404,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/project/simplesamlphp_auth/issues/2936889": "https://www.drupal.org/files/issues/2020-07-31/simplesamlphp_auth-avoid_unexpected_redirect-2936889-12-d8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9863,17 +9809,77 @@
             "time": "2020-12-29T14:50:06+00:00"
         },
         {
-            "name": "enyo/dropzone",
-            "version": "v5.7.2",
+            "name": "enlightn/security-checker",
+            "version": "v1.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
-                "reference": "78424e9c97b569e698cc9175e9bc424168219162"
+                "url": "https://github.com/enlightn/security-checker.git",
+                "reference": "378b2493cb3bc7961c836ad164b3393c33a20754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enyo/dropzone/zipball/78424e9c97b569e698cc9175e9bc424168219162",
-                "reference": "78424e9c97b569e698cc9175e9bc424168219162",
+                "url": "https://api.github.com/repos/enlightn/security-checker/zipball/378b2493cb3bc7961c836ad164b3393c33a20754",
+                "reference": "378b2493cb3bc7961c836ad164b3393c33a20754",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-zip": "*",
+                "guzzlehttp/guzzle": "^6.3|^7.0",
+                "php": ">=5.6",
+                "symfony/console": "^3.4|^4|^5",
+                "symfony/finder": "^3|^4|^5",
+                "symfony/yaml": "^3.4|^4|^5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.5|^6|^7|^8|^9"
+            },
+            "bin": [
+                "security-checker"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Enlightn\\SecurityChecker\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paras Malhotra",
+                    "email": "paras@laravel-enlightn.com"
+                },
+                {
+                    "name": "Miguel Piedrafita",
+                    "email": "soy@miguelpiedrafita.com"
+                }
+            ],
+            "description": "A PHP dependency vulnerabilities scanner based on the Security Advisories Database.",
+            "keywords": [
+                "package",
+                "php",
+                "scanner",
+                "security",
+                "security advisories",
+                "vulnerability scanner"
+            ],
+            "time": "2021-02-01T13:49:38+00:00"
+        },
+        {
+            "name": "enyo/dropzone",
+            "version": "v5.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dropzone/dropzone-packagist.git",
+                "reference": "7c40871566b9fe67648a441178a5b36c6ad7a5d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dropzone/dropzone-packagist/zipball/7c40871566b9fe67648a441178a5b36c6ad7a5d9",
+                "reference": "7c40871566b9fe67648a441178a5b36c6ad7a5d9",
                 "shasum": ""
             },
             "type": "library",
@@ -9896,21 +9902,7 @@
                 "file upload",
                 "upload"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/[user1",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/enyo] # Replace with up to 4 GitHub Sponsors-enabled usernames e.g.",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/user2",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-07-23T12:58:26+00:00"
+            "time": "2021-02-05T16:58:34+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -12294,53 +12286,6 @@
             "time": "2017-11-07T13:08:06+00:00"
         },
         {
-            "name": "sensiolabs/security-checker",
-            "version": "v5.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "46be3f58adac13084497961e10eed9a7fb4d44d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/46be3f58adac13084497961e10eed9a7fb4d44d1",
-                "reference": "46be3f58adac13084497961e10eed9a7fb4d44d1",
-                "shasum": ""
-            },
-            "require": {
-                "composer/ca-bundle": "^1.0",
-                "php": ">=5.5.9",
-                "symfony/console": "~2.7|~3.0|~4.0"
-            },
-            "bin": [
-                "security-checker"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SensioLabs\\Security\\": "SensioLabs/Security"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien.potencier@gmail.com"
-                }
-            ],
-            "description": "A security checker for your composer.lock",
-            "abandoned": "https://github.com/fabpot/local-php-security-checker",
-            "time": "2018-12-19T17:14:59+00:00"
-        },
-        {
             "name": "simplesamlphp/composer-module-installer",
             "version": "v1.1.8",
             "source": {
@@ -12376,16 +12321,16 @@
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "v4.1.12",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "f6186d07a3a59c6dc506ff0ec63b65051570a6d5"
+                "reference": "d4038b83be50ccd64ecdc0b7c68e66d63c899d2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/f6186d07a3a59c6dc506ff0ec63b65051570a6d5",
-                "reference": "f6186d07a3a59c6dc506ff0ec63b65051570a6d5",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/d4038b83be50ccd64ecdc0b7c68e66d63c899d2c",
+                "reference": "d4038b83be50ccd64ecdc0b7c68e66d63c899d2c",
                 "shasum": ""
             },
             "require": {
@@ -12427,7 +12372,7 @@
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2021-01-17T14:08:48+00:00"
+            "time": "2021-01-28T21:35:22+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp",
@@ -13326,16 +13271,16 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-memcachemonitor",
-            "version": "v0.9.1",
+            "version": "v0.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp-module-memcachemonitor.git",
-                "reference": "0e08e87707cd7b1fb91bbcf65cc454d8849571b0"
+                "reference": "900b5c6b59913d9013b8dae090841a127ae55ae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-memcachemonitor/zipball/0e08e87707cd7b1fb91bbcf65cc454d8849571b0",
-                "reference": "0e08e87707cd7b1fb91bbcf65cc454d8849571b0",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-memcachemonitor/zipball/900b5c6b59913d9013b8dae090841a127ae55ae5",
+                "reference": "900b5c6b59913d9013b8dae090841a127ae55ae5",
                 "shasum": ""
             },
             "require": {
@@ -13352,7 +13297,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-3.0-or-later"
+                "LGPL-2.1-or-later"
             ],
             "authors": [
                 {
@@ -13369,7 +13314,7 @@
                 "memcachemonitor",
                 "simplesamlphp"
             ],
-            "time": "2019-12-03T09:19:35+00:00"
+            "time": "2021-01-25T15:44:44+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-memcookie",
@@ -13466,16 +13411,16 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-negotiate",
-            "version": "v0.9.9",
+            "version": "v0.9.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp-module-negotiate.git",
-                "reference": "68c9a1a2b81c68978ba6cfe19f0a7527300768ba"
+                "reference": "db05ff40399c66e3f14697a8162da6b2fbdab47d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/68c9a1a2b81c68978ba6cfe19f0a7527300768ba",
-                "reference": "68c9a1a2b81c68978ba6cfe19f0a7527300768ba",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/db05ff40399c66e3f14697a8162da6b2fbdab47d",
+                "reference": "db05ff40399c66e3f14697a8162da6b2fbdab47d",
                 "shasum": ""
             },
             "require": {
@@ -13515,7 +13460,7 @@
                 "negotiate",
                 "simplesamlphp"
             ],
-            "time": "2020-08-03T13:02:36+00:00"
+            "time": "2021-01-22T13:36:09+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-oauth",
@@ -13838,16 +13783,16 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-statistics",
-            "version": "v0.9.5",
+            "version": "v0.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp-module-statistics.git",
-                "reference": "d7f68a129baa2dfb6104b91deddfc36b79ae2b54"
+                "reference": "03fb6bdbbf5ce0a0cb257208db79aacac227ac10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-statistics/zipball/d7f68a129baa2dfb6104b91deddfc36b79ae2b54",
-                "reference": "d7f68a129baa2dfb6104b91deddfc36b79ae2b54",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-statistics/zipball/03fb6bdbbf5ce0a0cb257208db79aacac227ac10",
+                "reference": "03fb6bdbbf5ce0a0cb257208db79aacac227ac10",
                 "shasum": ""
             },
             "require": {
@@ -13881,7 +13826,7 @@
                 "simplesamlphp",
                 "statistics"
             ],
-            "time": "2021-01-05T15:07:29+00:00"
+            "time": "2021-01-25T15:15:26+00:00"
         },
         {
             "name": "simplesamlphp/twig-configurable-i18n",
@@ -14263,12 +14208,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/react_paragraphs.git",
-                "reference": "d4478a74cfe3705d9c9c0a8c967de38965b76aa3"
+                "reference": "e90df665aa56c1b1a6a9ef30663fc75e96418454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/d4478a74cfe3705d9c9c0a8c967de38965b76aa3",
-                "reference": "d4478a74cfe3705d9c9c0a8c967de38965b76aa3",
+                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/e90df665aa56c1b1a6a9ef30663fc75e96418454",
+                "reference": "e90df665aa56c1b1a6a9ef30663fc75e96418454",
                 "shasum": ""
             },
             "require": {
@@ -14287,7 +14232,7 @@
                 }
             ],
             "description": "An advanced UI for editing paragraphs in Drupal.",
-            "time": "2021-01-05T16:42:40+00:00"
+            "time": "2021-01-22T06:15:54+00:00"
         },
         {
             "name": "su-sws/stanford_basic",
@@ -14295,12 +14240,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_basic.git",
-                "reference": "ae599e360ab4dc6a3fc3c7618345bc33bdc307c7"
+                "reference": "78ee97fe746f74d9b852b134648ebfc027cdac6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/ae599e360ab4dc6a3fc3c7618345bc33bdc307c7",
-                "reference": "ae599e360ab4dc6a3fc3c7618345bc33bdc307c7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/78ee97fe746f74d9b852b134648ebfc027cdac6e",
+                "reference": "78ee97fe746f74d9b852b134648ebfc027cdac6e",
                 "shasum": ""
             },
             "require": {
@@ -14313,7 +14258,7 @@
             ],
             "description": "Stanford Basic Branding Theme.",
             "homepage": "https://github.com/SU-SWS/stanford_basic",
-            "time": "2020-12-04T20:41:20+00:00"
+            "time": "2021-02-04T23:25:05+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -14346,12 +14291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_events.git",
-                "reference": "e079e8bf70dee2166fc7cf95d431544e34a9957e"
+                "reference": "7816cd408454082b72786bd28c687afa5e3d8c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/e079e8bf70dee2166fc7cf95d431544e34a9957e",
-                "reference": "e079e8bf70dee2166fc7cf95d431544e34a9957e",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/7816cd408454082b72786bd28c687afa5e3d8c95",
+                "reference": "7816cd408454082b72786bd28c687afa5e3d8c95",
                 "shasum": ""
             },
             "require": {
@@ -14419,7 +14364,7 @@
             ],
             "description": "Stanford Events",
             "homepage": "https://github.com/SU-SWS/stanford_events",
-            "time": "2021-01-08T16:55:16+00:00"
+            "time": "2021-02-03T16:30:27+00:00"
         },
         {
             "name": "su-sws/stanford_fields",
@@ -14587,17 +14532,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_news.git",
-                "reference": "265d0cc7670c28aa85b15beb7a99221877ec8231"
+                "reference": "ec516a0c098a5d1552b33b53f3e8a02a247017c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/265d0cc7670c28aa85b15beb7a99221877ec8231",
-                "reference": "265d0cc7670c28aa85b15beb7a99221877ec8231",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/ec516a0c098a5d1552b33b53f3e8a02a247017c0",
+                "reference": "ec516a0c098a5d1552b33b53f3e8a02a247017c0",
                 "shasum": ""
             },
             "require": {
                 "drupal/allowed_formats": "^1.2",
-                "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
+                "drupal/auto_entitylabel": "^3.0",
                 "drupal/ctools": "^3.4",
                 "drupal/default_content": "^2.0",
                 "drupal/ds": "^3.5",
@@ -14608,11 +14553,11 @@
                 "drupal/field_group": "^3.0",
                 "drupal/layout_builder_restrictions": "^2.7",
                 "drupal/menu_block": "^1.6",
-                "drupal/page_manager": "dev-4.x#78b492786c841c5d2eb07f6d977275a76b79e46f",
+                "drupal/page_manager": "^4.0",
                 "drupal/paragraphs": "^1.11",
                 "drupal/pathauto": "^1.8",
                 "drupal/rabbit_hole": "^1.0-beta6",
-                "drupal/taxonomy_menu": "dev-3.x#c0892fa9b428ceb784876554c9b80f49d72a246f",
+                "drupal/taxonomy_menu": "dev-3.x",
                 "drupal/views_block_filter_block": "^1.0",
                 "drupal/views_infinite_scroll": "^1.6",
                 "drupal/views_taxonomy_term_name_depth": "^7.0",
@@ -14643,7 +14588,7 @@
             ],
             "description": "Stanford News",
             "homepage": "https://github.com/SU-SWS/stanford_news",
-            "time": "2021-01-08T16:41:54+00:00"
+            "time": "2021-02-03T16:46:34+00:00"
         },
         {
             "name": "su-sws/stanford_notifications",
@@ -14681,12 +14626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_person.git",
-                "reference": "ddf9cce890e2eeee18444094968dd2ce9e231230"
+                "reference": "aba0569e3aa3a8f9e9e0c8276da3fbc82d9240ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/ddf9cce890e2eeee18444094968dd2ce9e231230",
-                "reference": "ddf9cce890e2eeee18444094968dd2ce9e231230",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/aba0569e3aa3a8f9e9e0c8276da3fbc82d9240ad",
+                "reference": "aba0569e3aa3a8f9e9e0c8276da3fbc82d9240ad",
                 "shasum": ""
             },
             "require": {
@@ -14735,7 +14680,7 @@
             ],
             "description": "Stanford Module Example",
             "homepage": "https://github.com/SU-SWS/stanford_person",
-            "time": "2021-01-08T17:05:14+00:00"
+            "time": "2021-02-03T19:14:33+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -14878,12 +14823,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "7cb474973c89fa59e2772e21f79c96ea0643ae86"
+                "reference": "8fc9196b8f7f61abfa32c2d9cd4de1b61846b2f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/7cb474973c89fa59e2772e21f79c96ea0643ae86",
-                "reference": "7cb474973c89fa59e2772e21f79c96ea0643ae86",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/8fc9196b8f7f61abfa32c2d9cd4de1b61846b2f9",
+                "reference": "8fc9196b8f7f61abfa32c2d9cd4de1b61846b2f9",
                 "shasum": ""
             },
             "require": {
@@ -14926,7 +14871,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Helper Module For Stanford Profile",
-            "time": "2021-01-13T21:21:31+00:00"
+            "time": "2021-02-04T23:20:50+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
@@ -17027,16 +16972,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.18",
+            "version": "v4.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "4f31364bbc8177f2a6dbc125ac3851634ebe2a03"
+                "reference": "a1eab2f69906dc83c5ddba4632180260d0ab4f7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/4f31364bbc8177f2a6dbc125ac3851634ebe2a03",
-                "reference": "4f31364bbc8177f2a6dbc125ac3851634ebe2a03",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a1eab2f69906dc83c5ddba4632180260d0ab4f7f",
+                "reference": "a1eab2f69906dc83c5ddba4632180260d0ab4f7f",
                 "shasum": ""
             },
             "require": {
@@ -17053,7 +16998,7 @@
                 "ext-iconv": "*",
                 "symfony/console": "^3.4|^4.0|^5.0",
                 "symfony/process": "^4.4|^5.0",
-                "twig/twig": "^1.34|^2.4|^3.0"
+                "twig/twig": "^1.43|^2.13|^3.0.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
@@ -17089,7 +17034,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
             "homepage": "https://symfony.com",
             "keywords": [
                 "debug",
@@ -17109,7 +17054,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T16:59:59+00:00"
+            "time": "2021-01-27T09:09:26+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -17405,12 +17350,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -17541,19 +17486,20 @@
         },
         {
             "name": "zumba/amplitude-php",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zumba/amplitude-php.git",
-                "reference": "efec5ce34dde9f7b168e7d810159b9b31bbe362b"
+                "reference": "144da6e648b21a95e5bc67e711af6858f7dae38e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/efec5ce34dde9f7b168e7d810159b9b31bbe362b",
-                "reference": "efec5ce34dde9f7b168e7d810159b9b31bbe362b",
+                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/144da6e648b21a95e5bc67e711af6858f7dae38e",
+                "reference": "144da6e648b21a95e5bc67e711af6858f7dae38e",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "php": ">=7.2",
                 "psr/log": "^1.0"
             },
@@ -17591,7 +17537,7 @@
                 "sdk",
                 "tracking"
             ],
-            "time": "2019-08-08T15:19:30+00:00"
+            "time": "2021-01-26T15:42:42+00:00"
         }
     ],
     "packages-dev": [
@@ -17779,25 +17725,26 @@
         },
         {
             "name": "behat/gherkin",
-            "version": "v4.6.2",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "51ac4500c4dc30cbaaabcd2f25694299df666a31"
+                "reference": "2391482cd003dfdc36b679b27e9f5326bd656acd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/51ac4500c4dc30cbaaabcd2f25694299df666a31",
-                "reference": "51ac4500c4dc30cbaaabcd2f25694299df666a31",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/2391482cd003dfdc36b679b27e9f5326bd656acd",
+                "reference": "2391482cd003dfdc36b679b27e9f5326bd656acd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.1"
+                "php": "~7.2|~8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5|~5",
-                "symfony/phpunit-bridge": "~2.7|~3|~4",
-                "symfony/yaml": "~2.3|~3|~4"
+                "cucumber/cucumber": "dev-gherkin-16.0.0",
+                "phpunit/phpunit": "~8|~9",
+                "symfony/phpunit-bridge": "~3|~4|~5",
+                "symfony/yaml": "~3|~4|~5"
             },
             "suggest": {
                 "symfony/yaml": "If you want to parse features, represented in YAML files"
@@ -17824,7 +17771,7 @@
                     "homepage": "http://everzet.com"
                 }
             ],
-            "description": "Gherkin DSL parser for PHP 5.3",
+            "description": "Gherkin DSL parser for PHP",
             "homepage": "http://behat.org/",
             "keywords": [
                 "BDD",
@@ -17834,7 +17781,7 @@
                 "gherkin",
                 "parser"
             ],
-            "time": "2020-03-17T14:03:26+00:00"
+            "time": "2021-02-04T12:44:21+00:00"
         },
         {
             "name": "behat/mink",
@@ -18336,16 +18283,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.15",
+            "version": "4.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "9b174d18ba58bb2e8cc4cecce619d6124df1d83a"
+                "reference": "c153b1ab289b3e3109e685379aa8847c54ac2b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/9b174d18ba58bb2e8cc4cecce619d6124df1d83a",
-                "reference": "9b174d18ba58bb2e8cc4cecce619d6124df1d83a",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/c153b1ab289b3e3109e685379aa8847c54ac2b68",
+                "reference": "c153b1ab289b3e3109e685379aa8847c54ac2b68",
                 "shasum": ""
             },
             "require": {
@@ -18423,7 +18370,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-01-17T19:19:40+00:00"
+            "time": "2021-02-01T07:30:47+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -18477,16 +18424,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "1.3.6",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "41b79ba6761001bdb1f373a347400180693ad4e7"
+                "reference": "b7406c710684c255d9b067d7795269a5585a0406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/41b79ba6761001bdb1f373a347400180693ad4e7",
-                "reference": "41b79ba6761001bdb1f373a347400180693ad4e7",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/b7406c710684c255d9b067d7795269a5585a0406",
+                "reference": "b7406c710684c255d9b067d7795269a5585a0406",
                 "shasum": ""
             },
             "require": {
@@ -18529,7 +18476,7 @@
             "keywords": [
                 "codeception"
             ],
-            "time": "2021-01-17T11:21:09+00:00"
+            "time": "2021-01-29T18:17:25+00:00"
         },
         {
             "name": "codeception/module-asserts",
@@ -18767,17 +18714,88 @@
             "time": "2019-08-10T16:20:53+00:00"
         },
         {
-            "name": "composer/composer",
-            "version": "1.10.19",
+            "name": "composer/ca-bundle",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/composer/composer.git",
-                "reference": "196601d50c08c3fae389a417a7689367fcf37cef"
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/196601d50c08c3fae389a417a7689367fcf37cef",
-                "reference": "196601d50c08c3fae389a417a7689367fcf37cef",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
+                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.55",
+                "psr/log": "^1.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-12T12:10:35+00:00"
+        },
+        {
+            "name": "composer/composer",
+            "version": "1.10.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/composer.git",
+                "reference": "e55d297525f0ecc805c813a0f63a40114fd670f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/composer/zipball/e55d297525f0ecc805c813a0f63a40114fd670f6",
+                "reference": "e55d297525f0ecc805c813a0f63a40114fd670f6",
                 "shasum": ""
             },
             "require": {
@@ -18858,7 +18876,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-04T08:14:16+00:00"
+            "time": "2021-01-27T14:41:06+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -19642,7 +19660,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "8.9.12",
+            "version": "8.9.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
