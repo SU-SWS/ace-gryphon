@@ -13783,12 +13783,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "be737be760449c35f7bf78bb218ac8787a49e57d"
+                "reference": "77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/be737be760449c35f7bf78bb218ac8787a49e57d",
-                "reference": "be737be760449c35f7bf78bb218ac8787a49e57d",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3",
+                "reference": "77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3",
                 "shasum": ""
             },
             "require": {
@@ -13812,6 +13812,9 @@
             "type": "drupal-custom-profile",
             "extra": {
                 "patches": {
+                    "drupal/conditional_fields": {
+                        "https://www.drupal.org/project/conditional_fields/issues/3192044": "https://www.drupal.org/files/issues/2021-01-14/fix-notice-3192044-14.patch"
+                    },
                     "drupal/core": {
                         "https://www.drupal.org/project/drupal/issues/3015152": "https://www.drupal.org/files/issues/2021-01-29/3015152-tps-114.patch",
                         "https://www.drupal.org/project/drupal/issues/3104980": "https://www.drupal.org/files/issues/2020-01-08/3104980-2.patch"
@@ -13840,7 +13843,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2021-02-11T18:46:37+00:00"
+            "time": "2021-02-11T20:03:41+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",

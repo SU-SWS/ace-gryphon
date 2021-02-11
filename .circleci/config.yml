@@ -100,8 +100,6 @@ phpunit_coverage: &phpunit_coverage
         command: |
           composer install --no-interaction
           vendor/bin/blt circleci:drupal:setup --no-interaction
-          vendor/bin/blt tests:php:lint --no-interaction
-          vendor/bin/blt tests:twig:lint:all --no-interaction
           vendor/bin/blt tests:phpunit:coverage --no-interaction
     - *save_caches
     - store_test_results:
