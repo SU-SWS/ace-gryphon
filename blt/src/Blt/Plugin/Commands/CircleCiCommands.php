@@ -1,6 +1,6 @@
 <?php
 
-namespace Example\Blt\Plugin\Commands;
+namespace Gryphon\Blt\Plugin\Commands;
 
 use Acquia\Blt\Robo\BltTasks;
 use Drupal\Core\Serialization\Yaml;

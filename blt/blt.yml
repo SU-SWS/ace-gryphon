@@ -48,8 +48,6 @@ simplesamlphp: true
 cm:
   strategy: config-split
   allow-overrides: true
-cloud:
-  appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
 multisites:
   - cardinalservice
   - default
@@ -72,6 +70,7 @@ tests:
       config: ${docroot}/core/phpunit.xml
       directory: ${docroot}/modules/custom
       bootstrap: ${docroot}/core/tests/bootstrap.php
+      filter: '/(Unit|Kernel)/'
   codeception:
     cardinal_service:
       suites:
@@ -80,10 +79,12 @@ tests:
       directory: ${docroot}/profiles/custom/cardinal_service_profile/tests/codeception
 validate:
   twig:
-    # Add custom functions from twig tweaks or other modules.
-    functions:
-      - drupal_block
-      - drupal_field
-      - pattern
-    filters:
-      - render_clean
+    functions: [drupal_block, drupal_field, pattern]
+    filters: [render_clean]
+cloud:
+  appId: 1ef402a7-c301-42d7-9b63-f226fa1b2329
+keys_rsync:
+  ssh: cardinalsites.01test@staging-2153.enterprise-g1.hosting.acquia.com
+  files:
+    - /mnt/gfs/stanfordgryphon.prod/nobackup/simplesamlphp/
+    - /mnt/gfs/stanfordgryphon.prod/secrets.settings.php

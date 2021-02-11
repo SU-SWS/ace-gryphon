@@ -16,9 +16,6 @@
 #   - Deny applying with `git apply --whitespace=error-all`.
 #   - Fix automatically with `git apply --whitespace=fix`.
 
-# https://blog.martinhujer.cz/17-tips-for-using-composer-efficiently/#tip-%239%3A-do-not-attempt-to-merge-%60composer.lock%60-when-rebasing-or-merging
-/composer.lock -merge
-
 *.config  text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
 *.css     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
 *.dist    text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2

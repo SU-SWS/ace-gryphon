@@ -132,6 +132,6 @@ workflows:
           filters:
             branches:
               only:
-                - /1.x/
+                - /2.x/
     jobs:
       - renew-certs

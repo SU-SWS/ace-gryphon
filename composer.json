@@ -1,20 +1,32 @@
 {
     "name": "su-sws/ace-gryphon",
     "type": "project",
-    "description": "Project template for Drupal 8 sites built with BLT.",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
+            "url": "https://git.drupalcode.org/issue/domain_301_redirect-2954889",
+            "type": "vcs"
         },
         {
-            "type": "vcs",
-            "url": "git@github.com:pookmish/behat-tools.git"
+            "url": "https://git.drupalcode.org/issue/link_title_formatter-3174382",
+            "type": "vcs"
+        },
+        {
+            "url": "https://git.drupalcode.org/issue/response_code_condition-3141520",
+            "type": "vcs"
+        },
+        {
+            "url": "https://git.drupalcode.org/issue/paranoia-3148370",
+            "type": "vcs"
         },
         {
             "type": "package",
@@ -75,61 +87,87 @@
                     "composer/installers": "~1.0"
                 }
             }
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.2",
-        "acquia/blt": "^11.2.0",
-        "drupal/acquia_purge": "^1.0@beta",
-        "su-hkku/cardinal_service_profile": "dev-8.x-1.x",
-        "su-sws/stanford_profile": "dev-8.x-1.x"
-    },
-    "require-dev": {
-        "pcov/clobber": "^2.0",
-        "se/selenium-server-standalone": "^3.141",
-        "su-sws/drupal-dev": "^8.1.2"
-    },
-    "replace": {
-        "dealerdirect/phpcodesniffer-composer-installer": "*"
-    },
-    "config": {
-        "platform": {
-            "php": "7.2"
         },
-        "discard-changes": true,
-        "sort-packages": true
-    },
-    "extra": {
-        "composer-exit-on-patch-failure": true,
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "./docroot"
-            },
-            "file-mapping": {
-                "[web-root]/sites/default/default.services.yml": {
-                    "mode": "replace",
-                    "path": "docroot/core/assets/scaffold/files/default.services.yml",
-                    "overwrite": false
-                },
-                "[web-root]/sites/default/default.settings.php": {
-                    "mode": "replace",
-                    "path": "docroot/core/assets/scaffold/files/default.settings.php",
-                    "overwrite": false
+        {
+            "type": "package",
+            "package": {
+                "name": "citation-style-language/locales",
+                "version": "1.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/citation-style-language/locales.git",
+                    "reference": "master"
                 }
             }
         },
-        "enable-patching": true,
+        {
+            "type": "package",
+            "package": {
+                "name": "citation-style-language/styles-distribution",
+                "version": "1.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/citation-style-language/styles-distribution.git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "acquia/blt": "^12",
+        "acquia/blt-simplesamlphp": "dev-master",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/acquia_connector": "^1.22",
+        "drupal/acquia_purge": "^1.1",
+        "drupal/core": "^9.0",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9.0",
+        "drupal/domain_301_redirect": "dev-2954889-d9-ready as 1.0.0",
+        "drupal/editor_advanced_link": "^1.8",
+        "drupal/link_title_formatter": "dev-3174382-d9-ready as 1.1.0",
+        "drupal/mysql56": "^1.1",
+        "drupal/paranoia": "dev-3148370-d9-ready as 1.9.0",
+        "drupal/response_code_condition": "dev-3141520-d9-ready as 1.0.0",
+        "drush/drush": "^10.3",
+        "su-sws/stanford_profile": "dev-8.x-2.x as dev-8.x-1.x",
+        "su-hkku/cardinal_service_profile": "dev-8.x-2.x"
+    },
+    "require-dev": {
+        "acquia/blt-drupal-test": "^1.0",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "su-sws/blt-sws": "dev-main",
+        "su-sws/drupal-dev": "^8.2"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "discard-changes": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            },
+            "file-mapping": {
+                "[web-root]/INSTALL.txt": false,
+                "[web-root]/README.txt": false
+            },
+            "gitignore": false
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
             ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
-            ],
-            "docroot/modules/custom/{$name}": [
-                "type:drupal-custom-module"
             ],
             "docroot/profiles/contrib/{$name}": [
                 "type:drupal-profile"
@@ -140,16 +178,14 @@
             "docroot/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
             "docroot/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
-            ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "drush/Commands/{$name}": [
-                "type:drupal-drush"
             ]
         },
         "custom-installer": {
@@ -167,74 +203,42 @@
                 "type:drupal-custom-profile"
             ]
         },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
-        "patchLevel": {
-            "drupal/core": "-p2"
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ]
         },
+        "enable-patching": true,
         "patches": {
-            "drupal/anchor_link": {
-                "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch"
-            },
-            "drupal/conditional_fields": {
-                "https://www.drupal.org/project/conditional_fields/issues/3192044": "https://www.drupal.org/files/issues/2021-01-14/fix-notice-3192044-14.patch"
-            },
-            "drupal/config_ignore": {
-                "https://www.drupal.org/project/config_ignore/issues/2857247": "https://www.drupal.org/files/issues/2018-10-14/support-for-export-2857247-24.patch"
-            },
-            "drupal/fakeobjects": {
-                "https://www.drupal.org/project/fakeobjects/issues/3002953": "https://www.drupal.org/files/issues/2020-06-22/fakeobjects-missing_plugin-3002953-5.patch"
-            },
-            "drupal/menu_link_weight": {
-                "https://www.drupal.org/project/menu_link_weight/issues/3099139": "https://www.drupal.org/files/issues/2019-12-05/menu_link_weight-target_blank-3099139.patch"
-            },
-            "drupal/config_readonly": {
-                "https://www.drupal.org/project/config_readonly/issues/2892631": "https://www.drupal.org/files/issues/2018-04-01/config-readonly-2892631-18.patch"
-            },
             "drupal/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
             },
             "drupal/ui_patterns": {
-                "https://github.com/nuvoleweb/ui_patterns/pull/182": "patches/contrib/ui_patterns.patch"
+                "Ui Patterns Views Fixes": "patches/contrib/ui_patterns_views-preview.patch"
+            },
+            "ckeditor-plugin/link": {
+                "http://github.com/ckeditor/ckeditor4/pull/3965": "patches/libraries/ckeditor-plugin-link-anchor-id.patch",
+                "Disable double click double modal": "patches/libraries/ckeditor-plugin-link-disable-double.patch"
             }
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Example\\": "blt/src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Drupal\\Tests\\PHPUnit\\": "tests/phpunit/src/"
-        }
-    },
     "scripts": {
-        "post-create-project-cmd": [
-            "blt internal:create-project:init-repo"
-        ],
-        "nuke": [
-            "rm -rf vendor composer.lock docroot/core docroot/modules/contrib docroot/profiles/contrib docroot/themes/contrib",
-            "rm -rf docroot/*/custom",
-            "@composer clearcache --ansi",
-            "@composer install --ansi",
-            "rm -rf docroot/*/custom",
-            "@composer install --ansi --prefer-source"
-        ],
-        "init-lando": [
-          "cp lando/example.env .env",
-          "cp lando/example.lando.yml .lando.yml",
-          "cp lando/example.local.blt.yml blt/local.blt.yml",
-          "cp lando/example.php.ini lando/php.ini",
-          "cp lando/example.local.sites.php docroot/sites/local.sites.php",
-          "blt blt:init:settings",
-          "blt source:build:simplesamlphp-config",
-          "blt gryphon:keys"
-        ],
         "post-drupal-scaffold-cmd": [
             "patch -Ns -r \"\" --no-backup-if-mismatch -p1 < ./patches/htaccess.patch"
+        ],
+        "init-lando": [
+            "cp lando/example.env .env",
+            "cp lando/example.lando.yml .lando.yml",
+            "cp lando/example.local.blt.yml blt/local.blt.yml",
+            "cp lando/example.php.ini lando/php.ini",
+            "blt blt:init:settings",
+            "blt source:build:simplesamlphp-config"
         ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Gryphon\\": "blt/src/"
+        }
     }
 }
