@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc43334c08cd460307da8c85b35315a0",
+    "content-hash": "8ff52988b9ac634c092401ae408207dc",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2974,6 +2974,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/project/conditional_fields/issues/3192044": "https://www.drupal.org/files/issues/2021-01-14/fix-notice-3192044-14.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9666,16 +9669,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
                 "shasum": ""
             },
             "require": {
@@ -9712,7 +9715,7 @@
                 "jwt",
                 "php"
             ],
-            "time": "2020-03-25T18:49:23+00:00"
+            "time": "2021-02-12T00:02:00+00:00"
         },
         {
             "name": "gettext/gettext",
@@ -13779,16 +13782,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "dev-2021-02-09",
+            "version": "dev-8.x-2.x",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3"
+                "reference": "176264d062ce9cd8da13f4b4d8692fef95bd4968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3",
-                "reference": "77e14c347cc91a7bb5bb7f1e5fb509cf414e12a3",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/176264d062ce9cd8da13f4b4d8692fef95bd4968",
+                "reference": "176264d062ce9cd8da13f4b4d8692fef95bd4968",
                 "shasum": ""
             },
             "require": {
@@ -13843,7 +13846,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2021-02-11T20:03:41+00:00"
+            "time": "2021-02-11T21:42:50+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",

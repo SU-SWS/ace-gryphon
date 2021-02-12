@@ -131,7 +131,7 @@
         "drupal/response_code_condition": "dev-3141520-d9-ready as 1.0.0",
         "drush/drush": "^10.3",
         "su-sws/stanford_profile": "dev-8.x-2.x",
-        "su-hkku/cardinal_service_profile": "dev-2021-02-09"
+        "su-hkku/cardinal_service_profile": "dev-8.x-2.x"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
