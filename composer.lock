@@ -4177,6 +4177,7 @@
                     "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2020-06-11/2577923-128.patch",
                     "https://www.drupal.org/project/drupal/issues/3104980": "https://www.drupal.org/files/issues/2020-01-08/3104980-2.patch",
                     "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
+                    "https://www.drupal.org/project/drupal/issues/3186415": "https://git.drupalcode.org/project/drupal/-/merge_requests/93.diff",
                     "https://www.drupal.org/project/drupal/issues/3064751": "https://www.drupal.org/files/issues/2019-07-02/3064751-5.patch",
                     "https://www.drupal.org/project/drupal/issues/3059955": "https://www.drupal.org/files/issues/2019-12-28/3082690-80.patch",
                     "https://www.drupal.org/project/drupal/issues/3106718": "https://www.drupal.org/files/issues/2020-01-16/3106718-image-hal-3.patch",
@@ -9445,7 +9446,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/views_taxonomy_term_name_depth/issues/2877249": "https://www.drupal.org/files/issues/2020-05-01/2877249_21.patch"
+                    "https://www.drupal.org/project/views_taxonomy_term_name_depth/issues/2877249": "https://www.drupal.org/files/issues/2021-02-11/2877249-26.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -14153,16 +14154,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "8.1.11",
+            "version": "8.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "c236724ce59bcebaffd7b666e05378ff7da3ef4e"
+                "reference": "79b2ccfe0450e458efdd9fa7b6c1b6b813cbbe84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/c236724ce59bcebaffd7b666e05378ff7da3ef4e",
-                "reference": "c236724ce59bcebaffd7b666e05378ff7da3ef4e",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/79b2ccfe0450e458efdd9fa7b6c1b6b813cbbe84",
+                "reference": "79b2ccfe0450e458efdd9fa7b6c1b6b813cbbe84",
                 "shasum": ""
             },
             "require": {
@@ -14220,7 +14221,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
-            "time": "2021-02-18T21:57:08+00:00"
+            "time": "2021-02-22T21:40:01+00:00"
         },
         {
             "name": "su-sws/jumpstart_ui",
