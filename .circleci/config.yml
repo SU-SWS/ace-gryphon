@@ -125,13 +125,13 @@ workflows:
     jobs:
       - run-cardinal-service-codeception-acceptance
       - run-phpunit-coverage
-  renew_certs:
-    triggers:
-      - schedule:
-          cron: "0 8 * * 0"
-          filters:
-            branches:
-              only:
-                - /1.x/
-    jobs:
-      - renew-certs
+#   renew_certs:
+#     triggers:
+#       - schedule:
+#           cron: "0 8 * * 0"
+#           filters:
+#             branches:
+#               only:
+#                 - /1.x/
+#     jobs:
+#       - renew-certs
