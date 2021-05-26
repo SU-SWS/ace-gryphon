@@ -12,7 +12,7 @@ $metadata['https://idp.stanford.edu/'] = [
     'en' => 'Stanford University WebLogin',
   ],
   'description' => 'Stanford University WebLogin',
-  'SingleSignOnService' => 'https://idp.stanford.edu/idp/profile/SAML2/Redirect/SSO',
+  'SingleSignOnService' => 'https://login.stanford.edu/idp/profile/SAML2/Redirect/SSO',
   'certFingerprint' => '2B:41:A2:66:6A:4E:3F:40:C6:30:55:6A:1F:EC:C3:E3:0B:CE:EE:8F',
 ];
 
@@ -21,6 +21,6 @@ $metadata['https://idp-uat.stanford.edu/'] = [
     'en' => 'Stanford University WebLogin',
   ],
   'description' => 'Stanford University WebLogin',
-  'SingleSignOnService' => 'https://idp-uat.stanford.edu/idp/profile/SAML2/Redirect/SSO',
+  'SingleSignOnService' => 'https://login-uat.stanford.edu/idp/profile/SAML2/Redirect/SSO',
   'certFingerprint' => '6E:C8:18:F6:F9:3D:00:9D:8D:AB:18:02:FD:1A:41:14:ED:98:E4:31',
 ];
