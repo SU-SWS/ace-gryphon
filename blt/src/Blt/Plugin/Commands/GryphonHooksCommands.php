@@ -101,7 +101,7 @@ class GryphonHooksCommands extends BltTasks {
     // Databases should correlate directly to the site name. Except the default
     // directory which has a different database name. This allows the db scrub
     // drush command to operate on the correct database.
-    $site = $args_options['db_name'] == 'stanfordgryphon' ? 'default' : $args_options['db_name'];
+    $site = $args_options['db_name'] == 'hrgryphon' ? 'default' : $args_options['db_name'];
     $this->switchSiteContext($site);
   }
 

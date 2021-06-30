@@ -220,7 +220,7 @@ class GryphonAcquiaApiCommands extends GryphonCommands {
       'modules' => 'letsencrypt_challenge',
     ]);
     $ssh_url = $this->getSshUrl($environment);
-    $command = sprintf('ssh %s "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/stanfordgryphon.%s/tmp %s --debug"', $ssh_url, $domains, $environment, $force ? '--force' : '');
+    $command = sprintf('ssh %s "~/.acme.sh/acme.sh --issue %s -w /mnt/gfs/hrgryphon.%s/tmp %s --debug"', $ssh_url, $domains, $environment, $force ? '--force' : '');
     $this->taskExec($command)->run();
 
     $this->invokeCommand('gryphon:update-certs', ['environment' => $environment]);
@@ -258,21 +258,21 @@ class GryphonAcquiaApiCommands extends GryphonCommands {
     // The names of the cert are different each environment.
     switch ($environment) {
       case 'test':
-        $cert_name = "stanfordgryphonstg.prod.acquia-sites.com";
+        $cert_name = "hrgryphonstg.prod.acquia-sites.com";
         break;
 
       case 'prod':
-        $cert_name = "stanfordgryphon.prod.acquia-sites.com";
+        $cert_name = "hrgryphon.prod.acquia-sites.com";
         break;
 
       default:
-        $cert_name = "stanfordgryphon$environment.prod.acquia-sites.com";
+        $cert_name = "hrgryphon$environment.prod.acquia-sites.com";
     }
 
     // Download the certs to local file system.
     $this->taskDeleteDir($this->getConfigValue('repo.root') . '/certs')->run();
     $this->taskDrush()
-      ->drush("rsync --mode=rltDkz @default.$environment:/home/stanfordgryphon/.acme.sh/$cert_name/ @self:../certs")
+      ->drush("rsync --mode=rltDkz @default.$environment:/home/hrgryphon/.acme.sh/$cert_name/ @self:../certs")
       ->run();
 
     $local_cert_dir = $this->getConfigValue('repo.root') . '/certs';
@@ -403,7 +403,7 @@ class GryphonAcquiaApiCommands extends GryphonCommands {
       default:
         $ssh_env = $environment;
     }
-    return sprintf('stanfordgryphon.%s@stanfordgryphon%s.ssh.prod.acquia-sites.com', $environment, $ssh_env);
+    return sprintf('hrgryphon.%s@hrgryphon%s.ssh.prod.acquia-sites.com', $environment, $ssh_env);
   }
 
 }

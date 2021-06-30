@@ -1,13 +1,13 @@
 project:
-  prefix: gryphon
-  human_name: 'Stanford ACE D8 Projects'
+  prefix: hrgryphon
+  human_name: 'Stanford HR D9 Projects'
   profile:
     name: stanford_profile
   local: {  }
 git:
-  default_branch: 1.x
+  default_branch: caw
   remotes:
-    - 'stanfordgryphon@svn-23450.prod.hosting.acquia.com:stanfordgryphon.git'
+    - 'hrgryphon@svn-23450.prod.hosting.acquia.com:hrgryphon.git'
 deploy:
   tag_source: false
   exclude_file: '${repo.root}/blt/deploy/rsync-exclude.txt'
@@ -50,7 +50,6 @@ cm:
   allow-overrides: true
 multisites:
   - cardinalatwork
-  - cardinalservice
   - default
 behat:
   selenium:
@@ -73,11 +72,11 @@ tests:
       bootstrap: '${docroot}/core/tests/bootstrap.php'
       filter: /(Unit|Kernel)/
   codeception:
-    cardinal_service:
+    caw_:
       suites:
         - acceptance
         - functional
-      directory: '${docroot}/profiles/custom/cardinal_service_profile/tests/codeception'
+      directory: '${docroot}/profiles/custom/caw_profile/tests/codeception'
 validate:
   twig:
     functions:
@@ -87,9 +86,9 @@ validate:
     filters:
       - render_clean
 cloud:
-  appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
+  appId: a840b27a-157c-4831-867a-56763306d293
 keys_rsync:
-  ssh: stanfordgryphon.prod@web-25384.prod.hosting.acquia.com
+  ssh: hrgryphon.prod@ded-35981.prod.hosting.acquia.com
   files:
-    - /mnt/gfs/stanfordgryphon.prod/nobackup/simplesamlphp/
-    - /mnt/gfs/stanfordgryphon.prod/secrets.settings.php
+    - /mnt/gfs/hrgryphon.prod/nobackup/simplesamlphp/
+    - /mnt/gfs/hrgryphon.prod/secrets.settings.php
