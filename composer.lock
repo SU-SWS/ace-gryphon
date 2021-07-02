@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ffcc976c84e8ed77f1008702ef762c4",
+    "content-hash": "b798da5bf6853dc4bc69b7de0b262efa",
     "packages": [
         {
             "name": "acquia/blt",
@@ -6130,6 +6130,59 @@
             }
         },
         {
+            "name": "drupal/layout_paragraphs",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_paragraphs.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_paragraphs-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "6b4bbb8fc50f70092d1c1ed720076be9f8904218"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/paragraphs": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1621524309",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "itamair",
+                    "homepage": "https://www.drupal.org/user/1179076"
+                },
+                {
+                    "name": "justin2pin",
+                    "homepage": "https://www.drupal.org/user/278450"
+                }
+            ],
+            "description": "Layout Paragraphs",
+            "homepage": "https://www.drupal.org/project/layout_paragraphs",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_paragraphs",
+                "issues": "https://www.drupal.org/project/issues/layout_paragraphs"
+            }
+        },
+        {
             "name": "drupal/link_title_formatter",
             "version": "dev-3174382-d9-ready",
             "source": {
@@ -6188,6 +6241,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/linkit",
                 "issues": "http://drupal.org/project/linkit"
+            }
+        },
+        {
+            "name": "drupal/mathjax",
+            "version": "3.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mathjax.git",
+                "reference": "3.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mathjax-3.0.0-beta1.zip",
+                "reference": "3.0.0-beta1",
+                "shasum": "c81c33e19170f81a84c99d499e8ebadb7dacd6b9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta1",
+                    "datestamp": "1606331550",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cilefen",
+                    "homepage": "https://www.drupal.org/user/1850070"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "julou",
+                    "homepage": "https://www.drupal.org/user/273952"
+                }
+            ],
+            "description": "Javascript-based LaTeX rendering solution for your Drupal website.",
+            "homepage": "https://www.drupal.org/project/mathjax",
+            "support": {
+                "source": "https://git.drupalcode.org/project/mathjax"
             }
         },
         {
@@ -13725,23 +13830,23 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "dev-8.x-2.x",
+            "version": "dev-CAW21-38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "d1892afea4cdc4c856b85899807e95cbc793349d"
+                "reference": "fd8da191e954a8748c49305b900052ed30c9fab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/d1892afea4cdc4c856b85899807e95cbc793349d",
-                "reference": "d1892afea4cdc4c856b85899807e95cbc793349d",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/fd8da191e954a8748c49305b900052ed30c9fab5",
+                "reference": "fd8da191e954a8748c49305b900052ed30c9fab5",
                 "shasum": ""
             },
             "require": {
                 "drupal/core": "^9.2",
+                "drupal/layout_paragraphs": "^1.0",
                 "su-sws/stanford_profile": "dev-8.x-2.x"
             },
-            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -13762,9 +13867,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/8.x-2.x"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/CAW21-38"
             },
-            "time": "2021-07-01T05:41:25+00:00"
+            "time": "2021-07-02T19:07:21+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -13851,12 +13956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/jumpstart_ui.git",
-                "reference": "b37906284b6b01b1b14813cb68e48ead4d33f793"
+                "reference": "8e0b21ca780d5cc4ee6633334ba80e87a5f05fff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/b37906284b6b01b1b14813cb68e48ead4d33f793",
-                "reference": "b37906284b6b01b1b14813cb68e48ead4d33f793",
+                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/8e0b21ca780d5cc4ee6633334ba80e87a5f05fff",
+                "reference": "8e0b21ca780d5cc4ee6633334ba80e87a5f05fff",
                 "shasum": ""
             },
             "require": {
@@ -13880,7 +13985,7 @@
                 "issues": "https://github.com/SU-SWS/jumpstart_ui/issues",
                 "source": "https://github.com/SU-SWS/jumpstart_ui/tree/8.x-1.x"
             },
-            "time": "2021-06-28T16:51:10+00:00"
+            "time": "2021-07-02T00:03:44+00:00"
         },
         {
             "name": "su-sws/nobots",
@@ -14425,12 +14530,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "de890ff25b164ae30b7917727a76dc2ec9e66ebf"
+                "reference": "879cbb6162ce525beedd2c59f7b9e0fc4e318780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/de890ff25b164ae30b7917727a76dc2ec9e66ebf",
-                "reference": "de890ff25b164ae30b7917727a76dc2ec9e66ebf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/879cbb6162ce525beedd2c59f7b9e0fc4e318780",
+                "reference": "879cbb6162ce525beedd2c59f7b9e0fc4e318780",
                 "shasum": ""
             },
             "require": {
@@ -14467,6 +14572,7 @@
                 "drupal/layout_library": "^1.0-beta1",
                 "drupal/link_title_formatter": "^1.1",
                 "drupal/linkit": "^6.0",
+                "drupal/mathjax": "^3.0",
                 "drupal/menu_admin_per_menu": "^1.0",
                 "drupal/menu_block": "dev-1.x#567becffbb0589e824fb053f15fb38a5846e7276",
                 "drupal/menu_link_weight": "^1.0-beta3",
@@ -14529,7 +14635,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/8.x-2.x"
             },
-            "time": "2021-06-29T17:23:56+00:00"
+            "time": "2021-07-02T19:16:33+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -14537,12 +14643,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "94543e640ce9c03a0a0ee90a942668aba2eb07c8"
+                "reference": "12ef64d9dd37a8b6457a802dbec35dbd4e62064c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/94543e640ce9c03a0a0ee90a942668aba2eb07c8",
-                "reference": "94543e640ce9c03a0a0ee90a942668aba2eb07c8",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/12ef64d9dd37a8b6457a802dbec35dbd4e62064c",
+                "reference": "12ef64d9dd37a8b6457a802dbec35dbd4e62064c",
                 "shasum": ""
             },
             "require": {
@@ -14592,7 +14698,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/8.x-1.x"
             },
-            "time": "2021-06-30T21:35:58+00:00"
+            "time": "2021-07-02T00:09:58+00:00"
         },
         {
             "name": "su-sws/stanford_publication",
@@ -23338,12 +23444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/blt-sws.git",
-                "reference": "0551c1ba4360f75075ffdad1f4f3a73467fe5ddf"
+                "reference": "76b0b25f9bbe3a8af820f0da83d4540dd7f9a882"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/blt-sws/zipball/0551c1ba4360f75075ffdad1f4f3a73467fe5ddf",
-                "reference": "0551c1ba4360f75075ffdad1f4f3a73467fe5ddf",
+                "url": "https://api.github.com/repos/SU-SWS/blt-sws/zipball/76b0b25f9bbe3a8af820f0da83d4540dd7f9a882",
+                "reference": "76b0b25f9bbe3a8af820f0da83d4540dd7f9a882",
                 "shasum": ""
             },
             "require": {
@@ -23371,7 +23477,7 @@
                 "issues": "https://github.com/SU-SWS/blt-sws/issues",
                 "source": "https://github.com/SU-SWS/blt-sws/tree/main"
             },
-            "time": "2021-06-14T16:06:07+00:00"
+            "time": "2021-07-02T16:59:51+00:00"
         },
         {
             "name": "su-sws/drupal-dev",

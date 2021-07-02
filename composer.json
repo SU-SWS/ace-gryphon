@@ -131,7 +131,7 @@
         "drupal/paranoia": "^1.9",
         "drupal/response_code_condition": "dev-3141520-d9-ready as 1.0.0",
         "drush/drush": "^10.3",
-        "su-sws/caw_profile": "dev-8.x-2.x"
+        "su-sws/caw_profile": "dev-CAW21-38"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
