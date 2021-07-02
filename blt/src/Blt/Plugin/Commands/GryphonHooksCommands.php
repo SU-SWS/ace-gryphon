@@ -119,8 +119,6 @@ class GryphonHooksCommands extends BltTasks {
         $this->switchSiteContext($multisite);
         $this->taskDrush()
           ->drush('state:set nobots 1')
-          ->drush('sqlq')
-          ->arg('truncate config_pages__su_site_url')
           ->run();
       }
     }
