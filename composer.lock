@@ -13786,12 +13786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "c8d006a112ecf41db0f150f47f316e00c05ff2d1"
+                "reference": "6734053f2d3085cb14c771f7e19eb9880aacf785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/c8d006a112ecf41db0f150f47f316e00c05ff2d1",
-                "reference": "c8d006a112ecf41db0f150f47f316e00c05ff2d1",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/6734053f2d3085cb14c771f7e19eb9880aacf785",
+                "reference": "6734053f2d3085cb14c771f7e19eb9880aacf785",
                 "shasum": ""
             },
             "require": {
@@ -13821,7 +13821,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/8.x-2.x"
             },
-            "time": "2021-07-08T20:59:25+00:00"
+            "time": "2021-07-09T20:16:12+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -13909,12 +13909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/jumpstart_ui.git",
-                "reference": "58b2cf2a254c29e6a66888eb49ea29ada2c14dc2"
+                "reference": "7ebb7e4eda64aee9a949ac7b6b2f7ccc76fd8c3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/58b2cf2a254c29e6a66888eb49ea29ada2c14dc2",
-                "reference": "58b2cf2a254c29e6a66888eb49ea29ada2c14dc2",
+                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/7ebb7e4eda64aee9a949ac7b6b2f7ccc76fd8c3b",
+                "reference": "7ebb7e4eda64aee9a949ac7b6b2f7ccc76fd8c3b",
                 "shasum": ""
             },
             "require": {
@@ -13938,7 +13938,7 @@
                 "issues": "https://github.com/SU-SWS/jumpstart_ui/issues",
                 "source": "https://github.com/SU-SWS/jumpstart_ui/tree/8.x-1.x"
             },
-            "time": "2021-07-06T21:41:00+00:00"
+            "time": "2021-07-09T17:12:12+00:00"
         },
         {
             "name": "su-sws/nobots",
@@ -14016,12 +14016,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_basic.git",
-                "reference": "24e659cb45434b63c9ae09178af4664d3ad02e84"
+                "reference": "72e9bc6a00606bc10c0ef61781aec27a3e18ad33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/24e659cb45434b63c9ae09178af4664d3ad02e84",
-                "reference": "24e659cb45434b63c9ae09178af4664d3ad02e84",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_basic/zipball/72e9bc6a00606bc10c0ef61781aec27a3e18ad33",
+                "reference": "72e9bc6a00606bc10c0ef61781aec27a3e18ad33",
                 "shasum": ""
             },
             "require": {
@@ -14040,7 +14040,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_basic/issues",
                 "source": "https://github.com/SU-SWS/stanford_basic/tree/8.x-5.x"
             },
-            "time": "2021-07-07T18:08:09+00:00"
+            "time": "2021-07-09T16:53:26+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -14078,12 +14078,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_events.git",
-                "reference": "486bad9529eaabb9e99a6a5577713f3bcc7ecf4f"
+                "reference": "d8a47b27a6166d034452580ffdb0a9a76ba310de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/486bad9529eaabb9e99a6a5577713f3bcc7ecf4f",
-                "reference": "486bad9529eaabb9e99a6a5577713f3bcc7ecf4f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/d8a47b27a6166d034452580ffdb0a9a76ba310de",
+                "reference": "d8a47b27a6166d034452580ffdb0a9a76ba310de",
                 "shasum": ""
             },
             "require": {
@@ -14138,7 +14138,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_events/tree/8.x-1.x"
             },
-            "time": "2021-07-06T16:53:24+00:00"
+            "time": "2021-07-09T17:22:14+00:00"
         },
         {
             "name": "su-sws/stanford_fields",
@@ -14328,12 +14328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_news.git",
-                "reference": "9aad0b9b2234c37b40b6a31ee2355602857d1450"
+                "reference": "79edcaf62f35b5363584f56381d8caeaa4c9f48f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/9aad0b9b2234c37b40b6a31ee2355602857d1450",
-                "reference": "9aad0b9b2234c37b40b6a31ee2355602857d1450",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/79edcaf62f35b5363584f56381d8caeaa4c9f48f",
+                "reference": "79edcaf62f35b5363584f56381d8caeaa4c9f48f",
                 "shasum": ""
             },
             "require": {
@@ -14373,7 +14373,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_news/tree/8.x-2.x"
             },
-            "time": "2021-07-06T16:27:21+00:00"
+            "time": "2021-07-09T17:16:43+00:00"
         },
         {
             "name": "su-sws/stanford_notifications",
@@ -14416,12 +14416,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_person.git",
-                "reference": "93a9842ccd2b1d56319e8f55058567af051adb0d"
+                "reference": "803d1de0ed1d37d9d2eaba83b8645ac225b09a1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/93a9842ccd2b1d56319e8f55058567af051adb0d",
-                "reference": "93a9842ccd2b1d56319e8f55058567af051adb0d",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/803d1de0ed1d37d9d2eaba83b8645ac225b09a1d",
+                "reference": "803d1de0ed1d37d9d2eaba83b8645ac225b09a1d",
                 "shasum": ""
             },
             "require": {
@@ -14475,7 +14475,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_person/issues",
                 "source": "https://github.com/SU-SWS/stanford_person/tree/8.x-1.x"
             },
-            "time": "2021-07-06T21:59:53+00:00"
+            "time": "2021-07-09T17:06:16+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -14483,12 +14483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "d1d4c4fa0007258798c1e3cc2bb2c4a9fe3b5d35"
+                "reference": "ae27779c696bcd64db1378b4baaf5f6948cb45d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d1d4c4fa0007258798c1e3cc2bb2c4a9fe3b5d35",
-                "reference": "d1d4c4fa0007258798c1e3cc2bb2c4a9fe3b5d35",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/ae27779c696bcd64db1378b4baaf5f6948cb45d7",
+                "reference": "ae27779c696bcd64db1378b4baaf5f6948cb45d7",
                 "shasum": ""
             },
             "require": {
@@ -14588,7 +14588,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/8.x-2.x"
             },
-            "time": "2021-07-08T18:13:21+00:00"
+            "time": "2021-07-09T20:10:53+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -14596,12 +14596,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "c98060a2fab47b31d13313d39abd0b7f9192c83e"
+                "reference": "c130a18783e981feb5f71d825bfbfdcf4f0c36f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/c98060a2fab47b31d13313d39abd0b7f9192c83e",
-                "reference": "c98060a2fab47b31d13313d39abd0b7f9192c83e",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/c130a18783e981feb5f71d825bfbfdcf4f0c36f6",
+                "reference": "c130a18783e981feb5f71d825bfbfdcf4f0c36f6",
                 "shasum": ""
             },
             "require": {
@@ -14651,7 +14651,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/8.x-1.x"
             },
-            "time": "2021-07-07T17:09:50+00:00"
+            "time": "2021-07-09T20:21:19+00:00"
         },
         {
             "name": "su-sws/stanford_publication",
