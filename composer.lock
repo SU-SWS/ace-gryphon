@@ -13840,12 +13840,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f"
+                "reference": "372858f9d991e058f00fce7fe8fb9ca6113f3160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f",
-                "reference": "b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/372858f9d991e058f00fce7fe8fb9ca6113f3160",
+                "reference": "372858f9d991e058f00fce7fe8fb9ca6113f3160",
                 "shasum": ""
             },
             "require": {
@@ -13876,7 +13876,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/8.x-2.x"
             },
-            "time": "2021-08-03T20:17:02+00:00"
+            "time": "2021-08-03T20:29:52+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
