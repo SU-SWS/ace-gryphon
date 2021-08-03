@@ -13840,12 +13840,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "bcfb18ebd89979609cbbdb53eb44043c9ca3894c"
+                "reference": "b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/bcfb18ebd89979609cbbdb53eb44043c9ca3894c",
-                "reference": "bcfb18ebd89979609cbbdb53eb44043c9ca3894c",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f",
+                "reference": "b1a9f00a0e9cd65832c3d0b0af89e9f4ef54a91f",
                 "shasum": ""
             },
             "require": {
@@ -13876,7 +13876,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/8.x-2.x"
             },
-            "time": "2021-08-02T17:04:55+00:00"
+            "time": "2021-08-03T20:17:02+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -14541,12 +14541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "17c098579fbf1ff2532f07c821e98c74ccc345eb"
+                "reference": "691dfd7d0d2702128cd5ef1ad99922cd642b30d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/17c098579fbf1ff2532f07c821e98c74ccc345eb",
-                "reference": "17c098579fbf1ff2532f07c821e98c74ccc345eb",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/691dfd7d0d2702128cd5ef1ad99922cd642b30d6",
+                "reference": "691dfd7d0d2702128cd5ef1ad99922cd642b30d6",
                 "shasum": ""
             },
             "require": {
@@ -14646,7 +14646,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/8.x-2.x"
             },
-            "time": "2021-08-03T14:53:19+00:00"
+            "time": "2021-08-03T17:52:15+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
