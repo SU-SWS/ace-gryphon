@@ -3549,16 +3549,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "08ad826a9ccd193e9a2e717f75c9f6fac3274a79"
+                "reference": "e9c75c8e2d1395aebb19cad17d6a514945636ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/08ad826a9ccd193e9a2e717f75c9f6fac3274a79",
-                "reference": "08ad826a9ccd193e9a2e717f75c9f6fac3274a79",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e9c75c8e2d1395aebb19cad17d6a514945636ecf",
+                "reference": "e9c75c8e2d1395aebb19cad17d6a514945636ecf",
                 "shasum": ""
             },
             "require": {
@@ -3797,13 +3797,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.2.2"
+                "source": "https://github.com/drupal/core/tree/9.2.3"
             },
-            "time": "2021-07-20T21:42:48+00:00"
+            "time": "2021-08-03T13:14:21+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3847,22 +3847,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.2"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.3"
             },
             "time": "2021-07-10T22:39:33+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "06a84abc067304e9280fde292a382ca6bce82ee1"
+                "reference": "20feef210c8506a8cc903bd5ef9ef90dec89e71e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/06a84abc067304e9280fde292a382ca6bce82ee1",
-                "reference": "06a84abc067304e9280fde292a382ca6bce82ee1",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/20feef210c8506a8cc903bd5ef9ef90dec89e71e",
+                "reference": "20feef210c8506a8cc903bd5ef9ef90dec89e71e",
                 "shasum": ""
             },
             "require": {
@@ -3871,7 +3871,7 @@
                 "doctrine/annotations": "1.13.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.2.2",
+                "drupal/core": "9.2.3",
                 "egulias/email-validator": "2.1.25",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.1",
@@ -3934,9 +3934,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.2.2"
+                "source": "https://github.com/drupal/core-recommended/tree/9.2.3"
             },
-            "time": "2021-07-20T21:42:48+00:00"
+            "time": "2021-08-03T13:14:21+00:00"
         },
         {
             "name": "drupal/crop",
@@ -13968,12 +13968,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/jumpstart_ui.git",
-                "reference": "705af83fe83824b028f5ef2c49c0c77e423e35e8"
+                "reference": "992f75e4a07a7c0e65ae57a2d02ef43647efb146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/705af83fe83824b028f5ef2c49c0c77e423e35e8",
-                "reference": "705af83fe83824b028f5ef2c49c0c77e423e35e8",
+                "url": "https://api.github.com/repos/SU-SWS/jumpstart_ui/zipball/992f75e4a07a7c0e65ae57a2d02ef43647efb146",
+                "reference": "992f75e4a07a7c0e65ae57a2d02ef43647efb146",
                 "shasum": ""
             },
             "require": {
@@ -13997,7 +13997,7 @@
                 "issues": "https://github.com/SU-SWS/jumpstart_ui/issues",
                 "source": "https://github.com/SU-SWS/jumpstart_ui/tree/8.x-1.x"
             },
-            "time": "2021-07-29T21:49:56+00:00"
+            "time": "2021-08-03T14:32:38+00:00"
         },
         {
             "name": "su-sws/nobots",
@@ -14268,12 +14268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_media.git",
-                "reference": "a1c4c8c21f803e9bad8fbc172ba3a08be14af7f0"
+                "reference": "0676a16143f4cdcc710760181a5e0ff17748830e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/a1c4c8c21f803e9bad8fbc172ba3a08be14af7f0",
-                "reference": "a1c4c8c21f803e9bad8fbc172ba3a08be14af7f0",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/0676a16143f4cdcc710760181a5e0ff17748830e",
+                "reference": "0676a16143f4cdcc710760181a5e0ff17748830e",
                 "shasum": ""
             },
             "require": {
@@ -14296,7 +14296,6 @@
                 },
                 "patches": {
                     "drupal/core": {
-                        "https://www.drupal.org/project/drupal/issues/3186415": "https://git.drupalcode.org/project/drupal/-/merge_requests/93.diff",
                         "https://www.drupal.org/project/drupal/issues/3064751": "https://www.drupal.org/files/issues/2019-07-02/3064751-5.patch",
                         "https://www.drupal.org/project/drupal/issues/3059955": "https://www.drupal.org/files/issues/2019-12-28/3082690-80.patch"
                     },
@@ -14328,7 +14327,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_media/issues",
                 "source": "https://github.com/SU-SWS/stanford_media/tree/8.x-2.x"
             },
-            "time": "2021-06-21T22:26:30+00:00"
+            "time": "2021-08-03T14:36:31+00:00"
         },
         {
             "name": "su-sws/stanford_migrate",
@@ -14542,12 +14541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "3b963daec467218fa06f242a0f543209f90a90ea"
+                "reference": "17c098579fbf1ff2532f07c821e98c74ccc345eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/3b963daec467218fa06f242a0f543209f90a90ea",
-                "reference": "3b963daec467218fa06f242a0f543209f90a90ea",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/17c098579fbf1ff2532f07c821e98c74ccc345eb",
+                "reference": "17c098579fbf1ff2532f07c821e98c74ccc345eb",
                 "shasum": ""
             },
             "require": {
@@ -14647,7 +14646,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/8.x-2.x"
             },
-            "time": "2021-08-02T17:26:49+00:00"
+            "time": "2021-08-03T14:53:19+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -20496,7 +20495,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -20542,7 +20541,7 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev/tree/9.2.2"
+                "source": "https://github.com/drupal/core-dev/tree/9.2.3"
             },
             "time": "2021-06-01T16:41:50+00:00"
         },
@@ -23076,7 +23075,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
