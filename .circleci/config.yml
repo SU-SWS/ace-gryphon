@@ -74,7 +74,7 @@ renew_certs: &renew_certs
           vendor/bin/blt gryphon:renew-cert test --no-interaction
           vendor/bin/blt gryphon:renew-cert dev --no-interaction
 
-cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptance
+caw_profile_codeception_acceptance: &caw_profile_codeception_acceptance
   <<: *defaults
   steps:
     - checkout
@@ -85,10 +85,10 @@ cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptanc
           composer install --no-interaction
           vendor/bin/blt blt:telemetry:disable --no-interaction
           mkdir -p artifacts/_data
-          vendor/bin/blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
+          vendor/bin/blt circleci:drupal:install --profile=caw_profile --no-interaction
           vendor/bin/blt drupal:toggle:modules --no-interaction
           vendor/bin/drush xmlsitemap-regenerate
-          vendor/bin/blt tests:codeception --test=cardinal_service --no-interaction
+          vendor/bin/blt tests:codeception --test=caw_profile --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -117,8 +117,8 @@ phpunit_coverage: &phpunit_coverage
 jobs:
   renew-certs:
     <<: *renew_certs
-  run-cardinal-service-codeception-acceptance:
-    <<: *cardinal_service_codeception_acceptance
+  run-caw-profile-codeception-acceptance:
+    <<: *caw_profile_codeception_acceptance
   run-phpunit-coverage:
     <<: *phpunit_coverage
 
@@ -127,7 +127,7 @@ workflows:
   version: 2
   tests:
     jobs:
-      - run-cardinal-service-codeception-acceptance
+      - run-caw-profile-codeception-acceptance
       - run-phpunit-coverage
   renew_certs:
     triggers:
