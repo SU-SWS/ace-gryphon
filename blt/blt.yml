@@ -9,6 +9,7 @@ git:
   remotes:
     - 'hrgryphon@svn-23450.prod.hosting.acquia.com:hrgryphon.git'
 deploy:
+  dir: '${repo.root}/deploy'
   tag_source: false
   exclude_file: '${repo.root}/blt/deploy/rsync-exclude.txt'
   gitignore_file: '${repo.root}/blt/deploy/.gitignore'
