@@ -9494,16 +9494,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "10.5.0",
+            "version": "10.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "3fd9f7e62ffb7f221e4be8151a738529345d22d5"
+                "reference": "a57390579f178d553decd3e9f92cdb37cbd27a07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/3fd9f7e62ffb7f221e4be8151a738529345d22d5",
-                "reference": "3fd9f7e62ffb7f221e4be8151a738529345d22d5",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/a57390579f178d553decd3e9f92cdb37cbd27a07",
+                "reference": "a57390579f178d553decd3e9f92cdb37cbd27a07",
                 "shasum": ""
             },
             "require": {
@@ -9627,7 +9627,7 @@
                 "irc": "irc://irc.freenode.org/drush",
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/10.5.0"
+                "source": "https://github.com/drush-ops/drush/tree/10.5.1"
             },
             "funding": [
                 {
@@ -9635,7 +9635,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-08T15:49:30+00:00"
+            "time": "2021-08-13T02:55:27+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -14396,12 +14396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "457664fad51af3ae1b545bd7b0b0ad2f35a6790f"
+                "reference": "95cffef15313fa21ebc83f2c9045efabf85fea0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/457664fad51af3ae1b545bd7b0b0ad2f35a6790f",
-                "reference": "457664fad51af3ae1b545bd7b0b0ad2f35a6790f",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/95cffef15313fa21ebc83f2c9045efabf85fea0d",
+                "reference": "95cffef15313fa21ebc83f2c9045efabf85fea0d",
                 "shasum": ""
             },
             "require": {
@@ -14418,6 +14418,11 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches": {
+                    "drupal/layout_paragraphs": {
+                        "https://www.drupal.org/project/layout_paragraphs/issues/3227998": "https://www.drupal.org/files/issues/2021-08-12/layout_paragraphs-3227998.patch"
+                    }
                 }
             },
             "autoload": {
@@ -14432,9 +14437,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/CAW21-38-v2"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/CAW21-38"
             },
-            "time": "2021-08-12T23:37:23+00:00"
+            "time": "2021-08-13T06:00:10+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
