@@ -72,7 +72,7 @@ tests:
       bootstrap: '${docroot}/core/tests/bootstrap.php'
       filter: /(Unit|Kernel)/
   codeception:
-    caw_:
+    caw_profile:
       suites:
         - acceptance
         - functional

@@ -4,6 +4,8 @@ project:
   local:
     protocol: http
     hostname: local.cardinalatwork.com
+  profile:
+    name: caw_profile
 drush:
   aliases:
     local: cardinalatwork.local

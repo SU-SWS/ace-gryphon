@@ -5,7 +5,7 @@ project:
     hostname: cardinalservice.lndo.site
     uri: https://cardinalservice.lndo.site
   profile:
-    name: cardinal_service_profile
+    name: caw_profile
 drupal:
   db:
     username: drupal

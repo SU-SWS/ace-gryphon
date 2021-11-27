@@ -13,8 +13,7 @@
             "url": "https://packages.drupal.org/8",
             "exclude": [
                 "drupal/domain_301_redirect",
-                "drupal/link_title_formatter",
-                "drupal/response_code_condition"
+                "drupal/link_title_formatter"
             ]
         },
         {
@@ -23,10 +22,6 @@
         },
         {
             "url": "https://git.drupalcode.org/issue/link_title_formatter-3174382",
-            "type": "vcs"
-        },
-        {
-            "url": "https://git.drupalcode.org/issue/response_code_condition-3141520",
             "type": "vcs"
         },
         {
@@ -129,7 +124,6 @@
         "drupal/link_title_formatter": "dev-3174382-d9-ready as 1.1.0",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
-        "drupal/response_code_condition": "dev-3141520-d9-ready as 1.0.0",
         "drush/drush": "^10.3",
         "su-sws/caw_profile": "dev-8.x-2.x"
     },
