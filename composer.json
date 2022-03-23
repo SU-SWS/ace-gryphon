@@ -125,7 +125,7 @@
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^10.3",
-        "su-sws/caw_profile": "^8.2"
+        "su-sws/caw_profile": "8.x-dev"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
@@ -143,7 +143,8 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "discard-changes": true
+        "discard-changes": true,
+        "allow-plugins": true
     },
     "extra": {
         "drupal-scaffold": {
