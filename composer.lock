@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b992c50a025e4564e4ca65210233465",
+    "content-hash": "d6d3a66ff8894931dad8cf5be94894ac",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1936,16 +1936,16 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd"
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/60b704331479a69e9bcdb3496da2315b5c4f94fd",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/c6dfd9bb8b0040609f04754f729d4cb3016e0575",
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575",
                 "shasum": ""
             },
             "require": {
@@ -1997,9 +1997,9 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v1.2.0"
+                "source": "https://github.com/dompdf/dompdf/tree/v1.2.1"
             },
-            "time": "2022-02-07T13:02:10+00:00"
+            "time": "2022-03-24T12:57:42+00:00"
         },
         {
             "name": "drupal/acquia_connector",
@@ -4487,15 +4487,45 @@
         },
         {
             "name": "drupal/domain_301_redirect",
-            "version": "dev-2954889-d9-ready",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/issue/domain_301_redirect-2954889",
-                "reference": "1ae930639200937b47614a4f1b94299bbc8fb617"
+                "url": "https://git.drupalcode.org/project/domain_301_redirect.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain_301_redirect-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "69ac94e4ca40008b5a448ae081c9fb5ce7642b51"
+            },
+            "require": {
+                "drupal/core": "^9.0"
             },
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1648146518",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "pookmish",
+                    "homepage": "https://www.drupal.org/user/3059577"
+                },
+                {
+                    "name": "timhilliard",
+                    "homepage": "https://www.drupal.org/user/195493"
+                }
             ],
             "description": "Allows you to 301 redirect any domain to the main domain associated with a site.",
             "homepage": "http://drupal.org/project/domain_301_redirect",
@@ -4503,10 +4533,9 @@
                 "Drupal"
             ],
             "support": {
-                "issues": "http://drupal.org/project/domain_301_redirect",
-                "source": "http://cgit.drupalcode.org/domain_301_redirect"
-            },
-            "time": "2020-11-11T22:06:02+00:00"
+                "source": "http://cgit.drupalcode.org/domain_301_redirect",
+                "issues": "http://drupal.org/project/domain_301_redirect"
+            }
         },
         {
             "name": "drupal/dropzonejs",
@@ -6940,14 +6969,51 @@
         },
         {
             "name": "drupal/link_title_formatter",
-            "version": "dev-3174382-d9-ready",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/issue/link_title_formatter-3174382",
-                "reference": "92b5f7aeb8fa5c938ff23cd7dbe21d4250ef6664"
+                "url": "https://git.drupalcode.org/project/link_title_formatter.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_title_formatter-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "282a71938ff4a38ce9a6c7e4ce977230940295c1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
-            "time": "2020-11-11T21:10:53+00:00"
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1648153058",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "pookmish",
+                    "homepage": "https://www.drupal.org/user/3059577"
+                },
+                {
+                    "name": "vinothg",
+                    "homepage": "https://www.drupal.org/user/442398"
+                }
+            ],
+            "description": "Formats a link title field as text without the link.",
+            "homepage": "https://www.drupal.org/project/link_title_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_title_formatter"
+            }
         },
         {
             "name": "drupal/linkit",
@@ -15578,12 +15644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "a5063149e428b5f2b7332388b28b0d004ea7022a"
+                "reference": "2aaa06667e56ac8066411b18fbeee9a180ee8ec6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/a5063149e428b5f2b7332388b28b0d004ea7022a",
-                "reference": "a5063149e428b5f2b7332388b28b0d004ea7022a",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/2aaa06667e56ac8066411b18fbeee9a180ee8ec6",
+                "reference": "2aaa06667e56ac8066411b18fbeee9a180ee8ec6",
                 "shasum": ""
             },
             "require": {
@@ -15627,7 +15693,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/8.x"
             },
-            "time": "2022-03-23T16:02:35+00:00"
+            "time": "2022-03-24T18:14:22+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -16365,12 +16431,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "1489781b3c8b557de0bd3b6b2c334199219aacfc"
+                "reference": "7ea26789d60fcaff782e140b0ce2bc02db2b746e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/1489781b3c8b557de0bd3b6b2c334199219aacfc",
-                "reference": "1489781b3c8b557de0bd3b6b2c334199219aacfc",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/7ea26789d60fcaff782e140b0ce2bc02db2b746e",
+                "reference": "7ea26789d60fcaff782e140b0ce2bc02db2b746e",
                 "shasum": ""
             },
             "require": {
@@ -16392,7 +16458,7 @@
                 "drupal/content_lock": "^2.2",
                 "drupal/core": "~9.3.0",
                 "drupal/diff": "^1.0@RC",
-                "drupal/domain_301_redirect": "^1.0-alpha0",
+                "drupal/domain_301_redirect": "^2.0",
                 "drupal/ds": "^3.3",
                 "drupal/editoria11y": "^1.0",
                 "drupal/element_class_formatter": "^1.1",
@@ -16410,7 +16476,7 @@
                 "drupal/layout_builder_modal": "^1.0",
                 "drupal/layout_builder_restrictions": "^2.2",
                 "drupal/layout_library": "^1.0-beta1",
-                "drupal/link_title_formatter": "^1.1",
+                "drupal/link_title_formatter": "^2.0",
                 "drupal/linkit": "^6.0",
                 "drupal/markup": "^1.0",
                 "drupal/mathjax": "^3.0",
@@ -16480,7 +16546,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/8.x"
             },
-            "time": "2022-03-22T23:34:44+00:00"
+            "time": "2022-03-24T20:19:07+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -25896,25 +25962,10 @@
             "time": "2020-10-20T22:54:07+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "drupal/domain_301_redirect",
-            "version": "dev-2954889-d9-ready",
-            "alias": "1.0.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "drupal/link_title_formatter",
-            "version": "dev-3174382-d9-ready",
-            "alias": "1.1.0",
-            "alias_normalized": "1.1.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/blt-simplesamlphp": 20,
-        "drupal/domain_301_redirect": 20,
-        "drupal/link_title_formatter": 20,
         "su-sws/caw_profile": 20,
         "su-sws/blt-sws": 20
     },
