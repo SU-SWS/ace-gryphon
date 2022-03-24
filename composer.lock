@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bdc083f9548011b1802a2c3f9121309",
+    "content-hash": "3c730533ffabdf80f1ae1baa4cf15195",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4487,17 +4487,17 @@
         },
         {
             "name": "drupal/domain_301_redirect",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/domain_301_redirect.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/domain_301_redirect-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "f6979ab212ba534c1120eb325accfd9f0a0ce7e4"
+                "url": "https://ftp.drupal.org/files/projects/domain_301_redirect-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "69ac94e4ca40008b5a448ae081c9fb5ce7642b51"
             },
             "require": {
                 "drupal/core": "^9.0"
@@ -4505,8 +4505,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1648144037",
+                    "version": "2.0.1",
+                    "datestamp": "1648146518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4518,22 +4518,6 @@
                 "GPL-2.0+"
             ],
             "authors": [
-                {
-                    "name": "Kevin Hankens",
-                    "homepage": "https://www.drupal.org/user/78090"
-                },
-                {
-                    "name": "jessebeach",
-                    "homepage": "https://www.drupal.org/user/748566"
-                },
-                {
-                    "name": "nagba",
-                    "homepage": "https://www.drupal.org/user/21231"
-                },
-                {
-                    "name": "naveenvalecha",
-                    "homepage": "https://www.drupal.org/user/2665733"
-                },
                 {
                     "name": "pookmish",
                     "homepage": "https://www.drupal.org/user/3059577"
@@ -25924,7 +25908,7 @@
     "aliases": [
         {
             "package": "drupal/domain_301_redirect",
-            "version": "2.0.0.0",
+            "version": "2.0.1.0",
             "alias": "1.0.0",
             "alias_normalized": "1.0.0.0"
         },

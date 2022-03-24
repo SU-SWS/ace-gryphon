@@ -114,7 +114,7 @@
         "drupal/core": "^9.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9.0",
-        "drupal/domain_301_redirect": "2.0.0 as 1.0.0",
+        "drupal/domain_301_redirect": "2.0.1 as 1.0.0",
         "drupal/editor_advanced_link": "^1.8",
         "drupal/link_title_formatter": "dev-3174382-d9-ready as 1.1.0",
         "drupal/mysql56": "^1.1",
