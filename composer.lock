@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dabefa7c8a4b2c040fdd6da0e25a4f2",
+    "content-hash": "cf0cc71215d6c777228a0019e81bbe48",
     "packages": [
         {
             "name": "acquia/blt",
@@ -9169,29 +9169,27 @@
         },
         {
             "name": "drupal/smart_trim",
-            "version": "1.3.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_trim.git",
-                "reference": "8.x-1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_trim-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "5894aa067fba19a3452ed8ce749f33bd9ae91907"
+                "reference": "b5f188888702b155a6faa0d165c18e082095bda7"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9",
+                "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1589766531",
+                    "version": "8.x-1.3+2-dev",
+                    "datestamp": "1612063629",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -15544,16 +15542,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "dev-2022-04-22--compatibility-updates",
+            "version": "8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "b9a2a4b05c64f0eb8446daf3616ae7907e9a72d6"
+                "reference": "879d66872aa1451d27c69669f6aea8755dd2ca30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/b9a2a4b05c64f0eb8446daf3616ae7907e9a72d6",
-                "reference": "b9a2a4b05c64f0eb8446daf3616ae7907e9a72d6",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/879d66872aa1451d27c69669f6aea8755dd2ca30",
+                "reference": "879d66872aa1451d27c69669f6aea8755dd2ca30",
                 "shasum": ""
             },
             "require": {
@@ -15563,12 +15561,15 @@
                 "drupal/field_delimiter": "^1.1",
                 "drupal/flag": "^4.0@beta",
                 "drupal/hotjar": "^2.0",
+                "drupal/migrate_plus": "5.2",
                 "drupal/node_title_help_text": "^1.2",
+                "drupal/smart_trim": "^1.7",
                 "drupal/views_field_view": "^1.0@beta",
                 "ext-imagick": "*",
                 "michelf/php-markdown": "^1.9",
                 "su-sws/stanford_profile": "8.x-dev"
             },
+            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "patches": {
@@ -15594,9 +15595,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/2022-04-22--compatibility-updates"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/8.x"
             },
-            "time": "2022-04-22T17:13:37+00:00"
+            "time": "2022-04-22T20:48:10+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -15730,12 +15731,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/minimally_branded_subtheme.git",
-                "reference": "cef0cf62ce842a6f68cb05c8d5de387caafeccb4"
+                "reference": "642f5fdd880857267e2c3e1f1ea7c8b37fe44598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/minimally_branded_subtheme/zipball/cef0cf62ce842a6f68cb05c8d5de387caafeccb4",
-                "reference": "cef0cf62ce842a6f68cb05c8d5de387caafeccb4",
+                "url": "https://api.github.com/repos/SU-SWS/minimally_branded_subtheme/zipball/642f5fdd880857267e2c3e1f1ea7c8b37fe44598",
+                "reference": "642f5fdd880857267e2c3e1f1ea7c8b37fe44598",
                 "shasum": ""
             },
             "require": {
@@ -15753,7 +15754,7 @@
                 "issues": "https://github.com/SU-SWS/minimally_branded_subtheme/issues",
                 "source": "https://github.com/SU-SWS/minimally_branded_subtheme/tree/1.x"
             },
-            "time": "2022-04-12T00:21:07+00:00"
+            "time": "2022-04-22T18:38:44+00:00"
         },
         {
             "name": "su-sws/nobots",
