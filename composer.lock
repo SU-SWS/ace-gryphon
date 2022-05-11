@@ -15818,16 +15818,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "8.4.1",
+            "version": "8.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "e6bf823546c1d1a7f756ebd231b99d44d8b7a208"
+                "reference": "52e257f0a474d2672fd64cfd38376936f42f657a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/e6bf823546c1d1a7f756ebd231b99d44d8b7a208",
-                "reference": "e6bf823546c1d1a7f756ebd231b99d44d8b7a208",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/52e257f0a474d2672fd64cfd38376936f42f657a",
+                "reference": "52e257f0a474d2672fd64cfd38376936f42f657a",
                 "shasum": ""
             },
             "require": {
@@ -15867,9 +15867,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/8.4.1"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/8.4.2"
             },
-            "time": "2022-05-11T17:21:02+00:00"
+            "time": "2022-05-11T23:22:31+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
