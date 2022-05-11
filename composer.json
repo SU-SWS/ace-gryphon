@@ -98,8 +98,9 @@
         }
     ],
     "require": {
-        "acquia/blt": "^12",
-        "acquia/blt-simplesamlphp": "dev-master",
+        "php": ">=8.0",
+        "acquia/blt": "^13.4",
+        "acquia/blt-simplesamlphp": "^1.0",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^3.0",
@@ -107,11 +108,10 @@
         "drupal/core": "^9.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9.0",
-        "drupal/domain_301_redirect": "2.0.1 as 1.0.0",
-        "drupal/editor_advanced_link": "^1.8",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^10.3",
+        "simplesamlphp/simplesamlphp": "^1.19",
         "su-sws/caw_profile": "^8.4"
     },
     "require-dev": {
