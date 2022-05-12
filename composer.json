@@ -110,7 +110,7 @@
         "drupal/core-recommended": "^9.0",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
-        "drush/drush": "^10.3",
+        "drush/drush": "^11.0",
         "simplesamlphp/simplesamlphp": "^1.19",
         "su-sws/caw_profile": "^8.4"
     },
