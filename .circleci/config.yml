@@ -9,17 +9,6 @@ add_ssh: &add_ssh
     fingerprints:
       - "6f:84:bf:38:2c:c5:fe:25:46:14:94:54:f3:22:42:f5"
 
-## Add Known Hosts
-add_known_hosts: &add_known_hosts
-  run:
-    name: Add SSH Known Hosts
-    command: |
-      ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphondev.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphonstg.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphon.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
-
 ## Defines the cache restoring mechanism.
 restore_caches: &restore_caches
   restore_cache:
@@ -66,11 +55,10 @@ caw_profile_codeception_acceptance: &caw_profile_codeception_acceptance
         name: Run Codeception Acceptance Tests
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          mkdir -p artifacts/_data
-          vendor/bin/blt circleci:drupal:install --profile=caw_profile --no-interaction
-          vendor/bin/drush xmlsitemap-regenerate
-          vendor/bin/blt tests:codeception --test=caw_profile --no-interaction
+          blt blt:telemetry:disable --no-interaction
+          blt source:build:simplesamlphp-config
+          blt circleci:drupal:install --profile=caw_profile --no-interaction
+          blt tests:codeception --test=caw_profile --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -86,9 +74,9 @@ phpunit_coverage: &phpunit_coverage
         name: Run PHPUnit Coverage Tests
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          vendor/bin/blt circleci:drupal:setup --no-interaction
-          vendor/bin/blt tests:phpunit:coverage --no-interaction
+          blt blt:telemetry:disable --no-interaction
+          blt circleci:drupal:setup --no-interaction
+          blt tests:phpunit:coverage --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts/phpunit
