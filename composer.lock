@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5930df1a6e13992580a64f6f4c238551",
+    "content-hash": "87dad2c381695623b7fed38256482a15",
     "packages": [
         {
             "name": "acquia/blt",
@@ -15843,16 +15843,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "8.4.2",
+            "version": "dev-fixup-tests",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "52e257f0a474d2672fd64cfd38376936f42f657a"
+                "reference": "e98b8c6f0cfb22dbdaea14bfc2f9432865acd792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/52e257f0a474d2672fd64cfd38376936f42f657a",
-                "reference": "52e257f0a474d2672fd64cfd38376936f42f657a",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/e98b8c6f0cfb22dbdaea14bfc2f9432865acd792",
+                "reference": "e98b8c6f0cfb22dbdaea14bfc2f9432865acd792",
                 "shasum": ""
             },
             "require": {
@@ -15892,9 +15892,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/8.4.2"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/fixup-tests"
             },
-            "time": "2022-05-11T23:22:31+00:00"
+            "time": "2022-05-12T02:48:32+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -26546,6 +26546,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "su-sws/caw_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,

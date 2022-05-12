@@ -58,6 +58,7 @@ caw_profile_codeception_acceptance: &caw_profile_codeception_acceptance
           blt blt:telemetry:disable --no-interaction
           blt circleci:drupal:install --profile=caw_profile --no-interaction
           drush pmu simplesamlphp_auth -y
+          drush xmlsitemap:regenerate
           blt tests:codeception --test=caw_profile --no-interaction
     - *save_caches
     - store_test_results:
