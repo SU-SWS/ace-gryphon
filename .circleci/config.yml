@@ -56,8 +56,8 @@ caw_profile_codeception_acceptance: &caw_profile_codeception_acceptance
         command: |
           composer install --no-interaction
           blt blt:telemetry:disable --no-interaction
-          blt source:build:simplesamlphp-config
           blt circleci:drupal:install --profile=caw_profile --no-interaction
+          drush pmu simplesamlphp_auth -y
           blt tests:codeception --test=caw_profile --no-interaction
     - *save_caches
     - store_test_results:
