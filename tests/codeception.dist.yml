@@ -22,6 +22,9 @@ modules:
     - PhpBrowser:
         url: '${project.local.protocol}://${project.local.hostname}/'
     - WebDriver:
+        wait: 1
+        log_js_errors: true
+        debug_log_entries: 10
         browser: chrome
         url: '${project.local.protocol}://${project.local.hostname}/'
     - StanfordCaravan\Codeception\Drupal\DrupalEntity:
