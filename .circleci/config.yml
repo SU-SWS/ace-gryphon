@@ -9,17 +9,6 @@ add_ssh: &add_ssh
     fingerprints:
       - "6f:84:bf:38:2c:c5:fe:25:46:14:94:54:f3:22:42:f5"
 
-## Add Known Hosts
-add_known_hosts: &add_known_hosts
-  run:
-    name: Add SSH Known Hosts
-    command: |
-      ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphondev.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphonstg.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan hrgryphon.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
-
 ## Defines the cache restoring mechanism.
 restore_caches: &restore_caches
   restore_cache:
@@ -47,7 +36,7 @@ save_caches: &save_caches
 ## Defines images and working directory.
 defaults: &defaults
   docker:
-    - image: pookmish/drupal8ci:latest
+    - image: pookmish/drupal8ci:php8
     - image: selenium/standalone-chrome:latest
     - image: circleci/mysql:5.7
       environment:
@@ -57,38 +46,57 @@ defaults: &defaults
         MYSQL_ALLOW_EMPTY_PASSWORD: 1
   working_directory: /var/www/html
 
-## Renew the lets encrypt certificates for the three main environments.
-renew_certs: &renew_certs
+
+caw_profile_prep: &caw_profile_prep
   <<: *defaults
   steps:
-    - *add_ssh
-    - *add_known_hosts
     - checkout
     - *restore_caches
     - run:
-        name: Renew LE Certs
+        name: Site Prep
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          vendor/bin/blt gryphon:renew-cert prod --no-interaction
-          vendor/bin/blt gryphon:renew-cert test --no-interaction
-          vendor/bin/blt gryphon:renew-cert dev --no-interaction
+          blt blt:telemetry:disable --no-interaction
+          mkdir -p artifacts/_data
+          blt circleci:drupal:install --profile=caw_profile --no-interaction
+          drush xmlsitemap-regenerate
+          drush pm:uninstall simplesamlphp_auth
+          drush sql-dump > caw.sql
+    - persist_to_workspace:
+        root: .
+        paths:
+          - .
 
 caw_profile_codeception_acceptance: &caw_profile_codeception_acceptance
   <<: *defaults
   steps:
-    - checkout
-    - *restore_caches
+    - attach_workspace:
+        at: .
     - run:
         name: Run Codeception Acceptance Tests
         command: |
-          composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          mkdir -p artifacts/_data
-          vendor/bin/blt circleci:drupal:install --profile=caw_profile --no-interaction
-          vendor/bin/blt drupal:toggle:modules --no-interaction
-          vendor/bin/drush xmlsitemap-regenerate
-          vendor/bin/blt tests:codeception --test=caw_profile --no-interaction
+          dockerize -wait tcp://localhost:3306 -timeout 1m
+          apachectl stop && apachectl start
+          drush sql-cli < caw.sql
+          blt tests:codeception --test=caw_profile --suite=acceptance --no-interaction
+    - *save_caches
+    - store_test_results:
+        path: artifacts
+    - store_artifacts:
+        path: artifacts
+
+caw_profile_codeception_functional: &caw_profile_codeception_functional
+  <<: *defaults
+  steps:
+    - attach_workspace:
+        at: .
+    - run:
+        name: Run Codeception Acceptance Tests
+        command: |
+          dockerize -wait tcp://localhost:3306 -timeout 1m
+          apachectl stop && apachectl start
+          drush sql-cli < caw.sql
+          blt tests:codeception --test=caw_profile --suite=functional --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -104,22 +112,24 @@ phpunit_coverage: &phpunit_coverage
         name: Run PHPUnit Coverage Tests
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          vendor/bin/blt circleci:drupal:setup --no-interaction
-          vendor/bin/blt tests:phpunit:coverage --no-interaction
+          blt blt:telemetry:disable --no-interaction
+          blt circleci:drupal:setup --no-interaction
+          blt tests:phpunit:coverage --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts/phpunit
     - store_artifacts:
         path: artifacts/phpunit
 
-# Declare all of the jobs we should run.
+# Declare all jobs we should run.
 jobs:
-  renew-certs:
-    <<: *renew_certs
-  run-caw-profile-codeception-acceptance:
+  'Setup CAW':
+    <<: *caw_profile_prep
+  'Codeception Acceptance Tests':
     <<: *caw_profile_codeception_acceptance
-  run-phpunit-coverage:
+  'Codeception Functional Tests':
+    <<: *caw_profile_codeception_functional
+  'PHP Unit Coverage Tests':
     <<: *phpunit_coverage
 
 # Declare a workflow that runs all of our jobs in parallel.
@@ -127,15 +137,11 @@ workflows:
   version: 2
   tests:
     jobs:
-      - run-caw-profile-codeception-acceptance
-      - run-phpunit-coverage
-  renew_certs:
-    triggers:
-      - schedule:
-          cron: "0 8 * * 0"
-          filters:
-            branches:
-              only:
-                - /2.x/
-    jobs:
-      - renew-certs
+      - 'Setup CAW'
+      - 'Codeception Acceptance Tests':
+          requires:
+            - 'Setup CAW'
+      - 'Codeception Functional Tests':
+          requires:
+            - 'Setup CAW'
+      - 'PHP Unit Coverage Tests'
