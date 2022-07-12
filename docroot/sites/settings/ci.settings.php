@@ -162,3 +162,5 @@ if (isset($_acsf_site_name)) {
 $settings['trusted_host_patterns'] = array(
   '^.+$',
 );
+
+error_reporting(E_ALL & ~E_DEPRECATED);
