@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e823dd4a2b1f25deb30d2bfc3ae60db",
+    "content-hash": "697b1720414d6ae075363e148593d483",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16019,16 +16019,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "8.4.3",
+            "version": "8.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "37f432081ba34ad318d96a092f49e9755a07200c"
+                "reference": "e0293b0e60cf94c0c8f29f96bb5e93c02234e9d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/37f432081ba34ad318d96a092f49e9755a07200c",
-                "reference": "37f432081ba34ad318d96a092f49e9755a07200c",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/e0293b0e60cf94c0c8f29f96bb5e93c02234e9d2",
+                "reference": "e0293b0e60cf94c0c8f29f96bb5e93c02234e9d2",
                 "shasum": ""
             },
             "require": {
@@ -16068,9 +16068,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/8.4.3"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/8.4.4"
             },
-            "time": "2022-07-09T06:09:40+00:00"
+            "time": "2022-07-15T20:33:01+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -16255,16 +16255,16 @@
         },
         {
             "name": "su-sws/react_paragraphs",
-            "version": "8.2.11",
+            "version": "8.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/react_paragraphs.git",
-                "reference": "75dde8f2f1fbf503eabcca500a456c017dc461d6"
+                "reference": "53a5eac34a72baedc574af305f43a6d5d186529d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/75dde8f2f1fbf503eabcca500a456c017dc461d6",
-                "reference": "75dde8f2f1fbf503eabcca500a456c017dc461d6",
+                "url": "https://api.github.com/repos/SU-SWS/react_paragraphs/zipball/53a5eac34a72baedc574af305f43a6d5d186529d",
+                "reference": "53a5eac34a72baedc574af305f43a6d5d186529d",
                 "shasum": ""
             },
             "require": {
@@ -16284,9 +16284,9 @@
             ],
             "description": "An advanced UI for editing paragraphs in Drupal.",
             "support": {
-                "source": "https://github.com/SU-SWS/react_paragraphs/tree/8.2.11"
+                "source": "https://github.com/SU-SWS/react_paragraphs/tree/8.2.12"
             },
-            "time": "2022-07-08T20:27:50+00:00"
+            "time": "2022-07-15T20:35:43+00:00"
         },
         {
             "name": "su-sws/stanford_actions",
@@ -16448,16 +16448,16 @@
         },
         {
             "name": "su-sws/stanford_events",
-            "version": "8.1.30",
+            "version": "8.1.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_events.git",
-                "reference": "b68173ea8e3efcc2697845c5fde4c004bc904263"
+                "reference": "f6454d161793e79ec6c7cbbc49cac94fd071f3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/b68173ea8e3efcc2697845c5fde4c004bc904263",
-                "reference": "b68173ea8e3efcc2697845c5fde4c004bc904263",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_events/zipball/f6454d161793e79ec6c7cbbc49cac94fd071f3b7",
+                "reference": "f6454d161793e79ec6c7cbbc49cac94fd071f3b7",
                 "shasum": ""
             },
             "require": {
@@ -16507,9 +16507,9 @@
             "description": "Stanford Events",
             "homepage": "https://github.com/SU-SWS/stanford_events",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_events/tree/8.1.30"
+                "source": "https://github.com/SU-SWS/stanford_events/tree/8.1.31"
             },
-            "time": "2022-07-08T20:26:36+00:00"
+            "time": "2022-07-14T22:58:49+00:00"
         },
         {
             "name": "su-sws/stanford_fields",
@@ -16844,16 +16844,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "8.4.6",
+            "version": "8.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "901f69233277b8071839e30ebf7c3eaeb38d9ca3"
+                "reference": "d86dfc7bd30e4f21f9f40c40c2f16adcc16bcf81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/901f69233277b8071839e30ebf7c3eaeb38d9ca3",
-                "reference": "901f69233277b8071839e30ebf7c3eaeb38d9ca3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/d86dfc7bd30e4f21f9f40c40c2f16adcc16bcf81",
+                "reference": "d86dfc7bd30e4f21f9f40c40c2f16adcc16bcf81",
                 "shasum": ""
             },
             "require": {
@@ -16976,9 +16976,9 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/8.4.6"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/8.4.7"
             },
-            "time": "2022-07-08T23:45:49+00:00"
+            "time": "2022-07-12T18:13:49+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -20924,6 +20924,47 @@
                 "source": "https://github.com/acquia/blt-drupal-test/tree/v1.0.0"
             },
             "time": "2020-11-03T23:25:11+00:00"
+        },
+        {
+            "name": "acquia/blt-multisite",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acquia/blt-multisite.git",
+                "reference": "9a0c0ad5d66b4eb33b3658963bd7c165aab10153"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acquia/blt-multisite/zipball/9a0c0ad5d66b4eb33b3658963bd7c165aab10153",
+                "reference": "9a0c0ad5d66b4eb33b3658963bd7c165aab10153",
+                "shasum": ""
+            },
+            "require-dev": {
+                "acquia/blt": "^13.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acquia\\BltMultisite\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A recipe for generating multisites with Acquia BLT",
+            "support": {
+                "issues": "https://github.com/acquia/blt-multisite/issues",
+                "source": "https://github.com/acquia/blt-multisite/tree/v1.0.0"
+            },
+            "time": "2021-11-19T22:23:41+00:00"
         },
         {
             "name": "alchemy/zippy",
@@ -26144,12 +26185,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford-caravan.git",
-                "reference": "66bbb5451695d35e93ac32e6816f0df767b71cc8"
+                "reference": "69115d0572a5cddc877c7f1965e8bf740f997b78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/66bbb5451695d35e93ac32e6816f0df767b71cc8",
-                "reference": "66bbb5451695d35e93ac32e6816f0df767b71cc8",
+                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/69115d0572a5cddc877c7f1965e8bf740f997b78",
+                "reference": "69115d0572a5cddc877c7f1965e8bf740f997b78",
                 "shasum": ""
             },
             "require": {
@@ -26179,7 +26220,7 @@
                 "issues": "https://github.com/SU-SWS/stanford-caravan/issues",
                 "source": "https://github.com/SU-SWS/stanford-caravan/tree/8.x-2.x"
             },
-            "time": "2022-07-07T17:59:47+00:00"
+            "time": "2022-07-11T17:18:20+00:00"
         },
         {
             "name": "symfony/browser-kit",
