@@ -15618,12 +15618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "69d05d10674dbeaee4d923ab6e6a4cbfe926a519"
+                "reference": "422a361c104620bd66608887ef5ed5237e50fa4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/69d05d10674dbeaee4d923ab6e6a4cbfe926a519",
-                "reference": "69d05d10674dbeaee4d923ab6e6a4cbfe926a519",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/422a361c104620bd66608887ef5ed5237e50fa4e",
+                "reference": "422a361c104620bd66608887ef5ed5237e50fa4e",
                 "shasum": ""
             },
             "require": {
@@ -15798,7 +15798,7 @@
             "support": {
                 "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/stanford-profile-updates-20220804"
             },
-            "time": "2022-08-04T19:41:54+00:00"
+            "time": "2022-08-04T19:59:16+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
