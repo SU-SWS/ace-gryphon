@@ -9,17 +9,6 @@ add_ssh: &add_ssh
     fingerprints:
       - "6f:84:bf:38:2c:c5:fe:25:46:14:94:54:f3:22:42:f5"
 
-## Add Known Hosts
-add_known_hosts: &add_known_hosts
-  run:
-    name: Add SSH Known Hosts
-    command: |
-      ssh-keyscan svn-23450.prod.hosting.acquia.com >> ~/.ssh/known_hosts
-      ssh-keyscan stanfordgryphondev.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan stanfordgryphonstg.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan stanfordgryphon.ssh.prod.acquia-sites.com >> ~/.ssh/known_hosts
-      ssh-keyscan -t rsa,dsa github.com >> ~/.ssh/known_hosts
-
 ## Defines the cache restoring mechanism.
 restore_caches: &restore_caches
   restore_cache:
@@ -57,21 +46,56 @@ defaults: &defaults
         MYSQL_ALLOW_EMPTY_PASSWORD: 1
   working_directory: /var/www/html
 
-cardinal_service_codeception_acceptance: &cardinal_service_codeception_acceptance
+cardinal_service_profile_prep: &cardinal_service_profile_prep
   <<: *defaults
   steps:
     - checkout
     - *restore_caches
     - run:
-        name: Run Codeception Acceptance Tests
+        name: Site Prep
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
+          blt blt:telemetry:disable --no-interaction
           mkdir -p artifacts/_data
-          vendor/bin/blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
-          vendor/bin/blt drupal:toggle:modules --no-interaction
-          vendor/bin/drush xmlsitemap-regenerate
-          vendor/bin/blt tests:codeception --test=cardinal_service --no-interaction
+          blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
+          drush xmlsitemap-regenerate
+          drush pm:uninstall simplesamlphp_auth
+          drush sql-dump > cardinal_service.sql
+    - persist_to_workspace:
+        root: .
+        paths:
+          - .
+
+cardinal_service_profile_codeception_acceptance: &cardinal_service_profile_codeception_acceptance
+  <<: *defaults
+  steps:
+    - attach_workspace:
+        at: .
+    - run:
+        name: Run Codeception Acceptance Tests
+        command: |
+          dockerize -wait tcp://localhost:3306 -timeout 1m
+          apachectl stop && apachectl start
+          drush sql-cli < cardinal_service.sql
+          blt tests:codeception --test=cardinal_service --suite=acceptance --no-interaction
+    - *save_caches
+    - store_test_results:
+        path: artifacts
+    - store_artifacts:
+        path: artifacts
+
+cardinal_service_profile_codeception_functional: &cardinal_service_profile_codeception_functional
+  <<: *defaults
+  steps:
+    - attach_workspace:
+        at: .
+    - run:
+        name: Run Codeception Acceptance Tests
+        command: |
+          dockerize -wait tcp://localhost:3306 -timeout 1m
+          apachectl stop && apachectl start
+          drush sql-cli < cardinal_service.sql
+          blt tests:codeception --test=cardinal_service --suite=functional --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts
@@ -87,20 +111,24 @@ phpunit_coverage: &phpunit_coverage
         name: Run PHPUnit Coverage Tests
         command: |
           composer install --no-interaction
-          vendor/bin/blt blt:telemetry:disable --no-interaction
-          vendor/bin/blt circleci:drupal:setup --no-interaction
-          vendor/bin/blt tests:phpunit:coverage --no-interaction
+          blt blt:telemetry:disable --no-interaction
+          blt circleci:drupal:setup --no-interaction
+          blt tests:phpunit:coverage --no-interaction
     - *save_caches
     - store_test_results:
         path: artifacts/phpunit
     - store_artifacts:
         path: artifacts/phpunit
 
-# Declare all of the jobs we should run.
+# Declare all jobs we should run.
 jobs:
-  run-cardinal-service-codeception-acceptance:
-    <<: *cardinal_service_codeception_acceptance
-  run-phpunit-coverage:
+  'Setup Cardinal Service':
+    <<: *cardinal_service_profile_prep
+  'Codeception Acceptance Tests':
+    <<: *cardinal_service_profile_codeception_acceptance
+  'Codeception Functional Tests':
+    <<: *cardinal_service_profile_codeception_functional
+  'PHP Unit Coverage Tests':
     <<: *phpunit_coverage
 
 # Declare a workflow that runs all of our jobs in parallel.
@@ -108,5 +136,11 @@ workflows:
   version: 2
   tests:
     jobs:
-      - run-cardinal-service-codeception-acceptance
-      - run-phpunit-coverage
+      - 'Setup Cardinal Service'
+      - 'Codeception Acceptance Tests':
+          requires:
+            - 'Setup Cardinal Service'
+      - 'Codeception Functional Tests':
+          requires:
+            - 'Setup Cardinal Service'
+      - 'PHP Unit Coverage Tests'
