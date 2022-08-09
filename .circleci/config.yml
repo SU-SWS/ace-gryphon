@@ -14,9 +14,9 @@ restore_caches: &restore_caches
   restore_cache:
     # We use the composer.lock as a way to determine if we can cache our build.
     keys:
-      - cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "composer.lock" }}
+      - caw-cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "composer.lock" }}
       # fallback to using the latest cache if no exact match is found
-      - cache-{{ .Environment.CACHE_VERSION }}-
+      - caw-cache-{{ .Environment.CACHE_VERSION }}-
 
 ## Defines the cache saving mechanism.
 save_caches: &save_caches
@@ -31,7 +31,7 @@ save_caches: &save_caches
       - ./docroot/themes/custom
       - ./docroot/libraries
       - ./docroot/core
-    key: cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "composer.lock" }}
+    key: caw-cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "composer.lock" }}
 
 ## Defines images and working directory.
 defaults: &defaults
@@ -39,6 +39,7 @@ defaults: &defaults
     - image: pookmish/drupal8ci:latest
     - image: selenium/standalone-chrome:latest
     - image: circleci/mysql:5.7
+      command: ['--max-allowed-packet=67108864']
       environment:
         MYSQL_DATABASE: drupal
         MYSQL_USER: drupal
