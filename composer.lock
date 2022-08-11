@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6ef824cc1b7467768e6367812dbde1d",
+    "content-hash": "35a54405458bd6d117e668a436f2d689",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4177,17 +4177,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.10.0",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "8.x-3.10"
+                "reference": "8.x-3.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.10.zip",
-                "reference": "8.x-3.10",
-                "shasum": "8b515a3816a47a9eb55e0c4f4df42839ff4f2660"
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.11.zip",
+                "reference": "8.x-3.11",
+                "shasum": "67da670df43155d1e15c80c7b0e326b3049ac5a2"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -4195,8 +4195,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.10",
-                    "datestamp": "1659040378",
+                    "version": "8.x-3.11",
+                    "datestamp": "1660167573",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4270,7 +4270,7 @@
         },
         {
             "name": "drupal/ctools_views",
-            "version": "3.10.0",
+            "version": "3.11.0",
             "require": {
                 "drupal/core": "^9.3 || ^10",
                 "drupal/ctools": "^3"
@@ -4278,8 +4278,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.10",
-                    "datestamp": "1659040378",
+                    "version": "8.x-3.11",
+                    "datestamp": "1660167573",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8762,7 +8762,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.11",
-                    "datestamp": "1659472597",
+                    "datestamp": "1660129564",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10019,17 +10019,17 @@
         },
         {
             "name": "drupal/subrequests",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/subrequests.git",
-                "reference": "3.0.3"
+                "reference": "3.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/subrequests-3.0.3.zip",
-                "reference": "3.0.3",
-                "shasum": "e4c2262ee8514529c652b0c7b00387550514014c"
+                "url": "https://ftp.drupal.org/files/projects/subrequests-3.0.4.zip",
+                "reference": "3.0.4",
+                "shasum": "da116a815d16c47bf5fd87ba2580bbd754502d2f"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -10041,8 +10041,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.3",
-                    "datestamp": "1633470100",
+                    "version": "3.0.4",
+                    "datestamp": "1660166144",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10058,10 +10058,6 @@
                     "name": "Mateu Aguiló Bosch",
                     "homepage": "https://www.drupal.org/user/550110",
                     "email": "mateu.aguilo.bosch@gmail.com"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
                 }
             ],
             "description": "Add a front controller that you can use to make subrequests.",
@@ -17051,16 +17047,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "9.1.1",
+            "version": "9.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "4d77569a73fd91d58070811a8efbef9600532af8"
+                "reference": "8a6446712809717eccc3f64378c70a02de588550"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/4d77569a73fd91d58070811a8efbef9600532af8",
-                "reference": "4d77569a73fd91d58070811a8efbef9600532af8",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/8a6446712809717eccc3f64378c70a02de588550",
+                "reference": "8a6446712809717eccc3f64378c70a02de588550",
                 "shasum": ""
             },
             "require": {
@@ -17227,9 +17223,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/9.1.1"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/9.1.2"
             },
-            "time": "2022-08-10T18:52:40+00:00"
+            "time": "2022-08-11T20:47:01+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
@@ -17572,16 +17568,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "dev-release-9.0.2",
+            "version": "9.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "ce7bb4f38e7e73424bc81022979e9a8ad4cd5709"
+                "reference": "f7d0a696cb424740f0a444dffb9657ab890f11b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/ce7bb4f38e7e73424bc81022979e9a8ad4cd5709",
-                "reference": "ce7bb4f38e7e73424bc81022979e9a8ad4cd5709",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/f7d0a696cb424740f0a444dffb9657ab890f11b0",
+                "reference": "f7d0a696cb424740f0a444dffb9657ab890f11b0",
                 "shasum": ""
             },
             "require": {
@@ -17754,9 +17750,9 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/release-9.0.2"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/9.1.1"
             },
-            "time": "2022-08-09T01:02:40+00:00"
+            "time": "2022-08-10T01:44:33+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
@@ -27494,7 +27490,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "su-sws/stanford_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,

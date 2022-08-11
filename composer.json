@@ -115,8 +115,8 @@
         "drupal/paranoia": "^1.9",
         "drush/drush": "^11.1",
         "simplesamlphp/simplesamlphp": "^1.19",
-        "su-sws/caw_profile": "^9.0",
-        "su-sws/stanford_profile": "dev-release-9.0.2"
+        "su-sws/caw_profile": "^9.1",
+        "su-sws/stanford_profile": "^9.1"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
