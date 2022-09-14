@@ -103,9 +103,8 @@
         "acquia/blt-simplesamlphp": "^1.0",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
-        "drupal/acquia_connector": "^3.0",
+        "drupal/acquia_connector": "dev-4.x",
         "drupal/acquia_purge": "^1.1",
-        "drupal/config_filter": "^1.0",
         "drupal/core": "^9.4",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9.0",
@@ -116,7 +115,7 @@
         "drush/drush": "^11.1",
         "simplesamlphp/simplesamlphp": "^1.19",
         "su-sws/caw_profile": "^9.1",
-        "su-sws/stanford_profile": "^9.1"
+        "su-sws/stanford_profile": "9.x-dev"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
