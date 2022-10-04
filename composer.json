@@ -110,6 +110,7 @@
         "drupal/core-recommended": "^9.0",
         "drupal/domain_301_redirect": "2.0.1 as 1.0.0",
         "drupal/editor_advanced_link": "^1.8",
+        "drupal/hook_event_dispatcher": "~3.2.0",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^11.1",
