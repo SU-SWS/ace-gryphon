@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cca78d2fc8438703c21cd33d7b6c6cb8",
+    "content-hash": "ec3765ffa2a42f594f034abded02f6a1",
     "packages": [
         {
             "name": "acquia/blt",
@@ -18631,20 +18631,21 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "9.2.0",
+            "version": "9.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "559076638437f37a734f2217705c6a7d3f0d1501"
+                "reference": "e7caebf2163bd8a16e1ed1e7658fb2dea536c78c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/559076638437f37a734f2217705c6a7d3f0d1501",
-                "reference": "559076638437f37a734f2217705c6a7d3f0d1501",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/e7caebf2163bd8a16e1ed1e7658fb2dea536c78c",
+                "reference": "e7caebf2163bd8a16e1ed1e7658fb2dea536c78c",
                 "shasum": ""
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.0",
+                "acquia/memcache-settings": "^1.2",
                 "citation-style-language/locales": "1.0.0",
                 "citation-style-language/styles-distribution": "1.0.0",
                 "ckeditor-plugin/a11ychecker": "^1.1.1",
@@ -18717,6 +18718,7 @@
                 "drupal/linkit": "^6.0",
                 "drupal/markup": "^1.0",
                 "drupal/mathjax": "^3.0",
+                "drupal/memcache": "^2.5",
                 "drupal/menu_admin_per_menu": "^1.0",
                 "drupal/menu_block": "dev-1.x#567becffbb0589e824fb053f15fb38a5846e7276",
                 "drupal/menu_link_weight": "^1.0-beta3",
@@ -18724,6 +18726,7 @@
                 "drupal/name": "^1.0@RC",
                 "drupal/next": "^1.2",
                 "drupal/node_revision_delete": "^1.0@RC",
+                "drupal/page_cache_query_ignore": "^2.2",
                 "drupal/page_manager": "^4.0@beta",
                 "drupal/paragraphs": "^1.11",
                 "drupal/paragraphs_edit": "^2.0@alpha",
@@ -18773,6 +18776,7 @@
                 "su-sws/stanford_profile_helper": "^9.0",
                 "su-sws/stanford_ssp": "^8.2"
             },
+            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -18814,9 +18818,9 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/9.2.0"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/9.x"
             },
-            "time": "2022-10-25T23:15:09+00:00"
+            "time": "2022-11-11T23:36:00+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -28745,6 +28749,7 @@
     "stability-flags": {
         "drupal/menu_block": 20,
         "su-hkku/cardinal_service_profile": 20,
+        "su-sws/stanford_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,
