@@ -51,7 +51,7 @@ jobs:
           name: unit-tests-results
           path: $GITHUB_WORKSPACE/artifacts
   acceptance:
-    name: Codeception Acceptance Tests
+    name: Cardinal Service Codeception Acceptance Tests
     runs-on: ubuntu-latest
     env:
       DRUPAL_DATABASE_NAME: drupal
@@ -95,6 +95,7 @@ jobs:
           composer install -n
           blt blt:telemetry:disable --no-interaction
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
+          blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
           blt drupal:install -n
           drush pm:uninstall simplesamlphp_auth -y
           drush role:perm:add anonymous 'access content'
@@ -107,7 +108,7 @@ jobs:
           name: acceptance-tests-results
           path: artifacts
   functional:
-    name: Codeception Functional Tests
+    name: Cardinal Service Codeception Functional Tests
     runs-on: ubuntu-latest
     env:
       DRUPAL_DATABASE_NAME: drupal
@@ -156,7 +157,7 @@ jobs:
           composer install -n
           blt blt:telemetry:disable --no-interaction
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
-          blt drupal:install -n
+          blt circleci:drupal:install --profile=cardinal_service_profile --no-interaction
           drush pm:uninstall simplesamlphp_auth -y
           drush role:perm:add anonymous 'access content'
           drush xmlsitemap:rebuild
