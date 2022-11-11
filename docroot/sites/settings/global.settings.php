@@ -24,7 +24,6 @@ $settings['file_temp_path'] = '/tmp';
 if (EnvironmentDetector::isAhEnv()) {
   // Set the temp directory as per https://docs.acquia.com/acquia-cloud/manage/files/broken/
   $settings['file_temp_path'] = '/mnt/gfs/' . EnvironmentDetector::getAhGroup() . '.' . EnvironmentDetector::getAhEnv() . '/tmp';
-  $settings['letsencrypt_challenge_directory'] = $settings['file_temp_path'];
 
   // Lock the UI to read_only when on production or test in Acquia.
   if (
@@ -36,6 +35,12 @@ if (EnvironmentDetector::isAhEnv()) {
       'system.menu.*',
       'core.menu.static_menu_link_overrides',
     ];
+  }
+
+  // Memcached settings for Acquia Hosting.
+  $memcache_settings_file = DRUPAL_ROOT . "/../vendor/acquia/memcache-settings/memcache.settings.php";
+  if (file_exists($memcache_settings_file)) {
+    require_once $memcache_settings_file;
   }
 }
 
