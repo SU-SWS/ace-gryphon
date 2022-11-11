@@ -8,17 +8,15 @@ use Drupal\Core\Serialization\Yaml;
 /**
  * Class GryphonCommands.
  */
-class CircleCiCommands extends BltTasks {
+class CiCommands extends BltTasks {
 
   /**
    * Setup the directory with drupal settings files.
    *
-   * @command circleci:drupal:setup
+   * @command gryphon-ci:drupal:setup
    */
   public function setupDrupal() {
     $root = $this->getConfigValue('repo.root');
-    $tasks[] = $this->taskExec('dockerize -wait tcp://localhost:3306 -timeout 1m');
-    $tasks[] = $this->taskExec('apachectl stop; apachectl start');
 
     // Cleanup any local or remnant files.
     $files = glob("$root/docroot/sites/*/local.*");
@@ -45,11 +43,11 @@ class CircleCiCommands extends BltTasks {
    *
    * @throws \Acquia\Blt\Robo\Exceptions\BltException
    *
-   * @command circleci:drupal:install
+   * @command gryphon-ci:drupal:install
    * @options profile Specify which profile to install.
    */
   public function installDrupal(array $options = ['profile' => NULL]) {
-    $this->invokeCommand('circleci:drupal:setup');
+    $this->invokeCommand('gryphon-ci:drupal:setup');
 
     if ($options['profile']) {
       $root = $this->getConfigValue('repo.root');
