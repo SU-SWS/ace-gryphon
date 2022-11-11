@@ -18085,12 +18085,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "2cfad73fef16aa014a17551e6474c78e0ad156e7"
+                "reference": "d7098edb17ecbb9f2aecf667fb514d9add3a31c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/2cfad73fef16aa014a17551e6474c78e0ad156e7",
-                "reference": "2cfad73fef16aa014a17551e6474c78e0ad156e7",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/d7098edb17ecbb9f2aecf667fb514d9add3a31c5",
+                "reference": "d7098edb17ecbb9f2aecf667fb514d9add3a31c5",
                 "shasum": ""
             },
             "require": {
@@ -18264,7 +18264,7 @@
             "support": {
                 "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/9.x"
             },
-            "time": "2022-11-11T19:00:40+00:00"
+            "time": "2022-11-11T21:36:51+00:00"
         },
         {
             "name": "su-sws/drupal-patches",
