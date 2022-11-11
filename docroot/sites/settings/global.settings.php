@@ -36,12 +36,6 @@ if (EnvironmentDetector::isAhEnv()) {
       'core.menu.static_menu_link_overrides',
     ];
   }
-
-  // Memcached settings for Acquia Hosting.
-  $memcache_settings_file = DRUPAL_ROOT . "/../vendor/acquia/memcache-settings/memcache.settings.php";
-  if (file_exists($memcache_settings_file)) {
-    require_once $memcache_settings_file;
-  }
 }
 
 /**
