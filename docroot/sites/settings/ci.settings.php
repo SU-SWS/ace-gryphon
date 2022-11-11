@@ -12,22 +12,22 @@ $db_name = 'drupal';
 /**
  * Database configuration.
  */
-$databases = array(
+$databases = [
   'default' =>
-  array(
-    'default' =>
-    array(
-      'database' => $db_name,
-      'username' => 'root',
-      'password' => '',
-      'host' => '127.0.0.1',
-      'port' => '3306',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+    [
+      'default' =>
+        [
+          'database' => $db_name,
+          'username' => 'drupal',
+          'password' => 'drupal',
+          'host' => 'mysql',
+          'port' => '3306',
+          'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ],
+    ],
+];
 
 $dir = dirname(DRUPAL_ROOT);
 
@@ -98,16 +98,17 @@ $settings['extension_discovery_scan_tests'] = FALSE;
 /**
  * Configure static caches.
  *
- * Note: you should test with the config, bootstrap, and discovery caches enabled to
- * test that metadata is cached as expected. However, in the early stages of development,
- * you may want to disable them. Overrides to these bins must be explicitly set for each
- * bin to change the default configuration provided by Drupal core in core.services.yml.
- * See https://www.drupal.org/node/2754947
+ * Note: you should test with the config, bootstrap, and discovery caches
+ * enabled to test that metadata is cached as expected. However, in the early
+ * stages of development, you may want to disable them. Overrides to these bins
+ * must be explicitly set for each bin to change the default configuration
+ * provided by Drupal core in core.services.yml. See
+ * https://www.drupal.org/node/2754947
  */
 
- // $settings['cache']['bins']['bootstrap'] = 'cache.backend.null';
- // $settings['cache']['bins']['discovery'] = 'cache.backend.null';
- // $settings['cache']['bins']['config'] = 'cache.backend.null';
+// $settings['cache']['bins']['bootstrap'] = 'cache.backend.null';
+// $settings['cache']['bins']['discovery'] = 'cache.backend.null';
+// $settings['cache']['bins']['config'] = 'cache.backend.null';
 
 
 /**
@@ -159,6 +160,8 @@ if (isset($_acsf_site_name)) {
  *
  * See full description in default.settings.php.
  */
-$settings['trusted_host_patterns'] = array(
+$settings['trusted_host_patterns'] = [
   '^.+$',
-);
+];
+
+error_reporting(E_ALL & ~E_DEPRECATED);
