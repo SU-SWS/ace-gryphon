@@ -10,6 +10,7 @@
  */
 
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use SimpleSAML\Logger;
 
 /**
  * Defines Acquia account specific options in $config keys.
@@ -68,35 +69,35 @@ $config['auth.adminpassword'] = getenv('SAML_ADMIN_PASS');
  * @endcode
  */
 
-/**
- * Generate Acquia session storage via hosting creds.json.
- *
- * Session sorage defaults using the database for the current request.
- *
- * @link https://docs.acquia.com/resource/using-simplesamlphp-acquia-cloud-site/#storing-session-information-using-the-acquia-cloud-sql-database
- */
-
-// Support multi-site and single site installations at different base URLs.
-// Overide $config['baseurlpath'] = "https://{yourdomain}/simplesaml/"
-// to customize the default Acquia configuration.
-// phpcs:ignore
-$config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . $port . '/simplesaml/';
-// Set ACE and ACSF sites based on hosting database and site name.
-$config['certdir'] = "/mnt/www/html/{$_ENV['AH_SITE_GROUP']}.{$_ENV['AH_SITE_ENVIRONMENT']}/simplesamlphp/cert/";
-$config['metadatadir'] = "/mnt/www/html/{$_ENV['AH_SITE_GROUP']}.{$_ENV['AH_SITE_ENVIRONMENT']}/simplesamlphp/metadata";
-$config['baseurlpath'] = 'simplesaml/';
-// Setup basic logging.
-$config['logging.handler'] = 'file';
-// phpcs:ignore
-$config['loggingdir'] = dirname(getenv('ACQUIA_HOSTING_DRUPAL_LOG'));
-$config['logging.logfile'] = 'simplesamlphp-' . date('Ymd') . '.log';
-$creds_json = file_get_contents('/var/www/site-php/' . $_ENV['AH_SITE_GROUP'] . '.' . $_ENV['AH_SITE_ENVIRONMENT'] . '/creds.json');
-$databases = json_decode($creds_json, TRUE);
-$creds = $databases['databases'][$_ENV['AH_SITE_GROUP']];
-if (substr($_ENV['AH_SITE_ENVIRONMENT'], 0, 3) === 'ode') {
-  $creds['host'] = key($creds['db_url_ha']);
+// do Acquia specific translations here
+// Prevent Varnish from interfering with SimpleSAMLphp.
+// SSL terminated at the ELB / balancer so we correctly set the SERVER_PORT
+// and HTTPS for SimpleSAMLphp baseurl configuration.
+$protocol = 'http://';
+$port = '80';
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+  $_SERVER['SERVER_PORT'] = 443;
+  $_SERVER['HTTPS'] = 'true';
+  $protocol = 'https://';
+  $port = $_SERVER['SERVER_PORT'];
 }
-else {
+$config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . ':' . $port . '/simplesaml/';
+$config['trusted.url.domains'] = [$_SERVER['HTTP_HOST']];
+
+// Setup basic file based logging.
+$config['logging.handler'] = 'file';
+// on Cloud Next, the preferred location is /shared/logs
+// on Cloud Classic, the preferred location is the same directory as ACQUIA_HOSTING_DRUPAL_LOG
+$config['loggingdir'] = (file_exists('/shared/logs/')) ? '/shared/logs/' : dirname(getenv('ACQUIA_HOSTING_DRUPAL_LOG'));
+$config['logging.logfile'] = 'simplesamlphp-' . date('Ymd') . '.log';
+
+// Retrieve database credentials from creds.json
+$creds_json = file_get_contents('/var/www/site-php/' . $_ENV['AH_SITE_GROUP'] . '.' . $_ENV['AH_SITE_ENVIRONMENT'] . '/creds.json');
+$creds = json_decode($creds_json, TRUE);
+
+$database = $creds['databases'][$_ENV['AH_SITE_GROUP']];
+// On Cloud Classic, the current active database host is determined by a DNS lookup
+if (isset($database['db_cluster_id'])) {
   require_once "/usr/share/php/Net/DNS2_wrapper.php";
   try {
     $resolver = new Net_DNS2_Resolver([
@@ -105,17 +106,17 @@ else {
         'dns-master',
       ],
     ]);
-    $response = $resolver->query("cluster-{$creds['db_cluster_id']}.mysql", 'CNAME');
-    $creds['host'] = $response->answer[0]->cname;
-  }
-  catch (Net_DNS2_Exception $e) {
-    $creds['host'] = "";
+    $response = $resolver->query("cluster-{$database['db_cluster_id']}.mysql", 'CNAME');
+    $database['host'] = $response->answer[0]->cname;
+  } catch (Net_DNS2_Exception $e) {
+    Logger::warning('DNS entry not found');
   }
 }
 $config['store.type'] = 'sql';
-$config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', $creds['host'], $creds['port'], $creds['name']);
-$config['store.sql.username'] = $creds['user'];
-$config['store.sql.password'] = $creds['pass'];
+$config['store.sql.dsn'] = sprintf('mysql:host=%s;port=%s;dbname=%s', $database['host'], $database['port'], $database['name']);
+$config['store.sql.username'] = $database['user'];
+$config['store.sql.password'] = $database['pass'];
 $config['store.sql.prefix'] = 'simplesaml';
+
 
 $config['certdir'] = EnvironmentDetector::getAhFilesRoot() . '/nobackup/simplesamlphp/';

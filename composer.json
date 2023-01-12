@@ -98,7 +98,7 @@
         }
     ],
     "require": {
-        "acquia/blt": "^13.6",
+        "acquia/blt": "^13.7",
         "acquia/blt-simplesamlphp": "^1.0",
         "acquia/memcache-settings": "^1.2",
         "composer/installers": "^1.9",
@@ -111,7 +111,7 @@
         "drupal/menu_block": "dev-1.x#17bc5a2094dec85a921fdac6aff0030bfe004744",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
-        "drush/drush": "^11.3",
+        "drush/drush": "^11.4",
         "su-hkku/cardinal_service_profile": "9.x-dev",
         "su-sws/stanford_profile": "9.x-dev"
     },
