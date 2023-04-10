@@ -1,0 +1,72 @@
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: false
+    addBadge: false
+ports:
+  - name: database
+    description: Mysql database
+    port: 3306
+    onOpen: ignore
+    visibility: private
+  - port: 33060
+    onOpen: ignore
+    visibility: private
+  - name: drupal
+    description: Drupal
+    port: 8001
+    onOpen: ignore
+    visibility: public
+  - port: 8002-9999
+    onOpen: ignore
+image: pookmish/drupal8ci:gitpod
+tasks:
+  - name: Drupal Prep
+    init: >
+      export PREVIEW_FULL_URL=`gp url 8001` &&
+      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
+      cp .gitpod/blt.yml blt/local.blt.yml &&
+      composer install --no-interaction &&
+      blt blt:telemetry:disable --no-interaction &&
+      blt settings &&
+      blt drupal:install -n &&
+      blt sbsc
+    command: |
+      cd $GITPOD_REPO_ROOT &&
+      echo 'Restarting Apache' &&
+      apache2ctl restart &&
+      gp ports await 8001 &&
+      find docroot -name 'local.drush.yml' | xargs rm &&
+      export PREVIEW_FULL_URL=`gp url 8001` &&
+      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
+      blt blt:telemetry:disable --no-interaction &&
+      echo 'Establishing Settings' &&
+      blt settings &&
+      echo 'Logging Into Drupal' &&
+      drush st &&
+      echo "drush uli --uri=$PREVIEW_FULL_URL" &&
+      drush uli --uri=$PREVIEW_FULL_URL &&
+      echo "drush uli --uri=$PREVIEW_FULL_URL | xargs gp preview --external" &&
+      drush uli --uri=$PREVIEW_FULL_URL | xargs gp preview --external &&
+      git config core.fileMode false
+  - name: SSH Keys
+    command: |
+      rm -rf ~/.ssh/id_rsa &&
+      rm -rf ~/.ssh/id_rsa.pub &&
+      eval $(command gp env -e) &&
+      mkdir -p ~/.ssh &&
+      [[ ! -z $SSH_PUBLIC_KEY  ]] &&
+      echo $SSH_PUBLIC_KEY | base64 -d > ~/.ssh/id_rsa.pub &&
+      chmod 644 ~/.ssh/id_rsa.pub &&
+      [[ ! -z $SSH_PRIVATE_KEY  ]] &&
+      echo $SSH_PRIVATE_KEY | base64 -d > ~/.ssh/id_rsa &&
+      chmod 600 ~/.ssh/id_rsa &&
+      cd $GITPOD_REPO_ROOT &&
+      git remote set-url origin git@github.com:SU-SWS/ace-botgryphon.git &&
+      [[ ! -z $GITCONFIG  ]] &&
+      echo $GITCONFIG | base64 -d > ~/.gitconfig &&
+      chmod 644 ~/.gitconfig
