@@ -18649,16 +18649,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "9.2.1",
+            "version": "9.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "1c46653b6287fdd18aeb682e66372abc373fb894"
+                "reference": "925943a9e733ac4e3e3ea1b20bc4b9a5bab13b6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/1c46653b6287fdd18aeb682e66372abc373fb894",
-                "reference": "1c46653b6287fdd18aeb682e66372abc373fb894",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/925943a9e733ac4e3e3ea1b20bc4b9a5bab13b6c",
+                "reference": "925943a9e733ac4e3e3ea1b20bc4b9a5bab13b6c",
                 "shasum": ""
             },
             "require": {
@@ -18829,9 +18829,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/9.2.1"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/9.2.2"
             },
-            "time": "2023-06-07T16:53:44+00:00"
+            "time": "2023-06-09T17:32:02+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
