@@ -63,12 +63,12 @@ index 58f0b04..b7020a2 100644
 +++ b/modules/ui_patterns_views/ui_patterns_views.module
 @@ -6,6 +6,9 @@
   */
- 
+
  use Drupal\ui_patterns\Element\PatternContext;
 +use Drupal\Component\Utility\Html;
 +use Drupal\Component\Utility\Xss;
 +use Drupal\Core\Template\Attribute;
- 
+
  /**
   * Implements hook_theme().
 @@ -15,6 +18,9 @@ function ui_patterns_views_theme() {
@@ -80,11 +80,11 @@ index 58f0b04..b7020a2 100644
 +    ],
    ];
  }
- 
+
 @@ -35,37 +41,122 @@ function template_preprocess_pattern_views_row(array &$variables) {
    $options = $variables['options'];
    $row = $variables['row'];
- 
+
 -  foreach ($options['pattern_mapping'] as $mapping) {
 -    $field_name = $mapping['source'];
 -    $field = $view->field[$field_name];
@@ -193,7 +193,7 @@ index 58f0b04..b7020a2 100644
 +      ];
      }
    }
- 
+
 -  $variables['pattern'] = [];
 -  if ($view->preview && !isset($view->element['#embed'])) {
 -    \Drupal::messenger()->addWarning(t("Pattern Views row plugin does not support preview."));
@@ -230,5 +230,5 @@ index 58f0b04..b7020a2 100644
 +  $variables['pattern']['#context']['view'] = $view;
 +  $variables['pattern']['#context']['row'] = $row;
  }
- 
+
  /**
