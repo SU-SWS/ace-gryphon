@@ -5946,17 +5946,17 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "ff677594c632b4b87aaace39a90a8cdf48ec3ed4"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "2af4bb7f305735adbc216de742f0fa02bba6457b"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -5970,8 +5970,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1681277837",
+                    "version": "2.0.1",
+                    "datestamp": "1689093654",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8271,6 +8271,10 @@
                     "homepage": "https://www.drupal.org/user/551886"
                 },
                 {
+                    "name": "ultrabob",
+                    "homepage": "https://www.drupal.org/user/110463"
+                },
+                {
                     "name": "webflo",
                     "homepage": "https://www.drupal.org/user/254778"
                 }
@@ -9461,17 +9465,17 @@
         },
         {
             "name": "drupal/pdf_api",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pdf_api.git",
-                "reference": "2.3.1"
+                "reference": "2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pdf_api-2.3.1.zip",
-                "reference": "2.3.1",
-                "shasum": "50e67e680e2e0a9eaa1ce37c05ce78112d78d6e4"
+                "url": "https://ftp.drupal.org/files/projects/pdf_api-2.3.2.zip",
+                "reference": "2.3.2",
+                "shasum": "82b153d594c94f4407befb26ffe7ba14ce9904ce"
             },
             "require": {
                 "dompdf/dompdf": "^2.0",
@@ -9483,8 +9487,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.3.1",
-                    "datestamp": "1683204846",
+                    "version": "2.3.2",
+                    "datestamp": "1689071871",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9517,17 +9521,17 @@
         },
         {
             "name": "drupal/printable",
-            "version": "3.0.0-rc2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/printable.git",
-                "reference": "3.0.0-rc2"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/printable-3.0.0-rc2.zip",
-                "reference": "3.0.0-rc2",
-                "shasum": "9fd796f3e066156e930ccaee32ef54313a403737"
+                "url": "https://ftp.drupal.org/files/projects/printable-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "28fcd932dee6d59603bea0f32313ac2681534b2e"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10",
@@ -9541,11 +9545,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-rc2",
-                    "datestamp": "1684249143",
+                    "version": "3.0.0",
+                    "datestamp": "1689071670",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -13403,6 +13407,58 @@
                 }
             ],
             "time": "2023-04-17T16:00:37+00:00"
+        },
+        {
+            "name": "harvesthq/chosen",
+            "version": "v1.8.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/harvesthq/chosen-package.git",
+                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/harvesthq/chosen-package/zipball/ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
+                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Koen Punt",
+                    "homepage": "https://github.com/koenpunt"
+                },
+                {
+                    "name": "Patrick Filler",
+                    "homepage": "https://github.com/pfiller"
+                },
+                {
+                    "name": "Christophe Coevoet",
+                    "homepage": "https://github.com/stof"
+                },
+                {
+                    "name": "Ken Earley",
+                    "homepage": "https://github.com/kenearley"
+                }
+            ],
+            "description": "Chosen is a JavaScript plugin that makes select boxes user-friendly. It is currently available in both jQuery and Prototype flavors.",
+            "homepage": "https://harvesthq.github.io/chosen/",
+            "keywords": [
+                "dropdown",
+                "form",
+                "input",
+                "multiselect",
+                "select",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/harvesthq/chosen-package/tree/v1.8.7"
+            },
+            "time": "2018-06-28T20:32:51+00:00"
         },
         {
             "name": "joshfraser/php-name-parser",
@@ -18449,16 +18505,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "9.2.3",
+            "version": "9.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "b01d3eb84c3f9d9698ebb5666612ea40cec08608"
+                "reference": "3cb9960000bc1fd58da15aca3dd412ee0395c1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/b01d3eb84c3f9d9698ebb5666612ea40cec08608",
-                "reference": "b01d3eb84c3f9d9698ebb5666612ea40cec08608",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/3cb9960000bc1fd58da15aca3dd412ee0395c1dc",
+                "reference": "3cb9960000bc1fd58da15aca3dd412ee0395c1dc",
                 "shasum": ""
             },
             "require": {
@@ -18582,6 +18638,7 @@
                 "drupal/views_taxonomy_term_name_depth": "^7.0",
                 "drupal/webp": "^1.0@beta",
                 "drupal/xmlsitemap": "^1.0",
+                "harvesthq/chosen": "^1.8",
                 "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
                 "sainsburys/guzzle-oauth2-plugin": "^3.0",
                 "seboettg/citeproc-php": "2.4.1",
@@ -18629,9 +18686,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/9.2.3"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/9.2.4"
             },
-            "time": "2023-07-10T18:11:34+00:00"
+            "time": "2023-07-11T23:27:16+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -19297,16 +19354,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "8.3.3",
+            "version": "8.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "1370003506cf7dc2ec405c287dd52fe6fd0e077f"
+                "reference": "a2acf9bee9d38d2220b5c5458ceed40003c22c1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/1370003506cf7dc2ec405c287dd52fe6fd0e077f",
-                "reference": "1370003506cf7dc2ec405c287dd52fe6fd0e077f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/a2acf9bee9d38d2220b5c5458ceed40003c22c1a",
+                "reference": "a2acf9bee9d38d2220b5c5458ceed40003c22c1a",
                 "shasum": ""
             },
             "require": {
@@ -19333,9 +19390,9 @@
             "description": "A Drupal Authentication Module.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues",
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/8.3.3"
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/8.3.4"
             },
-            "time": "2023-07-10T18:05:56+00:00"
+            "time": "2023-07-10T18:34:52+00:00"
         },
         {
             "name": "symfony-cmf/routing",
