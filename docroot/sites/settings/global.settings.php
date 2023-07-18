@@ -35,6 +35,10 @@ if (EnvironmentDetector::isAhEnv()) {
       'system.menu.*',
       'core.menu.static_menu_link_overrides',
     ];
+    $settings['config_readonly_content_link_providers'] = [
+      'menu_link_content',
+      'menu_link',
+    ];
   }
 }
 
@@ -57,6 +61,7 @@ $additionalSettingsFiles = [
   __DIR__ . '/google_analytics.settings.php',
   __DIR__ . '/simplesamlphp.settings.php',
   __DIR__ . '/xmlsitemap.settings.php',
+  __DIR__ . '/fast404.settings.php',
 ];
 
 foreach ($additionalSettingsFiles as $settingsFile) {
