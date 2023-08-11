@@ -45,21 +45,14 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^4.0",
         "drupal/acquia_purge": "^1.1",
-        "drupal/anchor_link": "^2.5",
-        "drupal/ckeditor_a11ychecker": "^1.0",
-        "drupal/ckeditor_balloonpanel": "^1.1",
-        "drupal/ckeditor_blockimagepaste": "^1.4",
-        "drupal/config_merge": "^1.0",
-        "drupal/config_update": "^1.7",
         "drupal/core": "^9.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9.0",
-        "drupal/fakeobjects": "^1.1",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^11.4",
         "su-hkku/cardinal_service_profile": "^10.0",
-        "su-sws/stanford_profile": "10.x-dev"
+        "su-sws/stanford_profile": "^10.0"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
