@@ -69,8 +69,8 @@ tests:
     -
       path: '${docroot}'
       config: '${docroot}/core/phpunit.xml'
-      directory: '${docroot}/modules/custom'
       bootstrap: '${docroot}/core/tests/bootstrap.php'
+      testsuite: stanford
       filter: /(Unit|Kernel)/
   codeception:
     caw_profile:

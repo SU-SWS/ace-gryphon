@@ -22,9 +22,6 @@ modules:
     - PhpBrowser:
         url: '${project.local.protocol}://${project.local.hostname}/'
     - WebDriver:
-        wait: 1
-        log_js_errors: true
-        debug_log_entries: 10
         browser: chrome
         url: '${project.local.protocol}://${project.local.hostname}/'
     - StanfordCaravan\Codeception\Drupal\DrupalEntity:
@@ -46,3 +43,13 @@ modules:
         cleanup_test: true
         cleanup_failed: false
         cleanup_suite: true
+env:
+  ci:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://drupal8ci/'
+          browser: chrome
+          host: selenium
+          port: 4444
+          restart: true
