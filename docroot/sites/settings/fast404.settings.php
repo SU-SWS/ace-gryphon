@@ -152,11 +152,20 @@ $settings['fast404_exts'] = '/^(?!\/robots)^(?!\/system\/files).*\.(txt|png|gif|
  * This is always set and exposed by the Drupal Kernel.
  */
 $site_404 = DRUPAL_ROOT . '/' . $site_path . '/files/404.html';
-if (EnvironmentDetector::isAhEnv()) {
+if (EnvironmentDetector::isAcsfEnv()) {
+  $site_404 = EnvironmentDetector::getAhFilesRoot() . '/sites/g/files/' . EnvironmentDetector::getSiteName($site_path) . '/files/404.html';
+}
+elseif (EnvironmentDetector::isAhEnv()) {
   $site_404 = EnvironmentDetector::getAhFilesRoot() . '/sites/' . EnvironmentDetector::getSiteName($site_path) . '/files/404.html';
 }
 $settings['fast404_HTML_error_page'] = file_exists($site_404) ? $site_404 : FALSE;
 $settings['fast404_path_check'] = file_exists($site_404);
+
+/**
+ * Default value for this setting is FALSE. This setting needs to be enabled,
+ * so that fast 404 respects the redirect module.
+ */
+$settings['fast404_respect_redirect'] = TRUE;
 
 /**
  * Load the fast404.inc file.
