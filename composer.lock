@@ -10054,58 +10054,6 @@
             }
         },
         {
-            "name": "drupal/response_code_condition",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/response_code_condition.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/response_code_condition-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "df29c6d726f597f7989ca328ffd43745999fda4e"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1636202713",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "ahebrank",
-                    "homepage": "https://www.drupal.org/user/3190515"
-                },
-                {
-                    "name": "darius.restivan",
-                    "homepage": "https://www.drupal.org/user/3508866"
-                }
-            ],
-            "description": "Provides a condition to show or hide a block depending on the response code.",
-            "homepage": "https://www.drupal.org/project/response_code_condition",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/response_code_condition",
-                "issues": "https://www.drupal.org/project/issues/response_code_condition"
-            }
-        },
-        {
             "name": "drupal/responsive_tables_filter",
             "version": "1.18.0",
             "source": {
@@ -18523,12 +18471,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "00e7b3ecc980361db63f4b71c21d2036b010dc18"
+                "reference": "a5da75f3124878f0b024627ce686cc7ace855afd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/00e7b3ecc980361db63f4b71c21d2036b010dc18",
-                "reference": "00e7b3ecc980361db63f4b71c21d2036b010dc18",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/a5da75f3124878f0b024627ce686cc7ace855afd",
+                "reference": "a5da75f3124878f0b024627ce686cc7ace855afd",
                 "shasum": ""
             },
             "require": {
@@ -18613,6 +18561,7 @@
                 "drupal/nobots": "^1.0",
                 "drupal/node_revision_delete": "^1.0@RC",
                 "drupal/node_title_help_text": "^1.2",
+                "drupal/oembed_lazyload": "^2.0",
                 "drupal/page_cache_query_ignore": "^2.2",
                 "drupal/page_manager": "^4.0@beta",
                 "drupal/paragraphs": "^1.11",
@@ -18709,7 +18658,7 @@
             "support": {
                 "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/10.x"
             },
-            "time": "2023-09-11T18:57:53+00:00"
+            "time": "2023-09-11T21:35:06+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -18947,16 +18896,16 @@
         },
         {
             "name": "su-sws/stanford_fields",
-            "version": "8.2.4",
+            "version": "8.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fields.git",
-                "reference": "5be66070d1fd3b5f1c545214ac44c5cf7d574e02"
+                "reference": "548f939bbb317ee755d25074b4c2eec6d57423ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/5be66070d1fd3b5f1c545214ac44c5cf7d574e02",
-                "reference": "5be66070d1fd3b5f1c545214ac44c5cf7d574e02",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/548f939bbb317ee755d25074b4c2eec6d57423ae",
+                "reference": "548f939bbb317ee755d25074b4c2eec6d57423ae",
                 "shasum": ""
             },
             "require": {
@@ -18972,9 +18921,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_fields",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_fields/issues",
-                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.2.4"
+                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.2.5"
             },
-            "time": "2023-09-08T15:52:15+00:00"
+            "time": "2023-09-11T21:33:15+00:00"
         },
         {
             "name": "su-sws/stanford_media",
@@ -19042,16 +18991,16 @@
         },
         {
             "name": "su-sws/stanford_migrate",
-            "version": "8.5.2",
+            "version": "8.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_migrate.git",
-                "reference": "2d7ca9aa25ed62974cdd6fcb38f31dd91e0509d7"
+                "reference": "6ed875cf6f0316e36f5ded10cd1929011cbaca3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/2d7ca9aa25ed62974cdd6fcb38f31dd91e0509d7",
-                "reference": "2d7ca9aa25ed62974cdd6fcb38f31dd91e0509d7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/6ed875cf6f0316e36f5ded10cd1929011cbaca3e",
+                "reference": "6ed875cf6f0316e36f5ded10cd1929011cbaca3e",
                 "shasum": ""
             },
             "require": {
@@ -19092,9 +19041,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_migrate",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_migrate/issues",
-                "source": "https://github.com/SU-SWS/stanford_migrate/tree/8.5.2"
+                "source": "https://github.com/SU-SWS/stanford_migrate/tree/8.5.3"
             },
-            "time": "2023-09-08T15:52:34+00:00"
+            "time": "2023-09-11T21:00:31+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -19102,12 +19051,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "e6a75014a071e344f9eaec6758347b21434bcb38"
+                "reference": "ee64be7c6cbcc5635cecc9c845af3da534901817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/e6a75014a071e344f9eaec6758347b21434bcb38",
-                "reference": "e6a75014a071e344f9eaec6758347b21434bcb38",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/ee64be7c6cbcc5635cecc9c845af3da534901817",
+                "reference": "ee64be7c6cbcc5635cecc9c845af3da534901817",
                 "shasum": ""
             },
             "require": {
@@ -19200,7 +19149,6 @@
                 "drupal/rabbit_hole": "^1.0@beta",
                 "drupal/real_aes": "^2.4",
                 "drupal/redirect": "^1.0-beta1",
-                "drupal/response_code_condition": "^1.0",
                 "drupal/responsive_tables_filter": "^1.9",
                 "drupal/role_delegation": "^1.0@beta",
                 "drupal/scheduler": "^2.0",
@@ -19236,7 +19184,7 @@
                 "su-sws/stanford_fields": "^8.2",
                 "su-sws/stanford_media": "^9.0",
                 "su-sws/stanford_migrate": "^8.3",
-                "su-sws/stanford_profile_helper": "^9.2",
+                "su-sws/stanford_profile_helper": "^9.3",
                 "su-sws/stanford_samlauth": "^1.0"
             },
             "default-branch": true,
@@ -19276,24 +19224,27 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/10.x"
             },
-            "time": "2023-09-11T16:23:35+00:00"
+            "time": "2023-09-11T21:09:33+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "9.3.0",
+            "version": "9.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "768694b5294fc5fb967e002b5ebef1e9e3d0cf27"
+                "reference": "4f44aa42679cb5fac17c1b64a28d735db8cb3517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/768694b5294fc5fb967e002b5ebef1e9e3d0cf27",
-                "reference": "768694b5294fc5fb967e002b5ebef1e9e3d0cf27",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/4f44aa42679cb5fac17c1b64a28d735db8cb3517",
+                "reference": "4f44aa42679cb5fac17c1b64a28d735db8cb3517",
                 "shasum": ""
             },
             "require": {
                 "drupal/layout_paragraphs": "^2.0"
+            },
+            "replace": {
+                "drupal/response_code_condition": "1.1.0"
             },
             "require-dev": {
                 "citation-style-language/locales": "^1.0",
@@ -19305,12 +19256,12 @@
                 "drupal/config_pages": "^2.15",
                 "drupal/config_pages_overrides": "^2.0",
                 "drupal/default_content": "^2.0@alpha",
-                "drupal/element_class_formatter": "^1.5",
+                "drupal/element_class_formatter": "^2.0",
                 "drupal/externalauth": "^2.0",
                 "drupal/field_formatter_class": "^1.6",
                 "drupal/field_group": "^3.4",
                 "drupal/flat_taxonomy": "^2.0",
-                "drupal/hook_event_dispatcher": "^3.3",
+                "drupal/hook_event_dispatcher": "^4.0",
                 "drupal/layout_builder_restrictions": "^2.19",
                 "drupal/layout_library": "^1.0@beta",
                 "drupal/mathjax": "^4.0",
@@ -19336,7 +19287,7 @@
                 "seboettg/citeproc-php": "^2.4",
                 "su-sws/react_paragraphs": "^8.2",
                 "su-sws/stanford_fields": "^8.2",
-                "su-sws/stanford_media": "^9.0",
+                "su-sws/stanford_media": "^9.0 || ^10.0",
                 "su-sws/stanford_migrate": "^8.4"
             },
             "type": "drupal-custom-module",
@@ -19368,9 +19319,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.3.0"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.3.2"
             },
-            "time": "2023-09-07T16:05:06+00:00"
+            "time": "2023-09-11T16:31:02+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",

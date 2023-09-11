@@ -18,33 +18,11 @@ drush:
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
-  local:
-    enable:
-      - stanford_ssp
-      - environment_indicator
-    uninstall:
-      - acquia_purge
-  ci:
-    enable:
-      - nobots
-    uninstall:
-      - simplesamlphp_auth
-  dev:
-    enable:
-      - nobots
-      - environment_indicator
-    uninstall: {  }
-  test:
-    enable:
-      - nobots
-      - environment_indicator
-    uninstall:
-      - views_ui
-  prod:
-    enable:
-      - environment_indicator
-    uninstall:
-      - views_ui
+  local: {}
+  ci: {}
+  dev: {}
+  test: {}
+  prod: {}
 simplesamlphp: true
 cm:
   strategy: config-split
@@ -89,7 +67,7 @@ validate:
 cloud:
   appId: 8449683b-500e-4728-b70a-5f69d9e8a61a
 keys_rsync:
-  ssh: stanfordgryphon.prod@web-25384.prod.hosting.acquia.com
+  ssh: stanfordgryphon.test@stanfordgryphonstg.ssh.prod.acquia-sites.com
   files:
-    - /mnt/gfs/stanfordgryphon.prod/nobackup/simplesamlphp/
-    - /mnt/gfs/stanfordgryphon.prod/secrets.settings.php
+    - /mnt/gfs/stanfordgryphon.test/nobackup/simplesamlphp/
+    - /mnt/gfs/stanfordgryphon.test/secrets.settings.php
