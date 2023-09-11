@@ -67,7 +67,7 @@ validate:
 cloud:
   appId: a840b27a-157c-4831-867a-56763306d293
 keys_rsync:
-  ssh: hrgryphon.prod@hrgryphon.ssh.prod.acquia-sites.com
+  ssh: hrgryphon.test@hrgryphonstg.ssh.prod.acquia-sites.com
   files:
-    - /mnt/gfs/hrgryphon.prod/nobackup/simplesamlphp/
-    - /mnt/gfs/hrgryphon.prod/secrets.settings.php
+    - /mnt/gfs/hrgryphon.test/nobackup/simplesamlphp/
+    - /mnt/gfs/hrgryphon.test/secrets.settings.php
