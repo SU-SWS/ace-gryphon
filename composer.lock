@@ -19238,16 +19238,16 @@
         },
         {
             "name": "su-sws/stanford_fields",
-            "version": "8.2.4",
+            "version": "8.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fields.git",
-                "reference": "5be66070d1fd3b5f1c545214ac44c5cf7d574e02"
+                "reference": "548f939bbb317ee755d25074b4c2eec6d57423ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/5be66070d1fd3b5f1c545214ac44c5cf7d574e02",
-                "reference": "5be66070d1fd3b5f1c545214ac44c5cf7d574e02",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/548f939bbb317ee755d25074b4c2eec6d57423ae",
+                "reference": "548f939bbb317ee755d25074b4c2eec6d57423ae",
                 "shasum": ""
             },
             "require": {
@@ -19263,9 +19263,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_fields",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_fields/issues",
-                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.2.4"
+                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.2.5"
             },
-            "time": "2023-09-08T15:52:15+00:00"
+            "time": "2023-09-11T21:33:15+00:00"
         },
         {
             "name": "su-sws/stanford_media",

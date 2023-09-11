@@ -18,33 +18,11 @@ drush:
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
-  local:
-    enable:
-      - stanford_ssp
-      - environment_indicator
-    uninstall:
-      - acquia_purge
-  ci:
-    enable:
-      - nobots
-    uninstall:
-      - simplesamlphp_auth
-  dev:
-    enable:
-      - nobots
-      - environment_indicator
-    uninstall: {  }
-  test:
-    enable:
-      - nobots
-      - environment_indicator
-    uninstall:
-      - views_ui
-  prod:
-    enable:
-      - environment_indicator
-    uninstall:
-      - views_ui
+  local: {}
+  ci: {}
+  dev: {}
+  test: {}
+  prod: {}
 simplesamlphp: true
 cm:
   strategy: config-split
