@@ -4137,6 +4137,66 @@
             }
         },
         {
+            "name": "drupal/custom_markup_block",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/custom_markup_block.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/custom_markup_block-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "7620119afa220e5dd70e63b79e8ae8058aa7ecad"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "suggest": {
+                "drupal/token_filter": "Enables the usage of tokens in the custom markup block content."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1688289080",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Graham",
+                    "homepage": "https://www.drupal.org/user/459856",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Manuel Adan (manuel.adan)",
+                    "homepage": "https://www.drupal.org/user/516420",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Custom Markup Block",
+            "homepage": "https://www.drupal.org/project/custom_markup_block",
+            "keywords": [
+                "blocks",
+                "drupal",
+                "php"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/custom_markup_block",
+                "issues": "https://www.drupal.org/project/issues/custom_markup_block",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/decoupled_router",
             "version": "2.0.4",
             "source": {
@@ -16503,16 +16563,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "9.3.2",
+            "version": "9.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "2bd8a309638d0130b4d90f86009f709675ac1c48"
+                "reference": "9704d140368ee2ca4ffe62718b7beb37f3e1b2b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/2bd8a309638d0130b4d90f86009f709675ac1c48",
-                "reference": "2bd8a309638d0130b4d90f86009f709675ac1c48",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/9704d140368ee2ca4ffe62718b7beb37f3e1b2b1",
+                "reference": "9704d140368ee2ca4ffe62718b7beb37f3e1b2b1",
                 "shasum": ""
             },
             "require": {
@@ -16542,6 +16602,7 @@
                 "drupal/content_lock": "^2.2",
                 "drupal/core": "~9.5.0",
                 "drupal/cshs": "^4.0",
+                "drupal/custom_markup_block": "^1.2",
                 "drupal/default_content": "^2.0@alpha",
                 "drupal/diff": "^1.0@RC",
                 "drupal/display_field_copy": "^2.0",
@@ -16682,9 +16743,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/9.3.2"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/9.3.3"
             },
-            "time": "2023-09-22T16:14:53+00:00"
+            "time": "2023-09-22T21:20:06+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
