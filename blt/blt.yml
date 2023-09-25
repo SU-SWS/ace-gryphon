@@ -5,7 +5,7 @@ project:
     name: stanford_profile
   local: {  }
 git:
-  default_branch: 1.x
+  default_branch: 4.x
   remotes:
     - 'stanfordgryphon@svn-23450.prod.hosting.acquia.com:stanfordgryphon.git'
 deploy:
@@ -23,7 +23,6 @@ modules:
   dev: {}
   test: {}
   prod: {}
-simplesamlphp: true
 cm:
   strategy: config-split
   allow-overrides: true
