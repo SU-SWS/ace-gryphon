@@ -160,3 +160,6 @@ drush/sites/.checksums
 
 # Deprecation detector rules
 .rules
+
+# Ddev
+docroot/sites/*/settings/settings.ddev.php
