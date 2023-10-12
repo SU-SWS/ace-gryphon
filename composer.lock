@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d9a8227f4735d432d1e0492281d24b3",
+    "content-hash": "12fca6d349ea2f30a69e56a57c9fbf58",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16279,12 +16279,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "4d49ee4f7c55403ce7029dcd9331b56d0b6c0eaa"
+                "reference": "7c03f38efe3afdffd580686eccc37039019ee15b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/4d49ee4f7c55403ce7029dcd9331b56d0b6c0eaa",
-                "reference": "4d49ee4f7c55403ce7029dcd9331b56d0b6c0eaa",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/7c03f38efe3afdffd580686eccc37039019ee15b",
+                "reference": "7c03f38efe3afdffd580686eccc37039019ee15b",
                 "shasum": ""
             },
             "require": {
@@ -16464,7 +16464,7 @@
             "support": {
                 "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.x"
             },
-            "time": "2023-10-12T16:17:39+00:00"
+            "time": "2023-10-12T18:50:13+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
