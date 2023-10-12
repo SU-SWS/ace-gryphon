@@ -16500,12 +16500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "5a5af14a5bc3ad67993fe40dd5e1f1672009ad3c"
+                "reference": "44b00feb25d615c604405111bf84dd3e1ecff925"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/5a5af14a5bc3ad67993fe40dd5e1f1672009ad3c",
-                "reference": "5a5af14a5bc3ad67993fe40dd5e1f1672009ad3c",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/44b00feb25d615c604405111bf84dd3e1ecff925",
+                "reference": "44b00feb25d615c604405111bf84dd3e1ecff925",
                 "shasum": ""
             },
             "require": {
@@ -16680,7 +16680,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/10.x"
             },
-            "time": "2023-10-12T17:20:22+00:00"
+            "time": "2023-10-12T18:03:04+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17257,12 +17257,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "e2a84bc8575ad2fabb8f485b018c83c975c4d9d4"
+                "reference": "7d65d25a1c8dd2d7aa41b0bb2aa9ccba08357d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/e2a84bc8575ad2fabb8f485b018c83c975c4d9d4",
-                "reference": "e2a84bc8575ad2fabb8f485b018c83c975c4d9d4",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/7d65d25a1c8dd2d7aa41b0bb2aa9ccba08357d7e",
+                "reference": "7d65d25a1c8dd2d7aa41b0bb2aa9ccba08357d7e",
                 "shasum": ""
             },
             "require": {
@@ -17347,7 +17347,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.x"
             },
-            "time": "2023-10-11T21:35:52+00:00"
+            "time": "2023-10-12T17:36:42+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
