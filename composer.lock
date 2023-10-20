@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "239384a8a698f23fe86b85a8c72888b8",
+    "content-hash": "9164fdd4bace6315c62cb8bc5d043474",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16501,16 +16501,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "10.x-dev",
+            "version": "10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "c5f0e073b1ee9e6d2968886d31457bf40cb4a982"
+                "reference": "f505577d88c293cb009557b702f9480a7e9f88c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/c5f0e073b1ee9e6d2968886d31457bf40cb4a982",
-                "reference": "c5f0e073b1ee9e6d2968886d31457bf40cb4a982",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/f505577d88c293cb009557b702f9480a7e9f88c0",
+                "reference": "f505577d88c293cb009557b702f9480a7e9f88c0",
                 "shasum": ""
             },
             "require": {
@@ -16683,9 +16683,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/10.x"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/10.0.0"
             },
-            "time": "2023-10-19T02:33:00+00:00"
+            "time": "2023-10-20T18:25:13+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -16958,16 +16958,16 @@
         },
         {
             "name": "su-sws/stanford_media",
-            "version": "10.0.0",
+            "version": "10.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_media.git",
-                "reference": "2c748a6615fa9da6116254b982a7674179cb6c39"
+                "reference": "3035fe2f25e1aba707d9eeb224947ed6affe4bf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/2c748a6615fa9da6116254b982a7674179cb6c39",
-                "reference": "2c748a6615fa9da6116254b982a7674179cb6c39",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/3035fe2f25e1aba707d9eeb224947ed6affe4bf5",
+                "reference": "3035fe2f25e1aba707d9eeb224947ed6affe4bf5",
                 "shasum": ""
             },
             "require": {
@@ -17012,9 +17012,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_media",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_media/issues",
-                "source": "https://github.com/SU-SWS/stanford_media/tree/10.0.0"
+                "source": "https://github.com/SU-SWS/stanford_media/tree/10.1.0"
             },
-            "time": "2023-09-08T04:25:07+00:00"
+            "time": "2023-10-20T16:37:07+00:00"
         },
         {
             "name": "su-sws/stanford_migrate",
@@ -17074,16 +17074,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "11.x-dev",
+            "version": "11.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "a656bb80c1e79e01103de33e9f1d9013e6b007b8"
+                "reference": "5dd6d10ee11720465373708b706f64560d389700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/a656bb80c1e79e01103de33e9f1d9013e6b007b8",
-                "reference": "a656bb80c1e79e01103de33e9f1d9013e6b007b8",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/5dd6d10ee11720465373708b706f64560d389700",
+                "reference": "5dd6d10ee11720465373708b706f64560d389700",
                 "shasum": ""
             },
             "require": {
@@ -17214,7 +17214,6 @@
                 "su-sws/stanford_profile_helper": "^9.3",
                 "su-sws/stanford_samlauth": "^1.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17252,22 +17251,22 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.x"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.0.1"
             },
-            "time": "2023-10-19T02:03:14+00:00"
+            "time": "2023-10-20T18:20:26+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "9.x-dev",
+            "version": "9.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "266611249980c42c395b1fd744d46dfaff22c6e3"
+                "reference": "d55a52faed46bec612955d0245f1d1b6d1e7a3df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/266611249980c42c395b1fd744d46dfaff22c6e3",
-                "reference": "266611249980c42c395b1fd744d46dfaff22c6e3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/d55a52faed46bec612955d0245f1d1b6d1e7a3df",
+                "reference": "d55a52faed46bec612955d0245f1d1b6d1e7a3df",
                 "shasum": ""
             },
             "require": {
@@ -17320,7 +17319,6 @@
                 "su-sws/stanford_media": "^9.0 || ^10.0",
                 "su-sws/stanford_migrate": "^8.4"
             },
-            "default-branch": true,
             "type": "drupal-custom-module",
             "extra": {
                 "drush": {
@@ -17350,9 +17348,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.x"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.3.5"
             },
-            "time": "2023-10-19T02:19:40+00:00"
+            "time": "2023-10-20T16:38:12+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
@@ -26245,20 +26243,10 @@
             "time": "2023-08-28T21:15:44+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "su-sws/stanford_profile_helper",
-            "version": "9.9999999.9999999.9999999-dev",
-            "alias": "9.3.4",
-            "alias_normalized": "9.3.4.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/acquia_connector": 20,
-        "su-sws/caw_profile": 20,
-        "su-sws/stanford_profile": 20,
-        "su-sws/stanford_profile_helper": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,

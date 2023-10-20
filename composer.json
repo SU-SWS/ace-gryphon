@@ -50,9 +50,8 @@
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^11.1",
-        "su-sws/caw_profile": "10.x-dev",
-        "su-sws/stanford_profile": "11.x-dev",
-        "su-sws/stanford_profile_helper": "9.x-dev as 9.3.4"
+        "su-sws/caw_profile": "^10.0",
+        "su-sws/stanford_profile": "^11.0"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
