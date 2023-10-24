@@ -16505,16 +16505,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "10.0.2",
+            "version": "10.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "0a8bd09a4b025d9b3d091d4d71939cb395df3939"
+                "reference": "0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/0a8bd09a4b025d9b3d091d4d71939cb395df3939",
-                "reference": "0a8bd09a4b025d9b3d091d4d71939cb395df3939",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb",
+                "reference": "0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb",
                 "shasum": ""
             },
             "require": {
@@ -16687,9 +16687,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/10.0.2"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/10.0.3"
             },
-            "time": "2023-10-24T02:25:17+00:00"
+            "time": "2023-10-24T23:05:34+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17076,16 +17076,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "11.0.3",
+            "version": "11.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "8b834f46b78339652316ce07c83a1134c24ddd3b"
+                "reference": "78a15a5d64117621c27ceff330083c4c41924ddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/8b834f46b78339652316ce07c83a1134c24ddd3b",
-                "reference": "8b834f46b78339652316ce07c83a1134c24ddd3b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/78a15a5d64117621c27ceff330083c4c41924ddf",
+                "reference": "78a15a5d64117621c27ceff330083c4c41924ddf",
                 "shasum": ""
             },
             "require": {
@@ -17253,9 +17253,9 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.0.3"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.0.5"
             },
-            "time": "2023-10-23T23:31:55+00:00"
+            "time": "2023-10-24T22:36:49+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -22476,17 +22476,17 @@
         },
         {
             "name": "drupal/config_inspector",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_inspector.git",
-                "reference": "2.1.5"
+                "reference": "2.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_inspector-2.1.5.zip",
-                "reference": "2.1.5",
-                "shasum": "f9709d6495e1ca76c2d553ad6d0e77e9315e109a"
+                "url": "https://ftp.drupal.org/files/projects/config_inspector-2.1.6.zip",
+                "reference": "2.1.6",
+                "shasum": "a9f7b81fc5e3ea10acc5e861f9b6aeaad59d669e"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11"
@@ -22494,8 +22494,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.5",
-                    "datestamp": "1697797258",
+                    "version": "2.1.6",
+                    "datestamp": "1698150898",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
