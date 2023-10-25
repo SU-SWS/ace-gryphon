@@ -16505,16 +16505,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "10.0.3",
+            "version": "10.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb"
+                "reference": "eddb419197150848ffeb21bfafdf87f6cf51c83c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb",
-                "reference": "0a0ffb616ee76cba8bff2e9babbb76d23f4b90fb",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/eddb419197150848ffeb21bfafdf87f6cf51c83c",
+                "reference": "eddb419197150848ffeb21bfafdf87f6cf51c83c",
                 "shasum": ""
             },
             "require": {
@@ -16687,9 +16687,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/10.0.3"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/10.0.4"
             },
-            "time": "2023-10-24T23:05:34+00:00"
+            "time": "2023-10-25T02:24:30+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17076,16 +17076,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "11.0.5",
+            "version": "11.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "78a15a5d64117621c27ceff330083c4c41924ddf"
+                "reference": "b52526325e1cf71ab63859c9d8e3d5a9d8c4bf01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/78a15a5d64117621c27ceff330083c4c41924ddf",
-                "reference": "78a15a5d64117621c27ceff330083c4c41924ddf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/b52526325e1cf71ab63859c9d8e3d5a9d8c4bf01",
+                "reference": "b52526325e1cf71ab63859c9d8e3d5a9d8c4bf01",
                 "shasum": ""
             },
             "require": {
@@ -17253,9 +17253,9 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.0.5"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.0.6"
             },
-            "time": "2023-10-24T22:36:49+00:00"
+            "time": "2023-10-25T02:18:24+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
