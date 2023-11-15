@@ -160,3 +160,4 @@ drush/sites/.checksums
 
 # Deprecation detector rules
 .rules
+docroot/sites/cardinalservice/settings.ddev.php
