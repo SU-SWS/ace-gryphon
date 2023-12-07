@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dde12e2ac6d9541b3c5fb98a91d6398",
+    "content-hash": "0b386082d7fcd2bf59f8269da87abbe0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16047,29 +16047,33 @@
         },
         {
             "name": "seboettg/collection",
-            "version": "v3.1.0",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seboettg/Collection.git",
-                "reference": "6f753aef75923965173dcb11696e5dece0533f45"
+                "reference": "ca96a44ccfd66a68c8872e4bda603383600d1b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seboettg/Collection/zipball/6f753aef75923965173dcb11696e5dece0533f45",
-                "reference": "6f753aef75923965173dcb11696e5dece0533f45",
+                "url": "https://api.github.com/repos/seboettg/Collection/zipball/ca96a44ccfd66a68c8872e4bda603383600d1b94",
+                "reference": "ca96a44ccfd66a68c8872e4bda603383600d1b94",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3"
+                "php": ">=7.4"
             },
             "require-dev": {
+                "ext-json": "*",
                 "php-coveralls/php-coveralls": "^1",
                 "phpunit/phpunit": "8.5.*"
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/ArrayList/Functions.php"
+                    "src/Assert/Functions.php",
+                    "src/Lists/Functions.php",
+                    "src/Map/Functions.php",
+                    "src/Common/Functions.php"
                 ],
                 "psr-4": {
                     "Seboettg\\Collection\\": "src/"
@@ -16104,9 +16108,9 @@
             ],
             "support": {
                 "issues": "https://github.com/seboettg/Collection/issues",
-                "source": "https://github.com/seboettg/Collection/tree/v3.1.0"
+                "source": "https://github.com/seboettg/Collection/tree/v4.0.0"
             },
-            "time": "2022-07-09T19:47:27+00:00"
+            "time": "2023-12-07T21:44:11+00:00"
         },
         {
             "name": "setasign/fpdi",
@@ -16286,16 +16290,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.0.5",
+            "version": "dev-FIXUP-000-test-redirect-csv",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "c4560a7aa9f01033e07a6ea73dde8f3d663ccdea"
+                "reference": "6135ab2c91e9d85b580da633e9f52e90c65079e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/c4560a7aa9f01033e07a6ea73dde8f3d663ccdea",
-                "reference": "c4560a7aa9f01033e07a6ea73dde8f3d663ccdea",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/6135ab2c91e9d85b580da633e9f52e90c65079e7",
+                "reference": "6135ab2c91e9d85b580da633e9f52e90c65079e7",
                 "shasum": ""
             },
             "require": {
@@ -16473,9 +16477,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.0.5"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/FIXUP-000-test-redirect-csv"
             },
-            "time": "2023-10-27T19:12:56+00:00"
+            "time": "2023-12-07T22:22:40+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -26089,6 +26093,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/acquia_connector": 20,
+        "su-hkku/cardinal_service_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,
