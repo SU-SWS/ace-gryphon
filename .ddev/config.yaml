@@ -1,7 +1,7 @@
 name: gryphon
 type: drupal10
 docroot: docroot
-php_version: "8.1"
+php_version: "8.2"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -21,12 +21,12 @@ disable_settings_managemen: false
 nodejs_version: "16"
 hooks:
   post-start:
-    - exec: drush uli
+    - exec: drush --uri=https://cardinalservice.ddev.site uli
 
   post-import-db:
-    - exec: drush cr
-    - exec: drush cim -y
-    - exec: drush uli
+    - exec: drush --uri=https://cardinalservice.ddev.site cr
+    - exec: drush --uri=https://cardinalservice.ddev.site cim -y
+    - exec: drush --uri=https://cardinalservice.ddev.site uli
 
 
 # Key features of ddev's config.yaml:
