@@ -47,6 +47,7 @@
         "drupal/core": "^10",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-recommended": "^10",
+        "drupal/fontawesome": "2.25.0",
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^11.1",
@@ -136,6 +137,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/fontawesome": {
+                "https://www.drupal.org/project/fontawesome/issues/3370348": "https://www.drupal.org/files/issues/2023-06-27/3370348-2.patch"
+            },
             "drupal/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
             },

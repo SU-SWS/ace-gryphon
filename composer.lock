@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9164fdd4bace6315c62cb8bc5d043474",
+    "content-hash": "9e10588cde714067f05b8c665e376514",
     "packages": [
         {
             "name": "acquia/blt",
@@ -5909,17 +5909,17 @@
         },
         {
             "name": "drupal/fontawesome",
-            "version": "2.26.0",
+            "version": "2.25.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fontawesome.git",
-                "reference": "8.x-2.26"
+                "reference": "8.x-2.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fontawesome-8.x-2.26.zip",
-                "reference": "8.x-2.26",
-                "shasum": "22e67458e1ebc274c3a8b494ce2c4056a3d2af29"
+                "url": "https://ftp.drupal.org/files/projects/fontawesome-8.x-2.25.zip",
+                "reference": "8.x-2.25",
+                "shasum": "67f92e961b35c91b1520565669515525b2223cfb"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -5927,8 +5927,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.26",
-                    "datestamp": "1688063477",
+                    "version": "8.x-2.25",
+                    "datestamp": "1676999823",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -26258,5 +26258,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
