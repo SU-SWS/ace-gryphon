@@ -17,16 +17,16 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-disable_settings_managemen: false
+disable_settings_managemen: true
 nodejs_version: "16"
 hooks:
   post-start:
-    - exec: drush uli
+    - exec: drush --uri=https://cardinalservice.ddev.site uli
 
   post-import-db:
-    - exec: drush cr
-    - exec: drush cim -y
-    - exec: drush uli
+    - exec: drush --uri=https://cardinalservice.ddev.site cr
+    - exec: drush --uri=https://cardinalservice.ddev.site cim -y
+    - exec: drush --uri=https://cardinalservice.ddev.site uli
 
 
 # Key features of ddev's config.yaml:
