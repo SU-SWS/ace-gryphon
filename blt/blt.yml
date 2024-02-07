@@ -8,6 +8,7 @@ git:
   default_branch: 4.x
   remotes:
     - 'stanfordgryphon@svn-23450.prod.hosting.acquia.com:stanfordgryphon.git'
+    - 'hrgryphon@svn-23450.prod.hosting.acquia.com:hrgryphon.git'
 deploy:
   tag_source: false
   exclude_file: '${repo.root}/blt/deploy/rsync-exclude.txt'
@@ -18,15 +19,16 @@ drush:
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
-  local: {}
-  ci: {}
-  dev: {}
-  test: {}
-  prod: {}
+  local: {  }
+  ci: {  }
+  dev: {  }
+  test: {  }
+  prod: {  }
 cm:
   strategy: config-split
   allow-overrides: true
 multisites:
+  - cardinalatwork
   - cardinalservice
   - default
 behat:
@@ -55,6 +57,11 @@ tests:
         - acceptance
         - functional
       directory: '${docroot}/profiles/custom/cardinal_service_profile/tests/codeception'
+    caw_profile:
+      suites:
+        - acceptance
+        - functional
+      directory: '${docroot}/profiles/custom/caw_profile/tests/codeception'
 validate:
   twig:
     functions:
