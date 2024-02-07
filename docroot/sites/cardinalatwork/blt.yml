@@ -1,0 +1,14 @@
+project:
+  profile:
+    name: caw_profile
+  machine_name: cardinalatwork
+  human_name: cardinalatwork
+  local:
+    protocol: http
+    hostname: local.cardinalatwork.com
+drush:
+  aliases:
+    local: cardinalatwork.local
+    remote: cardinalatwork.prod
+drupal:
+  db: {  }
