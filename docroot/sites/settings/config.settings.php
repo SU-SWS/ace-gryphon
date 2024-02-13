@@ -17,4 +17,5 @@ if (EnvironmentDetector::isAhEnv()) {
 
 if (!EnvironmentDetector::isProdEnv()) {
   $config['domain_301_redirect.settings']['enabled'] = FALSE;
+  $config['stanford_syndication.settings']['enabled'] = FALSE;
 }

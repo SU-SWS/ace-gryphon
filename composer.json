@@ -51,7 +51,7 @@
         "drupal/mysql56": "^1.1",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^12",
-        "su-sws/caw_profile": "10.x-dev",
+        "su-sws/caw_profile": "^10.1",
         "su-sws/stanford_profile": "11.x-dev"
     },
     "require-dev": {
