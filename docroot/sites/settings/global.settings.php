@@ -34,6 +34,15 @@ if (EnvironmentDetector::isAhEnv()) {
     $settings['config_readonly_whitelist_patterns'] = [
       'system.menu.*',
       'core.menu.static_menu_link_overrides',
+      'google_tag.container.*',
+      'google_tag.settings',
+      'next.next_entity_type_config.*',
+      'next.next_site.*',
+      'samlauth.authentication',
+      'system.action.user_add_role_action.*',
+      'system.action.user_remove_role_action.*',
+      'system.theme',
+      'user.role.*',
     ];
     $settings['config_readonly_content_link_providers'] = [
       'menu_link_content',
