@@ -1,4 +1,4 @@
-name: gryphon
+name: cardinalservice
 type: drupal10
 docroot: docroot
 php_version: "8.2"
@@ -19,14 +19,6 @@ composer_version: "2"
 web_environment: []
 disable_settings_managemen: true
 nodejs_version: "16"
-hooks:
-  post-start:
-    - exec: drush --uri=https://cardinalservice.ddev.site uli
-
-  post-import-db:
-    - exec: drush --uri=https://cardinalservice.ddev.site cr
-    - exec: drush --uri=https://cardinalservice.ddev.site cim -y
-    - exec: drush --uri=https://cardinalservice.ddev.site uli
 
 
 # Key features of ddev's config.yaml:
