@@ -19,3 +19,8 @@ if (!EnvironmentDetector::isProdEnv()) {
   $config['domain_301_redirect.settings']['enabled'] = FALSE;
   $config['stanford_syndication.settings']['enabled'] = FALSE;
 }
+
+
+//$config['stanford_syndication.settings']['enabled'] = TRUE;
+//$config['stanford_syndication.settings']['debug'] = TRUE;
+//$settings['stanford_syndication.stanford_enterprise.token'] = 'foobar';

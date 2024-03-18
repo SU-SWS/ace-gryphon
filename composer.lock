@@ -15582,12 +15582,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/pear-core-minimal.git",
-                "reference": "d457b5c93e5001fbf4b5726d21038266e029e3be"
+                "reference": "ce0adade8b97561656ace07cdaac4751c271ea8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/d457b5c93e5001fbf4b5726d21038266e029e3be",
-                "reference": "d457b5c93e5001fbf4b5726d21038266e029e3be",
+                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/ce0adade8b97561656ace07cdaac4751c271ea8c",
+                "reference": "ce0adade8b97561656ace07cdaac4751c271ea8c",
                 "shasum": ""
             },
             "require": {
@@ -15600,9 +15600,9 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "": "src/"
-                }
+                "classmap": [
+                    "src/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "include-path": [
@@ -15623,7 +15623,7 @@
                 "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=PEAR",
                 "source": "https://github.com/pear/pear-core-minimal"
             },
-            "time": "2024-03-09T19:38:40+00:00"
+            "time": "2024-03-16T18:41:45+00:00"
         },
         {
             "name": "pear/pear_exception",
@@ -16431,16 +16431,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.1",
+            "version": "v0.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "39621c73e0754328252f032c6997b983afc50431"
+                "reference": "9185c66c2165bbf4d71de78a69dccf4974f9538d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/39621c73e0754328252f032c6997b983afc50431",
-                "reference": "39621c73e0754328252f032c6997b983afc50431",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/9185c66c2165bbf4d71de78a69dccf4974f9538d",
+                "reference": "9185c66c2165bbf4d71de78a69dccf4974f9538d",
                 "shasum": ""
             },
             "require": {
@@ -16504,9 +16504,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.1"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.2"
             },
-            "time": "2024-03-15T03:22:57+00:00"
+            "time": "2024-03-17T01:53:00+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -17079,16 +17079,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "10.2.0",
+            "version": "10.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "a5d7aae7d8f7d92cddd7a5b6dbeba9c018e27b39"
+                "reference": "e43760e55dfceddfbea2b4a7ce31201e5fc50edf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/a5d7aae7d8f7d92cddd7a5b6dbeba9c018e27b39",
-                "reference": "a5d7aae7d8f7d92cddd7a5b6dbeba9c018e27b39",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/e43760e55dfceddfbea2b4a7ce31201e5fc50edf",
+                "reference": "e43760e55dfceddfbea2b4a7ce31201e5fc50edf",
                 "shasum": ""
             },
             "require": {
@@ -17265,9 +17265,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/10.2.0"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/10.2.1"
             },
-            "time": "2024-03-15T17:13:08+00:00"
+            "time": "2024-03-18T16:47:10+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17642,16 +17642,16 @@
         },
         {
             "name": "su-sws/stanford_profile",
-            "version": "11.3.1",
+            "version": "11.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "8ffa679467c6e799b0ccb427b6bf22887689272b"
+                "reference": "3f26502af6355922b674e779aa77537cf7c1eb59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/8ffa679467c6e799b0ccb427b6bf22887689272b",
-                "reference": "8ffa679467c6e799b0ccb427b6bf22887689272b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/3f26502af6355922b674e779aa77537cf7c1eb59",
+                "reference": "3f26502af6355922b674e779aa77537cf7c1eb59",
                 "shasum": ""
             },
             "require": {
@@ -17822,22 +17822,22 @@
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
-                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.3.1"
+                "source": "https://github.com/SU-SWS/stanford_profile/tree/11.3.2"
             },
-            "time": "2024-03-15T16:28:22+00:00"
+            "time": "2024-03-18T00:53:03+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "9.6.0",
+            "version": "9.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "370123b1c82ef15d7dcded79ae6c889ab40f67bb"
+                "reference": "172f533b1a88503d6b62afe81334459681b78c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/370123b1c82ef15d7dcded79ae6c889ab40f67bb",
-                "reference": "370123b1c82ef15d7dcded79ae6c889ab40f67bb",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/172f533b1a88503d6b62afe81334459681b78c7b",
+                "reference": "172f533b1a88503d6b62afe81334459681b78c7b",
                 "shasum": ""
             },
             "require": {
@@ -17924,9 +17924,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.6.0"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.6.1"
             },
-            "time": "2024-03-14T22:32:42+00:00"
+            "time": "2024-03-18T00:28:38+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
@@ -17962,16 +17962,16 @@
         },
         {
             "name": "su-sws/stanford_syndication",
-            "version": "1.0.0-beta3",
+            "version": "1.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_syndication.git",
-                "reference": "8e4667c025b6fd9cc3c330945850e13d926d4311"
+                "reference": "5cf462de67ae1d520ea7eb2106ebc24627f08055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_syndication/zipball/8e4667c025b6fd9cc3c330945850e13d926d4311",
-                "reference": "8e4667c025b6fd9cc3c330945850e13d926d4311",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_syndication/zipball/5cf462de67ae1d520ea7eb2106ebc24627f08055",
+                "reference": "5cf462de67ae1d520ea7eb2106ebc24627f08055",
                 "shasum": ""
             },
             "type": "drupal-custom-module",
@@ -17987,9 +17987,9 @@
             "description": "Drupal module for connection to Syndication CMS systems",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_syndication/issues",
-                "source": "https://github.com/SU-SWS/stanford_syndication/tree/1.0.0-beta3"
+                "source": "https://github.com/SU-SWS/stanford_syndication/tree/1.0.0-beta4"
             },
-            "time": "2024-03-15T15:55:35+00:00"
+            "time": "2024-03-18T16:40:08+00:00"
         },
         {
             "name": "symfony/config",
@@ -20971,16 +20971,16 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.6.5",
+            "version": "6.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "5fce932fcee4371865314ab7f6c0d85423c5c7ce"
+                "reference": "5e6ce1e8447dc9d53ca7056b7bbb1476a02b7f5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/5fce932fcee4371865314ab7f6c0d85423c5c7ce",
-                "reference": "5fce932fcee4371865314ab7f6c0d85423c5c7ce",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/5e6ce1e8447dc9d53ca7056b7bbb1476a02b7f5a",
+                "reference": "5e6ce1e8447dc9d53ca7056b7bbb1476a02b7f5a",
                 "shasum": ""
             },
             "require": {
@@ -21031,7 +21031,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.6.5"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.7.1"
             },
             "funding": [
                 {
@@ -21039,7 +21039,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-09-06T15:09:26+00:00"
+            "time": "2024-03-18T16:25:58+00:00"
         },
         {
             "name": "twig/twig",
