@@ -71,6 +71,7 @@ $additionalSettingsFiles = [
   __DIR__ . '/saml.settings.php',
   __DIR__ . '/xmlsitemap.settings.php',
   __DIR__ . '/fast404.settings.php',
+  "$repo_root/keys/secrets.settings.php",
 ];
 
 foreach ($additionalSettingsFiles as $settingsFile) {
