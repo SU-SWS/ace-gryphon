@@ -4736,17 +4736,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.1.11",
+            "version": "2.1.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.1.11"
+                "reference": "2.1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.11.zip",
-                "reference": "2.1.11",
-                "shasum": "23fd7f0e7ceb091162468eed290d083a2e3b62af"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.12.zip",
+                "reference": "2.1.12",
+                "shasum": "2a3e32c25eebdcdb3c64144b01d7dd4ce2945fec"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -4757,8 +4757,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1713470242",
+                    "version": "2.1.12",
+                    "datestamp": "1713880633",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17222,16 +17222,16 @@
         },
         {
             "name": "su-sws/drupal-patches",
-            "version": "10.1.11",
+            "version": "10.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/drupal-patches.git",
-                "reference": "2f9486264a0f621e3ca01277a92c21dfe0126fd4"
+                "reference": "915404fa53f285c59d2f4752d54790336d741cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/2f9486264a0f621e3ca01277a92c21dfe0126fd4",
-                "reference": "2f9486264a0f621e3ca01277a92c21dfe0126fd4",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/915404fa53f285c59d2f4752d54790336d741cc9",
+                "reference": "915404fa53f285c59d2f4752d54790336d741cc9",
                 "shasum": ""
             },
             "require": {
@@ -17328,7 +17328,7 @@
                         "https://www.drupal.org/project/views_taxonomy_term_name_depth/issues/2877249": "https://git.drupalcode.org/project/views_taxonomy_term_name_depth/-/merge_requests/2.diff"
                     },
                     "drupal/webp": {
-                        "https://www.drupal.org/project/webp/issues/3281606": "https://www.drupal.org/files/issues/2024-02-13/3281606-webp-17.patch"
+                        "https://www.drupal.org/project/webp/issues/3281606": "https://git.drupalcode.org/project/webp/-/merge_requests/33.patch"
                     }
                 }
             },
@@ -17339,9 +17339,9 @@
             "description": "Drupal core and contrib shared patches",
             "support": {
                 "issues": "https://github.com/SU-SWS/drupal-patches/issues",
-                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.11"
+                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.12"
             },
-            "time": "2024-04-08T20:54:47+00:00"
+            "time": "2024-04-23T19:55:37+00:00"
         },
         {
             "name": "su-sws/react_paragraphs",
@@ -17848,16 +17848,16 @@
         },
         {
             "name": "su-sws/stanford_samlauth",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_samlauth.git",
-                "reference": "3b1eb2e5fb290a549cca7b97522436a9a2893aca"
+                "reference": "1e7a2120483ede7289df88d600ca09021416d19d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_samlauth/zipball/3b1eb2e5fb290a549cca7b97522436a9a2893aca",
-                "reference": "3b1eb2e5fb290a549cca7b97522436a9a2893aca",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_samlauth/zipball/1e7a2120483ede7289df88d600ca09021416d19d",
+                "reference": "1e7a2120483ede7289df88d600ca09021416d19d",
                 "shasum": ""
             },
             "require": {
@@ -17873,9 +17873,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_samlauth/issues",
-                "source": "https://github.com/SU-SWS/stanford_samlauth/tree/1.0.6"
+                "source": "https://github.com/SU-SWS/stanford_samlauth/tree/1.0.7"
             },
-            "time": "2024-04-22T16:22:29+00:00"
+            "time": "2024-04-23T16:37:04+00:00"
         },
         {
             "name": "su-sws/stanford_syndication",
@@ -22255,16 +22255,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "e49be96f3bccd183c9ff1313686c06cf898ba4be"
+                "reference": "a625e50598e12171d3f60b1149eb530690c43474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e49be96f3bccd183c9ff1313686c06cf898ba4be",
-                "reference": "e49be96f3bccd183c9ff1313686c06cf898ba4be",
+                "url": "https://api.github.com/repos/composer/composer/zipball/a625e50598e12171d3f60b1149eb530690c43474",
+                "reference": "a625e50598e12171d3f60b1149eb530690c43474",
                 "shasum": ""
             },
             "require": {
@@ -22349,7 +22349,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.3"
+                "source": "https://github.com/composer/composer/tree/2.7.4"
             },
             "funding": [
                 {
@@ -22365,7 +22365,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T19:40:57+00:00"
+            "time": "2024-04-22T19:17:03+00:00"
         },
         {
             "name": "composer/metadata-minifier",
