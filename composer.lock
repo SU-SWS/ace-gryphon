@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d64030a73ebbc0269d3b01d3a1e6c58",
+    "content-hash": "17ec4cd0024bd9bb93774f4142e02037",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16775,16 +16775,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.2.1",
+            "version": "dev-CS-128-cardinal-quarter-view",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "1c04240c344666e239e2206c50e0792cd7f29e21"
+                "reference": "d7283561202323a1dc0916f38ef03db23c907e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/1c04240c344666e239e2206c50e0792cd7f29e21",
-                "reference": "1c04240c344666e239e2206c50e0792cd7f29e21",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/d7283561202323a1dc0916f38ef03db23c907e8b",
+                "reference": "d7283561202323a1dc0916f38ef03db23c907e8b",
                 "shasum": ""
             },
             "require": {
@@ -16942,10 +16942,6 @@
                     "drupal/hook_event_dispatcher": {
                         "https://www.drupal.org/project/hook_event_dispatcher/issues/3354751": "https://www.drupal.org/files/issues/2024-03-14/hook_event_dispatcher-4.x-3354751-7.patch"
                     },
-                    "drupal/menu_block": {
-                        "https://www.drupal.org/project/menu_block/issues/3271218": "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch",
-                        "https://www.drupal.org/project/menu_block/issues/3082445": "https://www.drupal.org/files/issues/2022-11-08/menu_block-render-parent-3082445-53.patch"
-                    },
                     "drupal/menu_link": {
                         "https://www.drupal.org/project/menu_link/issues/3358081": "https://git.drupalcode.org/project/menu_link/-/merge_requests/9.patch"
                     },
@@ -16965,9 +16961,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.2.1"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/CS-128-cardinal-quarter-view"
             },
-            "time": "2024-04-22T19:31:16+00:00"
+            "time": "2024-09-11T19:47:44+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -27448,6 +27444,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/acquia_connector": 20,
+        "su-hkku/cardinal_service_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,
