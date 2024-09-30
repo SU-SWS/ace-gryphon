@@ -16794,12 +16794,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "5e140e56ca490166330c3d511ad339c52ce5fc41"
+                "reference": "dbcc662b021f372222ee87e23df860256143ee5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/5e140e56ca490166330c3d511ad339c52ce5fc41",
-                "reference": "5e140e56ca490166330c3d511ad339c52ce5fc41",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/dbcc662b021f372222ee87e23df860256143ee5c",
+                "reference": "dbcc662b021f372222ee87e23df860256143ee5c",
                 "shasum": ""
             },
             "require": {
@@ -16975,7 +16975,7 @@
             "support": {
                 "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.x"
             },
-            "time": "2024-09-27T20:33:31+00:00"
+            "time": "2024-09-30T21:57:33+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
