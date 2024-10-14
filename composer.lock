@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bff2bd27fca1624446857e6357baff24",
+    "content-hash": "78bb0bbf418e9474142e5e9060ccae46",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16835,16 +16835,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.x-dev",
+            "version": "dev-fix-test",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "dbcc662b021f372222ee87e23df860256143ee5c"
+                "reference": "1e5c42bba0a513928210daa3688cd2771568d6aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/dbcc662b021f372222ee87e23df860256143ee5c",
-                "reference": "dbcc662b021f372222ee87e23df860256143ee5c",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/1e5c42bba0a513928210daa3688cd2771568d6aa",
+                "reference": "1e5c42bba0a513928210daa3688cd2771568d6aa",
                 "shasum": ""
             },
             "require": {
@@ -16981,7 +16981,6 @@
                 "su-sws/stanford_profile_helper": "^9.6",
                 "su-sws/stanford_samlauth": "^1.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17018,9 +17017,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.x"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/fix-test"
             },
-            "time": "2024-09-30T21:57:33+00:00"
+            "time": "2024-10-14T18:50:13+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
