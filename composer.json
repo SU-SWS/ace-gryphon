@@ -38,7 +38,7 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "acquia/blt": "^13.5",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
