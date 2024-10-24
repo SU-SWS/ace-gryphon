@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f61194468dc40f433f1ccc61b694eab1",
+    "content-hash": "bff2bd27fca1624446857e6357baff24",
     "packages": [
         {
             "name": "acquia/blt",
@@ -10389,7 +10389,7 @@
             ],
             "authors": [
                 {
-                    "name": "Heine",
+                    "name": "heine",
                     "homepage": "https://www.drupal.org/user/17943"
                 },
                 {
@@ -12932,29 +12932,29 @@
         },
         {
             "name": "fileeye/mimemap",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FileEye/MimeMap.git",
-                "reference": "2cb60da59d5c6fb881a78b481d513c4c68a1a93c"
+                "reference": "c8c686cc6f77316b23128a83334877debf645dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/2cb60da59d5c6fb881a78b481d513c4c68a1a93c",
-                "reference": "2cb60da59d5c6fb881a78b481d513c4c68a1a93c",
+                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/c8c686cc6f77316b23128a83334877debf645dfb",
+                "reference": "c8c686cc6f77316b23128a83334877debf645dfb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.1"
             },
             "require-dev": {
                 "composer-runtime-api": "^2.0.0",
-                "sebastian/comparator": ">=4",
-                "sebastian/diff": ">=4",
-                "symfony/console": ">=5.4",
-                "symfony/filesystem": ">=5.4",
-                "symfony/var-dumper": ">=5.4",
-                "symfony/yaml": ">=5.4"
+                "sebastian/comparator": ">=5",
+                "sebastian/diff": ">=5",
+                "symfony/console": ">=6.4",
+                "symfony/filesystem": ">=6.4",
+                "symfony/var-dumper": ">=6.4",
+                "symfony/yaml": ">=6.4"
             },
             "bin": [
                 "bin/fileeye-mimemap"
@@ -12984,9 +12984,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FileEye/MimeMap/issues",
-                "source": "https://github.com/FileEye/MimeMap/tree/2.1.2"
+                "source": "https://github.com/FileEye/MimeMap/tree/2.2.0"
             },
-            "time": "2024-06-29T16:52:07+00:00"
+            "time": "2024-10-20T18:59:36+00:00"
         },
         {
             "name": "fileeye/pel",
@@ -16823,16 +16823,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "dev-debug-test",
+            "version": "11.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "b30dd03fd99dd9bd88e81414e74cdbb1c6224355"
+                "reference": "87b2cc719d779476e41cb9fe73cd0afb078a406b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/b30dd03fd99dd9bd88e81414e74cdbb1c6224355",
-                "reference": "b30dd03fd99dd9bd88e81414e74cdbb1c6224355",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/87b2cc719d779476e41cb9fe73cd0afb078a406b",
+                "reference": "87b2cc719d779476e41cb9fe73cd0afb078a406b",
                 "shasum": ""
             },
             "require": {
@@ -16969,6 +16969,7 @@
                 "su-sws/stanford_profile_helper": "^9.6",
                 "su-sws/stanford_samlauth": "^1.0"
             },
+            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17005,9 +17006,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/debug-test"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.x"
             },
-            "time": "2024-10-24T14:35:42+00:00"
+            "time": "2024-10-24T18:09:46+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
