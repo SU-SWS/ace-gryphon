@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9e0dd9400589b41e09b0ae316a34a3b",
+    "content-hash": "bff2bd27fca1624446857e6357baff24",
     "packages": [
         {
             "name": "acquia/blt",
@@ -9276,6 +9276,51 @@
                 "source": "https://cgit.drupalcode.org/node_title_help_text",
                 "issues": "https://drupal.org/project/issues/node_title_help_text",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/oembed_lazyload",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/oembed_lazyload.git",
+                "reference": "2.0.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/oembed_lazyload-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "08619476aad47a5c8db4b4e0f5a84c92c1dc4f5d"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.5",
+                    "datestamp": "1726188583",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Leber",
+                    "homepage": "https://www.drupal.org/user/3509746",
+                    "email": "lukeleber@gmail.com"
+                }
+            ],
+            "description": "Facilitates the lazy loading of oembed resources.",
+            "homepage": "https://www.drupal.org/project/oembed_lazyload",
+            "support": {
+                "source": "https://git.drupalcode.org/project/oembed_lazyload"
             }
         },
         {

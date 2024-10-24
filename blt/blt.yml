@@ -50,7 +50,7 @@ tests:
       testsuite: stanford
       filter: /(Unit|Kernel)/
   codeception:
-    cardinal_service:
+    cardinalservice:
       suites:
         - acceptance
         - functional
