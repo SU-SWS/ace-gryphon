@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     if: github.event.pull_request.merged
+    container:
+      image: pookmish/drupal8ci:latest
     steps:
       - name: Get Next Release
         id: tag
@@ -32,3 +34,37 @@ jobs:
           commit: ${{ github.sha }}
           generateReleaseNotes: true
           makeLatest: true
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: fail
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - name: Restore Cache
+        if: ${{ steps.tag.outputs.tag }}
+        uses: actions/cache@v4
+        with:
+          path: |
+            vendor
+            docroot/core
+            docroot/libraries
+            docroot/modules/contrib
+          key: 2.x-${{ hashFiles('blt/blt.yml') }}-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            2.x-${{ hashFiles('blt/blt.yml') }}-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+            2.x-${{ hashFiles('blt/blt.yml') }}-${{ hashFiles('composer.json') }}-
+            2.x-${{ hashFiles('blt/blt.yml') }}-
+      - name: Deploy Tag
+        if: ${{ steps.tag.outputs.tag }}
+        run: |
+          git config --system --add safe.directory '*' &&
+          git config --global user.email "sws-developers@lists.stanford.edu" &&
+          git config --global user.name "Github Actions" &&
+          ssh-keyscan -t rsa svn-45197.prod.hosting.acquia.com >> /root/.ssh/known_hosts &&
+          composer install -n &&
+          blt blt:telemetry:disable --no-interaction &&
+          blt deploy --tag=$(date +'%Y-%m-%d')"_"${{ steps.tag.outputs.tag }} --commit-msg=${{ steps.tag.outputs.tag }} --no-interaction
