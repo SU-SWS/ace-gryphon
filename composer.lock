@@ -16833,7 +16833,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/18fff4373c4c6d69c7d91abb2e871ede4151fcb0",
                 "reference": "18fff4373c4c6d69c7d91abb2e871ede4151fcb0",
-                "shasum": ""
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.0",
