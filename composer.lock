@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bff2bd27fca1624446857e6357baff24",
+    "content-hash": "b056b8ca1c6dfc12c851c1e02cf66f84",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16823,16 +16823,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.x-dev",
+            "version": "11.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "87b2cc719d779476e41cb9fe73cd0afb078a406b"
+                "reference": "18fff4373c4c6d69c7d91abb2e871ede4151fcb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/87b2cc719d779476e41cb9fe73cd0afb078a406b",
-                "reference": "87b2cc719d779476e41cb9fe73cd0afb078a406b",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/18fff4373c4c6d69c7d91abb2e871ede4151fcb0",
+                "reference": "18fff4373c4c6d69c7d91abb2e871ede4151fcb0",
                 "shasum": ""
             },
             "require": {
@@ -16969,7 +16969,6 @@
                 "su-sws/stanford_profile_helper": "^9.6",
                 "su-sws/stanford_samlauth": "^1.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17006,9 +17005,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.x"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.3.0"
             },
-            "time": "2024-10-24T18:09:46+00:00"
+            "time": "2024-10-25T03:55:30+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -27830,7 +27829,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/acquia_connector": 20,
-        "su-hkku/cardinal_service_profile": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,
