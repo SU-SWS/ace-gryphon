@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b056b8ca1c6dfc12c851c1e02cf66f84",
+    "content-hash": "966d27c90f9c2d2a6416e8ab201a2bc2",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4811,17 +4811,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.1.19",
+            "version": "2.1.20",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.1.19"
+                "reference": "2.1.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.19.zip",
-                "reference": "2.1.19",
-                "shasum": "0ccf651071837e1ee6fcfb8fbb1c279d2fc1bc27"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.20.zip",
+                "reference": "2.1.20",
+                "shasum": "67f8e2eb17ed3d3db6cd93782ed1faa88c206640"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -4832,8 +4832,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.19",
-                    "datestamp": "1726514804",
+                    "version": "2.1.20",
+                    "datestamp": "1731097435",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9143,34 +9143,31 @@
         },
         {
             "name": "drupal/node_revision_delete",
-            "version": "2.0.0-rc1",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/node_revision_delete.git",
-                "reference": "2.0.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/node_revision_delete-2.0.0-rc1.zip",
-                "reference": "2.0.0-rc1",
-                "shasum": "7532c3c7c0f7bbaccf5a2721273a77cdca1b821b"
+                "reference": "037d3a4b74e5a74c245338c8a96c3fded2e05c79"
             },
             "require": {
-                "drupal/core": "^9.0 || ^10"
+                "drupal/core": "^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0-rc1",
-                    "datestamp": "1709827878",
+                    "version": "2.0.0-rc1+4-dev",
+                    "datestamp": "1713534938",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9.0 || ^10 || ^11"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
@@ -9373,54 +9370,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/oembed_providers",
                 "issues": "https://www.drupal.org/project/issues/oembed_providers"
-            }
-        },
-        {
-            "name": "drupal/page_cache_query_ignore",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/page_cache_query_ignore.git",
-                "reference": "2.4.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/page_cache_query_ignore-2.4.0.zip",
-                "reference": "2.4.0",
-                "shasum": "c5ca770d05baf46e6e37b9cd28e9d59fb39e4c9c"
-            },
-            "require": {
-                "drupal/core": "^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.4.0",
-                    "datestamp": "1730066171",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "nterbogt",
-                    "homepage": "https://www.drupal.org/user/102218"
-                },
-                {
-                    "name": "validoll",
-                    "homepage": "https://www.drupal.org/user/144206"
-                }
-            ],
-            "description": "Alter page cache middleware class to ignore query params.",
-            "homepage": "https://www.drupal.org/project/page_cache_query_ignore",
-            "support": {
-                "source": "https://git.drupalcode.org/project/page_cache_query_ignore"
             }
         },
         {
@@ -15003,16 +14952,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.12.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c"
+                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
-                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/123267b2c49fbf30d78a7b2d333f6be754b94845",
+                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845",
                 "shasum": ""
             },
             "require": {
@@ -15051,7 +15000,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.0"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.1"
             },
             "funding": [
                 {
@@ -15059,7 +15008,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-12T14:39:25+00:00"
+            "time": "2024-11-08T17:47:46+00:00"
         },
         {
             "name": "myclabs/php-enum",
@@ -16824,16 +16773,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.3.1",
+            "version": "11.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "fb13ac1848cfe73bca16d13367a92bd69fb9ea40"
+                "reference": "356c707594ae7e826ed71525b7e2618f4cd8a523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/fb13ac1848cfe73bca16d13367a92bd69fb9ea40",
-                "reference": "fb13ac1848cfe73bca16d13367a92bd69fb9ea40",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/356c707594ae7e826ed71525b7e2618f4cd8a523",
+                "reference": "356c707594ae7e826ed71525b7e2618f4cd8a523",
                 "shasum": ""
             },
             "require": {
@@ -16918,7 +16867,6 @@
                 "drupal/nobots": "^1.0",
                 "drupal/node_revision_delete": "^2.0@RC",
                 "drupal/node_title_help_text": "^1.2",
-                "drupal/page_cache_query_ignore": "^2.2",
                 "drupal/page_manager": "^4.0@beta",
                 "drupal/paragraphs": "^1.11",
                 "drupal/paragraphs_edit": "^3.0",
@@ -17006,9 +16954,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.3.1"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.3.2"
             },
-            "time": "2024-11-08T16:47:13+00:00"
+            "time": "2024-11-08T21:26:25+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17555,16 +17503,16 @@
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "9.7.3",
+            "version": "9.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "b9440164b03f99f97e06e540028584efca47819f"
+                "reference": "a5a02d8431825cabf3b1c68eba6907e381334dac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/b9440164b03f99f97e06e540028584efca47819f",
-                "reference": "b9440164b03f99f97e06e540028584efca47819f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/a5a02d8431825cabf3b1c68eba6907e381334dac",
+                "reference": "a5a02d8431825cabf3b1c68eba6907e381334dac",
                 "shasum": ""
             },
             "require": {
@@ -17572,6 +17520,9 @@
                 "drupal/graphql_compose": "^2.0",
                 "drupal/layout_paragraphs": "^2.0",
                 "seboettg/collection": "~3.1"
+            },
+            "conflict": {
+                "drupal/page_cache_query_ignore": "*"
             },
             "replace": {
                 "drupal/response_code_condition": "1.1.0"
@@ -17591,12 +17542,14 @@
                 "drupal/field_formatter_class": ">=1.6",
                 "drupal/field_group": ">=3.4",
                 "drupal/flat_taxonomy": ">=2.0",
+                "drupal/google_analytics": "^4.0",
                 "drupal/hook_event_dispatcher": ">=4.0",
                 "drupal/jsonapi_extras": ">=3.24",
                 "drupal/layout_builder_restrictions": ">=2.19",
                 "drupal/layout_library": ">=1.0@beta",
                 "drupal/mathjax": ">=4.0",
                 "drupal/menu_block": ">=1.10",
+                "drupal/menu_link": ">=2.0",
                 "drupal/name": ">=1.0@RC",
                 "drupal/next": ">=1.6",
                 "drupal/paragraphs": ">=1.15",
@@ -17653,9 +17606,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.7.3"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.8.3"
             },
-            "time": "2024-09-24T17:18:31+00:00"
+            "time": "2024-11-08T17:32:54+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
@@ -27829,6 +27782,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/acquia_connector": 20,
+        "drupal/node_revision_delete": 20,
         "su-sws/blt-sws": 20
     },
     "prefer-stable": true,
