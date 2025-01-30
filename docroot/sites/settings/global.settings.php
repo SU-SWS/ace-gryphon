@@ -32,8 +32,10 @@ if (EnvironmentDetector::isAhEnv()) {
   ) {
     $settings['config_readonly'] = TRUE;
     $settings['config_readonly_whitelist_patterns'] = [
-      'system.menu.*',
       'core.menu.static_menu_link_overrides',
+      'google_tag.container.*',
+      'google_tag.settings',
+      'system.menu.*',
     ];
     $settings['config_readonly_content_link_providers'] = [
       'menu_link_content',
