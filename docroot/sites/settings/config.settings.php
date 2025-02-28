@@ -20,7 +20,5 @@ if (!EnvironmentDetector::isProdEnv()) {
   $config['stanford_syndication.settings']['enabled'] = FALSE;
 }
 
-
-//$config['stanford_syndication.settings']['enabled'] = TRUE;
-//$config['stanford_syndication.settings']['debug'] = TRUE;
-//$settings['stanford_syndication.stanford_enterprise.token'] = 'foobar';
+$config['stage_file_proxy.settings']['origin'] = "https://$site_name-prod.stanford.edu";
+$config['stage_file_proxy.settings']['origin_dir'] = "sites/$site_name/files";

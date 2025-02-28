@@ -14,6 +14,23 @@ use Robo\Contract\VerbosityThresholdInterface;
 class GryphonHooksCommands extends BltTasks {
 
   /**
+   * @hook post-command drupal:sync:db
+   */
+  public function postDbSync(){
+    return $this->taskDrush()
+      ->drush('pm:install')
+      ->arg('field_validation_legacy')
+      ->run();
+  }
+
+  /**
+   * @hook post-command drupal:update
+   */
+  public function postDrupalUpdate() {
+    $this->taskDrush()->drush('cache-rebuild')->run();
+  }
+
+  /**
    * After a multisite is created, modify the drush alias with default values.
    *
    * @hook post-command recipes:multisite:init
