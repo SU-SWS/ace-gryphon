@@ -17294,12 +17294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "3b641b0e8901def44c928f7fa4382caf65ed40a9"
+                "reference": "a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/3b641b0e8901def44c928f7fa4382caf65ed40a9",
-                "reference": "3b641b0e8901def44c928f7fa4382caf65ed40a9",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8",
+                "reference": "a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8",
                 "shasum": ""
             },
             "require": {
@@ -17479,7 +17479,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/10.x"
             },
-            "time": "2025-02-28T17:06:39+00:00"
+            "time": "2025-02-28T18:39:46+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17512,16 +17512,16 @@
         },
         {
             "name": "su-sws/drupal-patches",
-            "version": "10.1.29",
+            "version": "10.1.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/drupal-patches.git",
-                "reference": "471d27843ccbf8e0ff3f8366bf6486b544dfd694"
+                "reference": "6bf9f9a9a8547b91bacf80457150eccf1354eefd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/471d27843ccbf8e0ff3f8366bf6486b544dfd694",
-                "reference": "471d27843ccbf8e0ff3f8366bf6486b544dfd694",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/6bf9f9a9a8547b91bacf80457150eccf1354eefd",
+                "reference": "6bf9f9a9a8547b91bacf80457150eccf1354eefd",
                 "shasum": ""
             },
             "require": {
@@ -17556,6 +17556,7 @@
                         "https://www.drupal.org/project/webp/issues/3281606": "https://git.drupalcode.org/project/webp/-/merge_requests/33.patch"
                     },
                     "drupal/shield": {
+                        "https://www.drupal.org/project/shield/issues/3277210": "https://www.drupal.org/files/issues/2023-06-15/shield-key-bootstrap-corruption-workaround.patch",
                         "https://www.drupal.org/project/shield/issues/3304657": "https://www.drupal.org/files/issues/2025-02-05/shield-undefined_constant-3304657-23.patch",
                         "https://www.drupal.org/project/shield/issues/3479117": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/shield-3304657.patch"
                     },
@@ -17617,9 +17618,9 @@
             "description": "Drupal core and contrib shared patches",
             "support": {
                 "issues": "https://github.com/SU-SWS/drupal-patches/issues",
-                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.29"
+                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.30"
             },
-            "time": "2025-02-26T22:14:28+00:00"
+            "time": "2025-02-28T21:06:45+00:00"
         },
         {
             "name": "su-sws/react_paragraphs",
@@ -17854,12 +17855,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "9529fa6540891ea5f8ddd37e7bd6eccc1f7786f1"
+                "reference": "86dcc755fe40109438b6135f0655dee73ac598eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/9529fa6540891ea5f8ddd37e7bd6eccc1f7786f1",
-                "reference": "9529fa6540891ea5f8ddd37e7bd6eccc1f7786f1",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/86dcc755fe40109438b6135f0655dee73ac598eb",
+                "reference": "86dcc755fe40109438b6135f0655dee73ac598eb",
                 "shasum": ""
             },
             "require": {
@@ -17963,6 +17964,7 @@
                 "drupal/simple_oauth": "^6.0",
                 "drupal/smart_date": "^4.0",
                 "drupal/smart_trim": "^2.0",
+                "drupal/stage_file_proxy": "^3.1",
                 "drupal/taxonomy_entity_index": "^1.8",
                 "drupal/taxonomy_menu": "^3.5",
                 "drupal/token_or": "^2.0",
@@ -18031,7 +18033,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/11.x"
             },
-            "time": "2025-02-26T21:46:11+00:00"
+            "time": "2025-02-28T21:07:16+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",

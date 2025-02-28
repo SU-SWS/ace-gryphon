@@ -12,8 +12,6 @@ dev:
     root: /mnt/gfs/hrgryphon.dev/livedev/docroot
   host: hrgryphondev.ssh.prod.acquia-sites.com
   user: hrgryphon.dev
-  paths:
-    drush-script: drush9
   ssh:
     tty: 0
 prod:
@@ -27,8 +25,6 @@ prod:
     root: /mnt/gfs/hrgryphon.prod/livedev/docroot
   host: hrgryphon.ssh.prod.acquia-sites.com
   user: hrgryphon.prod
-  paths:
-    drush-script: drush9
   ssh:
     tty: 0
 ra:
@@ -42,8 +38,6 @@ ra:
     root: /mnt/gfs/hrgryphon.ra/livedev/docroot
   host: hrgryphonra.ssh.prod.acquia-sites.com
   user: hrgryphon.ra
-  paths:
-    drush-script: drush9
   ssh:
     tty: 0
 test:
@@ -57,7 +51,5 @@ test:
     root: /mnt/gfs/hrgryphon.test/livedev/docroot
   host: hrgryphonstg.ssh.prod.acquia-sites.com
   user: hrgryphon.test
-  paths:
-    drush-script: drush9
   ssh:
     tty: 0
