@@ -39,7 +39,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "acquia/blt": "^13.5",
+        "acquia/blt": "^13.7",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "dev-4.x",
