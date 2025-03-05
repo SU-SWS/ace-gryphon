@@ -2817,27 +2817,27 @@
         },
         {
             "name": "drupal/chosen",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/chosen.git",
-                "reference": "5.0.0"
+                "reference": "5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/chosen-5.0.0.zip",
-                "reference": "5.0.0",
-                "shasum": "4b9ecca7daacd3e0f5618717c2a24ff69cefc90f"
+                "url": "https://ftp.drupal.org/files/projects/chosen-5.0.1.zip",
+                "reference": "5.0.1",
+                "shasum": "e12bad5888c965823f5bad647a18c41ce6bac073"
             },
             "require": {
                 "drupal/chosen_lib": "*",
-                "drupal/core": "^9.2 || ^10 || ^11"
+                "drupal/core": "^10.2 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0",
-                    "datestamp": "1737983928",
+                    "version": "5.0.1",
+                    "datestamp": "1740832971",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2886,7 +2886,7 @@
                     "homepage": "https://www.drupal.org/user/235438"
                 }
             ],
-            "description": "Makes select elements more user-friendly using <a href=\"https://github.com/JJJ/chosen\">Chosen</a>.",
+            "description": "Makes select elements more user-friendly using <a href=\"https://github.com/noli42/chosen\">Chosen</a>.",
             "homepage": "https://www.drupal.org/project/chosen",
             "support": {
                 "source": "https://git.drupalcode.org/project/chosen"
@@ -2894,16 +2894,16 @@
         },
         {
             "name": "drupal/chosen_lib",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "require": {
                 "drupal/chosen": "^5",
-                "drupal/core": "^9.2 || ^10 || ^11"
+                "drupal/core": "^10.2 || ^11"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0",
-                    "datestamp": "1737983928",
+                    "version": "5.0.1",
+                    "datestamp": "1740832971",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2952,7 +2952,7 @@
                     "homepage": "https://www.drupal.org/user/235438"
                 }
             ],
-            "description": "Add <a href=\"https://github.com/JJJ/chosen\">chosen</a> library definition.",
+            "description": "Add <a href=\"https://github.com/noli42/chosen\">chosen</a> library definition.",
             "homepage": "https://www.drupal.org/project/chosen",
             "support": {
                 "source": "https://git.drupalcode.org/project/chosen"
@@ -9522,17 +9522,17 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.18.0",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.18"
+                "reference": "8.x-1.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.18.zip",
-                "reference": "8.x-1.18",
-                "shasum": "594e2937ea5c95fc88b60420590c4d83f5cd71ee"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "831a81a11eac419e8410db45efef5b283c4d117c"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -9545,7 +9545,7 @@
                 "drupal/entity_usage": "2.x-dev",
                 "drupal/feeds": "^3",
                 "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "1.x-dev",
+                "drupal/inline_entity_form": "3.x-dev",
                 "drupal/paragraphs-paragraphs_library": "*",
                 "drupal/replicate": "1.x-dev",
                 "drupal/search_api": "^1",
@@ -9557,8 +9557,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.18",
-                    "datestamp": "1723029144",
+                    "version": "8.x-1.19",
+                    "datestamp": "1740907076",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9575,7 +9575,7 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Frans",
+                    "name": "frans",
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
@@ -10850,21 +10850,21 @@
         },
         {
             "name": "drupal/search_api_algolia",
-            "version": "3.0.0-beta7",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_algolia.git",
-                "reference": "3.0.0-beta7"
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_algolia-3.0.0-beta7.zip",
-                "reference": "3.0.0-beta7",
-                "shasum": "3f2a26f104b70c43937094a872a9eacbc036fc2c"
+                "url": "https://ftp.drupal.org/files/projects/search_api_algolia-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "2f0837ed68c9d059a5a4e3496654735392658122"
             },
             "require": {
                 "algolia/algoliasearch-client-php": "^3.0",
-                "drupal/core": "^9.3 || ^10",
+                "drupal/core": "^10.1 || ^11",
                 "drupal/search_api": "*"
             },
             "suggest": {
@@ -10873,11 +10873,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-beta7",
-                    "datestamp": "1684829448",
+                    "version": "3.1.0",
+                    "datestamp": "1740820213",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -11176,17 +11176,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "4.2.2",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "4.2.2"
+                "reference": "4.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-4.2.2.zip",
-                "reference": "4.2.2",
-                "shasum": "c66711299d80ae71bec85836d42c87c1220b1bef"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-4.2.3.zip",
+                "reference": "4.2.3",
+                "shasum": "f4e97acce3bd666cf553b85c87b466eb172da69c"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -11202,8 +11202,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.2",
-                    "datestamp": "1738839300",
+                    "version": "4.2.3",
+                    "datestamp": "1740856565",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17294,12 +17294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8"
+                "reference": "d16d61ac08dbc11385a9111145de08c8d94a804c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8",
-                "reference": "a3f4bde84f72fe80aa71e2085e05c8b6b36f2dd8",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/d16d61ac08dbc11385a9111145de08c8d94a804c",
+                "reference": "d16d61ac08dbc11385a9111145de08c8d94a804c",
                 "shasum": ""
             },
             "require": {
@@ -17479,7 +17479,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/10.x"
             },
-            "time": "2025-02-28T18:39:46+00:00"
+            "time": "2025-03-05T19:28:04+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17512,16 +17512,16 @@
         },
         {
             "name": "su-sws/drupal-patches",
-            "version": "10.1.30",
+            "version": "10.1.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/drupal-patches.git",
-                "reference": "6bf9f9a9a8547b91bacf80457150eccf1354eefd"
+                "reference": "221c48a9426802bd04b85c801bd84e396f7b9aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/6bf9f9a9a8547b91bacf80457150eccf1354eefd",
-                "reference": "6bf9f9a9a8547b91bacf80457150eccf1354eefd",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/221c48a9426802bd04b85c801bd84e396f7b9aac",
+                "reference": "221c48a9426802bd04b85c801bd84e396f7b9aac",
                 "shasum": ""
             },
             "require": {
@@ -17595,9 +17595,6 @@
                         "https://www.drupal.org/project/menu_link_weight/issues/3099139": "https://www.drupal.org/files/issues/2019-12-05/menu_link_weight-target_blank-3099139.patch",
                         "https://www.drupal.org/project/menu_link_weight/issues/3410674": "https://www.drupal.org/files/issues/2023-12-23/menu_link_weight-3410674.patch"
                     },
-                    "drupal/search_api_algolia": {
-                        "https://www.drupal.org/project/search_api_algolia/issues/3343995": "https://git.drupalcode.org/project/search_api_algolia/-/merge_requests/19.patch"
-                    },
                     "drupal/views_infinite_scroll": {
                         "https://www.drupal.org/project/views_infinite_scroll/issues/3094488": "https://www.drupal.org/files/issues/2020-04-14/3094488-2.patch",
                         "D8CORE-2949: https://www.drupal.org/project/views_infinite_scroll/issues/3173923": "https://www.drupal.org/files/issues/2021-06-30/views_infinite_scroll-3173923-4.patch"
@@ -17618,9 +17615,9 @@
             "description": "Drupal core and contrib shared patches",
             "support": {
                 "issues": "https://github.com/SU-SWS/drupal-patches/issues",
-                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.30"
+                "source": "https://github.com/SU-SWS/drupal-patches/tree/10.1.31"
             },
-            "time": "2025-02-28T21:06:45+00:00"
+            "time": "2025-03-02T18:38:08+00:00"
         },
         {
             "name": "su-sws/react_paragraphs",
@@ -17855,12 +17852,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "86dcc755fe40109438b6135f0655dee73ac598eb"
+                "reference": "754bc9eaedb3652b4e4ebc4469abe40ddeb02025"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/86dcc755fe40109438b6135f0655dee73ac598eb",
-                "reference": "86dcc755fe40109438b6135f0655dee73ac598eb",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/754bc9eaedb3652b4e4ebc4469abe40ddeb02025",
+                "reference": "754bc9eaedb3652b4e4ebc4469abe40ddeb02025",
                 "shasum": ""
             },
             "require": {
@@ -18033,7 +18030,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/11.x"
             },
-            "time": "2025-02-28T21:07:16+00:00"
+            "time": "2025-03-05T01:13:11+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -18041,12 +18038,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "a4ec274f6f705c490ee3abc777a1f28e9212312c"
+                "reference": "9e1b88ef11e66cc4f3a890ef69e9f3e0d5eddf88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/a4ec274f6f705c490ee3abc777a1f28e9212312c",
-                "reference": "a4ec274f6f705c490ee3abc777a1f28e9212312c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/9e1b88ef11e66cc4f3a890ef69e9f3e0d5eddf88",
+                "reference": "9e1b88ef11e66cc4f3a890ef69e9f3e0d5eddf88",
                 "shasum": ""
             },
             "require": {
@@ -18066,6 +18063,7 @@
                 "citation-style-language/styles-distribution": "^1.0",
                 "drupal/admin_toolbar": ">=3.4",
                 "drupal/auto_entitylabel": ">=3.0",
+                "drupal/book": ">=2.0",
                 "drupal/components": ">=3.0",
                 "drupal/config_pages": ">=2.15",
                 "drupal/config_pages_overrides": ">=2.0",
@@ -18142,7 +18140,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/9.x"
             },
-            "time": "2025-02-12T19:10:58+00:00"
+            "time": "2025-03-05T19:18:26+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
@@ -23892,16 +23890,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.29.3",
+            "version": "v4.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "ab5077c2cfdd1f415f42d11fdbdf903ba8e3d9b7"
+                "reference": "e1d66682f6836aa87820400f0aa07d9eb566feb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/ab5077c2cfdd1f415f42d11fdbdf903ba8e3d9b7",
-                "reference": "ab5077c2cfdd1f415f42d11fdbdf903ba8e3d9b7",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/e1d66682f6836aa87820400f0aa07d9eb566feb6",
+                "reference": "e1d66682f6836aa87820400f0aa07d9eb566feb6",
                 "shasum": ""
             },
             "require": {
@@ -23930,9 +23928,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.29.3"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.30.0"
             },
-            "time": "2025-01-08T21:00:13+00:00"
+            "time": "2025-03-04T22:54:49+00:00"
         },
         {
             "name": "league/html-to-markdown",
@@ -25713,16 +25711,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.19",
+            "version": "1.12.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "c42ba9bab7a940ed00092ecb1c77bad98896d789"
+                "reference": "3240b1972042c7f73cf1045e879ea5bd5f761bb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c42ba9bab7a940ed00092ecb1c77bad98896d789",
-                "reference": "c42ba9bab7a940ed00092ecb1c77bad98896d789",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3240b1972042c7f73cf1045e879ea5bd5f761bb7",
+                "reference": "3240b1972042c7f73cf1045e879ea5bd5f761bb7",
                 "shasum": ""
             },
             "require": {
@@ -25767,7 +25765,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-19T15:42:21+00:00"
+            "time": "2025-03-05T13:37:43+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -26292,16 +26290,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5"
+                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
-                "reference": "a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
+                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
                 "shasum": ""
             },
             "require": {
@@ -26309,25 +26307,22 @@
             },
             "require-dev": {
                 "captainhook/plugin-composer": "^5.3",
-                "ergebnis/composer-normalize": "^2.28.3",
-                "fakerphp/faker": "^1.21",
+                "ergebnis/composer-normalize": "^2.45",
+                "fakerphp/faker": "^1.24",
                 "hamcrest/hamcrest-php": "^2.0",
-                "jangregor/phpstan-prophecy": "^1.0",
-                "mockery/mockery": "^1.5",
+                "jangregor/phpstan-prophecy": "^2.1",
+                "mockery/mockery": "^1.6",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpcsstandards/phpcsutils": "^1.0.0-rc1",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.9",
-                "phpstan/phpstan-mockery": "^1.1",
-                "phpstan/phpstan-phpunit": "^1.3",
-                "phpunit/phpunit": "^9.5",
-                "psalm/plugin-mockery": "^1.1",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "ramsey/coding-standard": "^2.0.3",
-                "ramsey/conventional-commits": "^1.3",
-                "vimeo/psalm": "^5.4"
+                "php-parallel-lint/php-parallel-lint": "^1.4",
+                "phpspec/prophecy-phpunit": "^2.3",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-mockery": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^10.5",
+                "ramsey/coding-standard": "^2.3",
+                "ramsey/conventional-commits": "^1.6",
+                "roave/security-advisories": "dev-latest"
             },
             "type": "library",
             "extra": {
@@ -26365,19 +26360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.0.0"
+                "source": "https://github.com/ramsey/collection/tree/2.1.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/ramsey",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/ramsey/collection",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-12-31T21:50:55+00:00"
+            "time": "2025-03-02T04:48:29+00:00"
         },
         {
             "name": "ramsey/uuid",
