@@ -35,6 +35,21 @@
                     "reference": "master"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "noli42/chosen",
+                "version": "3.0.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chosen"
+                },
+                "dist": {
+                    "url": "https://github.com/noli42/chosen/releases/download/3.0.0/chosen-assets-v3.0.0.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -51,12 +66,13 @@
         "drupal/oembed_lazyload": "^2.0",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^12",
-        "su-hkku/cardinal_service_profile": "^11.3",
+        "su-hkku/cardinal_service_profile": "dev-SWSDEVOPS-130-profile-update",
         "su-sws/stanford_profile": "^11.3"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
         "acquia/blt-multisite": "^1.0",
+        "drupal/upgrade_status": "^4.3",
         "phpspec/prophecy-phpunit": "^2.0",
         "su-sws/blt-sws": "dev-main",
         "su-sws/drupal-dev": "^10"
