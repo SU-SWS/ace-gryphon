@@ -39,10 +39,9 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         run: |
-          git config --system --add safe.directory '*'
-          composer install -n
-          blt blt:telemetry:disable --no-interaction
-          blt tests:phpunit:coverage --no-interaction
+          git config --system --add safe.directory '*' &&
+          composer install -n &&
+          blt tests:phpunit:coverage
       - name: Save Test Results
         uses: actions/upload-artifact@v4
         if: failure()
@@ -90,7 +89,7 @@ jobs:
       options: '--network-alias drupal8ci'
     services:
       selenium:
-        image: selenium/standalone-chrome:latest
+        image: selenium/standalone-chrome:130.0
         options: '--shm-size="2g"'
       mysql:
         image: mysql:5.7
@@ -123,8 +122,7 @@ jobs:
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' &&
           rm -rf /var/www/html &&
           ln -snf $GITHUB_WORKSPACE /var/www/html &&
-          mkdir -p docroot/sites/default/files &&
-          chmod -R 777 docroot/sites/default/files/ &&
+          mkdir -p -m 777 docroot/sites/default/files &&
           rm -rf docroot/sites/${{ matrix.site }}/files &&
           ln -sL ../default/files/ docroot/sites/${{ matrix.site }}/files &&
           apachectl stop &&
