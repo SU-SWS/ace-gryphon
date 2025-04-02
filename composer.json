@@ -2,7 +2,7 @@
     "name": "su-sws/ace-gryphon",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
+    "homepage": "https://github.com/SU-SWS/ace-gryphon",
     "support": {
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
@@ -54,15 +54,16 @@
     ],
     "require": {
         "php": ">=8.2",
-        "acquia/blt": "^13.7",
-        "composer/installers": "^1.9",
+        "acquia/blt": "^13.5",
+        "composer/installers": "^1.9 || ^2.0",
         "cweagans/composer-patches": "^1.6",
-        "drupal/acquia_connector": "dev-4.x",
+        "drupal/acquia_connector": "^4.0",
         "drupal/acquia_purge": "^1.1",
-        "drupal/core": "^10",
+        "drupal/allowed_formats": "^3.0",
+        "drupal/block_content_permissions": "^1.11",
+        "drupal/core": "^10.4",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-recommended": "^10",
-        "drupal/node_revision_delete": "2.0.x-dev",
         "drupal/oembed_lazyload": "^2.0",
         "drupal/paranoia": "^1.9",
         "drush/drush": "^12",
@@ -158,12 +159,6 @@
             },
             "drupal/ui_patterns": {
                 "Ui Patterns Views Fixes": "patches/contrib/ui_patterns_views-preview.patch"
-            },
-            "drupal/taxonomy_entity_index": {
-                "Fix PHP 8 strict error with arrays": "patches/contrib/taxonomy_entity_index.patch"
-            },
-            "drupal/google_tag": {
-                "Prevent google tag conflict": "patches/contrib/google_tag-ga_conflict.patch"
             }
         }
     },
