@@ -1,5 +1,6 @@
 {
     "name": "su-sws/ace-gryphon",
+    "description": "Cardinalservice ACN Stack.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://github.com/SU-SWS/ace-gryphon",
@@ -54,7 +55,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "acquia/blt": "^13.5",
+        "acquia/blt": "^13.7",
         "composer/installers": "^1.9 || ^2.0",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^4.0",
@@ -77,7 +78,7 @@
         "drupal/upgrade_status": "^4.3",
         "phpspec/prophecy-phpunit": "^2.0",
         "su-sws/blt-sws": "dev-main",
-        "su-sws/drupal-dev": "^10"
+        "su-sws/drupal-dev": "^10.0"
     },
     "replace": {
         "drupal/coder": "*"
@@ -160,6 +161,9 @@
             },
             "drupal/ui_patterns": {
                 "Ui Patterns Views Fixes": "patches/contrib/ui_patterns_views-preview.patch"
+            },
+            "drupal/taxonomy_entity_index": {
+                "Fix PHP 8 strict error with arrays": "patches/contrib/taxonomy_entity_index.patch"
             }
         }
     },
