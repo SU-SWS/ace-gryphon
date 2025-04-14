@@ -127,7 +127,7 @@ jobs:
           composer install -n
           blt blt:telemetry:disable --no-interaction
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
-          blt gryphon-ci:drupal:install --profile=cardinalservice_profile --no-interaction
+          blt gryphon-ci:drupal:install --profile=cardinal_service_profile --no-interaction
           blt drupal:install -n
           drush role:perm:add anonymous 'access content'
           drush xmlsitemap:rebuild
