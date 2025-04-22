@@ -7,7 +7,6 @@
 
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
 
-$config['stanford_samlauth.settings']['allowed']['groups'][99] = 'uit:sws';// Don't enable SAML configs if we're on CI systems.
 if (!EnvironmentDetector::isCiEnv()) {
   $env = EnvironmentDetector::getAhEnv() ?: '';
   $normalized_env = "01dev";
