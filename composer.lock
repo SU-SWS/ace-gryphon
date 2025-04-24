@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c5bc549f3dfd6413a90108046518eea",
+    "content-hash": "a5f46b990f4cc5c3be4850dc2df1f66b",
     "packages": [
         {
             "name": "acquia/blt",
@@ -13976,58 +13976,6 @@
             "time": "2025-03-27T12:30:47+00:00"
         },
         {
-            "name": "harvesthq/chosen",
-            "version": "v1.8.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/harvesthq/chosen-package.git",
-                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/harvesthq/chosen-package/zipball/ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
-                "reference": "ad86732b668627c131e61ee8f0e6e9ed52e4db8d",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Koen Punt",
-                    "homepage": "https://github.com/koenpunt"
-                },
-                {
-                    "name": "Patrick Filler",
-                    "homepage": "https://github.com/pfiller"
-                },
-                {
-                    "name": "Christophe Coevoet",
-                    "homepage": "https://github.com/stof"
-                },
-                {
-                    "name": "Ken Earley",
-                    "homepage": "https://github.com/kenearley"
-                }
-            ],
-            "description": "Chosen is a JavaScript plugin that makes select boxes user-friendly. It is currently available in both jQuery and Prototype flavors.",
-            "homepage": "https://harvesthq.github.io/chosen/",
-            "keywords": [
-                "dropdown",
-                "form",
-                "input",
-                "multiselect",
-                "select",
-                "ui"
-            ],
-            "support": {
-                "source": "https://github.com/harvesthq/chosen-package/tree/v1.8.7"
-            },
-            "time": "2018-06-28T20:32:51+00:00"
-        },
-        {
             "name": "joshfraser/php-name-parser",
             "version": "dev-master",
             "source": {
@@ -17296,16 +17244,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "dev-SWSDEVOPS-130-profile-update",
+            "version": "11.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "60dfdcdaf72fb049e075dcc4a03debdad6008406"
+                "reference": "3cea3334fbae16ea4c3c025ff52d0acd6f883b19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/60dfdcdaf72fb049e075dcc4a03debdad6008406",
-                "reference": "60dfdcdaf72fb049e075dcc4a03debdad6008406",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/3cea3334fbae16ea4c3c025ff52d0acd6f883b19",
+                "reference": "3cea3334fbae16ea4c3c025ff52d0acd6f883b19",
                 "shasum": ""
             },
             "require": {
@@ -17390,7 +17338,7 @@
                 "drupal/name": "^1.0@RC",
                 "drupal/next": "^2.0",
                 "drupal/nobots": "^1.0",
-                "drupal/node_revision_delete": "^2.0.x-dev",
+                "drupal/node_revision_delete": "^2.0@RC",
                 "drupal/node_title_help_text": "^1.2",
                 "drupal/page_manager": "^4.0@beta",
                 "drupal/paragraphs": "^1.11",
@@ -17433,8 +17381,8 @@
                 "drupal/webp": "^1.0@beta",
                 "drupal/xmlsitemap": "^2.0",
                 "ext-imagick": "*",
-                "harvesthq/chosen": "^1.8",
                 "michelf/php-markdown": "^1.9",
+                "noli42/chosen": "3.0.0",
                 "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
                 "sainsburys/guzzle-oauth2-plugin": "^3.0",
                 "seboettg/citeproc-php": "2.4.1",
@@ -17487,9 +17435,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/SWSDEVOPS-130-profile-update"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.4.0"
             },
-            "time": "2025-04-14T15:57:21+00:00"
+            "time": "2025-04-24T18:50:32+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -28588,7 +28536,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "su-hkku/cardinal_service_profile": 20,
         "su-sws/blt-sws": 20,
         "su-sws/stanford_profile": 20
     },
