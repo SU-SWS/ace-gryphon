@@ -7,6 +7,11 @@ jobs:
   phpunit:
     name: PHPUnit Coverage Tests
     runs-on: ubuntu-latest
+    env:
+      DRUPAL_DATABASE_NAME: drupal
+      DRUPAL_DATABASE_USERNAME: drupal
+      DRUPAL_DATABASE_PASSWORD: drupal
+      DRUPAL_DATABASE_HOST: mysql
     container:
       image: pookmish/drupal8ci:php8.3
     services:
@@ -39,7 +44,6 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         run: |
-          git config --system --add safe.directory '*'
           composer install -n
           blt blt:telemetry:disable --no-interaction
           blt tests:phpunit:coverage --no-interaction
@@ -90,7 +94,7 @@ jobs:
       options: '--network-alias drupal8ci'
     services:
       selenium:
-        image: selenium/standalone-chrome:latest
+        image: selenium/standalone-chrome:130.0
         options: '--shm-size="2g"'
       mysql:
         image: mysql:5.7
@@ -119,22 +123,17 @@ jobs:
             2.1-${{ hashFiles('blt/blt.yml') }}-
       - name: Install Site
         run: |
-          git config --system --add safe.directory '*' &&
-          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' &&
-          rm -rf /var/www/html &&
-          ln -snf $GITHUB_WORKSPACE /var/www/html &&
-          mkdir -p docroot/sites/default/files &&
-          chmod -R 777 docroot/sites/default/files/ &&
-          rm -rf docroot/sites/${{ matrix.site }}/files &&
-          ln -sL ../default/files/ docroot/sites/${{ matrix.site }}/files &&
-          apachectl stop &&
-          apachectl start &&
-          composer install -n &&
-          blt drupal:install --site=${{ matrix.site }} -n &&
-          drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
-          drush xmlsitemap:rebuild &&
-          drush cr &&
-          mkdir -p artifacts/_data/
+          rm -rf /var/www/html
+          ln -snf $GITHUB_WORKSPACE /var/www/html
+          apachectl stop
+          apachectl start
+          composer install -n
+          blt blt:telemetry:disable --no-interaction
+          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
+          blt gryphon-ci:drupal:install --profile=cardinal_service_profile --no-interaction
+          drush role:perm:add anonymous 'access content'
+          drush xmlsitemap:rebuild
+          blt codeception --suite=acceptance
       - name: Run tests
         run: blt codeception --test=${{ matrix.site }} --suite=${{ matrix.suite }}
       - name: Save Test Results

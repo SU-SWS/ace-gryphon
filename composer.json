@@ -1,8 +1,9 @@
 {
     "name": "su-sws/ace-gryphon",
+    "description": "Cardinalservice ACN Stack.",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
+    "homepage": "https://github.com/SU-SWS/ace-gryphon",
     "support": {
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
@@ -35,31 +36,49 @@
                     "reference": "master"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "noli42/chosen",
+                "version": "3.0.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chosen"
+                },
+                "dist": {
+                    "url": "https://github.com/noli42/chosen/releases/download/3.0.0/chosen-assets-v3.0.0.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
-        "php": ">=8.2",
-        "acquia/blt": "^13.5",
-        "composer/installers": "^1.9",
+        "php": ">=8.3",
+        "acquia/blt": "^13.7",
+        "composer/installers": "^1.9 || ^2.0",
         "cweagans/composer-patches": "^1.6",
-        "drupal/acquia_connector": "dev-4.x",
+        "drupal/acquia_connector": "^4.0",
         "drupal/acquia_purge": "^1.1",
-        "drupal/core": "^10",
+        "drupal/block_content_permissions": "^1.11",
+        "drupal/core": "^10.4",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-recommended": "^10",
-        "drupal/node_revision_delete": "2.0.x-dev",
+        "drupal/mysql57": "^1.0",
         "drupal/oembed_lazyload": "^2.0",
         "drupal/paranoia": "^1.9",
-        "drush/drush": "^12",
-        "su-hkku/cardinal_service_profile": "^11.3",
-        "su-sws/stanford_profile": "^11.3"
+        "drupal/trash": "^3.0",
+        "drush/drush": "13.3.3 as 12.5.3",
+        "su-hkku/cardinal_service_profile": "^11.4.0",
+        "su-sws/stanford_profile": "^11.x-dev"
     },
     "require-dev": {
         "acquia/blt-drupal-test": "^1.0",
         "acquia/blt-multisite": "^1.0",
+        "drupal/upgrade_status": "^4.3",
         "phpspec/prophecy-phpunit": "^2.0",
         "su-sws/blt-sws": "dev-main",
-        "su-sws/drupal-dev": "^10"
+        "su-sws/drupal-dev": "^10.0"
     },
     "replace": {
         "drupal/coder": "*"
@@ -145,9 +164,6 @@
             },
             "drupal/taxonomy_entity_index": {
                 "Fix PHP 8 strict error with arrays": "patches/contrib/taxonomy_entity_index.patch"
-            },
-            "drupal/google_tag": {
-                "Prevent google tag conflict": "patches/contrib/google_tag-ga_conflict.patch"
             }
         }
     },

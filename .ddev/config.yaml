@@ -1,8 +1,8 @@
 name: gryphon
-type: drupal10
+type: drupal
 docroot: docroot
-php_version: "8.2"
-webserver_type: apache-fpm
+php_version: "8.3"
+webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
@@ -17,17 +17,9 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-disable_settings_managemen: false
-nodejs_version: "16"
-hooks:
-  post-start:
-    - exec: drush uli
-
-  post-import-db:
-    - exec: drush cr
-    - exec: drush cim -y
-    - exec: drush uli
-
+disable_settings_management: true
+nodejs_version: "20"
+webimage_extra_packages: [build-essential]
 
 # Key features of ddev's config.yaml:
 
