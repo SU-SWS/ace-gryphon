@@ -51,7 +51,7 @@ jobs:
           name: unit-tests-results
           path: $GITHUB_WORKSPACE/artifacts
   acceptance:
-    name: VPGE Codeception Acceptance Tests
+    name: Cardinal Service Codeception Acceptance Tests
     runs-on: ubuntu-latest
     env:
       DRUPAL_DATABASE_NAME: drupal
@@ -95,7 +95,7 @@ jobs:
           composer install -n
           blt blt:telemetry:disable --no-interaction
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
-          blt gryphon-ci:drupal:install --profile=vpge_profile --no-interaction
+          blt gryphon-ci:drupal:install --profile=cardinal_service_profile --no-interaction
           blt drupal:install -n
           drush role:perm:add anonymous 'access content'
           drush xmlsitemap:rebuild
@@ -107,7 +107,7 @@ jobs:
           name: acceptance-tests-results
           path: artifacts
   functional:
-    name: VPGE Codeception Functional Tests
+    name: Cardinal Service Codeception Functional Tests
     runs-on: ubuntu-latest
     env:
       DRUPAL_DATABASE_NAME: drupal
@@ -152,7 +152,7 @@ jobs:
           composer install -n
           blt blt:telemetry:disable --no-interaction
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;'
-          blt gryphon-ci:drupal:install --profile=vpge_profile --no-interaction
+          blt gryphon-ci:drupal:install --profile=cardinal_service_profile --no-interaction
           drush role:perm:add anonymous 'access content'
           drush xmlsitemap:rebuild
           mkdir -p artifacts/_data/
