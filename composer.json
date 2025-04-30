@@ -69,7 +69,7 @@
         "drupal/paranoia": "^1.9",
         "drupal/trash": "^3.0",
         "drush/drush": "13.3.3 as 12.5.3",
-        "su-hkku/cardinal_service_profile": "^11.6.2",
+        "su-hkku/cardinal_service_profile": "dev-tests-fix-content-block-permission",
         "su-sws/stanford_profile": "^11.x-dev"
     },
     "require-dev": {
