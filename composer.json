@@ -60,7 +60,6 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^4.0",
         "drupal/acquia_purge": "^1.1",
-        "drupal/allowed_formats": "^3.0",
         "drupal/block_content_permissions": "^1.11",
         "drupal/core": "^10.4",
         "drupal/core-composer-scaffold": "^10",
