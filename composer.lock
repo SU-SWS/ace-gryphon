@@ -17608,16 +17608,16 @@
         },
         {
             "name": "su-hkku/cardinal_service_profile",
-            "version": "11.4.0",
+            "version": "11.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-HKKU/cardinal_service_profile.git",
-                "reference": "3cea3334fbae16ea4c3c025ff52d0acd6f883b19"
+                "reference": "044abf27da549dff22e55e25451b4cba2bf65d80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/3cea3334fbae16ea4c3c025ff52d0acd6f883b19",
-                "reference": "3cea3334fbae16ea4c3c025ff52d0acd6f883b19",
+                "url": "https://api.github.com/repos/SU-HKKU/cardinal_service_profile/zipball/044abf27da549dff22e55e25451b4cba2bf65d80",
+                "reference": "044abf27da549dff22e55e25451b4cba2bf65d80",
                 "shasum": ""
             },
             "require": {
@@ -17799,9 +17799,9 @@
             ],
             "description": "Installation Profile for the Stanford Webservice's Jumpstart Product.",
             "support": {
-                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.4.0"
+                "source": "https://github.com/SU-HKKU/cardinal_service_profile/tree/11.4.1"
             },
-            "time": "2025-04-24T18:50:32+00:00"
+            "time": "2025-05-06T22:48:09+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
