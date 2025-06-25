@@ -54,7 +54,6 @@
     ],
     "require": {
         "php": ">=8.0",
-        "acquia/blt": "^13.5",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^4.0",
@@ -66,13 +65,12 @@
         "drupal/jquery_ui_datepicker": "^2.1",
         "drupal/jquery_ui_slider": "^2.1",
         "drupal/jquery_ui_touch_punch": "^1.1",
-        "drush/drush": "^12",
+        "drush/drush": "^13.6",
         "su-sws/caw_profile": "^10.3",
-        "su-sws/stanford_profile": "^11.7"
+        "su-sws/stanford_profile": "^11.7",
+        "su-sws/sws-drush-commands": "1.x-dev"
     },
     "require-dev": {
-        "acquia/blt-drupal-test": "^1.0",
-        "acquia/blt-multisite": "^1.0",
         "phpspec/prophecy-phpunit": "^2.0",
         "su-sws/blt-sws": "dev-main",
         "su-sws/drupal-dev": "^10"

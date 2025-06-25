@@ -1,13 +1,30 @@
-# This file defines drush configuration that applies to drush commands
-# for the entire application. For site-specific settings, like URI, use
-# ../docroot/sites/[site]/drush.yml
 drush:
   paths:
     config:
-      # Load a drush.yml configuration file from the current working directory.
       - ../docroot/sites/default/local.drush.yml
-      # Allow local global config overrides.
       - local.drush.yml
+      - drush/local.drush.yml
     include:
       - '${env.home}/.drush'
       - /usr/share/drush/commands
+project:
+  profile: caw_profile
+command:
+  sws:
+    options:
+      git-url:
+        - 'hrgryphon@svn-23450.prod.hosting.acquia.com:hrgryphon.git'
+      post-build-script: drush/deploy-cleanup.sh
+      artifact-dir: deploy
+      alias-dir: drush/sites
+      app-id: a840b27a-157c-4831-867a-56763306d293
+      sync-ssh: hrgryphon.test@hrgryphonstg.ssh.prod.acquia-sites.com
+      sync-files:
+        - /mnt/gfs/hrgryphon.test/nobackup/simplesamlphp/
+        - /mnt/gfs/hrgryphon.test/secrets.settings.php
+      multisites:
+        - cardinalatwork
+        - default
+    codeception:
+      options:
+        test-dir: docroot/profiles/custom/caw_profile/tests/codeception

@@ -5,7 +5,7 @@
  * Contains any config overrides.
  */
 
-use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use Drupal\SwsDrush\Helpers\EnvironmentDetector;
 
 $config['simple_oauth.settings']['public_key'] = DRUPAL_ROOT . '/../keys/oauth.pub';
 $config['simple_oauth.settings']['private_key'] = DRUPAL_ROOT . '/../keys/oauth.key';
