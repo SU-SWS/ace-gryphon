@@ -140,7 +140,7 @@ jobs:
         run: |
           mkdir -p -m 777 tests/codeception/${{ matrix.suite }} &&
           PROFILE=`drush st --fields=install-profile --format=list` &&
-          rsync -r docroot/profiles/lagunita/$PROFILE/tests/codeception/${{ matrix.suite }}/ tests/codeception/${{ matrix.suite }}/$PROFILE &&
+          rsync -r docroot/profiles/custom/$PROFILE/tests/codeception/${{ matrix.suite }}/ tests/codeception/${{ matrix.suite }}/$PROFILE &&
           drush codeception --site-domain=localhost --suite=${{ matrix.suite }} &&
           if [ ! -f artifacts/report.html ]; then
             exit 1
@@ -181,7 +181,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           name: id_rsa
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          known_hosts: ${{ secrets.CAW_KNOWN_HOSTS }}
           if_key_exists: fail
       - uses: actions/checkout@v4
       - name: Restore Cache
@@ -237,7 +237,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           name: id_rsa
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          known_hosts: ${{ secrets.CAW_KNOWN_HOSTS }}
           if_key_exists: fail
       - name: Deploy Artifact
         run: |
