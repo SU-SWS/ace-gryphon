@@ -140,7 +140,6 @@ jobs:
         run: |
           mkdir -p -m 777 tests/codeception/${{ matrix.suite }} &&
           PROFILE=`drush st --fields=install-profile --format=list` &&
-          rsync -r docroot/profiles/custom/$PROFILE/tests/codeception/${{ matrix.suite }}/ tests/codeception/${{ matrix.suite }}/$PROFILE &&
           drush codeception --site-domain=localhost --suite=${{ matrix.suite }} &&
           if [ ! -f artifacts/report.html ]; then
             exit 1
