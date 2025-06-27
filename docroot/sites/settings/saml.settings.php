@@ -5,7 +5,7 @@
  * Simplesamlphp config settings.
  */
 
-use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use Drupal\SwsDrush\Helpers\EnvironmentDetector;
 
 $config['stanford_ssp.settings'] = [
   'workgroup_api_url' => 'https://workgroupsvc.stanford.edu/v1/workgroups',
