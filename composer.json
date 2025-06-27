@@ -68,7 +68,8 @@
         "drush/drush": "^13.6",
         "su-sws/caw_profile": "^10.3",
         "su-sws/stanford_profile": "^11.7",
-        "su-sws/sws-drush-commands": "1.x-dev"
+        "su-sws/sws-drush-commands": "1.x-dev",
+        "su-sws/stanford_syndication": "dev-fix-unit-tests as 1.0.0-beta5"
     },
     "require-dev": {
         "phpspec/prophecy-phpunit": "^2.0",

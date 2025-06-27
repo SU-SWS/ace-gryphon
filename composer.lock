@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2dd98925fb1c2feda984e2f643664233",
+    "content-hash": "5b2fbc1e17d94b7f7ce547a615b87d4e",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -18392,16 +18392,16 @@
         },
         {
             "name": "su-sws/stanford_syndication",
-            "version": "1.0.0-beta4",
+            "version": "dev-fix-unit-tests",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_syndication.git",
-                "reference": "5cf462de67ae1d520ea7eb2106ebc24627f08055"
+                "reference": "e0411fa1d7cf239f512aaec0b60e873ef0eaeebe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_syndication/zipball/5cf462de67ae1d520ea7eb2106ebc24627f08055",
-                "reference": "5cf462de67ae1d520ea7eb2106ebc24627f08055",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_syndication/zipball/e0411fa1d7cf239f512aaec0b60e873ef0eaeebe",
+                "reference": "e0411fa1d7cf239f512aaec0b60e873ef0eaeebe",
                 "shasum": ""
             },
             "type": "drupal-custom-module",
@@ -18417,9 +18417,9 @@
             "description": "Drupal module for connection to Syndication CMS systems",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_syndication/issues",
-                "source": "https://github.com/SU-SWS/stanford_syndication/tree/1.0.0-beta4"
+                "source": "https://github.com/SU-SWS/stanford_syndication/tree/fix-unit-tests"
             },
-            "time": "2024-03-18T16:40:08+00:00"
+            "time": "2025-06-27T16:03:23+00:00"
         },
         {
             "name": "su-sws/sws-drush-commands",
@@ -28463,10 +28463,18 @@
             "time": "2022-06-03T18:03:27+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "su-sws/stanford_syndication",
+            "version": "dev-fix-unit-tests",
+            "alias": "1.0.0-beta5",
+            "alias_normalized": "1.0.0.0-beta5"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "su-sws/blt-sws": 20,
+        "su-sws/stanford_syndication": 20,
         "su-sws/sws-drush-commands": 20
     },
     "prefer-stable": true,
