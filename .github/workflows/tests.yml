@@ -11,7 +11,7 @@ jobs:
       image: pookmish/drupal8ci:php8.3
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql:8.0
         env:
           MYSQL_DATABASE: drupal
           MYSQL_USER: drupal
@@ -95,7 +95,7 @@ jobs:
         image: selenium/standalone-chrome:130.0
         options: '--shm-size="2g"'
       mysql:
-        image: mysql:5.7
+        image: mysql:8.0
         env:
           MYSQL_DATABASE: drupal
           MYSQL_USER: drupal
@@ -166,7 +166,7 @@ jobs:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql:8.0
         env:
           MYSQL_DATABASE: drupal
           MYSQL_USER: drupal
