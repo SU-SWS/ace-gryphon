@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d660298745f63a7546f6414866f7194",
+    "content-hash": "49c501e83b747b8010322e0559eb32fa",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -17122,12 +17122,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "eab163fb8f1ea750cb4c026d82391c976cbee94d"
+                "reference": "7e97678df934e7478319c93ec46594a3b30e5702"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/eab163fb8f1ea750cb4c026d82391c976cbee94d",
-                "reference": "eab163fb8f1ea750cb4c026d82391c976cbee94d",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/7e97678df934e7478319c93ec46594a3b30e5702",
+                "reference": "7e97678df934e7478319c93ec46594a3b30e5702",
                 "shasum": ""
             },
             "require": {
@@ -17271,6 +17271,7 @@
                 "su-sws/stanford_samlauth": "^2.0",
                 "su-sws/stanford_syndication": "^1.0@beta"
             },
+            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17307,7 +17308,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
             },
-            "time": "2025-08-13T00:53:40+00:00"
+            "time": "2025-08-13T16:53:56+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17614,16 +17615,16 @@
         },
         {
             "name": "su-sws/stanford_fields",
-            "version": "8.6.1",
+            "version": "8.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fields.git",
-                "reference": "a8eabc1d65874bc7df35a2ff5b8dc1bd71046efd"
+                "reference": "59783e1d974119c916c8e4c42db0c140e9f741c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/a8eabc1d65874bc7df35a2ff5b8dc1bd71046efd",
-                "reference": "a8eabc1d65874bc7df35a2ff5b8dc1bd71046efd",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/59783e1d974119c916c8e4c42db0c140e9f741c2",
+                "reference": "59783e1d974119c916c8e4c42db0c140e9f741c2",
                 "shasum": ""
             },
             "require": {
@@ -17646,9 +17647,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_fields",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_fields/issues",
-                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.6.1"
+                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.6.2"
             },
-            "time": "2025-06-12T20:36:58+00:00"
+            "time": "2025-08-13T17:13:55+00:00"
         },
         {
             "name": "su-sws/stanford_media",
@@ -24080,16 +24081,16 @@
         },
         {
             "name": "lullabot/php-webdriver",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lullabot/php-webdriver.git",
-                "reference": "8c28db7151b8a73bd98861fe19972ac3f40184d2"
+                "reference": "dcaa93aa41624adfeae1ba557e2eb8f4df30631e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lullabot/php-webdriver/zipball/8c28db7151b8a73bd98861fe19972ac3f40184d2",
-                "reference": "8c28db7151b8a73bd98861fe19972ac3f40184d2",
+                "url": "https://api.github.com/repos/Lullabot/php-webdriver/zipball/dcaa93aa41624adfeae1ba557e2eb8f4df30631e",
+                "reference": "dcaa93aa41624adfeae1ba557e2eb8f4df30631e",
                 "shasum": ""
             },
             "require": {
@@ -24122,9 +24123,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Lullabot/php-webdriver/issues",
-                "source": "https://github.com/Lullabot/php-webdriver/tree/v2.0.6"
+                "source": "https://github.com/Lullabot/php-webdriver/tree/v2.0.7"
             },
-            "time": "2024-08-05T13:00:46+00:00"
+            "time": "2025-08-13T15:27:58+00:00"
         },
         {
             "name": "mglaman/phpstan-drupal",
@@ -24470,16 +24471,16 @@
         },
         {
             "name": "open-telemetry/context",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/context.git",
-                "reference": "4d5d98f1d4311a55b8d07e3d4c06d2430b4e6efc"
+                "reference": "438f71812242db3f196fb4c717c6f92cbc819be6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/context/zipball/4d5d98f1d4311a55b8d07e3d4c06d2430b4e6efc",
-                "reference": "4d5d98f1d4311a55b8d07e3d4c06d2430b4e6efc",
+                "url": "https://api.github.com/repos/opentelemetry-php/context/zipball/438f71812242db3f196fb4c717c6f92cbc819be6",
+                "reference": "438f71812242db3f196fb4c717c6f92cbc819be6",
                 "shasum": ""
             },
             "require": {
@@ -24525,7 +24526,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2025-08-04T03:25:06+00:00"
+            "time": "2025-08-13T01:12:00+00:00"
         },
         {
             "name": "open-telemetry/exporter-otlp",
@@ -27173,23 +27174,23 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "6.0.2",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "694d156164372abbd149a4b85ccda2e4670c0e16"
+                "reference": "f6458abbf32a6c8174f8f26261475dc133b3d9dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/694d156164372abbd149a4b85ccda2e4670c0e16",
-                "reference": "694d156164372abbd149a4b85ccda2e4670c0e16",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/f6458abbf32a6c8174f8f26261475dc133b3d9dc",
+                "reference": "f6458abbf32a6c8174f8f26261475dc133b3d9dc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^11.0"
+                "phpunit/phpunit": "^11.3"
             },
             "type": "library",
             "extra": {
@@ -27225,15 +27226,27 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/recursion-context/issues",
                 "security": "https://github.com/sebastianbergmann/recursion-context/security/policy",
-                "source": "https://github.com/sebastianbergmann/recursion-context/tree/6.0.2"
+                "source": "https://github.com/sebastianbergmann/recursion-context/tree/6.0.3"
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/sebastian/recursion-context",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2024-07-03T05:10:34+00:00"
+            "time": "2025-08-13T04:42:22+00:00"
         },
         {
             "name": "sebastian/type",
