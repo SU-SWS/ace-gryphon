@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eba414019804f69f5b3298973aa0a767",
+    "content-hash": "4d660298745f63a7546f6414866f7194",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -17118,16 +17118,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "dev-fix-upgrade",
+            "version": "11.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "fe394a33acce3ada246e8a9ed9bc888e55c2e805"
+                "reference": "eab163fb8f1ea750cb4c026d82391c976cbee94d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/fe394a33acce3ada246e8a9ed9bc888e55c2e805",
-                "reference": "fe394a33acce3ada246e8a9ed9bc888e55c2e805",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/eab163fb8f1ea750cb4c026d82391c976cbee94d",
+                "reference": "eab163fb8f1ea750cb4c026d82391c976cbee94d",
                 "shasum": ""
             },
             "require": {
@@ -17305,9 +17305,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/fix-upgrade"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
             },
-            "time": "2025-08-12T19:38:48+00:00"
+            "time": "2025-08-13T00:53:40+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17340,16 +17340,16 @@
         },
         {
             "name": "su-sws/drupal-patches",
-            "version": "11.0.1",
+            "version": "11.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/drupal-patches.git",
-                "reference": "1dd7871c4c19097186b8d90cc37bfe5310fc7dd5"
+                "reference": "f2041ddb06525a7ff36a473ab26707f77c8a6b32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/1dd7871c4c19097186b8d90cc37bfe5310fc7dd5",
-                "reference": "1dd7871c4c19097186b8d90cc37bfe5310fc7dd5",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/f2041ddb06525a7ff36a473ab26707f77c8a6b32",
+                "reference": "f2041ddb06525a7ff36a473ab26707f77c8a6b32",
                 "shasum": ""
             },
             "require": {
@@ -17379,7 +17379,8 @@
                     "drupal/core": {
                         "Fix page parameter for JSON Api": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/core-pager-parameters.patch",
                         "https://www.drupal.org/project/drupal/issues/2353611": "https://www.drupal.org/files/issues/2019-10-15/drupal-link_uuid-2353611-262.patch",
-                        "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2022-12-02/2577923-154.patch"
+                        "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2022-12-02/2577923-154.patch",
+                        "https://www.drupal.org/project/drupal/issues/3332063": "https://www.drupal.org/files/issues/2023-03-12/path-alias-not-available-3332063.patch"
                     },
                     "drupal/diff": {
                         "https://www.drupal.org/project/diff/issues/2882334#comment-13913401": "https://git.drupalcode.org/project/diff/-/merge_requests/42.patch"
@@ -17462,9 +17463,9 @@
             "description": "Drupal core and contrib shared patches",
             "support": {
                 "issues": "https://github.com/SU-SWS/drupal-patches/issues",
-                "source": "https://github.com/SU-SWS/drupal-patches/tree/11.0.1"
+                "source": "https://github.com/SU-SWS/drupal-patches/tree/11.0.2"
             },
-            "time": "2025-08-01T21:51:34+00:00"
+            "time": "2025-08-13T00:51:48+00:00"
         },
         {
             "name": "su-sws/paranoia",
