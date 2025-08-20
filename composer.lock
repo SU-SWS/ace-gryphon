@@ -9576,6 +9576,62 @@
             }
         },
         {
+            "name": "drupal/printable",
+            "version": "3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/printable.git",
+                "reference": "3.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/printable-3.1.4.zip",
+                "reference": "3.1.4",
+                "shasum": "bd55d2cee6922538508ebcfe8ef11574e6abb588"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10 || ^11",
+                "drupal/pdf_api": "^2.4.0",
+                "wa72/htmlpagedom": "^1.3 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "drupal/pdf_api": "*",
+                "smalot/pdfparser": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.4",
+                    "datestamp": "1754530410",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nigel Cunningham",
+                    "homepage": "https://www.drupal.org/user/346106",
+                    "email": "nigel@nigelcunningham.com.au"
+                },
+                {
+                    "name": "nigelcunningham",
+                    "homepage": "https://www.drupal.org/user/250105"
+                }
+            ],
+            "description": "Generates printer friendly version of nodes",
+            "homepage": "https://www.drupal.org/project/printable",
+            "support": {
+                "source": "https://git.drupalcode.org/project/printable",
+                "issues": "https://www.drupal.org/project/issues/printable"
+            }
+        },
+        {
             "name": "drupal/purge",
             "version": "3.6.0",
             "source": {
@@ -17122,12 +17178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "7e97678df934e7478319c93ec46594a3b30e5702"
+                "reference": "50e25f3cd2ed9fdcbde41b7bcebcd4ba24be1fe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/7e97678df934e7478319c93ec46594a3b30e5702",
-                "reference": "7e97678df934e7478319c93ec46594a3b30e5702",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/50e25f3cd2ed9fdcbde41b7bcebcd4ba24be1fe4",
+                "reference": "50e25f3cd2ed9fdcbde41b7bcebcd4ba24be1fe4",
                 "shasum": ""
             },
             "require": {
@@ -17218,6 +17274,7 @@
                 "drupal/path_redirect_import": "^2.0",
                 "drupal/pathauto": "^1.6",
                 "drupal/pdb": "^2.0",
+                "drupal/printable": "^3.1",
                 "drupal/rabbit_hole": "^1.0@beta",
                 "drupal/real_aes": "^2.4",
                 "drupal/redirect": "^1.0-beta1",
@@ -17261,7 +17318,6 @@
                 "su-sws/ckeditor5_plugins": "^1.0",
                 "su-sws/drupal-patches": "^11.0",
                 "su-sws/paranoia": "^1.0@RC",
-                "su-sws/printable": "^3.1",
                 "su-sws/react_paragraphs": "^8.2",
                 "su-sws/stanford_actions": "^8.2",
                 "su-sws/stanford_fields": "^8.4",
@@ -17308,7 +17364,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
             },
-            "time": "2025-08-13T16:53:56+00:00"
+            "time": "2025-08-18T19:01:12+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17502,49 +17558,6 @@
             "time": "2025-08-01T21:04:07+00:00"
         },
         {
-            "name": "su-sws/printable",
-            "version": "3.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SU-SWS/drupal-printable.git",
-                "reference": "45d425c4e39dc4eed4b5a32c1f2da3c079f82bdc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-printable/zipball/45d425c4e39dc4eed4b5a32c1f2da3c079f82bdc",
-                "reference": "45d425c4e39dc4eed4b5a32c1f2da3c079f82bdc",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/pdf_api": "^2.4",
-                "wa72/htmlpagedom": "^1.3 || ^2.0 || ^3.0"
-            },
-            "conflict": {
-                "drupal/pdf_api": "<2.4.5"
-            },
-            "require-dev": {
-                "smalot/pdfparser": "^1"
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Nigel Cunningham",
-                    "email": "nigel@nigelcunningham.com.au"
-                }
-            ],
-            "description": "Generates printer friendly version of nodes",
-            "homepage": "https://www.drupal.org/project/printable",
-            "support": {
-                "issues": "https://www.drupal.org/project/issues/printable",
-                "source": "https://git.drupalcode.org/project/printable"
-            },
-            "time": "2025-08-05T17:58:55+00:00"
-        },
-        {
             "name": "su-sws/react_paragraphs",
             "version": "8.2.18",
             "source": {
@@ -17616,16 +17629,16 @@
         },
         {
             "name": "su-sws/stanford_fields",
-            "version": "8.6.2",
+            "version": "8.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fields.git",
-                "reference": "59783e1d974119c916c8e4c42db0c140e9f741c2"
+                "reference": "3abfc931a4e652a3c48ea01c6a548b42b4ca0207"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/59783e1d974119c916c8e4c42db0c140e9f741c2",
-                "reference": "59783e1d974119c916c8e4c42db0c140e9f741c2",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fields/zipball/3abfc931a4e652a3c48ea01c6a548b42b4ca0207",
+                "reference": "3abfc931a4e652a3c48ea01c6a548b42b4ca0207",
                 "shasum": ""
             },
             "require": {
@@ -17648,9 +17661,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_fields",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_fields/issues",
-                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.6.2"
+                "source": "https://github.com/SU-SWS/stanford_fields/tree/8.6.3"
             },
-            "time": "2025-08-13T17:13:55+00:00"
+            "time": "2025-08-15T22:28:52+00:00"
         },
         {
             "name": "su-sws/stanford_media",
@@ -17777,12 +17790,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile.git",
-                "reference": "4aa4ebe035f29e3d564aad99cc5f0110b1f852bf"
+                "reference": "48832af3929b3e3c363be5a2673cb3f841f2d31d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/4aa4ebe035f29e3d564aad99cc5f0110b1f852bf",
-                "reference": "4aa4ebe035f29e3d564aad99cc5f0110b1f852bf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile/zipball/48832af3929b3e3c363be5a2673cb3f841f2d31d",
+                "reference": "48832af3929b3e3c363be5a2673cb3f841f2d31d",
                 "shasum": ""
             },
             "require": {
@@ -17872,6 +17885,7 @@
                 "drupal/path_redirect_import": "^2.0",
                 "drupal/pathauto": "^1.6",
                 "drupal/pdb": "^2.0",
+                "drupal/printable": "^3.1",
                 "drupal/rabbit_hole": "^1.0@beta",
                 "drupal/real_aes": "^2.4",
                 "drupal/redirect": "^1.0-beta1",
@@ -17912,7 +17926,6 @@
                 "su-sws/ckeditor5_plugins": "^1.0",
                 "su-sws/drupal-patches": "^11.0",
                 "su-sws/paranoia": "^1.0@RC",
-                "su-sws/printable": "^3.1",
                 "su-sws/react_paragraphs": "^8.2",
                 "su-sws/stanford_actions": "^8.2",
                 "su-sws/stanford_fields": "^8.4",
@@ -17958,7 +17971,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_profile/issues",
                 "source": "https://github.com/SU-SWS/stanford_profile/tree/12.x"
             },
-            "time": "2025-08-13T17:43:52+00:00"
+            "time": "2025-08-18T18:56:26+00:00"
         },
         {
             "name": "su-sws/stanford_profile_helper",
@@ -17966,12 +17979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "305a05836a6d617dd01e863926223e52a689b52c"
+                "reference": "1b50349953927bee7be67567be6ec849e00e9103"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/305a05836a6d617dd01e863926223e52a689b52c",
-                "reference": "305a05836a6d617dd01e863926223e52a689b52c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/1b50349953927bee7be67567be6ec849e00e9103",
+                "reference": "1b50349953927bee7be67567be6ec849e00e9103",
                 "shasum": ""
             },
             "require": {
@@ -18069,7 +18082,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/10.x"
             },
-            "time": "2025-08-12T18:41:07+00:00"
+            "time": "2025-08-18T16:09:35+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
@@ -18148,12 +18161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/sws-drush-commands.git",
-                "reference": "013cc14797abda17393c38292f0f5cf543096470"
+                "reference": "92ef9edf128703e0949db7702dbfdc0e7777752d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/013cc14797abda17393c38292f0f5cf543096470",
-                "reference": "013cc14797abda17393c38292f0f5cf543096470",
+                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/92ef9edf128703e0949db7702dbfdc0e7777752d",
+                "reference": "92ef9edf128703e0949db7702dbfdc0e7777752d",
                 "shasum": ""
             },
             "require": {
@@ -18185,7 +18198,7 @@
                 "issues": "https://github.com/SU-SWS/sws-drush-commands/issues",
                 "source": "https://github.com/SU-SWS/sws-drush-commands"
             },
-            "time": "2025-08-14T21:24:17+00:00"
+            "time": "2025-08-15T00:22:11+00:00"
         },
         {
             "name": "symfony/cache",
@@ -20133,7 +20146,7 @@
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
@@ -20189,7 +20202,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -20201,6 +20214,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -20209,16 +20226,16 @@
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
+                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/2fb86d65e2d424369ad2905e83b236a8805ba491",
-                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/17f6f9a6b1735c0f163024d959f700cfbc5155e5",
+                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5",
                 "shasum": ""
             },
             "require": {
@@ -20265,7 +20282,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -20277,11 +20294,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2025-07-08T02:45:35+00:00"
         },
         {
             "name": "symfony/polyfill-php84",
@@ -25299,16 +25320,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.2",
+            "version": "5.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62"
+                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/92dde6a5919e34835c506ac8c523ef095a95ed62",
-                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94f8051919d1b0369a6bcc7931d679a511c03fe9",
+                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9",
                 "shasum": ""
             },
             "require": {
@@ -25357,9 +25378,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.2"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.3"
             },
-            "time": "2025-04-13T19:20:35+00:00"
+            "time": "2025-08-01T19:43:32+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -26134,16 +26155,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.32",
+            "version": "11.5.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "101e132dcf9e74a1eb3a309b4f686114ae8f7f36"
+                "reference": "3e4c6ef395f7cb61a6206c23e0e04b31724174f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/101e132dcf9e74a1eb3a309b4f686114ae8f7f36",
-                "reference": "101e132dcf9e74a1eb3a309b4f686114ae8f7f36",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e4c6ef395f7cb61a6206c23e0e04b31724174f2",
+                "reference": "3e4c6ef395f7cb61a6206c23e0e04b31724174f2",
                 "shasum": ""
             },
             "require": {
@@ -26215,7 +26236,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.32"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.34"
             },
             "funding": [
                 {
@@ -26239,7 +26260,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-12T07:32:49+00:00"
+            "time": "2025-08-20T14:41:45+00:00"
         },
         {
             "name": "ramsey/collection",
@@ -26397,23 +26418,23 @@
         },
         {
             "name": "react/promise",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "8a164643313c71354582dc850b42b33fa12a4b63"
+                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/8a164643313c71354582dc850b42b33fa12a4b63",
-                "reference": "8a164643313c71354582dc850b42b33fa12a4b63",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/23444f53a813a3296c1368bb104793ce8d88f04a",
+                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "1.10.39 || 1.4.10",
+                "phpstan/phpstan": "1.12.28 || 1.4.10",
                 "phpunit/phpunit": "^9.6 || ^7.5"
             },
             "type": "library",
@@ -26458,7 +26479,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v3.2.0"
+                "source": "https://github.com/reactphp/promise/tree/v3.3.0"
             },
             "funding": [
                 {
@@ -26466,7 +26487,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-05-24T10:39:05+00:00"
+            "time": "2025-08-19T18:57:03+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -27852,7 +27873,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -27908,7 +27929,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -27920,6 +27941,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -27928,7 +27953,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -27988,7 +28013,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -28000,6 +28025,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -28008,7 +28037,7 @@
         },
         {
             "name": "symfony/polyfill-php82",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php82.git",
@@ -28064,7 +28093,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php82/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php82/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -28073,6 +28102,10 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {
