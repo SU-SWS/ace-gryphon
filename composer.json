@@ -2,11 +2,7 @@
     "name": "su-sws/ace-gryphon",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
-    },
+    "homepage": "https://github.com/SU-SWS/ace-gryphon",
     "repositories": [
         {
             "type": "composer",
@@ -67,8 +63,6 @@
         "su-sws/sws-drush-commands": "1.x-dev"
     },
     "require-dev": {
-        "drupal/upgrade_status": "^4.3",
-        "phpspec/prophecy-phpunit": "^2.0",
         "su-sws/drupal-dev": "^10"
     },
     "replace": {
@@ -146,6 +140,7 @@
             ]
         },
         "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
         "patches": {
             "su-sws/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
@@ -173,7 +168,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gryphon\\": "blt/src/"
+            "Drupal\\GryphonDrush\\": "drush/gryphon/src"
         }
     }
 }
