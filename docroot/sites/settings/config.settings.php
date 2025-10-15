@@ -20,5 +20,7 @@ if (!EnvironmentDetector::isProdEnv()) {
   $config['stanford_syndication.settings']['enabled'] = FALSE;
 }
 
+$config['search_api.index.algolia_search']['read_only'] = !EnvironmentDetector::isProdEnv();
+
 $config['stage_file_proxy.settings']['origin'] = "https://$site_name-prod.stanford.edu";
 $config['stage_file_proxy.settings']['origin_dir'] = "sites/$site_name/files";
