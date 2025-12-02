@@ -46,6 +46,19 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cure53/dompurify",
+                "version": "3.3.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/cure53/DOMPurify.git",
+                    "type": "git",
+                    "reference": "3.3.0"
+                }
+            }
         }
     ],
     "require": {
