@@ -155,9 +155,6 @@
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/next": {
-                "Fix CORS": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/next-cors.patch"
-            },
             "su-sws/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
             },

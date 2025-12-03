@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16f822e82be10a1f70874c3835bad242",
+    "content-hash": "48a694978ee146a5bc440b1559753f17",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -8962,17 +8962,17 @@
         },
         {
             "name": "drupal/next",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/next.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/next-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "1a7b07042d72fbfafd105c639b2bff062311a099"
+                "url": "https://ftp.drupal.org/files/projects/next-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "d36a513b54267cbb03282f51e4e0835f3366ff84"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -8993,8 +8993,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1739303969",
+                    "version": "2.0.1",
+                    "datestamp": "1764787542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -18395,16 +18395,16 @@
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "10.1.2",
+            "version": "10.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "6de5e37aae698c5bde40b501e61fb80fc46d708d"
+                "reference": "4e48f7845d3516072d0f251f7ce77a69b00f8dbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/6de5e37aae698c5bde40b501e61fb80fc46d708d",
-                "reference": "6de5e37aae698c5bde40b501e61fb80fc46d708d",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/4e48f7845d3516072d0f251f7ce77a69b00f8dbd",
+                "reference": "4e48f7845d3516072d0f251f7ce77a69b00f8dbd",
                 "shasum": ""
             },
             "require": {
@@ -18505,9 +18505,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/10.1.2"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/10.1.3"
             },
-            "time": "2025-11-25T17:31:17+00:00"
+            "time": "2025-12-03T23:52:57+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
