@@ -22,11 +22,11 @@ jobs:
             docroot/core
             docroot/libraries
             docroot/modules/contrib
-          key: caw-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+          key: 6.x-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
           restore-keys: |
-            caw-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
-            caw-${{ hashFiles('composer.json') }}-
-            caw-
+            6.x-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+            6.x-${{ hashFiles('composer.json') }}-
+            6.x-
       - name: Delete old database backups
         run: |
           composer install -n &&
@@ -57,13 +57,13 @@ jobs:
             docroot/core
             docroot/libraries
             docroot/modules/contrib
-          key: caw-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+          key: 6.x-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
           restore-keys: |
-            caw-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
-            caw-${{ hashFiles('composer.json') }}-
-            caw-
+            6.x-${{ hashFiles('composer.json') }}-${{ hashFiles('composer.lock') }}
+            6.x-${{ hashFiles('composer.json') }}-
+            6.x-
       - name: Delete unused git branches & tags
         run: |
           ssh-keyscan -t rsa svn-23450.prod.hosting.acquia.com >> /root/.ssh/known_hosts &&
           composer install -n &&
-          drush sws:acquia:clean-git --app-id=a840b27a-157c-4831-867a-56763306d293 --app-key="$ACQUIA_APP_KEY" --app-secret="$ACQUIA_APP_SECRET" -n &&
+          drush sws:acquia:clean-git --app-id=a840b27a-157c-4831-867a-56763306d293 --app-key="$ACQUIA_APP_KEY" --app-secret="$ACQUIA_APP_SECRET" -n

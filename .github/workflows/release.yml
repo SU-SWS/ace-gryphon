@@ -18,8 +18,8 @@ jobs:
         uses: K-Phoen/semver-release-action@master
         with:
           release_strategy: none
-          release_branch: 2.x
-          tag_format: "2.%minor%.%patch%"
+          release_branch: 6.x
+          tag_format: "6.%minor%.%patch%"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo 'Creating new release for ' ${{ steps.tag.outputs.tag }}
@@ -50,6 +50,6 @@ jobs:
           git config --system --add safe.directory '*' &&
           git config --global user.email "sws-developers@lists.stanford.edu" &&
           git config --global user.name "Github Actions" &&
-          ssh-keyscan -t rsa svn-45197.prod.hosting.acquia.com >> /root/.ssh/known_hosts &&
+          ssh-keyscan -t rsa svn-23450.prod.hosting.acquia.com >> /root/.ssh/known_hosts &&
           composer install -n &&
           drush sws:artifact:deploy --tag=$(date +'%Y-%m-%d')"_"${{ steps.tag.outputs.tag }} --no-interaction
