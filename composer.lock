@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ed23e052b99b04fb50859228ce665a2",
+    "content-hash": "60efffff2242700b995022eea9133ada",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -17592,16 +17592,16 @@
         },
         {
             "name": "su-sws/caw_profile",
-            "version": "11.x-dev",
+            "version": "dev-benefits-enhanced",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "7e150d7872737d8df1503bc7cd968a4ce430bd21"
+                "reference": "eb02fe3fc83c2d0a09f5900d3ccba017643bfe1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/7e150d7872737d8df1503bc7cd968a4ce430bd21",
-                "reference": "7e150d7872737d8df1503bc7cd968a4ce430bd21",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/eb02fe3fc83c2d0a09f5900d3ccba017643bfe1a",
+                "reference": "eb02fe3fc83c2d0a09f5900d3ccba017643bfe1a",
                 "shasum": ""
             },
             "require": {
@@ -17754,7 +17754,6 @@
             "conflict": {
                 "drupal/colorbox": ">=2.2.0"
             },
-            "default-branch": true,
             "type": "drupal-custom-profile",
             "extra": {
                 "drush": {
@@ -17786,9 +17785,9 @@
             ],
             "description": "Installation Profile for Cardinal at Work",
             "support": {
-                "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
+                "source": "https://github.com/SU-SWS/caw_profile/tree/benefits-enhanced"
             },
-            "time": "2026-06-22T15:44:54+00:00"
+            "time": "2026-06-22T15:53:37+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -29008,7 +29007,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.3"
+        "php": ">=8.4"
     },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
