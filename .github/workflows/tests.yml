@@ -138,6 +138,7 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Install Site
         run: |
+          mkdir -p ~/.ssh &&
           echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
           cat ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
