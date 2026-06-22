@@ -139,7 +139,7 @@ jobs:
       - name: Install Site
         run: |
           git config --system --add safe.directory '*' &&
-          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' &&
+          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
           ln -snf $GITHUB_WORKSPACE /var/www/html &&
           mkdir -p -m 777 docroot/sites/default/files &&
@@ -216,7 +216,7 @@ jobs:
       - name: Sync and Update Site
         run: |
           git config --system --add safe.directory '*' &&
-          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' &&
+          mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
           ln -snf $GITHUB_WORKSPACE /var/www/html &&
           mkdir -p -m 777 docroot/sites/default/files &&
