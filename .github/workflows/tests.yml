@@ -142,6 +142,8 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Install Site
         run: |
+          mkdir -p ~/.ssh/config &&
+          cp .github/ssh_config ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -219,6 +221,8 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Sync and Update Site
         run: |
+          mkdir -p ~/.ssh/config &&
+          cp .github/ssh_config ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -230,9 +234,8 @@ jobs:
           apachectl start &&
           composer install -n &&
           drush sa @${{ matrix.site }}.prod || exit 0 &&
-          drush drupal:sync --site=${{ matrix.site }} -n
-#          &&
-#          curl -I http://localhost --fail
+          drush drupal:sync --site=${{ matrix.site }} -n &&
+          curl -I http://localhost --fail
   all-tests-pass:
     name: All Tests Pass
     needs: [phpunit, codeception, db_updates]
@@ -278,6 +281,8 @@ jobs:
           if_key_exists: fail
       - name: Deploy Artifact
         run: |
+          mkdir -p ~/.ssh/config &&
+          cp .github/ssh_config ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           git config --global user.email "sws-developers@lists.stanford.edu" &&
           git config --global user.name "Github Actions" &&
