@@ -151,12 +151,11 @@ jobs:
           apachectl stop &&
           apachectl start &&
           composer install -n &&
-          drush drupal:install --site=${{ matrix.site }} -n
-#          &&
-#          drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
-#          drush xmlsitemap:rebuild &&
-#          drush cr &&
-#          mkdir -p artifacts/_data/
+          drush drupal:install --site=${{ matrix.site }} -n &&
+          drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
+          drush xmlsitemap:rebuild &&
+          drush cr &&
+          mkdir -p artifacts/_data/
       - name: Run tests
         run: |
           n=${{ vars.TEST_SHARDS || 3 }} &&
@@ -219,6 +218,8 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Sync and Update Site
         run: |
+          mkdir -p ~/.ssh &&
+          echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -277,6 +278,8 @@ jobs:
           if_key_exists: fail
       - name: Deploy Artifact
         run: |
+          mkdir -p ~/.ssh &&
+          echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           git config --global user.email "sws-developers@lists.stanford.edu" &&
           git config --global user.name "Github Actions" &&
