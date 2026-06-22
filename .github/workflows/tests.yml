@@ -148,11 +148,12 @@ jobs:
           apachectl stop &&
           apachectl start &&
           composer install -n &&
-          drush drupal:install --site=${{ matrix.site }} -n &&
-          drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
-          drush xmlsitemap:rebuild &&
-          drush cr &&
-          mkdir -p artifacts/_data/
+          drush drupal:install --site=${{ matrix.site }} -n
+#          &&
+#          drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
+#          drush xmlsitemap:rebuild &&
+#          drush cr &&
+#          mkdir -p artifacts/_data/
       - name: Run tests
         run: |
           n=${{ vars.TEST_SHARDS || 3 }} &&
