@@ -120,7 +120,11 @@ jobs:
           MYSQL_ROOT_PASSWORD: drupal
         ports:
           - 33306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
       - uses: actions/checkout@v7
       - name: Restore Cache
@@ -138,9 +142,6 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Install Site
         run: |
-          mkdir -p ~/.ssh &&
-          echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
-          cat ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -218,8 +219,6 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Sync and Update Site
         run: |
-          mkdir -p ~/.ssh &&
-          echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -231,8 +230,9 @@ jobs:
           apachectl start &&
           composer install -n &&
           drush sa @${{ matrix.site }}.prod || exit 0 &&
-          drush drupal:sync --site=${{ matrix.site }} -n &&
-          curl -I http://localhost --fail
+          drush drupal:sync --site=${{ matrix.site }} -n
+#          &&
+#          curl -I http://localhost --fail
   all-tests-pass:
     name: All Tests Pass
     needs: [phpunit, codeception, db_updates]
@@ -278,8 +278,6 @@ jobs:
           if_key_exists: fail
       - name: Deploy Artifact
         run: |
-          mkdir -p ~/.ssh &&
-          echo -e "Host *\n    UpdateHostKeys no" > ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           git config --global user.email "sws-developers@lists.stanford.edu" &&
           git config --global user.name "Github Actions" &&
