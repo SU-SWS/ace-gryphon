@@ -118,7 +118,6 @@ jobs:
           MYSQL_USER: drupal
           MYSQL_PASSWORD: drupal
           MYSQL_ROOT_PASSWORD: drupal
-          MARIADB_TLS_DISABLE_PEER_VERIFICATION: 1
         ports:
           - 33306:3306
         options: >
@@ -143,8 +142,7 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Install Site
         run: |
-          mkdir -p ~/.ssh/config &&
-          cp .github/ssh_config ~/.ssh/config &&
+          echo -e "[client]\nssl-verify-server-cert=FALSE" > /etc/mysql/conf.d/no-ssl-verify.cnf &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -196,7 +194,6 @@ jobs:
           MYSQL_USER: drupal
           MYSQL_PASSWORD: drupal
           MYSQL_ROOT_PASSWORD: drupal
-          MARIADB_TLS_DISABLE_PEER_VERIFICATION: 1
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -224,8 +221,7 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Sync and Update Site
         run: |
-          mkdir -p ~/.ssh/config &&
-          cp .github/ssh_config ~/.ssh/config &&
+          echo -e "[client]\nssl-verify-serer-cert=FALSE" > /etc/mysql/conf.d/no-ssl-verify.cnf &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
