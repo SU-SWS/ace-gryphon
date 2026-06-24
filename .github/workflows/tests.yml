@@ -8,7 +8,7 @@ jobs:
     name: PHPUnit
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     services:
       mysql:
         image: mysql:8.0
@@ -21,7 +21,7 @@ jobs:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
         with:
@@ -54,11 +54,11 @@ jobs:
     name: Sites to test
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
         with:
@@ -103,7 +103,7 @@ jobs:
         shard: ${{fromJSON(needs.shard_matrix.outputs.matrix)}}
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
       options: '--network-alias drupal8ci'
     env:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
@@ -120,9 +120,13 @@ jobs:
           MYSQL_ROOT_PASSWORD: drupal
         ports:
           - 33306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
         with:
@@ -176,7 +180,7 @@ jobs:
         site: ${{fromJSON(needs.sites_to_test.outputs.matrix)}}
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
       options: '--network-alias drupal8ci'
     env:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
@@ -190,7 +194,11 @@ jobs:
           MYSQL_ROOT_PASSWORD: drupal
         ports:
           - 33306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -199,7 +207,7 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           if_key_exists: fail
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
         with:
@@ -248,9 +256,9 @@ jobs:
     needs: [phpunit, codeception, db_updates]
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
         with:
