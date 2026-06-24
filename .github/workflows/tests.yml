@@ -125,6 +125,7 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
+          --tls-version=''
     steps:
       - uses: actions/checkout@v7
       - name: Restore Cache
@@ -142,7 +143,6 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Install Site
         run: |
-          echo -e "[client]\nssl-verify-server-cert=FALSE" > /etc/mysql/conf.d/no-ssl-verify.cnf &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
@@ -196,7 +196,12 @@ jobs:
           MYSQL_ROOT_PASSWORD: drupal
         ports:
           - 33306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+          --tls-version=''
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -221,7 +226,6 @@ jobs:
             6.x-${{ vars.CACHE_KEY }}-
       - name: Sync and Update Site
         run: |
-          echo -e "[client]\nssl-verify-serer-cert=FALSE" > /etc/mysql/conf.d/no-ssl-verify.cnf &&
           git config --system --add safe.directory '*' &&
           mysql -h mysql -P 3306 -u root -pdrupal -e 'SET GLOBAL max_allowed_packet=67108864;' --ssl=0 &&
           rm -rf /var/www/html &&
