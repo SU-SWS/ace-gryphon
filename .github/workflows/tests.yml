@@ -111,21 +111,10 @@ jobs:
       selenium:
         image: selenium/standalone-chrome:130.0
         options: '--shm-size="2g"'
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_DATABASE: drupal
-          MYSQL_USER: drupal
-          MYSQL_PASSWORD: drupal
-          MYSQL_ROOT_PASSWORD: drupal
-        ports:
-          - 33306:3306
-        options: >
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
     steps:
+      - uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: "8.4"
       - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
@@ -185,22 +174,10 @@ jobs:
       options: '--network-alias drupal8ci'
     env:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_DATABASE: drupal
-          MYSQL_USER: drupal
-          MYSQL_PASSWORD: drupal
-          MYSQL_ROOT_PASSWORD: drupal
-        ports:
-          - 33306:3306
-        options: >
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
     steps:
+      - uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: "8.4"
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
