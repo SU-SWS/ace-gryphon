@@ -8,7 +8,7 @@ jobs:
     name: PHPUnit
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     services:
       mysql:
         image: mysql:8.0
@@ -54,7 +54,7 @@ jobs:
     name: Sites to test
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
@@ -103,7 +103,7 @@ jobs:
         shard: ${{fromJSON(needs.shard_matrix.outputs.matrix)}}
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
       options: '--network-alias drupal8ci'
     env:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
@@ -111,10 +111,21 @@ jobs:
       selenium:
         image: selenium/standalone-chrome:130.0
         options: '--shm-size="2g"'
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: drupal
+          MYSQL_USER: drupal
+          MYSQL_PASSWORD: drupal
+          MYSQL_ROOT_PASSWORD: drupal
+        ports:
+          - 33306:3306
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
-      - uses: shogo82148/actions-setup-mysql@v1
-        with:
-          mysql-version: "8.4"
       - uses: actions/checkout@v6
       - name: Restore Cache
         uses: actions/cache@v5
@@ -170,14 +181,26 @@ jobs:
         site: ${{fromJSON(needs.sites_to_test.outputs.matrix)}}
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
       options: '--network-alias drupal8ci'
     env:
       STANFORD_ENCRYPT: ${{secrets.STANFORD_ENCRYPT}}
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: drupal
+          MYSQL_USER: drupal
+          MYSQL_PASSWORD: drupal
+          MYSQL_ROOT_PASSWORD: drupal
+        ports:
+          - 33306:3306
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
     steps:
-      - uses: shogo82148/actions-setup-mysql@v1
-        with:
-          mysql-version: "8.4"
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
@@ -234,7 +257,7 @@ jobs:
     needs: [phpunit, codeception, db_updates]
     runs-on: ubuntu-latest
     container:
-      image: pookmish/drupal8ci:php8.4
+      image: pookmish/drupal8ci:php8.3
     steps:
       - uses: actions/checkout@v6
       - name: Restore Cache
