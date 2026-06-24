@@ -281,8 +281,6 @@ jobs:
           if_key_exists: fail
       - name: Deploy Artifact
         run: |
-          mkdir -p ~/.ssh/config &&
-          cp .github/ssh_config ~/.ssh/config &&
           git config --system --add safe.directory '*' &&
           git config --global user.email "sws-developers@lists.stanford.edu" &&
           git config --global user.name "Github Actions" &&
