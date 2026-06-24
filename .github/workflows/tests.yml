@@ -153,7 +153,6 @@ jobs:
           apachectl start &&
           composer install -n &&
           drush drupal:install --site=${{ matrix.site }} -n &&
-          drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1' --debug &&
           drush image:derive thumbnail $(drush sql:query 'select uri from file_managed where uri like "%//media/%" limit 1') &&
           drush xmlsitemap:rebuild &&
           drush cr &&
