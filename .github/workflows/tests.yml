@@ -118,6 +118,7 @@ jobs:
           MYSQL_USER: drupal
           MYSQL_PASSWORD: drupal
           MYSQL_ROOT_PASSWORD: drupal
+          MARIADB_TLS_DISABLE_PEER_VERIFICATION: 1
         ports:
           - 33306:3306
         options: >
@@ -195,6 +196,7 @@ jobs:
           MYSQL_USER: drupal
           MYSQL_PASSWORD: drupal
           MYSQL_ROOT_PASSWORD: drupal
+          MARIADB_TLS_DISABLE_PEER_VERIFICATION: 1
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
