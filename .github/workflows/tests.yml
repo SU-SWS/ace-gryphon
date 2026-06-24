@@ -125,7 +125,7 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-          --tls-version=''
+          --tls-version=""
     steps:
       - uses: actions/checkout@v7
       - name: Restore Cache
@@ -201,7 +201,7 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-          --tls-version=''
+          --tls-version=""
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
