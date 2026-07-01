@@ -17540,12 +17540,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "707fffe9a26b1620ca81091afd37510f82df7bbd"
+                "reference": "1df8963027f8de9875c5faf9da7608c1de1d6c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/707fffe9a26b1620ca81091afd37510f82df7bbd",
-                "reference": "707fffe9a26b1620ca81091afd37510f82df7bbd",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/1df8963027f8de9875c5faf9da7608c1de1d6c82",
+                "reference": "1df8963027f8de9875c5faf9da7608c1de1d6c82",
                 "shasum": ""
             },
             "require": {
@@ -17732,7 +17732,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
             },
-            "time": "2026-06-30T16:30:00+00:00"
+            "time": "2026-07-01T17:14:12+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -18353,16 +18353,16 @@
         },
         {
             "name": "su-sws/stanford_profile_helper",
-            "version": "10.2.7",
+            "version": "10.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_profile_helper.git",
-                "reference": "738719596caef2bec1c31c025668f751a265fd72"
+                "reference": "148221e8e31a7ef89829bddf531f3ee637c32a21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/738719596caef2bec1c31c025668f751a265fd72",
-                "reference": "738719596caef2bec1c31c025668f751a265fd72",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_profile_helper/zipball/148221e8e31a7ef89829bddf531f3ee637c32a21",
+                "reference": "148221e8e31a7ef89829bddf531f3ee637c32a21",
                 "shasum": ""
             },
             "require": {
@@ -18465,9 +18465,9 @@
             ],
             "description": "Helper Module For Stanford Profile",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/10.2.7"
+                "source": "https://github.com/SU-SWS/stanford_profile_helper/tree/10.2.8"
             },
-            "time": "2026-06-24T16:09:08+00:00"
+            "time": "2026-06-30T16:59:24+00:00"
         },
         {
             "name": "su-sws/stanford_samlauth",
