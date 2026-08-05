@@ -70,9 +70,11 @@
         "drupal/core": "~11.3.0",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-recommended": "^11",
+        "drupal/ui_patterns_ds": "^1.0@alpha",
         "drush/drush": "^13.6",
-        "su-sws/caw_profile": "11.x-dev",
-        "su-sws/stanford_profile": "^12.0",
+        "su-sws/caw_profile": "12.x-dev",
+        "su-sws/stanford_profile": "13.x-dev",
+        "su-sws/stanford_profile_helper": "11.x-dev",
         "su-sws/sws-drush-commands": "1.x-dev"
     },
     "require-dev": {
@@ -90,7 +92,8 @@
     "config": {
         "sort-packages": true,
         "discard-changes": true,
-        "allow-plugins": true
+        "allow-plugins": true,
+        "policy": false
     },
     "extra": {
         "drupal-scaffold": {
@@ -158,9 +161,6 @@
         "patches": {
             "su-sws/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
-            },
-            "drupal/ui_patterns": {
-                "Ui Patterns Views Fixes": "patches/contrib/ui_patterns_views-preview.patch"
             },
             "drupal/google_tag": {
                 "Prevent google tag conflict": "patches/contrib/google_tag-ga_conflict.patch"

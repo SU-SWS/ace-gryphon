@@ -2,7 +2,7 @@ name: Deploy Main Branch Artifact
 on:
   push:
     branches:
-      - '6.x'
+      - '7.x'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
