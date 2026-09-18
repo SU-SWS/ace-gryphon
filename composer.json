@@ -70,6 +70,7 @@
         "drupal/core": "~11.3.0",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-recommended": "^11",
+        "drupal/diff": "2.1.1 as 1.9.0",
         "drush/drush": "^13.6",
         "su-sws/caw_profile": "11.x-dev",
         "su-sws/stanford_profile": "^12.0",
@@ -164,6 +165,13 @@
             },
             "drupal/google_tag": {
                 "Prevent google tag conflict": "patches/contrib/google_tag-ga_conflict.patch"
+            }
+        },
+        "patches-ignore": {
+            "su-sws/drupal-patches": {
+                "drupal/diff": {
+                    "Outdated": "https://git.drupalcode.org/project/diff/-/merge_requests/42.patch"
+                }
             }
         }
     },
