@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b0f322d4a7c955070b71abdb0b37097",
+    "content-hash": "14498a445c09977b0ee0a7ccb006ce30",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -4327,38 +4327,38 @@
         },
         {
             "name": "drupal/diff",
-            "version": "1.10.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/diff.git",
-                "reference": "8.x-1.10"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/diff-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "21398888a97071bfeb57bdc7128fcf6681da5358"
+                "url": "https://ftp.drupal.org/files/projects/diff-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "5510aba84b893dfe7106621e859bdb949d4a1f51"
             },
             "require": {
-                "drupal/core": "^10 || ^11",
+                "drupal/core": "^10.5 || ^11 || ^12",
                 "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
                 "php": "^8.1"
             },
             "require-dev": {
-                "jangregor/phpstan-prophecy": "^1.0",
-                "mglaman/phpstan-drupal": "^1.2.10",
+                "jangregor/phpstan-prophecy": "^1.0 || ^2.2.0",
+                "mglaman/phpstan-drupal": "^1.2.10 || ^2.0.7",
                 "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan": "^1.11 || ^2.1.17",
                 "phpstan/phpstan-deprecation-rules": "*",
-                "phpstan/phpstan-phpunit": "1.4.x-dev",
-                "phpstan/phpstan-strict-rules": "^1@stable",
-                "previousnext/coding-standard": "1.0.1"
+                "phpstan/phpstan-phpunit": "1.4 || ^2.0",
+                "phpstan/phpstan-strict-rules": "^1.0 || ^2.0.4",
+                "previousnext/coding-standard": "1.1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1768951091",
+                    "version": "2.1.1",
+                    "datestamp": "1786557203",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17539,12 +17539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "b80fb2cc8ebede73285a444d66b1e0476ec8eb79"
+                "reference": "9aee3a10c23407f91c04579b68e7373d45017b91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/b80fb2cc8ebede73285a444d66b1e0476ec8eb79",
-                "reference": "b80fb2cc8ebede73285a444d66b1e0476ec8eb79",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/9aee3a10c23407f91c04579b68e7373d45017b91",
+                "reference": "9aee3a10c23407f91c04579b68e7373d45017b91",
                 "shasum": ""
             },
             "require": {
@@ -17686,7 +17686,7 @@
                 "su-sws/ckeditor5_plugins": "^1.0",
                 "su-sws/drupal-patches": "^11.1",
                 "su-sws/paranoia": "^1.0@RC",
-                "su-sws/react_paragraphs": "^8.2",
+                "su-sws/react_paragraphs": "8.2.19",
                 "su-sws/stanford_actions": "^8.2",
                 "su-sws/stanford_media": "^11.3",
                 "su-sws/stanford_migrate": "^9.0",
@@ -17731,7 +17731,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/11.x"
             },
-            "time": "2026-07-28T18:52:58+00:00"
+            "time": "2026-09-18T14:33:01+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
@@ -17764,16 +17764,16 @@
         },
         {
             "name": "su-sws/drupal-patches",
-            "version": "11.1.10",
+            "version": "11.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/drupal-patches.git",
-                "reference": "ae3093a4263d80a0d17e9d32d4d52f53778d7430"
+                "reference": "4e23e4e1bdab8ea6cc63942b41f1af0fc847a8de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/ae3093a4263d80a0d17e9d32d4d52f53778d7430",
-                "reference": "ae3093a4263d80a0d17e9d32d4d52f53778d7430",
+                "url": "https://api.github.com/repos/SU-SWS/drupal-patches/zipball/4e23e4e1bdab8ea6cc63942b41f1af0fc847a8de",
+                "reference": "4e23e4e1bdab8ea6cc63942b41f1af0fc847a8de",
                 "shasum": ""
             },
             "require": {
@@ -17810,9 +17810,6 @@
                         "https://www.drupal.org/project/drupal/issues/3332063": "https://www.drupal.org/files/issues/2023-03-12/path-alias-not-available-3332063.patch",
                         "Disable https://www.drupal.org/project/drupal/issues/343535": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/drupal-disable_ajax_views_query_params-343535.patch"
                     },
-                    "drupal/diff": {
-                        "https://www.drupal.org/project/diff/issues/2882334#comment-13913401": "https://git.drupalcode.org/project/diff/-/merge_requests/42.patch"
-                    },
                     "drupal/webp": {
                         "https://www.drupal.org/project/webp/issues/3281606": "https://git.drupalcode.org/project/webp/-/merge_requests/33.patch",
                         "https://www.drupal.org/project/webp/issues/3551539": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/webp-3551539-1-0-0.patch"
@@ -17845,9 +17842,6 @@
                     },
                     "drupal/flat_taxonomy": {
                         "https://www.drupal.org/project/flat_taxonomy/issues/3569637": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/flat_taxonomy-form_setting-3569637.patch"
-                    },
-                    "drupal/jsonapi_views": {
-                        "https://www.drupal.org/project/jsonapi_views/issues/3213575": "https://www.drupal.org/files/issues/2023-09-29/3213575-views_json-pagination-10.patch"
                     },
                     "drupal/config_readonly": {
                         "https://www.drupal.org/project/config_readonly/issues/2892631": "https://www.drupal.org/files/issues/2023-07-18/config-readonly-2892631-27.patch"
@@ -17883,9 +17877,9 @@
             "description": "Drupal core and contrib shared patches",
             "support": {
                 "issues": "https://github.com/SU-SWS/drupal-patches/issues",
-                "source": "https://github.com/SU-SWS/drupal-patches/tree/11.1.10"
+                "source": "https://github.com/SU-SWS/drupal-patches/tree/11.1.12"
             },
-            "time": "2026-06-17T16:25:59+00:00"
+            "time": "2026-08-24T18:47:55+00:00"
         },
         {
             "name": "su-sws/paranoia",
@@ -18036,16 +18030,16 @@
         },
         {
             "name": "su-sws/stanford_media",
-            "version": "11.3.1",
+            "version": "11.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_media.git",
-                "reference": "8b5c86785941cedcd69842e5a200cac8f17d465e"
+                "reference": "c287d281d5d3795e9e0b363ab40e93f4d3a72c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/8b5c86785941cedcd69842e5a200cac8f17d465e",
-                "reference": "8b5c86785941cedcd69842e5a200cac8f17d465e",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_media/zipball/c287d281d5d3795e9e0b363ab40e93f4d3a72c2d",
+                "reference": "c287d281d5d3795e9e0b363ab40e93f4d3a72c2d",
                 "shasum": ""
             },
             "require": {
@@ -18091,23 +18085,22 @@
             "description": "Stanford Media module for Drupal 8 Media management",
             "homepage": "https://github.com/SU-SWS/stanford_media",
             "support": {
-                "issues": "https://github.com/SU-SWS/stanford_media/issues",
-                "source": "https://github.com/SU-SWS/stanford_media/tree/11.3.1"
+                "source": "https://github.com/SU-SWS/stanford_media/tree/11.3.3"
             },
-            "time": "2026-01-08T18:31:18+00:00"
+            "time": "2026-08-07T16:51:54+00:00"
         },
         {
             "name": "su-sws/stanford_migrate",
-            "version": "9.2.0",
+            "version": "9.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_migrate.git",
-                "reference": "6242db8b03379561c56ea3dc6c0c214e4d68d1ec"
+                "reference": "b0469e31955bb9d94357331b53267b2c99fece62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/6242db8b03379561c56ea3dc6c0c214e4d68d1ec",
-                "reference": "6242db8b03379561c56ea3dc6c0c214e4d68d1ec",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_migrate/zipball/b0469e31955bb9d94357331b53267b2c99fece62",
+                "reference": "b0469e31955bb9d94357331b53267b2c99fece62",
                 "shasum": ""
             },
             "require": {
@@ -18130,9 +18123,6 @@
                 "patches": {
                     "drupal/migrate_plus": {
                         "https://www.drupal.org/project/migrate_plus/issues/2837684": "https://www.drupal.org/files/issues/2023-01-13/2837684-14-migrate-plus-xml-return-as-xml.patch"
-                    },
-                    "drupal/readonly_field_widget": {
-                        "https://www.drupal.org/project/readonly_field_widget/issues/3220671": "https://www.drupal.org/files/issues/2024-09-23/third-party-settings-3220671-8.patch"
                     }
                 }
             },
@@ -18149,9 +18139,9 @@
             "homepage": "https://github.com/SU-SWS/stanford_migrate",
             "support": {
                 "issues": "https://github.com/SU-SWS/stanford_migrate/issues",
-                "source": "https://github.com/SU-SWS/stanford_migrate/tree/9.2.0"
+                "source": "https://github.com/SU-SWS/stanford_migrate/tree/9.2.2"
             },
-            "time": "2025-11-03T17:05:13+00:00"
+            "time": "2026-08-10T20:12:29+00:00"
         },
         {
             "name": "su-sws/stanford_profile",
@@ -18545,12 +18535,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/sws-drush-commands.git",
-                "reference": "5f39c7114a5dba768d3b6111f53497ac7a8bb35f"
+                "reference": "bba3dce75a9013c012ca98d434d155c5fc7a80d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/5f39c7114a5dba768d3b6111f53497ac7a8bb35f",
-                "reference": "5f39c7114a5dba768d3b6111f53497ac7a8bb35f",
+                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/bba3dce75a9013c012ca98d434d155c5fc7a80d9",
+                "reference": "bba3dce75a9013c012ca98d434d155c5fc7a80d9",
                 "shasum": ""
             },
             "require": {
@@ -18582,7 +18572,7 @@
                 "issues": "https://github.com/SU-SWS/sws-drush-commands/issues",
                 "source": "https://github.com/SU-SWS/sws-drush-commands"
             },
-            "time": "2026-06-18T20:35:39+00:00"
+            "time": "2026-09-04T14:07:47+00:00"
         },
         {
             "name": "symfony/cache",
@@ -28365,12 +28355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford-caravan.git",
-                "reference": "3c104f7c499a7f5cb3b6eba58188a2802ae5f5d8"
+                "reference": "78173da882b3513f6a9cca3884990349a728ea2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/3c104f7c499a7f5cb3b6eba58188a2802ae5f5d8",
-                "reference": "3c104f7c499a7f5cb3b6eba58188a2802ae5f5d8",
+                "url": "https://api.github.com/repos/SU-SWS/stanford-caravan/zipball/78173da882b3513f6a9cca3884990349a728ea2b",
+                "reference": "78173da882b3513f6a9cca3884990349a728ea2b",
                 "shasum": ""
             },
             "require": {
@@ -28399,7 +28389,7 @@
                 "issues": "https://github.com/SU-SWS/stanford-caravan/issues",
                 "source": "https://github.com/SU-SWS/stanford-caravan/tree/11.x"
             },
-            "time": "2026-07-02T21:00:45+00:00"
+            "time": "2026-09-03T16:29:36+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -28932,7 +28922,14 @@
             "time": "2026-06-15T15:31:57+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "drupal/diff",
+            "version": "2.1.1.0",
+            "alias": "1.9.0",
+            "alias_normalized": "1.9.0.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "su-sws/caw_profile": 20,
