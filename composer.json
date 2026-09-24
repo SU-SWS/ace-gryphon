@@ -73,8 +73,8 @@
         "drupal/ui_patterns_ds": "^1.0@alpha",
         "drush/drush": "^13.6",
         "su-sws/caw_profile": "12.x-dev",
-        "su-sws/stanford_profile": "13.x-dev",
-        "su-sws/stanford_profile_helper": "11.x-dev",
+        "su-sws/stanford_profile": "^13.0",
+        "su-sws/stanford_profile_helper": "^11.0",
         "su-sws/sws-drush-commands": "1.x-dev"
     },
     "require-dev": {
