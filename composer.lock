@@ -18017,12 +18017,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/caw_profile.git",
-                "reference": "9cb428821251d1862709057138d256b5aa30fd9c"
+                "reference": "6295e994584a849e491ea9f1faa62b5c7710172e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/9cb428821251d1862709057138d256b5aa30fd9c",
-                "reference": "9cb428821251d1862709057138d256b5aa30fd9c",
+                "url": "https://api.github.com/repos/SU-SWS/caw_profile/zipball/6295e994584a849e491ea9f1faa62b5c7710172e",
+                "reference": "6295e994584a849e491ea9f1faa62b5c7710172e",
                 "shasum": ""
             },
             "require": {
@@ -18214,7 +18214,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/caw_profile/tree/12.x"
             },
-            "time": "2026-09-24T19:31:55+00:00"
+            "time": "2026-09-25T18:25:59+00:00"
         },
         {
             "name": "su-sws/ckeditor5_plugins",
