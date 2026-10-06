@@ -159,6 +159,9 @@
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
+            "drupal/linkit": {
+                "https://www.drupal.org/project/linkit/issues/3049946": "patches/contrib/linkit-3049946.patch"
+            },
             "su-sws/paranoia": {
                 "https://stanfordits.atlassian.net/browse/D8CORE-1351": "patches/contrib/paranoia.patch"
             },
