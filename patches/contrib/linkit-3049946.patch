@@ -1,0 +1,288 @@
+From 2de8813384e47c27983741d9e46d03cc1a4ede50 Mon Sep 17 00:00:00 2001
+From: Harlor <harlor@web.de>
+Date: Tue, 6 Oct 2026 12:37:21 +0200
+Subject: [PATCH 1/2] Apply patch from #3049946-34
+
+---
+ src/Plugin/Linkit/Matcher/NodeMatcher.php | 68 ++++++++++++++++-------
+ 1 file changed, 49 insertions(+), 19 deletions(-)
+
+diff --git a/src/Plugin/Linkit/Matcher/NodeMatcher.php b/src/Plugin/Linkit/Matcher/NodeMatcher.php
+index 3198cac..ae1adda 100644
+--- a/src/Plugin/Linkit/Matcher/NodeMatcher.php
++++ b/src/Plugin/Linkit/Matcher/NodeMatcher.php
+@@ -86,30 +86,60 @@ class NodeMatcher extends EntityMatcher {
+   protected function buildEntityQuery($search_string) {
+     $query = parent::buildEntityQuery($search_string);
+ 
+-    if ($this->configuration['include_unpublished'] == FALSE) {
+-      $query->condition('status', NodeInterface::PUBLISHED);
++    // Default case: Users can only see published nodes.
++    $condition = $query
++      ->andConditionGroup()
++      ->condition('status', NodeInterface::PUBLISHED);
++    // We can skip filtering for these cases.
++    if ($this->currentUserCanViewAllContent() || $this->currentUserHasNodeGrants()) {
++      $condition = NULL;
+     }
+-    elseif (!$this->moduleHandler->hasImplementations('node_grants')) {
+-      if (($this->currentUser->hasPermission('bypass node access') || $this->currentUser->hasPermission('view any unpublished content'))) {
+-        // User can see all content, no check necessary.
+-      }
+-      elseif ($this->currentUser->hasPermission('view own unpublished content')) {
+-        // Users with "view own unpublished content" can see only their own.
+-        if ($this->configuration['include_unpublished'] == TRUE) {
+-          $or_condition = $query
+-            ->orConditionGroup()
+-            ->condition('status', NodeInterface::PUBLISHED)
+-            ->condition('uid', $this->currentUser->id());
+-          $query->condition($or_condition);
+-        }
+-      }
++    // OR-based filtering for holders of 'view own unpublished content'.
++    elseif ($this->currentUserCanViewOwnUnpublishedContent()) {
++      $condition = $query
++        ->orConditionGroup()
++        ->condition('status', NodeInterface::PUBLISHED)
++        ->condition('uid', $this->currentUser->id());
+     }
+-    else {
+-      // All other users should only get published results.
+-      $query->condition('status', NodeInterface::PUBLISHED);
++    // Add the generated condition, if one is set.
++    if ($condition) {
++      $query->condition($condition);
+     }
+ 
+     return $query;
+   }
+ 
++  /**
++   * Checks whether the current user is allowed to view all content.
++   *
++   * This check takes 'include_unpublished' into account.
++   */
++  protected function currentUserCanViewAllContent() {
++    // Some users can see all content.
++    return $this->configuration['include_unpublished'] &&
++      ($this->currentUser->hasPermission('bypass node access') ||
++      $this->currentUser->hasPermission('view any unpublished content'));
++  }
++
++  /**
++   * Checks whether any module grants global 'view' access to the current user.
++   *
++   * This check takes 'include_unpublished' into account.
++   */
++  protected function currentUserHasNodeGrants() {
++    return $this->configuration['include_unpublished'] &&
++      $this->moduleHandler->hasImplementations('node_grants') &&
++      $this->entityTypeManager->getAccessControlHandler('node')->checkAllGrants($this->currentUser);
++  }
++
++  /**
++   * Checks whether the user is allowed to view own nodes.
++   *
++   * This check takes 'include_unpublished' into account.
++   */
++  protected function currentUserCanViewOwnUnpublishedContent() {
++    return $this->configuration['include_unpublished'] &&
++      $this->currentUser->hasPermission('view own unpublished content');
++  }
++
+ }
+-- 
+GitLab
+
+
+From dfed05cbf5f5e0ea489f31b24aed071e7805e12d Mon Sep 17 00:00:00 2001
+From: Harlor <harlor@web.de>
+Date: Tue, 6 Oct 2026 13:24:45 +0200
+Subject: [PATCH 2/2] Add NodeMatcherNodeGrantsTest
+
+---
+ .../Matchers/NodeMatcherNodeGrantsTest.php    | 172 ++++++++++++++++++
+ 1 file changed, 172 insertions(+)
+ create mode 100644 tests/src/Kernel/Matchers/NodeMatcherNodeGrantsTest.php
+
+diff --git a/tests/src/Kernel/Matchers/NodeMatcherNodeGrantsTest.php b/tests/src/Kernel/Matchers/NodeMatcherNodeGrantsTest.php
+new file mode 100644
+index 0000000..2172241
+--- /dev/null
++++ b/tests/src/Kernel/Matchers/NodeMatcherNodeGrantsTest.php
+@@ -0,0 +1,172 @@
++<?php
++
++declare(strict_types=1);
++
++namespace Drupal\Tests\linkit\Kernel\Matchers;
++
++use Drupal\Core\Database\Database;
++use Drupal\node\Entity\Node;
++use Drupal\node\Entity\NodeType;
++use Drupal\Tests\linkit\Kernel\LinkitKernelTestBase;
++use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
++
++/**
++ * Tests node matcher's "include unpublished" setting with node grants.
++ *
++ * Covers the case where a hook_node_grants() implementation is present.
++ *
++ * @see https://www.drupal.org/project/linkit/issues/3049946
++ *
++ * @group linkit
++ */
++#[RunTestsInSeparateProcesses]
++class NodeMatcherNodeGrantsTest extends LinkitKernelTestBase {
++
++  /**
++   * Modules to enable.
++   *
++   * @var array
++   */
++  protected static $modules = [
++    'field',
++    'node',
++    'node_access_test',
++    // Provides the 'view any unpublished content' permission used below.
++    'content_moderation',
++    'workflows',
++    'text',
++  ];
++
++  /**
++   * The matcher manager.
++   *
++   * @var \Drupal\linkit\MatcherManager
++   */
++  protected $manager;
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function setUp(): void {
++    parent::setUp();
++
++    $this->installEntitySchema('node');
++    $this->installSchema('node', ['node_access']);
++    $this->installConfig(['field', 'node']);
++
++    $this->manager = $this->container->get('plugin.manager.linkit.matcher');
++
++    NodeType::create(['type' => 'page', 'name' => 'Page'])->save();
++
++    // Burn uid 1, which bypasses all access checks, so test accounts below
++    // don't accidentally become the superuser.
++    $this->createUser();
++  }
++
++  /**
++   * Creates a published and an unpublished node owned by the given account.
++   */
++  protected function createNodesOwnedBy($account): void {
++    Node::create([
++      'title' => 'Published alpha',
++      'type' => 'page',
++      'uid' => $account->id(),
++    ])->save();
++    Node::create([
++      'title' => 'Unpublished alpha',
++      'type' => 'page',
++      'uid' => $account->id(),
++      'status' => FALSE,
++    ])->save();
++  }
++
++  /**
++   * Tests that 'bypass node access' is respected with node grants present.
++   */
++  public function testBypassPermissionIsRespectedWithNodeGrants() {
++    $plugin = $this->manager->createInstance('entity:node', [
++      'settings' => ['include_unpublished' => TRUE],
++    ]);
++
++    $account = $this->createUser([], ['access content', 'bypass node access']);
++    \Drupal::currentUser()->setAccount($account);
++    $this->createNodesOwnedBy($account);
++
++    $suggestions = $plugin->execute('alpha');
++    $this->assertCount(2, $suggestions->getSuggestions());
++  }
++
++  /**
++   * Tests 'view any unpublished content' is respected with node grants.
++   */
++  public function testViewAnyUnpublishedPermissionIsRespectedWithNodeGrants() {
++    $plugin = $this->manager->createInstance('entity:node', [
++      'settings' => ['include_unpublished' => TRUE],
++    ]);
++
++    $account = $this->createUser([], ['access content', 'view any unpublished content']);
++    \Drupal::currentUser()->setAccount($account);
++    $this->createNodesOwnedBy($account);
++
++    $suggestions = $plugin->execute('alpha');
++    $this->assertCount(2, $suggestions->getSuggestions());
++  }
++
++  /**
++   * Tests that node grants alone don't unlock unpublished content.
++   */
++  public function testPlainUserDoesNotSeeUnpublishedWithNodeGrants() {
++    $plugin = $this->manager->createInstance('entity:node', [
++      'settings' => ['include_unpublished' => TRUE],
++    ]);
++
++    $account = $this->createUser([], ['access content']);
++    \Drupal::currentUser()->setAccount($account);
++    $this->createNodesOwnedBy($account);
++
++    $suggestions = $plugin->execute('alpha');
++    $this->assertCount(1, $suggestions->getSuggestions());
++  }
++
++  /**
++   * Tests that a global node grant unlocks unpublished content.
++   *
++   * This covers a user without 'bypass node access' or 'view any/own
++   * unpublished content', viewing content they don't own.
++   */
++  public function testGlobalNodeGrantUnlocksUnpublished() {
++    $plugin = $this->manager->createInstance('entity:node', [
++      'settings' => ['include_unpublished' => TRUE],
++    ]);
++
++    $owner = $this->createUser();
++    $this->createNodesOwnedBy($owner);
++
++    $account = $this->createUser([], ['access content']);
++    // 'no_access_uid' makes node_access_test's hook_node_grants() grant a
++    // 'node_access_all' gid 0 grant, matched below against a manually
++    // written nid=0 record: this is what makes checkAllGrants() (and so
++    // NodeMatcher::currentUserHasNodeGrants()) return TRUE, which is the
++    // query-level mechanism under test.
++    \Drupal::state()->set('node_access_test.no_access_uid', $account->id());
++    Database::getConnection()->insert('node_access')->fields([
++      'nid' => 0,
++      'gid' => 0,
++      'realm' => 'node_access_all',
++      'grant_view' => 1,
++      'grant_update' => 0,
++      'grant_delete' => 0,
++    ])->execute();
++    $this->container->get('node.view_all_nodes_memory_cache')->deleteAll();
++    // checkAllGrants() only affects the list query; the per-entity access()
++    // check that Linkit also performs doesn't honor the nid=0 fallback for
++    // unpublished nodes. node_access_test's 'allow_uid' hook_node_access()
++    // implementation grants that unconditionally, so set it too.
++    \Drupal::state()->set('node_access_test.allow_uid', $account->id());
++    \Drupal::currentUser()->setAccount($account);
++
++    $suggestions = $plugin->execute('alpha');
++    $this->assertCount(2, $suggestions->getSuggestions());
++  }
++
++}
+-- 
+GitLab
+
