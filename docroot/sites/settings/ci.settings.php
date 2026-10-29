@@ -23,6 +23,12 @@ $databases = [
           'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
           'driver' => 'mysql',
           'prefix' => '',
+          // The MariaDB client verifies server certs by default, and the CI
+          // mysql service's cert is self-signed. Drush passes this on to the
+          // mysql client. Pdo\Mysql replaces the PDO constant as of PHP 8.4.
+          'pdo' => [
+            (defined('Pdo\Mysql::ATTR_SSL_VERIFY_SERVER_CERT') ? Pdo\Mysql::ATTR_SSL_VERIFY_SERVER_CERT : PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT) => FALSE,
+          ],
         ],
     ],
 ];
@@ -40,8 +46,8 @@ $config['system.logging']['error_level'] = 'verbose';
 /**
  * Disable CSS and JS aggregation.
  */
-$config['system.performance']['css']['preprocess'] = TRUE;
-$config['system.performance']['js']['preprocess'] = TRUE;
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
 
 /**
  * Disable the render cache (this includes the page cache).
@@ -73,7 +79,6 @@ $config['system.performance']['js']['preprocess'] = TRUE;
  */
 $settings['extension_discovery_scan_tests'] = FALSE;
 
-
 /**
  * Configure static caches.
  *
@@ -88,7 +93,6 @@ $settings['extension_discovery_scan_tests'] = FALSE;
 // $settings['cache']['bins']['bootstrap'] = 'cache.backend.null';
 // $settings['cache']['bins']['discovery'] = 'cache.backend.null';
 // $settings['cache']['bins']['config'] = 'cache.backend.null';
-
 
 /**
  * Enable access to rebuild.php.
