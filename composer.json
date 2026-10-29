@@ -62,7 +62,7 @@
         }
     ],
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^4.0",
@@ -83,8 +83,7 @@
         "drupal/coder": "*"
     },
     "conflict": {
-        "drupal/drupal": "*",
-        "doctrine/instantiator": ">=2.1.0"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
