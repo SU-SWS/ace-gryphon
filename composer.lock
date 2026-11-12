@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d49dd851c6fc34d4f4c26334fe5bc768",
+    "content-hash": "4481eae84d4faf769efb7cb85ddb7499",
     "packages": [
         {
             "name": "acquia/drupal-environment-detector",
@@ -15328,63 +15328,6 @@
             "time": "2026-11-04T12:45:07+00:00"
         },
         {
-            "name": "loophp/phposinfo",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/loophp/phposinfo.git",
-                "reference": "9faccbfbf5364fd34fbc230961fa6fc51cc66b8f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/loophp/phposinfo/zipball/9faccbfbf5364fd34fbc230961fa6fc51cc66b8f",
-                "reference": "9faccbfbf5364fd34fbc230961fa6fc51cc66b8f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8"
-            },
-            "require-dev": {
-                "drupol/php-conventions": "^5.0.0",
-                "ext-pcov": "*",
-                "friends-of-phpspec/phpspec-code-coverage": "^6",
-                "infection/infection": "^0.26",
-                "infection/phpspec-adapter": "^0.2.0",
-                "phpspec/phpspec": "^7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "loophp\\phposinfo\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pol Dellaiera",
-                    "email": "pol.dellaiera@protonmail.com"
-                }
-            ],
-            "description": "Try to guess the host operating system.",
-            "keywords": [
-                "operating system detection"
-            ],
-            "support": {
-                "issues": "https://github.com/loophp/phposinfo/issues",
-                "source": "https://github.com/loophp/phposinfo"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/drupol",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-12-20T20:21:10+00:00"
-        },
-        {
             "name": "marc-mabe/php-enum",
             "version": "v4.7.2",
             "source": {
@@ -19224,21 +19167,20 @@
         },
         {
             "name": "su-sws/sws-drush-commands",
-            "version": "1.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/sws-drush-commands.git",
-                "reference": "04c484f64a6241276dc543a71f353527260e7c54"
+                "reference": "5d9d29395879e505dc1c89cbee5cdc4aaecff533"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/04c484f64a6241276dc543a71f353527260e7c54",
-                "reference": "04c484f64a6241276dc543a71f353527260e7c54",
+                "url": "https://api.github.com/repos/SU-SWS/sws-drush-commands/zipball/5d9d29395879e505dc1c89cbee5cdc4aaecff533",
+                "reference": "5d9d29395879e505dc1c89cbee5cdc4aaecff533",
                 "shasum": ""
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.7",
-                "loophp/phposinfo": "~1.0",
                 "symfony/console": "^6 || ^7",
                 "typhonius/acquia-php-sdk-v2": "^3.4"
             },
@@ -19248,7 +19190,6 @@
             "replace": {
                 "drupal/artifact_deployment": "*"
             },
-            "default-branch": true,
             "type": "drupal-drush",
             "autoload": {
                 "psr-4": {
@@ -19265,7 +19206,7 @@
                 "issues": "https://github.com/SU-SWS/sws-drush-commands/issues",
                 "source": "https://github.com/SU-SWS/sws-drush-commands"
             },
-            "time": "2026-09-29T15:08:47+00:00"
+            "time": "2026-10-30T22:24:04+00:00"
         },
         {
             "name": "symfony/cache",
