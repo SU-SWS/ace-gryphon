@@ -34,6 +34,21 @@ There are three options a site can choose from:
 will bypass any configuration management strategy and the site's configuration will be updated via update hooks.
 
 ----
+# Secret Scanning
+`.github/workflows/secret-scan.yml` runs [gitleaks](https://github.com/gitleaks/gitleaks) with `.gitleaks.toml`
+on every pull request and push to `7.x`, and weekly against the full history. Pull requests and pushes scan only the
+new commits.
+
+- The custom rules catch credentials the default rules miss: a Guzzle `auth` option set to literal username and
+  password strings, password-like keys (`password`, `client_secret`, `api_key`, ...) assigned a string literal, and
+  credentials embedded in a url.
+- A secret that reached git is in the history: **rotate it**, then remove it from the code.
+- To ignore a rotated credential or a false positive, add its fingerprint (`<commit>:<file>:<rule>:<line>`, printed in
+  the job summary) to `.gitleaksignore` with a comment explaining why. The fingerprint includes the commit SHA, so a
+  commit that exists under different SHAs on different branches needs one entry per SHA.
+- Write credential examples in docs with environment variables or describe them in words, not as literal strings.
+
+----
 # Setup Local Environment - Native LAMP Stack
 
 (See below for Lando config)
